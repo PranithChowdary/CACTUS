@@ -1,0 +1,12 @@
+cactus/
+├── data/              # Raw & processed MetaTool datasets
+├── env/               # Environment wrappers and RL API
+├── agents/            # All agent implementations (Scripted, RL, RL+LLM, etc.)
+├── llm/               # LLM interfacing, prompt construction, and ablations
+├── experiments/       # Configs, scripts, and experiment orchestration
+├── analysis/          # Scripts for plotting and result analysis
+├── notebooks/         # Colab demos, exploration, qualitative analysis
+├── utils/             # Utilities: logging, preprocessing, evaluation helpers
+├── README.md
+├── setup.py
+└── requirements.txt
