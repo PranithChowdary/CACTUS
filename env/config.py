@@ -8,12 +8,11 @@ Centralizes dataset paths, environment parameters, and training hyperparameters.
 import os
 
 # === PATHS ===
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATASET_PATH = os.path.join(BASE_DIR, "data", DATASET_PATH)
-LOGS_DIR = os.path.join(BASE_DIR, "utils")
+DATASET_PATH = "data/Raw/all_clean_data.csv"
+LOGS_DIR = "utils/logs"
 
 # === ENVIRONMENT ===
-MAX_STEPS = 1         # For single-shot predictions (change for multi-step)
+MAX_STEPS = 1        # For single-shot predictions (change for multi-step)
 OBSERVATION_TYPE = "text"  # Options: "text", "embedding"
 
 # === RL TRAINING ===
@@ -32,3 +31,8 @@ SEED = 42
 
 # Create logs directory if missing
 os.makedirs(LOGS_DIR, exist_ok=True)
+print("Configuration loaded successfully.\n")
+# print("Configurations:")
+# for key, value in globals().items():
+#     if key.isupper():
+#         print(f"  {key}: {value}")

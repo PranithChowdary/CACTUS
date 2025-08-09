@@ -8,7 +8,6 @@ and multi-step prediction modes.
 
 Author: CACTUS Authors
 Date: 2025-08-08
-
 """
 
 import random
@@ -26,6 +25,7 @@ class MetaToolEnv(dm_env.Environment):
     def __init__(
         self,
         dataframe: pd.DataFrame,
+        tool_vocab: List[str],
         mode: str = "single-shot",
         seed: Optional[int] = None
     ):
@@ -35,6 +35,7 @@ class MetaToolEnv(dm_env.Environment):
         Args:
             dataframe (pd.DataFrame): Dataset with columns ["prompt", "tools"].
                                       "tools" is a comma-separated string of correct tool names.
+            tool_vocab (list[str]): Global vocabulary of all tools.
             mode (str): "single-shot" or "multi-step".
             seed (int, optional): Random seed for reproducibility.
         """
@@ -43,6 +44,7 @@ class MetaToolEnv(dm_env.Environment):
         assert mode in ["single-shot", "multi-step"], "Invalid mode"
 
         self.df = dataframe
+        self.tool_vocab = tool_vocab  # ✅ Fixed: store a global vocabulary
         self.mode = mode
         self.rng = random.Random(seed)
 
@@ -66,6 +68,8 @@ class MetaToolEnv(dm_env.Environment):
         row = self.df.iloc[self.current_index]
         self.prompt = row["prompt"]
         self.correct_tools = [t.strip() for t in row["tools"].split(",")]
+
+        # Only include correct tools + distractors from vocab
         self.available_tools = sorted(
             list(set(self.correct_tools + self._sample_distractors()))
         )
@@ -77,7 +81,7 @@ class MetaToolEnv(dm_env.Environment):
         Take one step in the environment.
 
         Args:
-            action (int): Index of chosen tool in `available_tools`.
+            action (int): Index of chosen tool in the global vocabulary.
 
         Returns:
             dm_env.TimeStep: NEXT or LAST timestep.
@@ -85,7 +89,7 @@ class MetaToolEnv(dm_env.Environment):
         if self.done:
             raise RuntimeError("Episode is done. Call reset().")
 
-        chosen_tool = self.available_tools[action]
+        chosen_tool = self.tool_vocab[action]  # ✅ Actions are global-vocab based
         reward = 0.0
 
         if chosen_tool in self.correct_tools and chosen_tool not in self.selected_tools:
@@ -100,7 +104,7 @@ class MetaToolEnv(dm_env.Environment):
                 or chosen_tool == "DONE"
             ):
                 self.done = True
-
+        
         if self.done:
             return dm_env.termination(reward=reward, observation=self._get_observation())
         else:
@@ -120,7 +124,7 @@ class MetaToolEnv(dm_env.Environment):
 
     def _sample_distractors(self, n: int = 4) -> List[str]:
         """
-        Sample random distractor tools from dataset.
+        Sample random distractor tools from the global vocabulary.
 
         Args:
             n (int): Number of distractor tools.
@@ -128,12 +132,7 @@ class MetaToolEnv(dm_env.Environment):
         Returns:
             list[str]: Distractor tool names.
         """
-        all_tools = set()
-        for tools_str in self.df["tools"]:
-            for t in tools_str.split(","):
-                all_tools.add(t.strip())
-
-        distractors = list(all_tools - set(self.correct_tools))
+        distractors = list(set(self.tool_vocab) - set(self.correct_tools))
         return self.rng.sample(distractors, min(n, len(distractors)))
 
     def observation_spec(self):
@@ -150,7 +149,7 @@ class MetaToolEnv(dm_env.Environment):
         Define action spec.
         """
         return dm_env.specs.DiscreteArray(
-            num_values=len(self.available_tools),
+            num_values=len(self.tool_vocab),
             dtype=int,
             name="action"
         )
@@ -162,7 +161,8 @@ if __name__ == "__main__":
         "prompt": ["Find academic papers on reinforcement learning."],
         "tools": ["Google Scholar, Arxiv"]
     })
-    env = MetaToolEnv(df, mode="single-shot", seed=42)
+    vocab = ["Google Scholar", "Arxiv", "PubMed", "Mendeley", "ResearchGate"]
+    env = MetaToolEnv(df, tool_vocab=vocab, mode="single-shot", seed=42)
     ts = env.reset()
     print("Observation:", ts.observation)
     ts = env.step(0)

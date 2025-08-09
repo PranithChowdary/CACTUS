@@ -46,7 +46,7 @@ def preprocess_dataset(df: pd.DataFrame) -> List[Dict]:
         tools = [t.strip() for t in row["tools"].split(",")]
         processed.append({
             "prompt": row["prompt"],
-            "tools": tools
+            "tool": tools
         })
     return processed
 
@@ -63,6 +63,17 @@ def select_random_sample(dataset: List[Dict]) -> Dict:
     """
     return random.choice(dataset)
 
+def build_tool_vocab(tools: List[str]) -> Dict[str, int]:
+    """
+    Builds a vocabulary mapping tool names to unique IDs.
+
+    Args:
+        tools (List[str]): List of tool names.
+
+    Returns:
+        Dict[str, int]: Mapping of tool names to IDs.
+    """
+    return {tool: idx for idx, tool in enumerate(tools)}
 
 def calculate_reward(selected_tool: str, correct_tools: List[str]) -> float:
     """
