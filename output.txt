@@ -1,0 +1,96 @@
+
+##### Testing Single-Shot Mode #####
+
+=== New Episode ===
+Prompt: Find academic papers on reinforcement learning.
+Available Tools: ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']
+
+Step 0 → Choosing tool index 0 (Arxiv)
+Reward: 1.0 Done: True
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+##### Testing Multi-Step Mode #####
+
+=== New Episode ===
+Prompt: Find academic papers on reinforcement learning.
+Available Tools: ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']
+
+Step 0 → Choosing tool index 0 (Arxiv)
+Reward: 1.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 1 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 2 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 3 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 4 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 5 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 6 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 7 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 8 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 9 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 10 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 11 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 12 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 13 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 14 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 15 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 16 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 17 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 18 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}
+
+Step 19 → Choosing tool index 0 (Arxiv)
+Reward: 0.0 Done: False
+Observation: {'prompt': 'Find academic papers on reinforcement learning.', 'available_tools': ['Arxiv', 'Bing News', 'DONE', 'Google Scholar', 'Mendeley', 'Reddit']}

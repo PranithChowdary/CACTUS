@@ -89,7 +89,7 @@ class MetaToolEnv(dm_env.Environment):
         if self.done:
             raise RuntimeError("Episode is done. Call reset().")
 
-        chosen_tool = self.tool_vocab[action]  # ✅ Actions are global-vocab based
+        chosen_tool = self.tool_vocab[action]  # Actions are global-vocab based
         reward = 0.0
 
         if chosen_tool in self.correct_tools and chosen_tool not in self.selected_tools:
