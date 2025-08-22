@@ -29,6 +29,8 @@ REWARD_INCORRECT = -0.5
 # === SEED ===
 SEED = 42
 
+ACTION_LIST = ['Ahrefs', 'Connected Papers', 'Elicit', 'Google Scholar', 'Moz', 'ResearchFinder', 'ResearchHelper', 'ResearchRabbit', 'SEMRush', 'SEOTool', 'SciSpace', 'Semantic Scholar']
+
 # Create logs directory if missing
 os.makedirs(LOGS_DIR, exist_ok=True)
 print("Configuration loaded successfully.\n")
