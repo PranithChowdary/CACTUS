@@ -8,14 +8,14 @@ The environment simulates **tool selection** tasks based on natural language pro
 
 ## 📌 Features
 
-* **Dataset-Driven** — Uses the MetaTool dataset (or synthetic variant with real tool names) to generate episodes.
-* **Single-Shot & Multi-Step Modes** —
+* **Dataset-Driven** -  Uses the MetaTool dataset (or synthetic variant with real tool names) to generate episodes.
+* **Single-Shot & Multi-Step Modes** - 
 
   * *Single-Shot*: Agent predicts the correct tool(s) in one step.
   * *Multi-Step*: Agent selects tools sequentially until the task is solved or a step limit is reached.
-* **Flexible Reward Functions** — Reward can be binary (correct/incorrect) or shaped (partial credit for near matches).
-* **Observation Design** — Converts prompts into embeddings for agent input (via LLM encoder or other embedding models).
-* **dm\_env Compatible** — Easily pluggable with DeepMind’s RL frameworks and wrappers.
+* **Flexible Reward Functions** -  Reward can be binary (correct/incorrect) or shaped (partial credit for near matches).
+* **Observation Design** -  Converts prompts into embeddings for agent input (via LLM encoder or other embedding models).
+* **dm\_env Compatible** -  Easily pluggable with DeepMind’s RL frameworks and wrappers.
 
 
 ---
@@ -84,6 +84,6 @@ while not ts.last():
 
 ## 📈 Evaluation Metrics
 
-* **Accuracy** — % of prompts where the agent picks correct tool(s).
-* **Steps to Success** — Avg. number of steps in multi-step mode.
-* **Generalization** — Performance on unseen prompts/tools.
+* **Accuracy** -  % of prompts where the agent picks correct tool(s).
+* **Steps to Success** -  Avg. number of steps in multi-step mode.
+* **Generalization** -  Performance on unseen prompts/tools.
