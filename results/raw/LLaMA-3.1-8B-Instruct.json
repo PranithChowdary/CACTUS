@@ -1,0 +1,781 @@
+[
+  {
+    "index": 0,
+    "query": "I want to plan a picnic. Please let me know the weather conditions for tomorrow and suggest some cheerful music to enhance the mood.",
+    "ground_truth": [
+      "MusicTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "MusicTool",
+      "WeatherTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 1,
+    "query": "I'm interested in a career change. Can you suggest any relevant job opportunities that align with my background in computer science and the skills I acquired through an online course?",
+    "ground_truth": [
+      "CourseTool",
+      "JobTool"
+    ],
+    "predicted": [
+      "CourseTool",
+      "JobTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 2,
+    "query": "\"I'm looking for a budget-friendly accommodation in New York City. Can you provide me with a list of affordable hotels? Also, are there any nearby restaurants that offer vegetarian options?\"",
+    "ground_truth": [
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "predicted": [
+      "HousePurchasingTool",
+      "ProductSearch",
+      "RepoTool",
+      "ResearchFinder",
+      "ResearchHelper",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "f1": 0.4444444444444445,
+    "success": 0.0
+  },
+  {
+    "index": 3,
+    "query": "I'm planning a trip to the beach this weekend. Can you find out if there are any discounts on beach umbrellas and also provide the weather forecast for Saturday?",
+    "ground_truth": [
+      "Discount",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "Discount",
+      "TripTool",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 4,
+    "query": "Are there any severe weather warnings in effect right now and can you find news articles about recent weather-related incidents?",
+    "ground_truth": [
+      "NewsTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "NewsTool",
+      "WeatherTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 5,
+    "query": "I'm interested in learning about the latest advancements in artificial intelligence. Please provide me with news articles on this topic and suggest any relevant research papers.",
+    "ground_truth": [
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "predicted": [
+      "NewsTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 6,
+    "query": "I need a new camera. Can you recommend any discounted options with good reviews?",
+    "ground_truth": [
+      "Discount",
+      "ProductSearch"
+    ],
+    "predicted": [
+      "Discount",
+      "ProductSearch",
+      "ResearchFinder"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 7,
+    "query": "What are the top tourist attractions in New York City? Can you provide me with some PDF guides for further information?",
+    "ground_truth": [
+      "PDF&URLTool",
+      "TripAdviceTool"
+    ],
+    "predicted": [
+      "PDF&URLTool",
+      "ResearchFinder",
+      "ResearchHelper",
+      "TripTool"
+    ],
+    "f1": 0.3333333333333333,
+    "success": 0.0
+  },
+  {
+    "index": 8,
+    "query": "What are the top-performing stocks in the finance industry that have contributed significantly to open-source projects on GitHub?",
+    "ground_truth": [
+      "FinanceTool",
+      "RepoTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "RepoTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 9,
+    "query": "I'm curious about the correlation between air pollution and respiratory diseases. Can you find recent studies on this topic and also provide me with the current air quality index in my city?",
+    "ground_truth": [
+      "ResearchFinder",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "NewsTool",
+      "ResearchFinder",
+      "ResearchHelper",
+      "WeatherTool"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 10,
+    "query": "\"I'm looking for a course on digital marketing. Can you recommend any discounted options?\"",
+    "ground_truth": [
+      "CourseTool",
+      "Discount"
+    ],
+    "predicted": [
+      "CourseTool",
+      "Discount"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 11,
+    "query": "Can you provide some research articles on renewable energy sources? Also, I'm interested in purchasing eco-friendly products related to energy conservation. Any recommendations?",
+    "ground_truth": [
+      "ProductSearch",
+      "ResearchHelper"
+    ],
+    "predicted": [
+      "HousePurchasingTool",
+      "ProductSearch",
+      "ResearchFinder"
+    ],
+    "f1": 0.4,
+    "success": 0.0
+  },
+  {
+    "index": 12,
+    "query": "I'm going on a road trip tomorrow. Can you tell me the weather forecast for the next few days and recommend some energetic music for the journey?",
+    "ground_truth": [
+      "MusicTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "MusicTool",
+      "WeatherTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 13,
+    "query": "How has the recent economic recession affected the profitability of the banking sector?",
+    "ground_truth": [
+      "FinanceTool",
+      "ResearchFinder"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "RepoTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 14,
+    "query": "\"I need information about local job vacancies and popular tourist attractions in the area.\"",
+    "ground_truth": [
+      "JobTool",
+      "TripTool"
+    ],
+    "predicted": [
+      "JobTool",
+      "TripTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 15,
+    "query": "What is the current temperature in San Francisco? Also, I'm curious if there have been any scientific studies on the relationship between temperature and air pollution levels in urban areas.",
+    "ground_truth": [
+      "ResearchHelper",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "ResearchFinder",
+      "WeatherTool"
+    ],
+    "f1": 0.5,
+    "success": 0.0
+  },
+  {
+    "index": 16,
+    "query": "Can you give me some tips on backpacking in Europe? I'd also like to know if there are any recommended restaurants in the cities I plan to visit. Can you provide me with a PDF guide and some trip advice?",
+    "ground_truth": [
+      "PDF&URLTool",
+      "TripAdviceTool"
+    ],
+    "predicted": [
+      "PDF&URLTool",
+      "ProductSearch",
+      "ResearchHelper",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "f1": 0.5714285714285715,
+    "success": 0.0
+  },
+  {
+    "index": 17,
+    "query": "How much money will I need for a two-week vacation in Paris, including flights and accommodation?",
+    "ground_truth": [
+      "FinanceTool",
+      "TripTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "TripAdviceTool",
+      "TripTool",
+      "WeatherTool"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 18,
+    "query": "Can you tell me the current temperature in my city and also provide me with an overview of the stock market?",
+    "ground_truth": [
+      "FinanceTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "WeatherTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 19,
+    "query": "\"Can you recommend a PDF where I can find sheet music for popular songs?\"",
+    "ground_truth": [
+      "MusicTool",
+      "PDF&URLTool"
+    ],
+    "predicted": [
+      "MusicTool",
+      "PDF&URLTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 20,
+    "query": "Find me the latest news about climate change, and suggest some ambient music that complements the topic.",
+    "ground_truth": [
+      "MusicTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "MusicTool",
+      "NewsTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 21,
+    "query": "Can you tell me the current temperature in my city and how it will affect the stock market?",
+    "ground_truth": [
+      "FinanceTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "ResearchHelper",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 22,
+    "query": "Could you analyze the financial performance of this company based on the data in this PDF? Also, use the FinanceTool to find its debt-to-equity ratio.",
+    "ground_truth": [
+      "FinanceTool",
+      "PDF&URLTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "PDF&URLTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 23,
+    "query": "Can you provide me with the latest news on cryptocurrency and any potential financial implications?",
+    "ground_truth": [
+      "FinanceTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "NewsTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 24,
+    "query": "I'm located in Sydney, Australia and I'm experiencing a heatwave. Can you give me some suggestions on how to stay cool during extreme temperatures? Additionally, I would like to know if there have been any research papers published on the correlation between heatwaves and climate change.",
+    "ground_truth": [
+      "ResearchHelper",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "ResearchFinder",
+      "ResearchHelper",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 25,
+    "query": "Can you show me available houses within my budget and provide me with a discount estimate?",
+    "ground_truth": [
+      "Discount",
+      "HousePurchasingTool"
+    ],
+    "predicted": [
+      "Discount",
+      "HousePurchasingTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 26,
+    "query": "I want to know about the latest developments in renewable energy. Please provide some news articles that highlight recent advancements in solar and wind technologies.",
+    "ground_truth": [
+      "NewsTool",
+      "ResearchHelper"
+    ],
+    "predicted": [
+      "NewsTool",
+      "PDF&URLTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 27,
+    "query": "I need to buy a new pair of running shoes. Can you recommend some popular options and also let me know if it's going to rain tomorrow?",
+    "ground_truth": [
+      "ProductSearch",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "ProductSearch",
+      "ResearchFinder",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 28,
+    "query": "I'm looking for job opportunities in the healthcare sector in Los Angeles. Could you also give me some news articles about recent advancements in medical technology?",
+    "ground_truth": [
+      "JobTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "JobTool",
+      "NewsTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 29,
+    "query": "I need to analyze the financial performance of Amazon and understand any recent news or events that might have influenced its stock price.",
+    "ground_truth": [
+      "FinanceTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "NewsTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 30,
+    "query": "I'm interested in buying a house, but I need to be aware of the current market trends. Can you provide me with news articles covering the latest real estate developments, and then recommend some neighborhoods with affordable housing options?",
+    "ground_truth": [
+      "HousePurchasingTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "HousePurchasingTool",
+      "NewsTool",
+      "RepoTool",
+      "ResearchFinder",
+      "TripAdviceTool"
+    ],
+    "f1": 0.5714285714285715,
+    "success": 0.0
+  },
+  {
+    "index": 31,
+    "query": "Is there a PDF document available on the effects of climate change on marine ecosystems? If so, could you also suggest some recent research papers in this area?",
+    "ground_truth": [
+      "PDF&URLTool",
+      "ResearchFinder"
+    ],
+    "predicted": [
+      "PDF&URLTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 32,
+    "query": "Can you tell me if there are any discounts available for outdoor furniture in my area? Also, what is the weather forecast for tomorrow?",
+    "ground_truth": [
+      "Discount",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "Discount",
+      "ProductSearch",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 33,
+    "query": "What's the weather like today in Sydney? Additionally, can you find any academic articles about the impact of weather patterns on agricultural crops?",
+    "ground_truth": [
+      "ResearchFinder",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "ResearchFinder",
+      "WeatherTool"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 34,
+    "query": "\"I need to stay up-to-date with current events and also improve my writing skills. Any suggestions on courses that cover both topics?\"",
+    "ground_truth": [
+      "CourseTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "CourseTool",
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 35,
+    "query": "Can you show me a list of houses for sale in my city with a backyard and sunny weather?",
+    "ground_truth": [
+      "HousePurchasingTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "HousePurchasingTool",
+      "RepoTool",
+      "ResearchFinder",
+      "WeatherTool"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 36,
+    "query": "I want to pursue a career in graphic design. Can you suggest any online courses where I can learn the necessary design software and also provide information on job prospects in this field?",
+    "ground_truth": [
+      "CourseTool",
+      "JobTool"
+    ],
+    "predicted": [
+      "CourseTool",
+      "JobTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 37,
+    "query": "Can you recommend me a course on machine learning? I want to learn more about the topic, and also have access to relevant PDFs or URLs for further reading.",
+    "ground_truth": [
+      "CourseTool",
+      "PDF&URLTool"
+    ],
+    "predicted": [
+      "CourseTool",
+      "PDF&URLTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 38,
+    "query": "\"I need to find a restaurant that offers vegetarian options and is within walking distance from the museum. Any recommendations?\"",
+    "ground_truth": [
+      "Discount",
+      "TripAdviceTool"
+    ],
+    "predicted": [
+      "ProductSearch",
+      "ResearchFinder",
+      "ResearchHelper",
+      "TripTool"
+    ],
+    "f1": 0,
+    "success": 0.0
+  },
+  {
+    "index": 39,
+    "query": "Can you give me an overview of the current economic situation around the world, including any related research papers?",
+    "ground_truth": [
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "predicted": [
+      "FinanceTool",
+      "NewsTool",
+      "PDF&URLTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.5714285714285715,
+    "success": 0.0
+  },
+  {
+    "index": 40,
+    "query": "Are there any discounts or promotions on organic food products available? Also, could you provide me with some research on the long-term health effects of consuming organic food?",
+    "ground_truth": [
+      "Discount",
+      "ResearchHelper"
+    ],
+    "predicted": [
+      "Discount",
+      "ProductSearch",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.6666666666666666,
+    "success": 0.0
+  },
+  {
+    "index": 41,
+    "query": "I'm in the mood for some relaxing music while I work. Can you suggest a playlist for concentration? Additionally, I need a laptop with good battery life for long working hours.",
+    "ground_truth": [
+      "MusicTool",
+      "ProductSearch"
+    ],
+    "predicted": [
+      "MusicTool",
+      "ProductSearch"
+    ],
+    "f1": 1.0,
+    "success": 1.0
+  },
+  {
+    "index": 42,
+    "query": "I'm planning a trip to Hawaii. Can you recommend some popular tourist attractions and what the weather is usually like there?",
+    "ground_truth": [
+      "TripAdviceTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "TripTool",
+      "WeatherTool"
+    ],
+    "f1": 0.5,
+    "success": 0.0
+  },
+  {
+    "index": 43,
+    "query": "\"Which cities have seen the highest increase in property prices over the last year? Additionally, can you provide news articles about these cities?\"",
+    "ground_truth": [
+      "HousePurchasingTool",
+      "NewsTool"
+    ],
+    "predicted": [
+      "HousePurchasingTool",
+      "NewsTool",
+      "ResearchFinder"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 44,
+    "query": "What is the average temperature in my area, and how does it affect house prices?",
+    "ground_truth": [
+      "HousePurchasingTool",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "HousePurchasingTool",
+      "ResearchHelper",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 45,
+    "query": "Hey, I need to buy a new laptop. Can you check for any ongoing discounts on laptops and let me know if it will be sunny tomorrow?",
+    "ground_truth": [
+      "Discount",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "Discount",
+      "ProductSearch",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 46,
+    "query": "\"I'm planning a trip to a city with a vibrant music scene. Can you recommend any popular music festivals to attend?\"",
+    "ground_truth": [
+      "MusicTool",
+      "TripTool"
+    ],
+    "predicted": [
+      "MusicTool",
+      "NewsTool",
+      "ResearchFinder",
+      "ResearchHelper",
+      "TripTool"
+    ],
+    "f1": 0.5714285714285715,
+    "success": 0.0
+  },
+  {
+    "index": 47,
+    "query": "I need recommendations for beginner-friendly art courses. Additionally, can you suggest any art galleries or museums that I can visit to explore different art styles?",
+    "ground_truth": [
+      "CourseTool",
+      "TripAdviceTool"
+    ],
+    "predicted": [
+      "CourseTool",
+      "ProductSearch",
+      "ResearchFinder",
+      "ResearchHelper",
+      "TripAdviceTool",
+      "TripTool"
+    ],
+    "f1": 0.5,
+    "success": 0.0
+  },
+  {
+    "index": 48,
+    "query": "What is the forecast for tomorrow? Could you also suggest a reliable sunscreen for the expected high UV index?",
+    "ground_truth": [
+      "ProductSearch",
+      "WeatherTool"
+    ],
+    "predicted": [
+      "ProductSearch",
+      "TripAdviceTool",
+      "WeatherTool"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 49,
+    "query": "I need information about job opportunities in the field of data science and analytics. Can you provide me with a list of URLs and relevant PDFs that can help me explore this?",
+    "ground_truth": [
+      "JobTool",
+      "PDF&URLTool"
+    ],
+    "predicted": [
+      "JobTool",
+      "PDF&URLTool",
+      "ResearchFinder"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  },
+  {
+    "index": 50,
+    "query": "\"Can you help me find a course on artificial intelligence and suggest some research papers related to the topic?\"",
+    "ground_truth": [
+      "CourseTool",
+      "ResearchFinder"
+    ],
+    "predicted": [
+      "CourseTool",
+      "ResearchFinder",
+      "ResearchHelper"
+    ],
+    "f1": 0.8,
+    "success": 0.0
+  }
+]

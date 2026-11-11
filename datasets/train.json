@@ -1,0 +1,1590 @@
+[
+    {
+        "Query": "\"I'm planning to purchase a new phone but I'm not sure which one offers the best value. Can you find any research comparing the prices and features of different smartphones in the market, along with any available discounts?\"",
+        "Tool": "Discount,ResearchHelper"
+    },
+    {
+        "Query": "What are some top destinations for a beach vacation and can you provide me with the weather forecast for those places?",
+        "Tool": "WeatherTool,TripAdviceTool"
+    },
+    {
+        "Query": "I'm interested in buying a house, can you tell me the average discount available in the market?",
+        "Tool": "HousePurchasingTool,Discount"
+    },
+    {
+        "Query": "What's the weather like in Paris right now? Also, could you give me an update on the performance of my stocks?",
+        "Tool": "WeatherTool,FinanceTool"
+    },
+    {
+        "Query": "What are some must-visit places in Europe for backpackers?",
+        "Tool": "TripTool,TripAdviceTool"
+    },
+    {
+        "Query": "\"Can you help me find research papers on the current trends in real estate market and also provide me with a list of affordable houses in the same area?\"",
+        "Tool": "HousePurchasingTool,ResearchFinder"
+    },
+    {
+        "Query": "What are the recent economic trends and how are they impacting the stock market?",
+        "Tool": "NewsTool,FinanceTool"
+    },
+    {
+        "Query": "Can you give me the latest news on climate change and any scientific studies related to it?",
+        "Tool": "NewsTool,ResearchHelper"
+    },
+    {
+        "Query": "\"I have a PDF file with a list of products, but the prices are outdated. Can you extract the URLs of the websites from the file so that I can check the current prices, and also let me know if any discounts are available now?\"",
+        "Tool": "PDF&URLTool,Discount"
+    },
+    {
+        "Query": "I need information on the benefits of mindfulness meditation for stress management. Can you give me some research papers that explore the relationship between mindfulness and stress reduction?",
+        "Tool": "ResearchHelper,NewsTool"
+    },
+    {
+        "Query": "I need to know the current temperature in my city and also suggest some neighborhoods with affordable housing options.",
+        "Tool": "WeatherTool,HousePurchasingTool"
+    },
+    {
+        "Query": "Can you provide me with recent studies on the effects of pollution on human health? Also, I'm planning a trip next week, so could you tell me what the weather will be like in that city?",
+        "Tool": "ResearchHelper,WeatherTool"
+    },
+    {
+        "Query": "I'm planning a trip to Sydney. Can you recommend some budget-friendly accommodation options? Additionally, do you know if there are any cooking classes available in the city?",
+        "Tool": "TripAdviceTool,CourseTool"
+    },
+    {
+        "Query": "Can you help me find a job in New York City? I want to know what the weather is like there before I make a decision.",
+        "Tool": "JobTool,WeatherTool"
+    },
+    {
+        "Query": "I'm planning a vacation to Italy and want to learn more about the local cuisine. Is there a PDF guide available that includes traditional Italian recipes along with a curated list of Italian music to create an authentic atmosphere while cooking?",
+        "Tool": "PDF&URLTool,MusicTool"
+    },
+    {
+        "Query": "I'm interested in learning about interior design principles. Can you suggest a course for that and also help me find houses that have a modern interior design style?",
+        "Tool": "HousePurchasingTool,CourseTool"
+    },
+    {
+        "Query": "I'm planning a trip next week. Can you give me the weather conditions for my destination? Additionally, can you check if there are any discounted hotel rates available?",
+        "Tool": "WeatherTool,Discount"
+    },
+    {
+        "Query": "\"I'm going on a road trip and would like to know the must-visit spots on my route. Additionally, could you create a playlist of energetic music that will keep me pumped up throughout the journey?\"",
+        "Tool": "MusicTool,TripAdviceTool"
+    },
+    {
+        "Query": "What's the weather like in Paris next week? Can you also suggest some popular tourist attractions I should visit during my trip?",
+        "Tool": "WeatherTool,TripTool"
+    },
+    {
+        "Query": "I want to plan a trip to a city with affordable housing options. Can you suggest any destinations with low housing prices? ",
+        "Tool": "HousePurchasingTool,TripTool"
+    },
+    {
+        "Query": "I want to compare prices of various products mentioned in a PDF document by considering available discounts. Can you suggest an approach?",
+        "Tool": "Discount,PDF&URLTool"
+    },
+    {
+        "Query": "Can you tell me the current weather in San Francisco and also recommend some books about weather phenomena?",
+        "Tool": "WeatherTool,ResearchFinder"
+    },
+    {
+        "Query": "I'm attending a career fair next week and I want to gather information about various industries. Could you give me a collection of URLs and PDFs about different industries along with job opportunities in each of them?",
+        "Tool": "PDF&URLTool,JobTool"
+    },
+    {
+        "Query": "\"What are the best hiking trails in California? I also want to know if there are any recent news updates about the state.\"",
+        "Tool": "TripTool,NewsTool"
+    },
+    {
+        "Query": "What are the top-rated real estate courses available? And can you also recommend some houses in the same area?",
+        "Tool": "CourseTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"I need research papers on data privacy and security. Additionally, I would like to know if there are any courses that address this topic.\"",
+        "Tool": "ResearchFinder,CourseTool"
+    },
+    {
+        "Query": "What are some popular data visualization libraries in Python, and can you suggest any open-source projects on GitHub that utilize them?",
+        "Tool": "CourseTool,RepoTool"
+    },
+    {
+        "Query": "I'm looking for a research paper on renewable energy sources. Can you provide me with a link to a PDF that contains information about the history of renewable energy?",
+        "Tool": "PDF&URLTool,ResearchFinder"
+    },
+    {
+        "Query": "\"Are there any articles comparing the advantages and disadvantages of different programming languages?\"",
+        "Tool": "ResearchHelper,ResearchFinder"
+    },
+    {
+        "Query": "I need to understand statistical analysis and its applications better. Is there any course that can teach me the fundamentals and also provide supplementary material like PDFs or URLs for further exploration?",
+        "Tool": "CourseTool,PDF&URLTool"
+    },
+    {
+        "Query": "\"I need information on the latest developments in cybersecurity. Please provide me with research papers related to cybersecurity and let me know if there are any job openings in this field.\"",
+        "Tool": "ResearchFinder,JobTool"
+    },
+    {
+        "Query": "\"I need information on the psychological effects of social media usage and recommend some scenic hiking trails near popular cities.\"",
+        "Tool": "ResearchFinder,TripTool"
+    },
+    {
+        "Query": "Are there any storms expected in the coming days and what courses would you recommend that can be done indoors?",
+        "Tool": "WeatherTool,CourseTool"
+    },
+    {
+        "Query": "\"I want to improve my knowledge of data analysis techniques. Please recommend a course on data analysis and provide some research papers in the field.\"",
+        "Tool": "CourseTool,ResearchFinder"
+    },
+    {
+        "Query": "\"Can you tell me how much I can afford to spend on a house given my income and monthly expenses?\"",
+        "Tool": "FinanceTool,HousePurchasingTool"
+    },
+    {
+        "Query": "I'm interested in buying a house in a city known for its tourist attractions. Can you provide me with options that have both affordable housing and popular landmarks? ",
+        "Tool": "HousePurchasingTool,TripTool"
+    },
+    {
+        "Query": "I need to know the weather conditions for the next three days. Additionally, are there any news articles about extreme weather conditions lately?",
+        "Tool": "NewsTool,WeatherTool"
+    },
+    {
+        "Query": "Tell me about the top-rated laptops for gaming and also provide some news updates on any upcoming gaming events or tournaments.",
+        "Tool": "NewsTool,ProductSearch"
+    },
+    {
+        "Query": "Show me a comparison of the prices and user ratings for different smartphones available in the market, along with their quarterly sales data.",
+        "Tool": "FinanceTool,ProductSearch"
+    },
+    {
+        "Query": "\"Can you recommend any online courses on the latest news and journalism techniques?\"",
+        "Tool": "NewsTool,CourseTool"
+    },
+    {
+        "Query": "Can you tell me what the weather will be like tomorrow in New York City? Also, could you provide any research findings on the impact of weather on people's moods?",
+        "Tool": "WeatherTool,ResearchHelper"
+    },
+    {
+        "Query": "What is the weather like in New York City for the next week, and can you provide me with a URL link to view the detailed forecast?",
+        "Tool": "WeatherTool,PDF&URLTool"
+    },
+    {
+        "Query": "I need assistance in finding information about the history of artificial intelligence. Could you help me by suggesting relevant research papers and articles, as well as any PDF links available?",
+        "Tool": "PDF&URLTool,ResearchHelper"
+    },
+    {
+        "Query": "Give me a summary of the most recent news articles regarding interest rates and their impact on the real estate market. After that, can you suggest some websites where I can search for available houses within my budget?",
+        "Tool": "NewsTool,HousePurchasingTool"
+    },
+    {
+        "Query": "I want to learn about sustainable architecture. Could you recommend a course on that topic and also show me houses for sale that have eco-friendly features?",
+        "Tool": "HousePurchasingTool,CourseTool"
+    },
+    {
+        "Query": "I'm planning a trip to [Destination] next month. Can you recommend a hotel that's both close to tourist attractions and has good weather around that time?",
+        "Tool": "TripAdviceTool,WeatherTool"
+    },
+    {
+        "Query": "Can you help me find a job in a city with affordable housing options?",
+        "Tool": "HousePurchasingTool,JobTool"
+    },
+    {
+        "Query": "\"Can you help me find recent news articles about climate change and provide me with their sources?\"",
+        "Tool": "NewsTool,PDF&URLTool"
+    },
+    {
+        "Query": "\"I'm looking to buy a house within a certain budget. Can you suggest some cities with good job opportunities?\"",
+        "Tool": "JobTool,HousePurchasingTool"
+    },
+    {
+        "Query": "Can you provide me with the weather forecast for tomorrow and suggest some indoor job options?",
+        "Tool": "WeatherTool,JobTool"
+    },
+    {
+        "Query": "What are some popular interior design trends that can increase the value of a property? Can you also provide me with some resources to further explore this topic?",
+        "Tool": "ResearchFinder,HousePurchasingTool"
+    },
+    {
+        "Query": "\"What is the current housing market trend and how does it affect my investment portfolio?\"",
+        "Tool": "FinanceTool,HousePurchasingTool"
+    },
+    {
+        "Query": "What are some recent studies on the use of artificial intelligence in healthcare? Specifically, I'd like to learn about how AI is being utilized in diagnosis and treatment processes.",
+        "Tool": "ResearchHelper,NewsTool"
+    },
+    {
+        "Query": "I need recommendations for a family trip to a national park. Can you suggest some kid-friendly activities and also provide me with the park's PDF guide?",
+        "Tool": "TripAdviceTool,PDF&URLTool"
+    },
+    {
+        "Query": "I'm interested in learning about the current job market trends for cybersecurity professionals. Additionally, could you show me any news updates highlighting major data breaches?",
+        "Tool": "JobTool,NewsTool"
+    },
+    {
+        "Query": "I need to relocate to a city with better job prospects. Can you provide me with a list of cities with great job opportunities along with their weather forecast for the next week?",
+        "Tool": "JobTool,WeatherTool"
+    },
+    {
+        "Query": "I'm interested in learning about recent developments in renewable energy. Please show me relevant GitHub repositories and any latest news articles on the topic.",
+        "Tool": "RepoTool,NewsTool"
+    },
+    {
+        "Query": "\"I need information about the latest advancements in artificial intelligence. Additionally, can you recommend any online courses that cover advanced AI concepts?\"",
+        "Tool": "CourseTool,NewsTool"
+    },
+    {
+        "Query": "Give me recent news updates on renewable energy, and also recommend me some job openings in the sustainable energy sector.",
+        "Tool": "NewsTool,JobTool"
+    },
+    {
+        "Query": "Can you suggest any tourist attractions near Paris with good weather this weekend?",
+        "Tool": "TripTool,WeatherTool"
+    },
+    {
+        "Query": "\"What are the best stocks for long-term investment and how can I plan my travel budget wisely?\"",
+        "Tool": "TripAdviceTool,FinanceTool"
+    },
+    {
+        "Query": "I need a new pair of running shoes for marathon training. Can you recommend some lightweight and breathable options? Also, provide me with information on the latest research regarding the benefits of lightweight shoes for marathon runners.",
+        "Tool": "ProductSearch,ResearchFinder"
+    },
+    {
+        "Query": "\"I want to buy a house within a specific budget, can you find me news articles about affordable housing options?\"",
+        "Tool": "HousePurchasingTool,NewsTool"
+    },
+    {
+        "Query": "I'm looking for some travel advice. What are the top tourist destinations in London and are there any current discounts available for attractions or activities?",
+        "Tool": "Discount,TripAdviceTool"
+    },
+    {
+        "Query": "I want to relocate for work. Could you suggest some cities with good job prospects and reasonable housing prices?",
+        "Tool": "HousePurchasingTool,JobTool"
+    },
+    {
+        "Query": "Can you help me find job listings for software developers in New York City and also provide recent news articles related to the tech industry?",
+        "Tool": "JobTool,NewsTool"
+    },
+    {
+        "Query": "\"Which companies in this area offer good job opportunities and are located near popular tourist spots?\"",
+        "Tool": "TripTool,JobTool"
+    },
+    {
+        "Query": "Can you tell me the best time to visit Paris and what the weather will be like?",
+        "Tool": "WeatherTool,TripAdviceTool"
+    },
+    {
+        "Query": "I'm planning a road trip across the United States. Can you recommend scenic routes and attractions along the way?",
+        "Tool": "TripTool,TripAdviceTool"
+    },
+    {
+        "Query": "\"How much does a gallon of gasoline cost in California? Additionally, can you suggest some budget-friendly hotels in San Francisco?\"",
+        "Tool": "FinanceTool,TripTool"
+    },
+    {
+        "Query": "I'm looking for trending news articles in the tech industry, and also recommend me some music to listen to while I read them.",
+        "Tool": "MusicTool,NewsTool"
+    },
+    {
+        "Query": "Can you find me a product that is similar to the one mentioned in this PDF document?",
+        "Tool": "ProductSearch,PDF&URLTool"
+    },
+    {
+        "Query": "I'm interested in learning more about programming languages. Can you recommend me some reliable URLs and PDF resources for beginners, as well as provide job listings for programming positions?",
+        "Tool": "PDF&URLTool,JobTool"
+    },
+    {
+        "Query": "\"Can you find me news articles about the current housing market trends?\"",
+        "Tool": "HousePurchasingTool,NewsTool"
+    },
+    {
+        "Query": "I'm traveling to a foreign country and I need some advice on local customs and etiquette. Can you also provide me with a PDF guide that includes popular sightseeing spots and their URLs?",
+        "Tool": "TripAdviceTool,PDF&URLTool"
+    },
+    {
+        "Query": "I'm writing a thesis on renewable energy sources. Can you suggest some reliable websites and research materials that discuss the economic benefits of solar energy? Additionally, if there are any relevant PDF documents, please share the links as well.",
+        "Tool": "PDF&URLTool,ResearchHelper"
+    },
+    {
+        "Query": "\"Can you show me discounted dresses that would be suitable for a cocktail party?\"",
+        "Tool": "Discount,ProductSearch"
+    },
+    {
+        "Query": "What is the weather forecast for tomorrow and are there any online courses available for that day?",
+        "Tool": "WeatherTool,CourseTool"
+    },
+    {
+        "Query": "What is the current temperature in my city? I also want to know if there are any recent news articles about the weather.",
+        "Tool": "NewsTool,WeatherTool"
+    },
+    {
+        "Query": "\"I'm interested in learning about classical composers. Could you recommend a music course that includes interactive quizzes?\"",
+        "Tool": "MusicTool,CourseTool"
+    },
+    {
+        "Query": "I need information about the top trending repositories on GitHub and any news articles related to artificial intelligence advancements.",
+        "Tool": "NewsTool,RepoTool"
+    },
+    {
+        "Query": "I'm looking for recent developments in artificial intelligence and any news articles written about its impact on society.",
+        "Tool": "NewsTool,ResearchHelper"
+    },
+    {
+        "Query": "\"I'm planning a trip to a new city. Can you suggest some affordable neighborhoods to stay in and also recommend popular tourist attractions nearby?\"",
+        "Tool": "HousePurchasingTool,TripAdviceTool"
+    },
+    {
+        "Query": "I'm looking for news updates on the current market trends as well as any potential discounts or offers.",
+        "Tool": "NewsTool,Discount"
+    },
+    {
+        "Query": "Can you give me an overview of the stock market trends, and suggest some upbeat music to listen to while analyzing the market?",
+        "Tool": "FinanceTool,MusicTool"
+    },
+    {
+        "Query": "\"I want to buy discounted music albums and also discover new artists. Can you provide me with a list of recommended albums that are currently on sale?\"",
+        "Tool": "MusicTool,Discount"
+    },
+    {
+        "Query": "Are there any discounted courses on artificial intelligence? Also, can you recommend any additional tools or resources to enhance my understanding in this subject?",
+        "Tool": "CourseTool,Discount"
+    },
+    {
+        "Query": "I want to learn more about the concept of diversification in investment. Can you provide me with a definition and explain its importance in reducing risk in a portfolio?",
+        "Tool": "FinanceTool,ResearchHelper"
+    },
+    {
+        "Query": "I'm interested in exploring the effects of social media on mental health, can you help me find relevant studies and suggest strategies to maintain a healthy online presence?",
+        "Tool": "ResearchFinder,ResearchHelper"
+    },
+    {
+        "Query": "Can you help me find information on the average home prices and nearby amenities in a specific neighborhood?",
+        "Tool": "HousePurchasingTool,ResearchHelper"
+    },
+    {
+        "Query": "\"What are the latest tech gadgets available in the market and where can I buy them?\"",
+        "Tool": "ProductSearch,NewsTool"
+    },
+    {
+        "Query": "\"I'm planning a trip to a city I've never been to before. Can you recommend any popular tourist attractions and also give me a playlist of local music to listen to while exploring?\"",
+        "Tool": "MusicTool,TripAdviceTool"
+    },
+    {
+        "Query": "Can you recommend any job opportunities in the hospitality industry in popular travel destinations?",
+        "Tool": "JobTool,TripAdviceTool"
+    },
+    {
+        "Query": "How can I calculate the compound interest of an investment over a period of time, and which financial courses would you suggest to improve my understanding of investments?",
+        "Tool": "CourseTool,FinanceTool"
+    },
+    {
+        "Query": "\"I'm looking for a comprehensive tutorial on web development. Is there a recommended course that also offers code samples on GitHub?\"",
+        "Tool": "RepoTool,CourseTool"
+    },
+    {
+        "Query": "What's the current temperature? Can you also suggest some relaxing music that complements the weather?",
+        "Tool": "WeatherTool,MusicTool"
+    },
+    {
+        "Query": "Can you help me find a laptop with good performance and within my budget?",
+        "Tool": "ProductSearch,FinanceTool"
+    },
+    {
+        "Query": "Can you suggest any discounts available for hotels in New York City? And also, can you sort them by customer reviews?",
+        "Tool": "Discount,TripTool"
+    },
+    {
+        "Query": "What are some popular career paths for individuals with a degree in psychology? Also, can you provide any research papers related to the career prospects in this field?",
+        "Tool": "JobTool,ResearchHelper"
+    },
+    {
+        "Query": "I have a presentation on the effects of climate change and I want to include some infographics. Can you assist me in finding a PDF with well-designed charts and also provide some uplifting background music to keep the audience engaged?",
+        "Tool": "PDF&URLTool,MusicTool"
+    },
+    {
+        "Query": "I'm planning to invest in mutual funds, can you explain how they work and recommend some background music for brainstorming my investment strategy?",
+        "Tool": "FinanceTool,MusicTool"
+    },
+    {
+        "Query": "Could you generate a PDF report comparing the weather patterns of two different cities for the next week?",
+        "Tool": "PDF&URLTool,WeatherTool"
+    },
+    {
+        "Query": "\"I want to learn about the latest advancements in technology and how it impacts the world. Could you recommend some courses or articles on this?\"",
+        "Tool": "NewsTool,CourseTool"
+    },
+    {
+        "Query": "How can I invest my savings wisely and also learn about financial planning?",
+        "Tool": "FinanceTool,CourseTool"
+    },
+    {
+        "Query": "I want to find a house in a city with a warm climate where I can go on beach vacations. Any recommendations? ",
+        "Tool": "HousePurchasingTool,TripTool"
+    },
+    {
+        "Query": "Can you recommend any courses that teach both accounting principles and investment strategies?",
+        "Tool": "FinanceTool,CourseTool"
+    },
+    {
+        "Query": "\"Can you recommend a hotel near the Eiffel Tower with good reviews? Also, how can I get there from the airport?\"",
+        "Tool": "TripAdviceTool,TripTool"
+    },
+    {
+        "Query": "Can you find me a course about data analysis with a discount?",
+        "Tool": "CourseTool,Discount"
+    },
+    {
+        "Query": "What are some affordable hotels in a city known for its vibrant music scene?",
+        "Tool": "TripAdviceTool,MusicTool"
+    },
+    {
+        "Query": "I'm interested in learning about breakthroughs in renewable energy sources. By the way, can you check if it will be sunny in my area for the next few days?",
+        "Tool": "ResearchHelper,WeatherTool"
+    },
+    {
+        "Query": "I'm interested in buying a new pair of running shoes. Can you find me a pair with a discount?",
+        "Tool": "ProductSearch,Discount"
+    },
+    {
+        "Query": "Is it going to rain tomorrow? If so, please check if there are any indoor activities or events happening nearby at discounted prices.",
+        "Tool": "WeatherTool,Discount"
+    },
+    {
+        "Query": "I need a comprehensive analysis of the market trends and financial indicators for a specific company. Can you provide me with that information?",
+        "Tool": "FinanceTool,ResearchFinder"
+    },
+    {
+        "Query": "I want to work remotely while traveling through Southeast Asia. Can you suggest some countries with good job prospects and also provide travel tips for that region?",
+        "Tool": "JobTool,TripAdviceTool"
+    },
+    {
+        "Query": "What are some recent breakthroughs in cancer research and any related scientific studies?",
+        "Tool": "NewsTool,ResearchHelper"
+    },
+    {
+        "Query": "Can you tell me if it will rain in London tomorrow? Also, suggest some popular cafes near the museums that I can visit.",
+        "Tool": "WeatherTool,TripTool"
+    },
+    {
+        "Query": "\"I want to improve my guitar skills and learn how to compose my own songs. Any music courses that offer both?\"",
+        "Tool": "MusicTool,CourseTool"
+    },
+    {
+        "Query": "I'm looking for information on the latest developments in quantum computing and any available products in the market. Can you assist with that?",
+        "Tool": "ResearchHelper,ProductSearch"
+    },
+    {
+        "Query": "I need to write a research paper on astrophysics. Could you suggest a website where I can find reliable information about black holes and also recommend some ambient music to help me concentrate while working?",
+        "Tool": "PDF&URLTool,MusicTool"
+    },
+    {
+        "Query": "\"I want to plan a trip to Bali. Can you suggest some popular attractions and the best time to visit? Additionally, what are the visa requirements for Indonesian tourists?\"",
+        "Tool": "TripAdviceTool,TripTool"
+    },
+    {
+        "Query": "What are the current trends in the finance industry, and are there any online courses available to learn about these trends?",
+        "Tool": "CourseTool,FinanceTool"
+    },
+    {
+        "Query": "I want to know the latest news about Tesla and how it has impacted the stock market.",
+        "Tool": "FinanceTool,NewsTool"
+    },
+    {
+        "Query": "\"I'm looking for recent news articles about the impact of climate change on the tourism industry. Could you provide some insights?\"",
+        "Tool": "NewsTool,TripAdviceTool"
+    },
+    {
+        "Query": "I'm looking for a romantic weekend getaway destination. Can you provide me with a list of beautiful coastal towns and resorts? Additionally, can you retrieve travel information from a specific URL I found?",
+        "Tool": "TripTool,PDF&URLTool"
+    },
+    {
+        "Query": "Is there any online retailer that offers a better price than the one mentioned in the PDF document I found?",
+        "Tool": "ProductSearch,PDF&URLTool"
+    },
+    {
+        "Query": "\"I want to learn about machine learning algorithms and their implementation. Do you have any online courses that include practical examples from GitHub repositories?\"",
+        "Tool": "RepoTool,CourseTool"
+    },
+    {
+        "Query": "\"I'm looking for a comprehensive review of machine learning algorithms. Can you assist me?\"",
+        "Tool": "ResearchHelper,ResearchFinder"
+    },
+    {
+        "Query": "I'm planning a vacation but I also need to manage my finances. Can you suggest some cost-effective travel tips and ways to save money during my trip?",
+        "Tool": "FinanceTool,TripAdviceTool"
+    },
+    {
+        "Query": "Can you find me a playlist of upbeat songs for my workout? Also, recommend some wireless headphones that are suitable for exercising.",
+        "Tool": "MusicTool,ProductSearch"
+    },
+    {
+        "Query": "Can you help me find job opportunities in the finance sector that offer a salary range between $70,000 and $90,000?",
+        "Tool": "JobTool,FinanceTool"
+    },
+    {
+        "Query": "I need assistance in accessing a specific PDF document related to the best hiking trails in national parks.",
+        "Tool": "PDF&URLTool,TripAdviceTool"
+    },
+    {
+        "Query": "What are the current job opportunities in the tech industry? Also, can you let me know if the weather will be suitable for outdoor activities this weekend?",
+        "Tool": "JobTool,WeatherTool"
+    },
+    {
+        "Query": "\"I'm interested in learning how to play the guitar. Can you suggest any beginner-friendly online courses that not only teach guitar techniques but also provide resources for practicing different music genres?\" ",
+        "Tool": "CourseTool,MusicTool"
+    },
+    {
+        "Query": "\"I want to know about the benefits of meditation but also find a scientific study that supports these claims. Can you assist me with finding news articles and any relevant research papers on this topic?\"",
+        "Tool": "NewsTool,PDF&URLTool"
+    },
+    {
+        "Query": "I need information on the average house prices in different neighborhoods, and also a PDF guide on how to negotiate house prices effectively.",
+        "Tool": "PDF&URLTool,HousePurchasingTool"
+    },
+    {
+        "Query": "I'm looking for a new career opportunity in the tech industry. Can you help me find job openings and let me know if any discounted training programs are available?",
+        "Tool": "JobTool,Discount"
+    },
+    {
+        "Query": "Can you provide me with the latest news headlines about technology and any relevant open-source projects?",
+        "Tool": "RepoTool,NewsTool"
+    },
+    {
+        "Query": "\"I want to understand the basics of data analysis. Can you suggest any online courses and a PDF tutorial on statistical analysis?\"",
+        "Tool": "PDF&URLTool,CourseTool"
+    },
+    {
+        "Query": "\"Can you help me find recent research papers on artificial intelligence?\"",
+        "Tool": "ResearchHelper,ResearchFinder"
+    },
+    {
+        "Query": "Can you calculate the compound interest for a $10,000 investment with a 5% rate for 5 years, and also check if there are any discounts available on shares of Company X?",
+        "Tool": "FinanceTool,Discount"
+    },
+    {
+        "Query": "I'm interested in reading news articles about recent cybersecurity breaches. Additionally, can you suggest any relevant repositories for improving online privacy?",
+        "Tool": "NewsTool,RepoTool"
+    },
+    {
+        "Query": "What is the weather forecast for this weekend? By the way, could you also find out if there are any ongoing promotions on electronics in local stores?",
+        "Tool": "WeatherTool,Discount"
+    },
+    {
+        "Query": "\"What are some recent news stories about the impact of music streaming on the industry, and can you suggest any songs or albums related to that topic?\"",
+        "Tool": "NewsTool,MusicTool"
+    },
+    {
+        "Query": "I want to improve my writing skills, particularly in creative writing. Can you recommend a course that offers interactive lessons, as well as includes PDFs or URLs with writing prompts and examples?",
+        "Tool": "CourseTool,PDF&URLTool"
+    },
+    {
+        "Query": "Can you provide me with recent research articles on climate change and its impact on marine ecosystems?",
+        "Tool": "ResearchFinder,ResearchHelper"
+    },
+    {
+        "Query": "Can you tell me the weather forecast for tomorrow and any news updates about travel disruptions due to bad weather?",
+        "Tool": "WeatherTool,NewsTool"
+    },
+    {
+        "Query": "What is the humidity level for tomorrow? And can you provide information on the real estate market in my city?",
+        "Tool": "WeatherTool,HousePurchasingTool"
+    },
+    {
+        "Query": "Give me an overview of trending open-source projects in web development, and provide me with any recent news articles related to those projects.",
+        "Tool": "RepoTool,NewsTool"
+    },
+    {
+        "Query": "Can you find me recent news articles about the latest sales and discounts available in online stores?",
+        "Tool": "NewsTool,Discount"
+    },
+    {
+        "Query": "What are some outdoor activities that I can do near the beach in Miami, and can you tell me if it's going to rain there tomorrow?",
+        "Tool": "TripTool,WeatherTool"
+    },
+    {
+        "Query": "I need information about the top-rated beaches in California and any upcoming music festivals.",
+        "Tool": "TripAdviceTool,NewsTool"
+    },
+    {
+        "Query": "What is the current temperature in my city? Can you also recommend a good jacket for this weather?",
+        "Tool": "WeatherTool,ProductSearch"
+    },
+    {
+        "Query": "\"Can you provide me with the PDF and relevant online resources about machine learning algorithms?\"",
+        "Tool": "PDF&URLTool,CourseTool"
+    },
+    {
+        "Query": "\"I need advice on buying a house in a particular city. Can you help me with information on the crime rates in different neighborhoods and also suggest nearby restaurants and shopping centers?\"",
+        "Tool": "HousePurchasingTool,TripAdviceTool"
+    },
+    {
+        "Query": "\"What is the price of Apple stock right now? And could you give me some recommendations for accommodations in Paris?\"",
+        "Tool": "FinanceTool,TripTool"
+    },
+    {
+        "Query": "I'm redecorating my living room. Could you please help me find any discounts on furniture and let me know if it will rain tomorrow?",
+        "Tool": "Discount,WeatherTool"
+    },
+    {
+        "Query": "Can you recommend any online courses for learning about natural language processing and a GitHub repository with relevant code examples?",
+        "Tool": "CourseTool,RepoTool"
+    },
+    {
+        "Query": "\"Can you recommend any online courses on artificial intelligence and provide links to relevant GitHub repositories?\"",
+        "Tool": "RepoTool,CourseTool"
+    },
+    {
+        "Query": "Can you tell me if it will rain today? Also, what are the average house prices in my neighborhood?",
+        "Tool": "WeatherTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"What are the top news headlines in the field of healthcare? Also, suggest some online courses that focus on healthcare management.\"",
+        "Tool": "CourseTool,NewsTool"
+    },
+    {
+        "Query": "\"Can you provide me with the current exchange rate between USD and EUR? Also, can you tell me which airlines offer flights from New York to London?\"",
+        "Tool": "FinanceTool,TripTool"
+    },
+    {
+        "Query": "\"I need a comprehensive list of top trending news topics and also recommend some new music releases based on those topics.\"",
+        "Tool": "NewsTool,MusicTool"
+    },
+    {
+        "Query": "Can you tell me if there will be any discounts at my favorite clothing store tomorrow? Also, can you let me know how the weather will be?",
+        "Tool": "WeatherTool,Discount"
+    },
+    {
+        "Query": "Can you find scholarly articles discussing the use of artificial intelligence in healthcare and provide the corresponding PDFs or URLs?",
+        "Tool": "ResearchFinder,PDF&URLTool"
+    },
+    {
+        "Query": "Can you provide me with news articles regarding the latest product launches and any promotional discounts offered by the brands?",
+        "Tool": "NewsTool,Discount"
+    },
+    {
+        "Query": "I need a comprehensive analysis of the impact of climate change on agriculture. Can you provide me with scientific research papers and relevant news articles?",
+        "Tool": "PDF&URLTool,NewsTool"
+    },
+    {
+        "Query": "Can you find recent articles about the impact of interest rate changes on the stock market and provide me with a summary?",
+        "Tool": "FinanceTool,ResearchHelper"
+    },
+    {
+        "Query": "I need a PDF document with information about the top travel destinations in Europe along with the weather conditions for each city mentioned.",
+        "Tool": "PDF&URLTool,WeatherTool"
+    },
+    {
+        "Query": "\"I'm interested in exploring a new city and potentially moving there. Can you give me an overview of popular neighborhoods, the average house prices, and also provide recommendations on must-visit tourist spots?\"",
+        "Tool": "HousePurchasingTool,TripAdviceTool"
+    },
+    {
+        "Query": "\"I want to explore research papers on human-computer interaction and also find related courses to deepen my understanding. Can you assist me with that?\"",
+        "Tool": "ResearchFinder,CourseTool"
+    },
+    {
+        "Query": "I have a specific job role in mind, can you assist me in finding relevant online resources to enhance my knowledge and skills in that field? ",
+        "Tool": "JobTool,PDF&URLTool"
+    },
+    {
+        "Query": "I want to learn about the stock market and also find the top-performing stocks in the market. Any suggestions?",
+        "Tool": "FinanceTool,CourseTool"
+    },
+    {
+        "Query": "I want to know the latest updates on the economy, particularly any news related to housing affordability. Additionally, could you give me some tips on purchasing a house in my area?",
+        "Tool": "NewsTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"What are some must-visit landmarks in Sydney? Can you recommend any guided tour packages that cover these attractions? Moreover, what is the weather like in Sydney during September?\"",
+        "Tool": "TripAdviceTool,TripTool"
+    },
+    {
+        "Query": "\"I want to find a PDF that explains the basics of music theory. Can you help me with that?\"",
+        "Tool": "MusicTool,PDF&URLTool"
+    },
+    {
+        "Query": "\"I'm looking for a course that teaches piano technique and also provides sheet music for popular songs. Any suggestions?\"",
+        "Tool": "MusicTool,CourseTool"
+    },
+    {
+        "Query": "Is it going to rain today and can you provide any news updates about local flooding?",
+        "Tool": "WeatherTool,NewsTool"
+    },
+    {
+        "Query": "I'm looking for a comprehensive guide on the legal process of buying a house, as well as a website that shows current property listings in my desired area.",
+        "Tool": "PDF&URLTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"I need some advice on where to go for my upcoming vacation. Can you suggest some off-the-beaten-path destinations and provide me with some background music that matches the vibe of those places?\"",
+        "Tool": "MusicTool,TripAdviceTool"
+    },
+    {
+        "Query": "Can you provide me with the historical price data for Company Z's stock over the past year? Also, let me know if there are any discounts available on purchasing the stock.",
+        "Tool": "FinanceTool,Discount"
+    },
+    {
+        "Query": "I need some help planning my itinerary for a trip to Paris. Can you give me recommendations for must-visit attractions and also suggest any nearby hotels with discounts?",
+        "Tool": "Discount,TripAdviceTool"
+    },
+    {
+        "Query": "I'm planning a beach vacation and I need tips on what to pack. Additionally, can you suggest some hotels with good ratings and provide me with URLs to book them?",
+        "Tool": "TripAdviceTool,PDF&URLTool"
+    },
+    {
+        "Query": "What is the weather forecast for tomorrow and how will it impact the financial markets?",
+        "Tool": "FinanceTool,WeatherTool"
+    },
+    {
+        "Query": "I'm interested in working for a tech company in California. Can you give me a list of available finance positions and also provide me with the market trends in the tech industry?",
+        "Tool": "JobTool,FinanceTool"
+    },
+    {
+        "Query": "I'm going on a business trip and need to manage my expenses. Can you recommend some cost-effective accommodation options and also provide insights on the local transportation fares?",
+        "Tool": "FinanceTool,TripAdviceTool"
+    },
+    {
+        "Query": "\"I want to plan a vacation in Paris, can you recommend some popular landmarks to visit and also provide me with the latest news about the city?\"",
+        "Tool": "TripTool,NewsTool"
+    },
+    {
+        "Query": "Can you tell me if it will rain in the next two days? Also, suggest some waterproof hiking boots for such weather conditions.",
+        "Tool": "WeatherTool,ProductSearch"
+    },
+    {
+        "Query": "Can you find me the latest news about upcoming sales and discount offers?",
+        "Tool": "Discount,NewsTool"
+    },
+    {
+        "Query": "\"What are some must-visit places in South America known for their unique cuisine and local food experiences?\"",
+        "Tool": "NewsTool,TripAdviceTool"
+    },
+    {
+        "Query": "I want to learn more about the history and origins of jazz music. Can you provide me with research articles and also recommend some classic jazz albums to listen to?",
+        "Tool": "ResearchHelper,MusicTool"
+    },
+    {
+        "Query": "I want to improve my project management skills. Are there any courses available? Additionally, can you provide information about job prospects for project managers?",
+        "Tool": "JobTool,CourseTool"
+    },
+    {
+        "Query": "How does the current economic situation affect the investment opportunities in the technology industry? Can you provide me with some insights and recommendations on where to invest?",
+        "Tool": "ResearchHelper,FinanceTool"
+    },
+    {
+        "Query": "I am looking for a comprehensive guide on web development. Could you suggest a course that covers both the basics and advanced concepts, and also provide additional resources like PDFs or URLs for in-depth understanding?",
+        "Tool": "CourseTool,PDF&URLTool"
+    },
+    {
+        "Query": "I need help finding a hotel near a major technology hub in California, as well as advice on the current job market in that area.",
+        "Tool": "TripAdviceTool,JobTool"
+    },
+    {
+        "Query": "How can I calculate the return on investment for a particular stock investment? Additionally, can you find and recommend job opportunities in the finance sector related to stock investment using JobTool?",
+        "Tool": "FinanceTool,JobTool"
+    },
+    {
+        "Query": "How can I determine if living in an area with job opportunities is financially feasible for me?",
+        "Tool": "HousePurchasingTool,JobTool"
+    },
+    {
+        "Query": "What is the current price of Tesla stocks and how does it compare to other electric vehicle companies?",
+        "Tool": "ProductSearch,FinanceTool"
+    },
+    {
+        "Query": "Can you recommend a beginner's online course for learning programming, and will it be affected by the weather? ",
+        "Tool": "CourseTool,WeatherTool"
+    },
+    {
+        "Query": "What is the average salary of financial analysts in the healthcare sector, and can you also recommend some job openings in that field?",
+        "Tool": "JobTool,FinanceTool"
+    },
+    {
+        "Query": "\"I need a new smartphone with a large screen. Are there any discounted options available?\"",
+        "Tool": "Discount,ProductSearch"
+    },
+    {
+        "Query": "\"I'm looking for a new song to add to my playlist. Can you recommend a discount on a popular music streaming service?\"",
+        "Tool": "Discount,MusicTool"
+    },
+    {
+        "Query": "\"I'm planning a trip to Paris. Can you suggest some attractions and also let me know if there are any discounts available?\"",
+        "Tool": "TripAdviceTool,Discount"
+    },
+    {
+        "Query": "Can you suggest some popular destinations for a family vacation?",
+        "Tool": "TripTool,TripAdviceTool"
+    },
+    {
+        "Query": "I'm interested in understanding the latest advancements in quantum computing. Can you provide me with research papers or articles on this topic, along with PDF links for further reading?",
+        "Tool": "PDF&URLTool,ResearchHelper"
+    },
+    {
+        "Query": "Find me news articles about the latest updates on COVID-19 research and also recommend popular repositories related to vaccine development.",
+        "Tool": "NewsTool,RepoTool"
+    },
+    {
+        "Query": "Which areas in my city have the lowest humidity, and are there any affordable houses available there?",
+        "Tool": "HousePurchasingTool,WeatherTool"
+    },
+    {
+        "Query": "Can you help me find the best course to learn web development and suggest me some affordable hotels near the course location?",
+        "Tool": "CourseTool,TripTool"
+    },
+    {
+        "Query": "How can I find the trending open-source projects related to blockchain and cryptocurrencies with the highest financial growth rate?",
+        "Tool": "RepoTool,FinanceTool"
+    },
+    {
+        "Query": "What is the stock price of a renewable energy company and how does it correlate with weather patterns?",
+        "Tool": "FinanceTool,WeatherTool"
+    },
+    {
+        "Query": "I'm planning a trip to Paris and I need some information about popular tourist attractions, such as the Eiffel Tower and Louvre Museum. Can you provide me with details on their historical significance and visiting hours? ",
+        "Tool": "TripTool,ResearchHelper"
+    },
+    {
+        "Query": "I need information on the role of exercise in reducing stress levels and improving overall well-being. Additionally, could you provide me with specific research studies that explore the relationship between physical activity and mental health?",
+        "Tool": "ResearchFinder,ResearchHelper"
+    },
+    {
+        "Query": "Can you help me find a research paper on the impact of inflation on stock market performance?",
+        "Tool": "FinanceTool,ResearchFinder"
+    },
+    {
+        "Query": "Can you extract the contact information of the individuals mentioned in this PDF? Additionally, use the FinanceTool to find the market capitalization of their respective companies.",
+        "Tool": "PDF&URLTool,FinanceTool"
+    },
+    {
+        "Query": "I want to take a vacation in Hawaii. Can you provide me with suggestions for popular beaches to visit and also recommend any discounted resorts in the area?",
+        "Tool": "Discount,TripAdviceTool"
+    },
+    {
+        "Query": "I'm planning a trip to Paris. Is there a way to find discounted flights to Paris? Additionally, could you help me find discounted hotels near the city center?",
+        "Tool": "Discount,TripTool"
+    },
+    {
+        "Query": "\"Can you recommend a music theory course that covers jazz harmony?\"",
+        "Tool": "MusicTool,CourseTool"
+    },
+    {
+        "Query": "\"I have been using a music composition software, but I need to enhance my skills. Do you know any online courses that can help me improve my composition techniques and utilize advanced features of the software effectively?\" ",
+        "Tool": "CourseTool,MusicTool"
+    },
+    {
+        "Query": "\"Could you suggest popular frameworks for deep learning and provide relevant tutorials?\"",
+        "Tool": "ResearchHelper,ResearchFinder"
+    },
+    {
+        "Query": "I would like to compare the financial performance of two companies. Can you provide me with the key financial metrics, such as revenue, profit margin, and debt ratio, for both companies using FinanceTool? Also, afterwards, can you suggest job opportunities at those companies using JobTool?",
+        "Tool": "FinanceTool,JobTool"
+    },
+    {
+        "Query": "Can you tell me the current weather conditions and recommend any outdoor courses nearby?",
+        "Tool": "WeatherTool,CourseTool"
+    },
+    {
+        "Query": "How can I find a cozy bed and breakfast near a music venue for my upcoming vacation?",
+        "Tool": "TripAdviceTool,MusicTool"
+    },
+    {
+        "Query": "\"What are the best neighborhoods to buy a house in right now? Also, can you show me recent news articles about these neighborhoods?\"",
+        "Tool": "HousePurchasingTool,NewsTool"
+    },
+    {
+        "Query": "I need information on the latest fashion trends, including clothes, accessories, and makeup. Additionally, can you show me any product recommendations related to these trends?",
+        "Tool": "NewsTool,ProductSearch"
+    },
+    {
+        "Query": "I'm interested in learning a new language. Please recommend a language learning course and also some popular travel destinations where I can practice speaking that language.",
+        "Tool": "CourseTool,TripAdviceTool"
+    },
+    {
+        "Query": "What are some popular tourist attractions in Paris? Also, are there any language courses available in the city?",
+        "Tool": "TripAdviceTool,CourseTool"
+    },
+    {
+        "Query": "Can you help me find recent research articles about climate change impacts on wildlife? I'm particularly interested in understanding the effects on biodiversity and ecosystems.",
+        "Tool": "ResearchHelper,NewsTool"
+    },
+    {
+        "Query": "What are some outdoor activities I can do in [City Name] next weekend and how will the weather be?",
+        "Tool": "TripAdviceTool,WeatherTool"
+    },
+    {
+        "Query": "Can you recommend any courses on personal finance management and also provide information on the average salary of professionals in this field?",
+        "Tool": "CourseTool,FinanceTool"
+    },
+    {
+        "Query": "What is the current temperature in my city and can you provide me with a URL link to a detailed weather report?",
+        "Tool": "PDF&URLTool,WeatherTool"
+    },
+    {
+        "Query": "I need assistance with researching the crime rates in various neighborhoods and finding affordable houses within a specific budget.",
+        "Tool": "HousePurchasingTool,ResearchHelper"
+    },
+    {
+        "Query": "Can you help me find a list of research papers related to the effects of music on concentration?",
+        "Tool": "MusicTool,ResearchFinder"
+    },
+    {
+        "Query": "\"I'm considering buying a house, could you help me calculate the mortgage payments and estimate the return on investment?\"",
+        "Tool": "FinanceTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"I'm curious about any news articles discussing the influence of music on society, particularly in relation to current events. Could you also recommend some songs that address those themes?\"",
+        "Tool": "NewsTool,MusicTool"
+    },
+    {
+        "Query": "Can you help me find a PDF document on the topic of quantum mechanics and also recommend some related research papers?",
+        "Tool": "PDF&URLTool,ResearchFinder"
+    },
+    {
+        "Query": "Can you find me a PDF or any relevant online resource about the steps involved in purchasing a house in my city?",
+        "Tool": "PDF&URLTool,HousePurchasingTool"
+    },
+    {
+        "Query": "How can I find academic studies about the connection between music and mental health, and also discover recommended songs related to this topic?",
+        "Tool": "MusicTool,ResearchFinder"
+    },
+    {
+        "Query": "I'm looking for a restaurant with live music tonight and also suggest some popular songs in the jazz genre.",
+        "Tool": "TripTool,MusicTool"
+    },
+    {
+        "Query": "Recommend me some relaxing instrumental music, and provide any recent news about upcoming concerts or music festivals.",
+        "Tool": "MusicTool,NewsTool"
+    },
+    {
+        "Query": "I want to know more about the advancements in renewable energy technologies, specifically how solar power and wind energy can be integrated into existing power grids effectively. Additionally, it would be great if you could suggest recent studies on the environmental impact of these renewable energy sources.",
+        "Tool": "ResearchFinder,ResearchHelper"
+    },
+    {
+        "Query": "How are the sales figures of the top luxury car brands impacted by the current market trends? Also, provide me with the financial growth rate of each brand.",
+        "Tool": "FinanceTool,ProductSearch"
+    },
+    {
+        "Query": "I need information on the latest developments in artificial intelligence. Additionally, can you tell me if it will rain in my location this weekend?",
+        "Tool": "ResearchHelper,WeatherTool"
+    },
+    {
+        "Query": "Please provide me with the current stock price of Apple and any recent news related to the company.",
+        "Tool": "FinanceTool,NewsTool"
+    },
+    {
+        "Query": "I'm interested in learning about real estate development. Can you recommend any courses? Additionally, could you provide me with information on available houses for purchase in developing neighborhoods?",
+        "Tool": "CourseTool,HousePurchasingTool"
+    },
+    {
+        "Query": "My partner and I are thinking about purchasing a house in Boston. Can you provide recommendations for neighborhoods with a good public transportation system? Additionally, could you suggest any areas that are close to grocery stores and parks?",
+        "Tool": "TripAdviceTool,HousePurchasingTool"
+    },
+    {
+        "Query": "I'm interested in learning graphic design. Can you recommend any graphic design courses and suggest some popular sightseeing spots in the city where the courses are offered?",
+        "Tool": "CourseTool,TripTool"
+    },
+    {
+        "Query": "What's the forecast for tomorrow? Also, can you check the current value of a specific stock for me?",
+        "Tool": "WeatherTool,FinanceTool"
+    },
+    {
+        "Query": "How can I learn about investing in real estate? And can you provide me with the current average house prices in that area?",
+        "Tool": "CourseTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"What are the best neighborhoods to invest in for rental properties and what is the potential rental income I can expect?\"",
+        "Tool": "FinanceTool,HousePurchasingTool"
+    },
+    {
+        "Query": "I'm planning a trip to New York and would like to know if there are any available web development courses in the area. Also, it would be great if you could recommend some good restaurants nearby.",
+        "Tool": "CourseTool,TripTool"
+    },
+    {
+        "Query": "\"I want to learn more about renewable energy. Can you find any research articles on this topic and also suggest any relevant jobs in renewable energy?\"",
+        "Tool": "ResearchFinder,JobTool"
+    },
+    {
+        "Query": "\"I need help finding a specific song from a certain genre. Can you tell me if there are any discounts available for purchasing or streaming it?\"",
+        "Tool": "MusicTool,Discount"
+    },
+    {
+        "Query": "Can you find any recent research papers on climate change and its impact on agriculture? Also, what is the weather forecast for tomorrow in my city?",
+        "Tool": "ResearchHelper,WeatherTool"
+    },
+    {
+        "Query": "\"I want to find a relaxing getaway destination for my next trip. Could you recommend some serene locations and also suggest calming music playlists to enhance the experience?\"",
+        "Tool": "MusicTool,TripAdviceTool"
+    },
+    {
+        "Query": "Can you provide me with the headlines of today's top news stories? Additionally, could you let me know if there are any weather warnings issued for my area?",
+        "Tool": "NewsTool,WeatherTool"
+    },
+    {
+        "Query": "Can you help me calculate the monthly mortgage payment for a house worth $500,000 with an interest rate of 4% using the first tool? And then, using the second tool, can you tell me the current stock price of the bank that provides the mortgage?",
+        "Tool": "HousePurchasingTool,FinanceTool"
+    },
+    {
+        "Query": "How can I extract specific features from a dataset using Python, and do you have any tutorials or code resources for implementing it?",
+        "Tool": "CourseTool,RepoTool"
+    },
+    {
+        "Query": "I need information on recent studies exploring the benefits of exercise for mental well-being, and any related news articles that highlight successful fitness programs.",
+        "Tool": "ResearchFinder,NewsTool"
+    },
+    {
+        "Query": "Can you assist me in finding remote job options in the field of graphic design? Additionally, I'd like to stay updated on any news regarding the latest design tools and software.",
+        "Tool": "JobTool,NewsTool"
+    },
+    {
+        "Query": "Recommend some popular hip-hop albums from the past decade. Additionally, can you find me a turntable with good sound quality to enjoy vinyl records?",
+        "Tool": "MusicTool,ProductSearch"
+    },
+    {
+        "Query": "\"I've been practicing singing for a while and I'm looking for online courses to develop my vocal range and improve my pitch accuracy. Additionally, I'm interested in learning about different singing styles. Can you suggest any courses that cover these aspects?\" ",
+        "Tool": "CourseTool,MusicTool"
+    },
+    {
+        "Query": "I want to know the latest news related to artificial intelligence, and also recommend me some AI job opportunities available in reputed companies.",
+        "Tool": "NewsTool,JobTool"
+    },
+    {
+        "Query": "\"I'm in the mood to listen to some music from the 90s. Can you suggest popular songs from that era and also let me know if there are any discounts available for purchasing or streaming them?\"",
+        "Tool": "MusicTool,Discount"
+    },
+    {
+        "Query": "What are the best hiking trails in national parks in the United States and are there any scientific studies conducted on the flora and fauna in those areas?",
+        "Tool": "TripTool,ResearchFinder"
+    },
+    {
+        "Query": "\"Is it a good time to invest in cryptocurrency? Also, can you find me a list of tourist attractions in Tokyo?\"",
+        "Tool": "FinanceTool,TripTool"
+    },
+    {
+        "Query": "\"I need assistance in finding a programming course that covers both Python and Java. Additionally, can you find any research papers on the applications of these programming languages?\"",
+        "Tool": "CourseTool,ResearchFinder"
+    },
+    {
+        "Query": "\"I'm interested in learning about renewable energy technologies. Could you provide me with recent news updates on this topic? Additionally, which online courses can I take to gain more knowledge in this area?\"",
+        "Tool": "CourseTool,NewsTool"
+    },
+    {
+        "Query": "Show me a list of popular GitHub repositories related to machine learning, and provide me with any recent news articles discussing those projects.",
+        "Tool": "RepoTool,NewsTool"
+    },
+    {
+        "Query": "What is the weather forecast for tomorrow? Please also show me any news updates related to upcoming weather events.",
+        "Tool": "NewsTool,WeatherTool"
+    },
+    {
+        "Query": "I need directions to the nearest music store and also suggest some artists and albums in the rock genre.",
+        "Tool": "TripTool,MusicTool"
+    },
+    {
+        "Query": "\"What are the recent developments in renewable energy technologies? Also, can you suggest some adventurous activities to do in coastal areas?\"",
+        "Tool": "ResearchFinder,TripTool"
+    },
+    {
+        "Query": "I want to invest $20,000 in government bonds with an interest rate of 3%. Can you calculate the total return after 10 years and also check if there are any discounts on the bonds?",
+        "Tool": "FinanceTool,Discount"
+    },
+    {
+        "Query": "Can you show me the historical stock performance of a company during periods of extreme weather conditions?",
+        "Tool": "FinanceTool,WeatherTool"
+    },
+    {
+        "Query": "I'm interested in exploring the latest advancements in renewable energy technologies. Could you find relevant research papers on the subject and also recommend job opportunities in the renewable energy industry?",
+        "Tool": "ResearchHelper,JobTool"
+    },
+    {
+        "Query": "Can you show me houses in the city center with a discount?",
+        "Tool": "HousePurchasingTool,Discount"
+    },
+    {
+        "Query": "\"Can you suggest any discounts available for online courses?\"",
+        "Tool": "Discount,CourseTool"
+    },
+    {
+        "Query": "\"I'll be in a different city every week for the next month. Can you suggest popular tourist attractions and also provide me with local music recommendations for each place?\"",
+        "Tool": "MusicTool,TripTool"
+    },
+    {
+        "Query": "Are there any houses available for purchase? Also, can you let me know if there are any ongoing discount offers?",
+        "Tool": "Discount,HousePurchasingTool"
+    },
+    {
+        "Query": "Can you recommend a travel destination where I can listen to live music performances?",
+        "Tool": "TripAdviceTool,MusicTool"
+    },
+    {
+        "Query": "I need the financial statements of the company mentioned in this URL. Additionally, can you calculate its current ratio using the information from the FinanceTool?",
+        "Tool": "PDF&URLTool,FinanceTool"
+    },
+    {
+        "Query": "I'm planning a trip next week, can you give me an overview of the weather conditions and suggest some relevant courses?",
+        "Tool": "WeatherTool,CourseTool"
+    },
+    {
+        "Query": "I'm interested in learning about the correlation between technological advancements and changes in stock market indices. Can you provide me with historical data and analysis regarding this?",
+        "Tool": "ResearchHelper,FinanceTool"
+    },
+    {
+        "Query": "I'm looking for a house to buy near my new job. Can you give me a list of available properties with their prices?",
+        "Tool": "HousePurchasingTool,JobTool"
+    },
+    {
+        "Query": "I'm looking for a new job in the tech industry. Can you recommend any relevant online courses to enhance my skills?",
+        "Tool": "JobTool,CourseTool"
+    },
+    {
+        "Query": "\"I need to find information about the pricing of the product I want to buy. Can you help me by providing a URL to a website that sells it?\"",
+        "Tool": "PDF&URLTool,Discount"
+    },
+    {
+        "Query": "Can you fetch me the weather forecast for tomorrow in PDF format for the city I'm currently in?",
+        "Tool": "PDF&URLTool,WeatherTool"
+    },
+    {
+        "Query": "\"What are the job prospects like in areas where houses are reasonably priced?\"",
+        "Tool": "JobTool,HousePurchasingTool"
+    },
+    {
+        "Query": "\"I am learning about music theory and want to find online courses to improve my knowledge. Can you recommend any courses that cover topics like scales, chords, and harmony?\" ",
+        "Tool": "CourseTool,MusicTool"
+    },
+    {
+        "Query": "I'm planning a road trip from San Francisco to Los Angeles next week. Can you recommend any scenic routes along the coast and tell me the weather conditions there?",
+        "Tool": "TripTool,WeatherTool"
+    },
+    {
+        "Query": "\"I'm interested in relocating for a job. Which cities have employment opportunities and affordable housing?\"",
+        "Tool": "JobTool,HousePurchasingTool"
+    },
+    {
+        "Query": "What are some recent studies on the impact of technology on the stock market, and how does it affect financial investments?",
+        "Tool": "ResearchHelper,FinanceTool"
+    },
+    {
+        "Query": "What's the weather like in Tokyo right now? Which hotels in the city center are offering discounted rates for the next month?",
+        "Tool": "WeatherTool,TripTool"
+    },
+    {
+        "Query": "I need resources for understanding \"reinforcement learning\" techniques, can you suggest some research papers and GitHub repositories?",
+        "Tool": "ResearchFinder,RepoTool"
+    },
+    {
+        "Query": "\"Can you give me the latest news updates on technology advancements? Additionally, suggest some tech events or conferences happening near me that I can attend.\"",
+        "Tool": "NewsTool,TripTool"
+    },
+    {
+        "Query": "I need information about the average annual returns of various investment options, and also show me any PDFs or online resources that explain the concept of compound interest in a simple way.",
+        "Tool": "FinanceTool,PDF&URLTool"
+    },
+    {
+        "Query": "\"What are the recent studies about the impact of interest rates on house prices, and can you recommend me some affordable houses based on those findings?\"",
+        "Tool": "HousePurchasingTool,ResearchFinder"
+    },
+    {
+        "Query": "\"Is there any PDF document that explains the concept of cloud computing? Additionally, can you recommend an online course on this topic?\"",
+        "Tool": "PDF&URLTool,CourseTool"
+    },
+    {
+        "Query": "What is the job market like in my city? Also, will the weather affect job prospects?",
+        "Tool": "WeatherTool,JobTool"
+    },
+    {
+        "Query": "Could you provide me with studies that explore the connection between sleep quality and mental health? It would be helpful if I can access the PDFs or URLs for further reading.",
+        "Tool": "ResearchFinder,PDF&URLTool"
+    },
+    {
+        "Query": "\"Can you give me the top tourist attractions in New York City and also find recent news articles about the city?\"",
+        "Tool": "TripTool,NewsTool"
+    },
+    {
+        "Query": "Can you help me find a PDF document that explains the history of classical music as well as provide a playlist of famous classical music pieces?",
+        "Tool": "PDF&URLTool,MusicTool"
+    },
+    {
+        "Query": "I need recommendations for hotels near the Eiffel Tower in Paris. Can you also suggest nearby restaurants?",
+        "Tool": "TripTool,TripAdviceTool"
+    },
+    {
+        "Query": "\"I'm looking for research papers on climate change. Can you help me find recent publications and also suggest any relevant job openings in this field?\"",
+        "Tool": "ResearchFinder,JobTool"
+    },
+    {
+        "Query": "I'm planning to buy a new smartphone, can you provide me with news articles about any ongoing discounts on popular phone models?",
+        "Tool": "Discount,NewsTool"
+    },
+    {
+        "Query": "I want to buy a house and I have $200,000 saved up. Can you use the first tool to find out how much house I can afford given my savings, and then use the second tool to suggest some stable stocks where I can invest any remaining funds?",
+        "Tool": "HousePurchasingTool,FinanceTool"
+    },
+    {
+        "Query": "I need to find reliable sources to understand the impact of social media on mental health. Additionally, can you suggest any tools or products that can help manage social media usage?",
+        "Tool": "ResearchHelper,ProductSearch"
+    },
+    {
+        "Query": "Can you give me an overview of the top trending stocks and any recent news that might be affecting their performance?",
+        "Tool": "FinanceTool,NewsTool"
+    },
+    {
+        "Query": "What are the best online resources to learn about personal finance and find courses on budgeting and saving money?",
+        "Tool": "FinanceTool,CourseTool"
+    },
+    {
+        "Query": "Are there any online courses on property management? Also, can you suggest some affordable houses for sale nearby?",
+        "Tool": "CourseTool,HousePurchasingTool"
+    },
+    {
+        "Query": "I want to learn web development. Can you suggest any discounted courses as well as tools that will help me during the learning process?",
+        "Tool": "CourseTool,Discount"
+    },
+    {
+        "Query": "I'm interested in pursuing a career in artificial intelligence. Can you suggest any job search websites specialized in AI and also provide me with some recent research papers in this area?",
+        "Tool": "JobTool,ResearchHelper"
+    },
+    {
+        "Query": "\"What's the weather like in my area right now? Also, can you suggest some relaxing music that matches this weather?\"",
+        "Tool": "MusicTool,WeatherTool"
+    },
+    {
+        "Query": "\"I'm interested in learning about machine learning algorithms. Can you recommend a course that covers the basics and provide some research papers for further exploration?\"",
+        "Tool": "CourseTool,ResearchFinder"
+    },
+    {
+        "Query": "What are some discounted online courses for programming beginners?",
+        "Tool": "CourseTool,Discount"
+    },
+    {
+        "Query": "Can you recommend a top-rated hotel in Paris that is also near popular job opportunities?",
+        "Tool": "TripAdviceTool,JobTool"
+    },
+    {
+        "Query": "What are the latest research papers and GitHub repositories available for \"computer vision\" applications?",
+        "Tool": "ResearchFinder,RepoTool"
+    },
+    {
+        "Query": "\"Can you suggest some nearby hotels with good ratings and job opportunities?\"",
+        "Tool": "TripTool,JobTool"
+    },
+    {
+        "Query": "Could you provide me with news articles on renewable energy sources and any research papers exploring their effectiveness?",
+        "Tool": "NewsTool,ResearchHelper"
+    },
+    {
+        "Query": "I need assistance in finding a job in the field of data analysis. Can you recommend any online courses that can enhance my analytical skills and also provide job placement assistance?",
+        "Tool": "CourseTool,JobTool"
+    },
+    {
+        "Query": "Can you provide me with a list of companies in the technology sector that have shown consistent growth in their stock prices over the past five years? Additionally, can you give me an analysis of their financial performance?",
+        "Tool": "ResearchHelper,FinanceTool"
+    },
+    {
+        "Query": "I want to improve my public speaking skills. Can you suggest some courses for public speaking and provide information about nearby tourist attractions?",
+        "Tool": "CourseTool,TripTool"
+    },
+    {
+        "Query": "I need help finding a course that covers machine learning algorithms. Also, could you suggest job opportunities in the field of artificial intelligence?",
+        "Tool": "JobTool,CourseTool"
+    },
+    {
+        "Query": "How can I find a PDF document about the latest real estate trends in my area and then extract the relevant information?",
+        "Tool": "HousePurchasingTool,PDF&URLTool"
+    },
+    {
+        "Query": "Can you help me find the latest financial report for a company I'm interested in, and also provide me with the stock market trends for the past month?",
+        "Tool": "FinanceTool,PDF&URLTool"
+    },
+    {
+        "Query": "Can you find me a PDF document on machine learning algorithms and also suggest some related job openings in this field?",
+        "Tool": "PDF&URLTool,JobTool"
+    },
+    {
+        "Query": "Can you generate a playlist of popular songs from the last week, and also include any news about the artists?",
+        "Tool": "MusicTool,NewsTool"
+    },
+    {
+        "Query": "\"I need some new music recommendations. Can you suggest songs that go well with a rainy day? Also, tell me the weather forecast for tomorrow.\"",
+        "Tool": "MusicTool,WeatherTool"
+    },
+    {
+        "Query": "How can I download a PDF file of the weather forecast for the upcoming weekend in London?",
+        "Tool": "WeatherTool,PDF&URLTool"
+    },
+    {
+        "Query": "I want to travel to Spain for a vacation, but I'm also interested in learning about job opportunities there. Can you provide recommendations for both tourist attractions and potential job locations?",
+        "Tool": "TripAdviceTool,JobTool"
+    },
+    {
+        "Query": "\"What are the popular tourist spots in London and are there any promotions or discounts available for those attractions?\"",
+        "Tool": "TripAdviceTool,Discount"
+    },
+    {
+        "Query": "What are the popular programming languages used in data science? Can you recommend both online courses and job positions that require proficiency in these languages?",
+        "Tool": "JobTool,CourseTool"
+    },
+    {
+        "Query": "\"I'm interested in the latest advancements in artificial intelligence. Could you provide me with research papers on AI and also let me know if there are any job opportunities related to AI?\"",
+        "Tool": "ResearchFinder,JobTool"
+    },
+    {
+        "Query": "\"I need information on the average house prices in different neighborhoods and also any relevant studies on housing affordability in those areas.\"",
+        "Tool": "HousePurchasingTool,ResearchFinder"
+    },
+    {
+        "Query": "How has the recent surge in oil prices affected the global economy and major companies in the energy sector?",
+        "Tool": "NewsTool,FinanceTool"
+    },
+    {
+        "Query": "\"What are the top-rated restaurants and career opportunities in this city?\"",
+        "Tool": "TripTool,JobTool"
+    },
+    {
+        "Query": "How can I calculate the compound interest on my savings account, and what are the top songs in the music industry right now?",
+        "Tool": "FinanceTool,MusicTool"
+    },
+    {
+        "Query": "Which laptops have a 4K display and also offer support for virtual reality applications? Can you point me to any GitHub repositories with VR development resources?",
+        "Tool": "ProductSearch,RepoTool"
+    },
+    {
+        "Query": "Can you show me the current weather forecast for tomorrow and also convert it into a PDF file?",
+        "Tool": "WeatherTool,PDF&URLTool"
+    },
+    {
+        "Query": "Can you recommend a course on real estate investment and also provide me with information on houses for sale in the area?",
+        "Tool": "HousePurchasingTool,CourseTool"
+    },
+    {
+        "Query": "I want to switch my career to software development. Can you provide me with information on available job opportunities and let me know if there are any discounted coding bootcamps or training programs?",
+        "Tool": "JobTool,Discount"
+    },
+    {
+        "Query": "What's the best time to visit [City Name] for a beach vacation, and can you suggest any hotels with beautiful views?",
+        "Tool": "TripAdviceTool,WeatherTool"
+    },
+    {
+        "Query": "\"What are the latest trending news articles related to computer science? Also, can you recommend any online courses for beginners in coding?\" ",
+        "Tool": "CourseTool,NewsTool"
+    },
+    {
+        "Query": "Can you find recent news articles about the current job market and provide a list of companies currently hiring in the technology industry?",
+        "Tool": "NewsTool,JobTool"
+    },
+    {
+        "Query": "\"Can you find me a discounted laptop with good battery life?\"",
+        "Tool": "Discount,ProductSearch"
+    },
+    {
+        "Query": "\"I need information on the best practices for data encryption. Can you show me a PDF or direct me to a reliable website that explains this topic in detail?\"",
+        "Tool": "NewsTool,PDF&URLTool"
+    },
+    {
+        "Query": "\"I'm trying to organize my music library. Can you suggest a discount on a tool that can help me categorize and tag my songs?\"",
+        "Tool": "Discount,MusicTool"
+    },
+    {
+        "Query": "I'm looking for discounts on home workout equipment. Can you help me find the best options and also suggest any relevant research on the benefits of working out at home?",
+        "Tool": "ResearchHelper,Discount"
+    },
+    {
+        "Query": "Can you provide me with research papers discussing the effects of social media on mental health, as well as any recent news articles covering this topic?",
+        "Tool": "ResearchFinder,NewsTool"
+    },
+    {
+        "Query": "I'm interested in learning about artificial intelligence applications in healthcare. Can you provide me with a PDF document that explains the concept and also recommend some relevant research papers?",
+        "Tool": "PDF&URLTool,ResearchFinder"
+    },
+    {
+        "Query": "How can I find the top-rated repositories related to machine learning and also get the weather forecast for tomorrow?",
+        "Tool": "WeatherTool,RepoTool"
+    },
+    {
+        "Query": "\"Can you help me find a job in a specific city that is close to affordable houses?\"",
+        "Tool": "JobTool,HousePurchasingTool"
+    },
+    {
+        "Query": "Could you suggest some hiking trails in the Rocky Mountains? Also, I have a PDF document containing detailed maps of the region. Can you extract the relevant maps and display them for me?",
+        "Tool": "TripTool,PDF&URLTool"
+    },
+    {
+        "Query": "Can you find recent news articles about climate change and identify any scientific studies mentioned in those articles?",
+        "Tool": "NewsTool,ResearchFinder"
+    },
+    {
+        "Query": "Can you recommend a hotel in New York City with a discount?",
+        "Tool": "TripTool,Discount"
+    },
+    {
+        "Query": "I'm traveling to Miami next month. Can you tell me if there are any discounted flight options available from my current location?",
+        "Tool": "TripTool,Discount"
+    },
+    {
+        "Query": "\"Can you find any research papers related to climate change impacts on agriculture and suggest some popular tourist destinations for eco-tourism?\"",
+        "Tool": "ResearchFinder,TripTool"
+    },
+    {
+        "Query": "Can you help me find some recent research articles on the impact of home renovations on property value?",
+        "Tool": "ResearchFinder,HousePurchasingTool"
+    },
+    {
+        "Query": "I'm looking for a weekend getaway. Could you suggest a destination within a three-hour drive from my current location and any hotels in that area with special offers?",
+        "Tool": "TripTool,Discount"
+    },
+    {
+        "Query": "Can you provide me with a list of online resources that offer a detailed comparison of mortgage interest rates and also recommend a useful PDF guide that explains the different types of mortgages?",
+        "Tool": "PDF&URLTool,HousePurchasingTool"
+    },
+    {
+        "Query": "Can you help me find a smartphone with a good discount?",
+        "Tool": "ProductSearch,Discount"
+    },
+    {
+        "Query": "Find me a phone with a high-quality camera and at least 128GB of internal storage. Also, show me any relevant GitHub repositories related to developing camera apps for smartphones.",
+        "Tool": "ProductSearch,RepoTool"
+    },
+    {
+        "Query": "I need assistance in finding a course on property valuation. Can you help me with that and also provide information on affordable houses in the market?",
+        "Tool": "HousePurchasingTool,CourseTool"
+    },
+    {
+        "Query": "What are the current economic trends in the renewable energy sector and how can I invest in them?",
+        "Tool": "ResearchFinder,FinanceTool"
+    },
+    {
+        "Query": "I'm planning a vacation and would like to find temporary job opportunities in a city with pleasant weather. Can you suggest a few cities and also provide their weather conditions?",
+        "Tool": "JobTool,WeatherTool"
+    },
+    {
+        "Query": "\"I'm curious about famous historical sites in Rome. Can you suggest some and also give me news updates related to the city?\"",
+        "Tool": "TripTool,NewsTool"
+    },
+    {
+        "Query": "I'm looking for information on the newest smartphones with 5G capabilities. Could you please suggest some models and also let me know if there have been any recent news articles about them?",
+        "Tool": "NewsTool,ProductSearch"
+    },
+    {
+        "Query": "Can you recommend some budget-friendly travel destinations and provide information on their local currency exchange rates?",
+        "Tool": "FinanceTool,TripAdviceTool"
+    },
+    {
+        "Query": "I'm planning a trip to New York next month. Can you tell me if there are any discounts available for hotels in the city?",
+        "Tool": "Discount,TripAdviceTool"
+    },
+    {
+        "Query": "Is there any scientific evidence to support the effectiveness of music therapy for reducing stress and anxiety? If so, could you provide some research papers and also suggest some calming instrumental music tracks?",
+        "Tool": "ResearchHelper,MusicTool"
+    },
+    {
+        "Query": "Can you provide me with a list of popular tourist attractions in a particular city along with some local music recommendations?",
+        "Tool": "TripTool,MusicTool"
+    },
+    {
+        "Query": "\"I'm looking for a music recommendation based on my mood. Can you suggest some songs that are upbeat and also have discounts available?\"",
+        "Tool": "MusicTool,Discount"
+    },
+    {
+        "Query": "I want to stay updated on the latest technological innovations. Find me news articles about emerging technologies and recommend any relevant research findings.",
+        "Tool": "NewsTool,ResearchFinder"
+    },
+    {
+        "Query": "\"Tell me about the latest research on sustainable housing options and also suggest me some houses that meet those criteria within my budget.\"",
+        "Tool": "HousePurchasingTool,ResearchFinder"
+    },
+    {
+        "Query": "I'm looking for a tool that can generate a playlist based on my favorite research articles about music therapy. Can you assist me?",
+        "Tool": "MusicTool,ResearchFinder"
+    },
+    {
+        "Query": "How can I use the house purchasing tool to find discounts on properties?",
+        "Tool": "HousePurchasingTool,Discount"
+    },
+    {
+        "Query": "Find me news articles about the best discounts available on electronic gadgets.",
+        "Tool": "Discount,NewsTool"
+    },
+    {
+        "Query": "Could you give me a weekly weather forecast for my area and recommend some areas with good schools for buying a house?",
+        "Tool": "WeatherTool,HousePurchasingTool"
+    },
+    {
+        "Query": "What's the current temperature and can you find any news related to upcoming storms in my area?",
+        "Tool": "WeatherTool,NewsTool"
+    },
+    {
+        "Query": "How does the weather in my area impact the energy efficiency of homes, and can you recommend some energy-efficient houses?",
+        "Tool": "HousePurchasingTool,WeatherTool"
+    },
+    {
+        "Query": "Is there a way to explore research articles on the impact of music education on cognitive development? After that, I'd like to generate a personalized music playlist based on the findings.",
+        "Tool": "MusicTool,ResearchFinder"
+    },
+    {
+        "Query": "I'm planning a trip to Tokyo next week. Could you give me the weather forecast for that period and any recent scientific studies on earthquake preparedness in Japan?",
+        "Tool": "WeatherTool,ResearchFinder"
+    },
+    {
+        "Query": "I need some assistance in finding discounted car rentals in Los Angeles. Furthermore, can you provide me with information on popular attractions nearby those rental car locations?",
+        "Tool": "Discount,TripTool"
+    },
+    {
+        "Query": "How can I plan a trip to New York City and find courses on photography there?",
+        "Tool": "TripAdviceTool,CourseTool"
+    },
+    {
+        "Query": "What's the weather like in Paris next week? Also, can you provide some romantic music recommendations for a special occasion?",
+        "Tool": "WeatherTool,MusicTool"
+    },
+    {
+        "Query": "\"Can you find me recent news articles about the latest music releases from popular artists?\"",
+        "Tool": "NewsTool,MusicTool"
+    },
+    {
+        "Query": "Is there any news about the upcoming Black Friday sales and any exclusive discounts associated with it?",
+        "Tool": "NewsTool,Discount"
+    },
+    {
+        "Query": "Can you provide me with a list of discounted houses in the city?",
+        "Tool": "HousePurchasingTool,Discount"
+    },
+    {
+        "Query": "I need information on the current market trends and insights within the finance industry. Additionally, could you find me job listings for finance professionals specializing in market analysis using JobTool?",
+        "Tool": "FinanceTool,JobTool"
+    },
+    {
+        "Query": "\"I need help finding resources to learn about machine learning algorithms.\"",
+        "Tool": "CourseTool,ResearchHelper"
+    },
+    {
+        "Query": "Can you help me find a good hotel near the concert venue and recommend some music playlists for the road trip?",
+        "Tool": "TripTool,MusicTool"
+    },
+    {
+        "Query": "\"I want to plan a trip to a beach destination in Asia within a specific budget. Any suggestions?\"",
+        "Tool": "NewsTool,TripAdviceTool"
+    },
+    {
+        "Query": "Can you calculate the average salary of finance professionals in New York City, and also provide me with a list of job openings in that area?",
+        "Tool": "JobTool,FinanceTool"
+    },
+    {
+        "Query": "\"I want to listen to some music that helps reduce stress and anxiety. Can you recommend me a playlist based on scientific research?\"",
+        "Tool": "ResearchFinder,MusicTool"
+    },
+    {
+        "Query": "What are some popular investment options with good returns, and can you recommend a playlist to relax while I research them?",
+        "Tool": "FinanceTool,MusicTool"
+    },
+    {
+        "Query": "\"I need to know the current political news updates. Please also recommend some tourist attractions and sightseeing spots in the capital city of my country.\"",
+        "Tool": "NewsTool,TripTool"
+    },
+    {
+        "Query": "Can you show me the latest news about electric cars available in the market and also provide some details on their prices and specifications?",
+        "Tool": "NewsTool,ProductSearch"
+    },
+    {
+        "Query": "What is the forecast for tomorrow in London? Also, can you provide me with any research papers related to climate change?",
+        "Tool": "WeatherTool,ResearchFinder"
+    },
+    {
+        "Query": "What are the trending topics in the world of business right now, and can you suggest some job positions in the marketing field with high demand?",
+        "Tool": "NewsTool,JobTool"
+    }
+]

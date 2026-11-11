@@ -1,0 +1,79 @@
+{
+  "n_examples": 51,
+  "n_seeds": 5,
+  "note": "CACTUS per-example scores are averaged across seeds before pairing. Baselines are single deterministic runs (Random is averaged across its repeats).",
+  "comparisons": {
+    "Random|f1": {
+      "cactus_mean": 0.8061437908496731,
+      "baseline_mean": 0.18254556157670343,
+      "mean_diff": 0.6235982292729697,
+      "bootstrap_95ci": [
+        0.5622165064206586,
+        0.6830854758147145
+      ],
+      "wilcoxon_statistic": 0.0,
+      "wilcoxon_p_value": 5.145276051717655e-10,
+      "significant_at_0.05": true
+    },
+    "Random|success": {
+      "cactus_mean": 0.5725490196078431,
+      "baseline_mean": 0.0,
+      "mean_diff": 0.5725490196078431,
+      "bootstrap_95ci": [
+        0.46274509803921565,
+        0.6862745098039216
+      ],
+      "wilcoxon_statistic": 0.0,
+      "wilcoxon_p_value": 2.1252967373079762e-08,
+      "significant_at_0.05": true
+    },
+    "DenseRetrieval|f1": {
+      "cactus_mean": 0.8061437908496731,
+      "baseline_mean": 0.565452847805789,
+      "mean_diff": 0.24069094304388422,
+      "bootstrap_95ci": [
+        0.16722595704948642,
+        0.31733193277310917
+      ],
+      "wilcoxon_statistic": 51.0,
+      "wilcoxon_p_value": 8.619260374402702e-07,
+      "significant_at_0.05": true
+    },
+    "DenseRetrieval|success": {
+      "cactus_mean": 0.5725490196078431,
+      "baseline_mean": 0.13725490196078433,
+      "mean_diff": 0.43529411764705883,
+      "bootstrap_95ci": [
+        0.32156862745098036,
+        0.5529411764705883
+      ],
+      "wilcoxon_statistic": 1.0,
+      "wilcoxon_p_value": 3.058930156792051e-07,
+      "significant_at_0.05": true
+    },
+    "LLaMA-3.1-8B-Instruct|f1": {
+      "cactus_mean": 0.8061437908496731,
+      "baseline_mean": 0.7443821973233736,
+      "mean_diff": 0.06176159352629937,
+      "bootstrap_95ci": [
+        0.00565639589168998,
+        0.11770930594460002
+      ],
+      "wilcoxon_statistic": 300.5,
+      "wilcoxon_p_value": 0.058756376443315536,
+      "significant_at_0.05": false
+    },
+    "LLaMA-3.1-8B-Instruct|success": {
+      "cactus_mean": 0.5725490196078431,
+      "baseline_mean": 0.2549019607843137,
+      "mean_diff": 0.31764705882352945,
+      "bootstrap_95ci": [
+        0.1843137254901961,
+        0.45098039215686275
+      ],
+      "wilcoxon_statistic": 60.0,
+      "wilcoxon_p_value": 7.019144500465664e-05,
+      "significant_at_0.05": true
+    }
+  }
+}

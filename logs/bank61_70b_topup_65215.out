@@ -1,0 +1,16 @@
+model on cuda:0
+
+
+[pmi] alpha=1.0 ...
+    step 1: 61 active, 1677s
+    step 2: 61 active, 3466s
+    step 3: 61 active, 5287s
+    step 4: 61 active, 7175s
+    step 5: 0 active, 9095s
+[pmi] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.164  probe_in_topk=nan  P(DONE|complete)=0.000  (9095s)
+
+======================================================================
+======================================================================
+
+Done. Then, locally after fetching:
+  python scripts/merge_topup.py

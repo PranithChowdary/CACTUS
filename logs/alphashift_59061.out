@@ -1,0 +1,29 @@
+=========================================
+0. Is the agent trainable at all?
+   (if the alpha=0 capacity check fails,
+    nothing below is interpretable)
+=========================================
+==================================================================
+1. CAPACITY CHECK  (alpha=0, static task, classifier gets 1.000)
+==================================================================
+   PPO exact-match = 0.925   (needs to approach 1.000)
+   -> OK: agent can fit the easy task
+
+==================================================================
+2+3. BEHAVIOURAL + CONDITIONING CHECK  (alpha=1, ceiling=0.500)
+==================================================================
+   PPO exact-match          = 0.625   (ceiling for query-only models = 0.500)
+   probes first             = 0.910   (needs ~1.0 to gather the bit)
+   recovers full gold set   = 0.625
+   next action depends on revealed bit = 0.870   (0 = channel ignored)
+
+   VERDICT: agent exceeds the analytic query-only ceiling -> the
+            information-gathering hypothesis survives this test.
+
+=========================================
+1. Alpha-shift: 4 train alphas x 5 seeds
+=========================================
+  train_a=0.00 seed=0  static_probe=0.000  SEM@a0.00=0.948  SEM@a1.00=0.000  (195s)
+  train_a=0.00 seed=1  static_probe=0.000  SEM@a0.00=0.990  SEM@a1.00=0.000  (193s)
+  train_a=0.00 seed=2  static_probe=0.000  SEM@a0.00=1.000  SEM@a1.00=0.005  (192s)
+  train_a=0.00 seed=3  static_probe=0.000  SEM@a0.00=0.980  SEM@a1.00=0.003  (192s)

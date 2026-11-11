@@ -1,0 +1,104 @@
+
+-------------------------------------------------------------
+# llama-3.1-70b   (meta-llama/Llama-3.1-70B-Instruct)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -17.3361 vs policy -17.3361
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.528 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.095 vs r_sum = -0.528
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +7.89 vs DeployTool +3.10
+      (argmax under PMI on this toy prompt: ' CarRentalTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   CarRentalTool      4    -19.35    -4.84    -27.47      8.13
+   HotelTool          2    -17.34    -8.67    -25.23      7.89
+   DeployTool         2    -22.18   -11.09    -25.28      3.10
+   DONE               1    -12.01   -12.01    -11.74     -0.27
+   PharmacyTool       2    -25.82   -12.91    -25.28     -0.54
+   WeatherTool        2    -23.64   -11.82    -22.82     -0.82
+
+critical: 6/6 passed   diagnostic: 3/3 passed
+--- running probe study ---
+model on cuda:0
+
+
+[sum] alpha=0.0 ...
+    step 1: 48 active, 729s
+    step 2: 48 active, 1443s
+    step 3: 48 active, 2134s
+    step 4: 48 active, 2803s
+    step 5: 0 active, 3445s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.083  SEM@k=0.333  probe_in_topk=0.500  P(DONE|complete)=0.002  (3445s)
+
+[sum] alpha=1.0 ...
+    step 1: 48 active, 728s
+    step 2: 48 active, 1451s
+    step 3: 47 active, 2159s
+    step 4: 47 active, 2827s
+    step 5: 0 active, 3466s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.021  DONE_rate=0.104  SEM@k=0.521  probe_in_topk=nan  P(DONE|complete)=0.015  (3466s)
+
+[pmi] alpha=0.0 ...
+    step 1: 48 active, 726s
+    step 2: 48 active, 1426s
+    step 3: 48 active, 2111s
+    step 4: 48 active, 2775s
+    step 5: 0 active, 3414s
+[pmi] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.417  probe_in_topk=0.333  P(DONE|complete)=0.000  (3414s)
+
+[pmi] alpha=1.0 ...
+    step 1: 48 active, 729s
+    step 2: 48 active, 1439s
+    step 3: 48 active, 2132s
+    step 4: 48 active, 2810s
+    step 5: 0 active, 3461s
+[pmi] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.292  probe_in_topk=nan  P(DONE|complete)=0.000  (3461s)
+
+======================================================================
+HEADLINE (sum scoring, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.333 (ceiling 1.000)
+  probe in top-k (over-gather): 0.500
+  over-probe rate (all 5 steps): 0.917
+  wasted tools per episode   : 2.92
+  exact match                : 0.000 (ceiling 1.000)
+  terminated via DONE        : 0.083
+======================================================================
+
+-------------------------------------------------------------
+# cross-model comparison
+-------------------------------------------------------------
+
+scoring = sum   (PMI reported as ablation in the raw JSON)
+
+model               rank   probe  exploit   stop  DONErank   P(DONE)  spur.probe
+                   SEM@k     a=1 branch@2   rate    of ~35     |cmpl         a=0
+--------------------------------------------------------------------------------
+llama-3.1-70b      0.333   0.917    0.568  0.104      35.0    0.0152       0.500
+llama-3.1-8b       0.833   0.917    0.295  0.000      35.0    0.0031       0.167
+llama-3.2-1b       0.000   0.000    1.000  0.000      35.0       nan       0.000
+qwen2.5-7b         0.500   0.833    0.341  0.917      35.4    0.5677       0.333
+
+VERDICT: llama-3.1-70b, qwen2.5-7b DOES terminate. The failure is NOT universal --
+         termination varies by model, which is a stronger and more
+         interesting result than uniform failure. Report the
+         contrast and look for what distinguishes them.
+
+wrote results/model_comparison.json

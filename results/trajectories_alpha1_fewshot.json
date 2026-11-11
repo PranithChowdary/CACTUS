@@ -1,0 +1,940 @@
+[
+  {
+    "episode": 0,
+    "scenario": 0,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "NewsTool",
+      "WeatherTool"
+    ],
+    "selected": [
+      "FlightTool",
+      "HotelTool",
+      "TripTool",
+      "WeatherTool"
+    ],
+    "verdict": "WRONG SET",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "WeatherTool",
+        "parsed": "WeatherTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "WeatherTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "TripTool",
+        "parsed": "TripTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "WeatherTool",
+          "TripTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "HotelTool",
+        "parsed": "HotelTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "WeatherTool",
+          "TripTool",
+          "HotelTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "WeatherTool",
+        "parsed": "WeatherTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "WeatherTool",
+          "TripTool",
+          "HotelTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "FlightTool",
+        "parsed": "FlightTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "WeatherTool",
+          "TripTool",
+          "HotelTool",
+          "FlightTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 1,
+    "scenario": 1,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "FinanceTool",
+      "TaxTool"
+    ],
+    "selected": [
+      "AccountTool",
+      "BudgetTool",
+      "FinanceTool",
+      "PayrollTool",
+      "TaxTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "FinanceTool",
+        "parsed": "FinanceTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "FinanceTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "BudgetTool",
+        "parsed": "BudgetTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "FinanceTool",
+          "BudgetTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "TaxTool",
+        "parsed": "TaxTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "FinanceTool",
+          "BudgetTool",
+          "TaxTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "AccountTool",
+        "parsed": "AccountTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "FinanceTool",
+          "BudgetTool",
+          "TaxTool",
+          "AccountTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "PayrollTool",
+        "parsed": "PayrollTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "FinanceTool",
+          "BudgetTool",
+          "TaxTool",
+          "AccountTool",
+          "PayrollTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 2,
+    "scenario": 2,
+    "is_conditional": true,
+    "latent_bit": 0,
+    "gold": [
+      "CarRentalTool",
+      "FlightTool"
+    ],
+    "selected": [
+      "CalendarTool",
+      "CarRentalTool",
+      "FlightTool",
+      "HotelTool",
+      "WeatherTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "FlightTool",
+        "parsed": "FlightTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "FlightTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "WeatherTool",
+        "parsed": "WeatherTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "FlightTool",
+          "WeatherTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "HotelTool",
+        "parsed": "HotelTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "FlightTool",
+          "WeatherTool",
+          "HotelTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "CalendarTool",
+        "parsed": "CalendarTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "FlightTool",
+          "WeatherTool",
+          "HotelTool",
+          "CalendarTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "CarRentalTool",
+        "parsed": "CarRentalTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "FlightTool",
+          "WeatherTool",
+          "HotelTool",
+          "CalendarTool",
+          "CarRentalTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 3,
+    "scenario": 3,
+    "is_conditional": true,
+    "latent_bit": 0,
+    "gold": [
+      "HealthTool",
+      "PharmacyTool"
+    ],
+    "selected": [
+      "DoctorTool",
+      "HealthTool",
+      "PharmacyTool",
+      "WeatherTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "HealthTool",
+        "parsed": "HealthTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "HealthTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "PharmacyTool",
+        "parsed": "PharmacyTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "HealthTool",
+          "PharmacyTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "DoctorTool",
+        "parsed": "DoctorTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "HealthTool",
+          "PharmacyTool",
+          "DoctorTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "WeatherTool",
+        "parsed": "WeatherTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "HealthTool",
+          "PharmacyTool",
+          "DoctorTool",
+          "WeatherTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "PharmacyTool",
+        "parsed": "PharmacyTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "HealthTool",
+          "PharmacyTool",
+          "DoctorTool",
+          "WeatherTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 4,
+    "scenario": 4,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "InventoryTool",
+      "SupplierTool"
+    ],
+    "selected": [
+      "InventoryTool",
+      "OrderTool",
+      "SupplierTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "InventoryTool",
+        "parsed": "InventoryTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "InventoryTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "SupplierTool",
+        "parsed": "SupplierTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "InventoryTool",
+          "SupplierTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "OrderTool",
+        "parsed": "OrderTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "InventoryTool",
+          "SupplierTool",
+          "OrderTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "InventoryTool",
+        "parsed": "InventoryTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "InventoryTool",
+          "SupplierTool",
+          "OrderTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "InventoryTool",
+        "parsed": "InventoryTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "InventoryTool",
+          "SupplierTool",
+          "OrderTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 5,
+    "scenario": 5,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "CalendarTool",
+      "MessageTool"
+    ],
+    "selected": [
+      "CalendarTool",
+      "MeetingTool"
+    ],
+    "verdict": "WRONG SET",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "CalendarTool",
+        "parsed": "CalendarTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "CalendarTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "MeetingTool",
+        "parsed": "MeetingTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "CalendarTool",
+          "MeetingTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "MeetingTool",
+        "parsed": "MeetingTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "CalendarTool",
+          "MeetingTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "MeetingTool",
+        "parsed": "MeetingTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "CalendarTool",
+          "MeetingTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "MeetingTool",
+        "parsed": "MeetingTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "CalendarTool",
+          "MeetingTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 6,
+    "scenario": 6,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "RepoTool",
+      "RollbackTool"
+    ],
+    "selected": [
+      "DeployTool",
+      "RepoTool",
+      "ShippingTool"
+    ],
+    "verdict": "WRONG SET",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "RepoTool",
+        "parsed": "RepoTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "RepoTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "DeployTool",
+        "parsed": "DeployTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "RepoTool",
+          "DeployTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "ShippingTool",
+        "parsed": "ShippingTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "RepoTool",
+          "DeployTool",
+          "ShippingTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "RepoTool",
+        "parsed": "RepoTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "RepoTool",
+          "DeployTool",
+          "ShippingTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "RepoTool",
+        "parsed": "RepoTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "RepoTool",
+          "DeployTool",
+          "ShippingTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 7,
+    "scenario": 7,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "BillingTool",
+      "EscalateTool"
+    ],
+    "selected": [
+      "BillingTool",
+      "EscalateTool",
+      "InvoiceTool",
+      "TicketTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "BillingTool",
+        "parsed": "BillingTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "BillingTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "InvoiceTool",
+        "parsed": "InvoiceTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "BillingTool",
+          "InvoiceTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "InvoiceTool",
+        "parsed": "InvoiceTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "BillingTool",
+          "InvoiceTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "EscalateTool",
+        "parsed": "EscalateTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "BillingTool",
+          "InvoiceTool",
+          "EscalateTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "TicketTool",
+        "parsed": "TicketTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "BillingTool",
+          "InvoiceTool",
+          "EscalateTool",
+          "TicketTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 8,
+    "scenario": 8,
+    "is_conditional": true,
+    "latent_bit": 0,
+    "gold": [
+      "ResetTool",
+      "SecurityTool"
+    ],
+    "selected": [
+      "AccountTool",
+      "ResetTool",
+      "SecurityTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "AccountTool",
+        "parsed": "AccountTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "AccountTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "AccountTool",
+        "parsed": "AccountTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "AccountTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "SecurityTool",
+        "parsed": "SecurityTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "AccountTool",
+          "SecurityTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "ResetTool",
+        "parsed": "ResetTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "AccountTool",
+          "SecurityTool",
+          "ResetTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "ResetTool",
+        "parsed": "ResetTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "AccountTool",
+          "SecurityTool",
+          "ResetTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 9,
+    "scenario": 9,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "HRTool",
+      "PayrollTool"
+    ],
+    "selected": [
+      "AccountTool",
+      "CalendarTool",
+      "FinanceTool",
+      "HRTool",
+      "PayrollTool"
+    ],
+    "verdict": "SUPERSET (over-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "HRTool",
+        "parsed": "HRTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "HRTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "FinanceTool",
+        "parsed": "FinanceTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "HRTool",
+          "FinanceTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "CalendarTool",
+        "parsed": "CalendarTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "HRTool",
+          "FinanceTool",
+          "CalendarTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "AccountTool",
+        "parsed": "AccountTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "HRTool",
+          "FinanceTool",
+          "CalendarTool",
+          "AccountTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "PayrollTool",
+        "parsed": "PayrollTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "HRTool",
+          "FinanceTool",
+          "CalendarTool",
+          "AccountTool",
+          "PayrollTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 10,
+    "scenario": 10,
+    "is_conditional": true,
+    "latent_bit": 1,
+    "gold": [
+      "EscalateTool",
+      "LegalTool"
+    ],
+    "selected": [
+      "InvoiceTool",
+      "LegalTool"
+    ],
+    "verdict": "WRONG SET",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "LegalTool",
+        "parsed": "LegalTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "LegalTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "InvoiceTool",
+        "parsed": "InvoiceTool",
+        "parse_mode": "exact",
+        "reward": -0.55,
+        "selected": [
+          "LegalTool",
+          "InvoiceTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "ContractTool",
+        "parsed": "ContractTool",
+        "parse_mode": "UNPARSED",
+        "reward": -0.5,
+        "selected": [
+          "LegalTool",
+          "InvoiceTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "LegalTool",
+        "parsed": "LegalTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "LegalTool",
+          "InvoiceTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "LegalTool",
+        "parsed": "LegalTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "LegalTool",
+          "InvoiceTool"
+        ]
+      }
+    ]
+  },
+  {
+    "episode": 11,
+    "scenario": 11,
+    "is_conditional": true,
+    "latent_bit": 0,
+    "gold": [
+      "EmailTool",
+      "ShippingTool"
+    ],
+    "selected": [
+      "ShippingTool"
+    ],
+    "verdict": "SUBSET (under-predicted)",
+    "emitted_done": false,
+    "over_probed": false,
+    "turns_used": 5,
+    "turns": [
+      {
+        "turn": 1,
+        "raw": "ShippingTool",
+        "parsed": "ShippingTool",
+        "parse_mode": "exact",
+        "reward": 0.95,
+        "selected": [
+          "ShippingTool"
+        ]
+      },
+      {
+        "turn": 2,
+        "raw": "TrackingTool",
+        "parsed": "TrackingTool",
+        "parse_mode": "UNPARSED",
+        "reward": -0.5,
+        "selected": [
+          "ShippingTool"
+        ]
+      },
+      {
+        "turn": 3,
+        "raw": "TrackingTool",
+        "parsed": "TrackingTool",
+        "parse_mode": "UNPARSED",
+        "reward": -0.5,
+        "selected": [
+          "ShippingTool"
+        ]
+      },
+      {
+        "turn": 4,
+        "raw": "ShippingTool",
+        "parsed": "ShippingTool",
+        "parse_mode": "REPEAT",
+        "reward": -0.5,
+        "selected": [
+          "ShippingTool"
+        ]
+      },
+      {
+        "turn": 5,
+        "raw": "TrackingTool",
+        "parsed": "TrackingTool",
+        "parse_mode": "UNPARSED",
+        "reward": -0.5,
+        "selected": [
+          "ShippingTool"
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,46 @@
+[
+  {
+    "alpha": 1.0,
+    "n": 140,
+    "few_shot": false,
+    "static_ceiling": 0.5,
+    "exact_match": 0.07142857142857142,
+    "probe_first": 0.5714285714285714,
+    "conditions_on_result": 0.9142857142857143,
+    "unneeded_branch_rate": NaN,
+    "wall_seconds": 25.997915983200073
+  },
+  {
+    "alpha": 0.0,
+    "n": 140,
+    "few_shot": false,
+    "static_ceiling": 1.0,
+    "exact_match": 0.14285714285714285,
+    "probe_first": NaN,
+    "conditions_on_result": NaN,
+    "unneeded_branch_rate": 1.0,
+    "wall_seconds": 20.955019235610962
+  },
+  {
+    "alpha": 1.0,
+    "n": 140,
+    "few_shot": true,
+    "static_ceiling": 0.5,
+    "exact_match": 0.07142857142857142,
+    "probe_first": 0.8571428571428571,
+    "conditions_on_result": 0.6285714285714286,
+    "unneeded_branch_rate": NaN,
+    "wall_seconds": 25.847587823867798
+  },
+  {
+    "alpha": 0.0,
+    "n": 140,
+    "few_shot": true,
+    "static_ceiling": 1.0,
+    "exact_match": 0.14285714285714285,
+    "probe_first": NaN,
+    "conditions_on_result": NaN,
+    "unneeded_branch_rate": 1.0,
+    "wall_seconds": 24.948488473892212
+  }
+]

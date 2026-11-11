@@ -1,0 +1,7 @@
+{
+  "LLaMA-3.1-8B-Instruct": {
+    "success_mean": 0.2549019607843137,
+    "f1_mean": 0.7443821973233736,
+    "n_examples": 51
+  }
+}

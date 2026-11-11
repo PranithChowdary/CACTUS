@@ -1,0 +1,361 @@
+[
+  [
+    {
+      "index": 0,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 1,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 2,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 3,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 4,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 5,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 6,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 7,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 8,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 9,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 10,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 11,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 12,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 13,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 14,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 15,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 16,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 17,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 18,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 19,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 20,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 21,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 22,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 23,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 24,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 25,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 26,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 27,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 28,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 29,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 30,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 31,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 32,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 33,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 34,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 35,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 36,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 37,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 38,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 39,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 40,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 41,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 42,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 43,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 44,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 45,
+      "reward": 1.5666666666666664,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2
+    },
+    {
+      "index": 46,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 47,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 48,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 49,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    },
+    {
+      "index": 50,
+      "reward": -0.05,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 1
+    }
+  ]
+]

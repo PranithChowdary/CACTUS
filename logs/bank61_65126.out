@@ -1,0 +1,285 @@
+bank size check:
+  61 scenarios
+
+-------------------------------------------------------------
+# llama-3.2-1b   (meta-llama/Llama-3.2-1B-Instruct)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -21.6529 vs policy -21.6530
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.293 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = +0.113 vs r_sum = -0.293
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +4.94 vs DeployTool +2.55
+      (argmax under PMI on this toy prompt: ' CarRentalTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   CarRentalTool      4    -26.10    -6.53    -33.22      7.12
+   HotelTool          2    -21.65   -10.83    -26.60      4.94
+   DeployTool         2    -22.14   -11.07    -24.69      2.55
+   DONE               1    -11.18   -11.18    -10.87     -0.30
+   PharmacyTool       2    -30.30   -15.15    -28.38     -1.92
+   WeatherTool        2    -27.28   -13.64    -23.08     -4.20
+
+critical: 6/6 passed   diagnostic: 3/3 passed
+model on cuda:0
+
+
+[sum] alpha=0.0 ...
+    step 1: 61 active, 27s
+    step 2: 61 active, 47s
+    step 3: 61 active, 66s
+    step 4: 61 active, 84s
+    step 5: 0 active, 102s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.000  probe_in_topk=0.033  P(DONE|complete)=nan  (102s)
+
+[sum] alpha=1.0 ...
+    step 1: 61 active, 21s
+    step 2: 61 active, 41s
+    step 3: 61 active, 60s
+    step 4: 61 active, 78s
+    step 5: 0 active, 95s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.016  probe_in_topk=nan  P(DONE|complete)=0.000  (95s)
+
+[pmi] alpha=0.0 ...
+    step 1: 61 active, 21s
+    step 2: 61 active, 41s
+    step 3: 61 active, 61s
+    step 4: 61 active, 80s
+    step 5: 0 active, 98s
+[pmi] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.033  probe_in_topk=0.066  P(DONE|complete)=0.000  (98s)
+
+[pmi] alpha=1.0 ...
+    step 1: 61 active, 21s
+    step 2: 61 active, 41s
+    step 3: 61 active, 61s
+    step 4: 61 active, 79s
+    step 5: 0 active, 97s
+[pmi] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.000  probe_in_topk=nan  P(DONE|complete)=nan  (97s)
+
+======================================================================
+HEADLINE (sum scoring, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.000 (ceiling 1.000)
+  probe in top-k (over-gather): 0.033
+  over-probe rate (all 5 steps): 0.131
+  wasted tools per episode   : 4.75
+  exact match                : 0.000 (ceiling 1.000)
+  terminated via DONE        : 0.000
+======================================================================
+
+-------------------------------------------------------------
+# qwen2.5-7b   (Qwen/Qwen2.5-7B-Instruct)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -21.0383 vs policy -21.0383
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.429 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.195 vs r_sum = -0.429
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +12.22 vs DeployTool +5.52
+      (argmax under PMI on this toy prompt: ' HotelTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   HotelTool          2    -21.04   -10.52    -33.26     12.22
+   CarRentalTool      4    -31.73    -7.93    -40.27      8.54
+   DeployTool         2    -27.65   -13.82    -33.16      5.52
+   PharmacyTool       2    -30.64   -15.32    -35.81      5.18
+   WeatherTool        2    -31.99   -16.00    -26.45     -5.54
+   DONE               1    -17.87   -17.87     -7.91     -9.97
+
+critical: 6/6 passed   diagnostic: 3/3 passed
+model on cuda:0
+
+
+[sum] alpha=0.0 ...
+    step 1: 61 active, 104s
+    step 2: 59 active, 203s
+    step 3: 35 active, 300s
+    step 4: 10 active, 355s
+    step 5: 0 active, 370s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.377  DONE_rate=0.984  SEM@k=0.656  probe_in_topk=0.164  P(DONE|complete)=0.575  (370s)
+
+[sum] alpha=1.0 ...
+    step 1: 60 active, 101s
+    step 2: 43 active, 197s
+    step 3: 21 active, 266s
+    step 4: 8 active, 300s
+    step 5: 0 active, 312s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.098  DONE_rate=0.885  SEM@k=0.164  probe_in_topk=nan  P(DONE|complete)=0.578  (312s)
+
+[pmi] alpha=0.0 ...
+    step 1: 61 active, 101s
+    step 2: 61 active, 197s
+    step 3: 61 active, 291s
+    step 4: 61 active, 384s
+    step 5: 0 active, 476s
+[pmi] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.492  probe_in_topk=0.213  P(DONE|complete)=0.000  (476s)
+
+[pmi] alpha=1.0 ...
+    step 1: 61 active, 101s
+    step 2: 61 active, 198s
+    step 3: 61 active, 294s
+    step 4: 61 active, 389s
+    step 5: 0 active, 482s
+[pmi] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.262  probe_in_topk=nan  P(DONE|complete)=0.000  (482s)
+
+======================================================================
+HEADLINE (sum scoring, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.656 (ceiling 1.000)
+  probe in top-k (over-gather): 0.164
+  over-probe rate (all 5 steps): 0.328
+  wasted tools per episode   : 0.77
+  exact match                : 0.377 (ceiling 1.000)
+  terminated via DONE        : 0.984
+======================================================================
+
+-------------------------------------------------------------
+# llama-3.1-8b   (meta-llama/Meta-Llama-3.1-8B-Instruct)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -16.4643 vs policy -16.4643
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.535 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.149 vs r_sum = -0.535
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +11.52 vs DeployTool +5.47
+      (argmax under PMI on this toy prompt: ' HotelTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   HotelTool          2    -16.46    -8.23    -27.98     11.52
+   CarRentalTool      4    -18.85    -4.71    -29.01     10.16
+   WeatherTool        2    -20.16   -10.08    -26.61      6.45
+   DeployTool         2    -20.74   -10.37    -26.20      5.47
+   PharmacyTool       2    -25.41   -12.71    -29.04      3.63
+   DONE               1    -11.68   -11.68    -11.88      0.20
+
+critical: 6/6 passed   diagnostic: 3/3 passed
+model on cuda:0
+
+
+[sum] alpha=0.0 ...
+    step 1: 61 active, 114s
+    step 2: 61 active, 224s
+    step 3: 61 active, 335s
+    step 4: 61 active, 442s
+    step 5: 0 active, 546s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.951  probe_in_topk=0.033  P(DONE|complete)=0.002  (546s)
+
+[sum] alpha=1.0 ...
+    step 1: 61 active, 111s
+    step 2: 61 active, 220s
+    step 3: 61 active, 329s
+    step 4: 61 active, 436s
+    step 5: 0 active, 540s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.180  probe_in_topk=nan  P(DONE|complete)=0.000  (540s)
+
+[pmi] alpha=0.0 ...
+    step 1: 61 active, 111s
+    step 2: 61 active, 217s
+    step 3: 61 active, 322s
+    step 4: 61 active, 426s
+    step 5: 0 active, 527s
+[pmi] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.049  probe_in_topk=0.082  P(DONE|complete)=0.000  (527s)
+
+[pmi] alpha=1.0 ...
+    step 1: 61 active, 111s
+    step 2: 61 active, 217s
+    step 3: 61 active, 321s
+    step 4: 61 active, 421s
+    step 5: 0 active, 521s
+[pmi] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.098  probe_in_topk=nan  P(DONE|complete)=0.000  (521s)
+
+======================================================================
+HEADLINE (sum scoring, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.951 (ceiling 1.000)
+  probe in top-k (over-gather): 0.033
+  over-probe rate (all 5 steps): 0.787
+  wasted tools per episode   : 3.00
+  exact match                : 0.000 (ceiling 1.000)
+  terminated via DONE        : 0.000
+======================================================================
+
+-------------------------------------------------------------
+# cross-model comparison (61-scenario bank)
+-------------------------------------------------------------
+
+scoring = sum   (PMI reported as ablation in the raw JSON)
+alpha=0 unit of evidence = SCENARIOS, not episodes (deterministic argmax makes repeats identical)
+
+model             recall    rank   probe       exploit    stop  DONErank   P(DONE)   spur
+                      @5   SEM@k     a=1      branch@2    scen    of ~35     |cmpl    a=0
+-----------------------------------------------------------------------------------------
+llama-3.1-70b      1.000   0.541   0.836  0.358 (n=53)    5/61      21.9    0.0107  0.246
+llama-3.1-8b       1.000   0.951   0.787  0.212 (n=52)    0/61      30.1    0.0020  0.033
+llama-3.2-1b       0.033   0.000   0.000   1.000 (n=1)    0/61      26.4       nan  0.033
+qwen2.5-7b         0.951   0.656   0.721  0.208 (n=48)   60/61       2.1    0.5782  0.164
+
+TERMINATION, two ways:
+  llama-3.1-70b    stops in 5/61 scenarios   P(DONE | gold complete) = 0.0107
+  llama-3.1-8b     stops in 0/61 scenarios   P(DONE | gold complete) = 0.0020
+  llama-3.2-1b     stops in 0/61 scenarios   P(DONE | gold complete) = nan
+  qwen2.5-7b       stops in 60/61 scenarios   P(DONE | gold complete) = 0.5782
+
+  crosses done_rate > 0.05        : llama-3.1-70b, qwen2.5-7b
+  holds >10% mass on DONE at cmpl : qwen2.5-7b
+
+  These two sets DIFFER. A model in the first but not the second
+  reaches the threshold without the stop signal being calibrated --
+  check how many distinct scenarios drive its done_rate before
+  describing it as a model that terminates.
+
+  note: for 4/4 models every alpha=0 repeat is identical within
+        each scenario, so n_effective = [61] and NOT [61]. Every alpha=0 rate
+        above is a multiple of 1/61; CIs must be taken over scenarios.
+
+wrote results/model_comparison_bank61.json
+
+Done. Pull back with:  bash scripts/fetch_results.sh

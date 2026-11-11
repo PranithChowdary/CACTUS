@@ -1,0 +1,31 @@
+\ProvidesPackage{arxiv}
+\RequirePackage{geometry}
+\geometry{a4paper, margin=1in}
+\RequirePackage{times}
+\RequirePackage{graphicx}
+\RequirePackage{natbib}
+\RequirePackage{amsmath,amssymb,amsfonts}
+\RequirePackage{booktabs}
+\RequirePackage{hyperref}
+\RequirePackage{algorithm}
+\RequirePackage{algorithmic}
+\RequirePackage{xcolor}
+\RequirePackage{tikz}
+\usetikzlibrary{shapes,arrows,positioning}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=red,
+    citecolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\renewcommand{\maketitle}{
+  \begin{center}
+    {\Large \bfseries \@title \par}
+    \vspace{1.5em}
+    {\large \@author \par}
+  \end{center}
+  \vspace{2em}
+}

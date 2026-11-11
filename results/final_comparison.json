@@ -1,0 +1,53 @@
+{
+    "Random": {
+        "reward_mean": -2.420199536462512,
+        "reward_std": 0.2844072606597886,
+        "f1_mean": 0.18254556157670346,
+        "f1_std": 0.02097876710505019,
+        "success_mean": 0.0,
+        "success_std": 0.0,
+        "steps_mean": 8.250980392156864,
+        "steps_std": 0.6367871586556075,
+        "n_runs": 5
+    },
+    "Heuristic": {
+        "reward_mean": 0.20359477124182998,
+        "reward_std": 0.0,
+        "f1_mean": 0.1045751633986928,
+        "f1_std": 0.0,
+        "success_mean": 0.0,
+        "success_std": 0.0,
+        "steps_mean": 1.1568627450980393,
+        "steps_std": 0.0,
+        "n_runs": 1
+    },
+    "DenseRetrieval": {
+        "reward_mean": 1.395845004668534,
+        "reward_std": 0.0,
+        "f1_mean": 0.565452847805789,
+        "f1_std": 0.0,
+        "success_mean": 0.13725490196078433,
+        "success_std": 0.0,
+        "steps_mean": 2.803921568627451,
+        "steps_std": 0.0,
+        "n_runs": 1
+    },
+    "PPO": {
+        "reward_mean": 2.6628104575163394,
+        "reward_std": 0.17489025503780808,
+        "f1_mean": 0.8061437908496731,
+        "f1_std": 0.03090128064013792,
+        "success_mean": 0.5725490196078431,
+        "success_std": 0.06706914265289046,
+        "steps_mean": 2.788235294117647,
+        "steps_std": 0.08012869310471595,
+        "n_runs": 5
+    },
+    "LLaMA-3.1-8B-Instruct": {
+        "f1_mean": 0.7443821973233736,
+        "f1_std": 0.0,
+        "success_mean": 0.2549019607843137,
+        "success_std": 0.0,
+        "n_runs": 1
+    }
+}

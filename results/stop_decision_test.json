@@ -1,0 +1,1082 @@
+[
+  {
+    "scenario": 0,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "CarRentalTool",
+      "HotelTool"
+    ],
+    "called": [
+      "CarRentalTool",
+      "HotelTool"
+    ],
+    "missing": null,
+    "A_raw": "TripTool",
+    "A_said_done": false,
+    "B_raw": "YES",
+    "B_said_yes": true,
+    "B_correct": true,
+    "C_done_logprob": -16.842668533325195,
+    "C_best_tool": "TripTool",
+    "C_best_tool_logprob": -1.0457934141159058,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 1,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "BudgetTool",
+      "InvoiceTool"
+    ],
+    "called": [
+      "BudgetTool",
+      "InvoiceTool"
+    ],
+    "missing": null,
+    "A_raw": "FinanceTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -10.7578763961792,
+    "C_best_tool": "FinanceTool",
+    "C_best_tool_logprob": -1.2031890153884888,
+    "C_done_rank": 33
+  },
+  {
+    "scenario": 2,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "CarRentalTool",
+      "HotelTool"
+    ],
+    "called": [
+      "CarRentalTool",
+      "HotelTool"
+    ],
+    "missing": null,
+    "A_raw": "FlightTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -17.91956329345703,
+    "C_best_tool": "FlightTool",
+    "C_best_tool_logprob": -0.16956263780593872,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 3,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "InsuranceTool",
+      "PharmacyTool"
+    ],
+    "called": [
+      "InsuranceTool",
+      "PharmacyTool"
+    ],
+    "missing": null,
+    "A_raw": "HealthTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -14.465182304382324,
+    "C_best_tool": "HealthTool",
+    "C_best_tool_logprob": -1.0862764120101929,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 4,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "OrderTool",
+      "ShippingTool"
+    ],
+    "called": [
+      "OrderTool",
+      "ShippingTool"
+    ],
+    "missing": null,
+    "A_raw": "InventoryTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -16.93903160095215,
+    "C_best_tool": "InventoryTool",
+    "C_best_tool_logprob": -0.6030946969985962,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 5,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "EmailTool",
+      "MeetingTool"
+    ],
+    "called": [
+      "EmailTool",
+      "MeetingTool"
+    ],
+    "missing": null,
+    "A_raw": "CalendarTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -15.444262504577637,
+    "C_best_tool": "CalendarTool",
+    "C_best_tool_logprob": -0.5731684565544128,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 6,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "DeployTool",
+      "TicketTool"
+    ],
+    "called": [
+      "DeployTool",
+      "TicketTool"
+    ],
+    "missing": null,
+    "A_raw": "ReleaseTicketTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -11.307778358459473,
+    "C_best_tool": "RepoTool",
+    "C_best_tool_logprob": -1.823403239250183,
+    "C_done_rank": 33
+  },
+  {
+    "scenario": 7,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "EmailTool",
+      "RefundTool"
+    ],
+    "called": [
+      "EmailTool",
+      "RefundTool"
+    ],
+    "missing": null,
+    "A_raw": "InvoiceTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -9.512513160705566,
+    "C_best_tool": "InvoiceTool",
+    "C_best_tool_logprob": -0.38751301169395447,
+    "C_done_rank": 20
+  },
+  {
+    "scenario": 8,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "EmailTool",
+      "ResetTool"
+    ],
+    "called": [
+      "EmailTool",
+      "ResetTool"
+    ],
+    "missing": null,
+    "A_raw": "AccountTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -5.148822784423828,
+    "C_best_tool": "AccountTool",
+    "C_best_tool_logprob": -0.937885046005249,
+    "C_done_rank": 10
+  },
+  {
+    "scenario": 9,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "EmailTool",
+      "TrainingTool"
+    ],
+    "called": [
+      "EmailTool",
+      "TrainingTool"
+    ],
+    "missing": null,
+    "A_raw": "HRTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -13.264020919799805,
+    "C_best_tool": "HRTool",
+    "C_best_tool_logprob": -0.5530833601951599,
+    "C_done_rank": 33
+  },
+  {
+    "scenario": 10,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "AccountTool",
+      "TicketTool"
+    ],
+    "called": [
+      "AccountTool",
+      "TicketTool"
+    ],
+    "missing": null,
+    "A_raw": "LegalTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -14.687336921691895,
+    "C_best_tool": "LegalTool",
+    "C_best_tool_logprob": -0.09358646720647812,
+    "C_done_rank": 32
+  },
+  {
+    "scenario": 11,
+    "conditional": false,
+    "complete": true,
+    "gold": [
+      "EmailTool",
+      "TicketTool"
+    ],
+    "called": [
+      "EmailTool",
+      "TicketTool"
+    ],
+    "missing": null,
+    "A_raw": "ShippingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -12.110976219177246,
+    "C_best_tool": "ShippingTool",
+    "C_best_tool_logprob": -0.18128831684589386,
+    "C_done_rank": 34
+  },
+  {
+    "scenario": 0,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "CarRentalTool",
+      "HotelTool"
+    ],
+    "called": [
+      "CarRentalTool"
+    ],
+    "missing": "HotelTool",
+    "A_raw": "HotelTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -18.487287521362305,
+    "C_best_tool": "HotelTool",
+    "C_best_tool_logprob": -0.0029123295098543167,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 1,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "BudgetTool",
+      "InvoiceTool"
+    ],
+    "called": [
+      "BudgetTool"
+    ],
+    "missing": "InvoiceTool",
+    "A_raw": "InvoiceTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -16.638282775878906,
+    "C_best_tool": "InvoiceTool",
+    "C_best_tool_logprob": -0.005470544099807739,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 2,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "CarRentalTool",
+      "HotelTool"
+    ],
+    "called": [
+      "CarRentalTool"
+    ],
+    "missing": "HotelTool",
+    "A_raw": "HotelTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -18.819683074951172,
+    "C_best_tool": "HotelTool",
+    "C_best_tool_logprob": -0.01890217326581478,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 3,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "InsuranceTool",
+      "PharmacyTool"
+    ],
+    "called": [
+      "InsuranceTool"
+    ],
+    "missing": "PharmacyTool",
+    "A_raw": "PharmacyTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -17.62571144104004,
+    "C_best_tool": "PharmacyTool",
+    "C_best_tool_logprob": -0.024148382246494293,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 4,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "OrderTool",
+      "ShippingTool"
+    ],
+    "called": [
+      "OrderTool"
+    ],
+    "missing": "ShippingTool",
+    "A_raw": "ShippingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -16.660247802734375,
+    "C_best_tool": "ShippingTool",
+    "C_best_tool_logprob": -0.10165343433618546,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 5,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "EmailTool",
+      "MeetingTool"
+    ],
+    "called": [
+      "EmailTool"
+    ],
+    "missing": "MeetingTool",
+    "A_raw": "MeetingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -14.933926582336426,
+    "C_best_tool": "MeetingTool",
+    "C_best_tool_logprob": -0.019864432513713837,
+    "C_done_rank": 33
+  },
+  {
+    "scenario": 6,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "DeployTool",
+      "TicketTool"
+    ],
+    "called": [
+      "DeployTool"
+    ],
+    "missing": "TicketTool",
+    "A_raw": "TicketTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -12.06379222869873,
+    "C_best_tool": "TicketTool",
+    "C_best_tool_logprob": -0.08722949773073196,
+    "C_done_rank": 30
+  },
+  {
+    "scenario": 7,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "EmailTool",
+      "RefundTool"
+    ],
+    "called": [
+      "EmailTool"
+    ],
+    "missing": "RefundTool",
+    "A_raw": "RefundTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -17.149085998535156,
+    "C_best_tool": "RefundTool",
+    "C_best_tool_logprob": -0.03580443188548088,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 8,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "EmailTool",
+      "ResetTool"
+    ],
+    "called": [
+      "EmailTool"
+    ],
+    "missing": "ResetTool",
+    "A_raw": "ResetTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -14.573336601257324,
+    "C_best_tool": "ResetTool",
+    "C_best_tool_logprob": -0.5889613032341003,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 9,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "EmailTool",
+      "TrainingTool"
+    ],
+    "called": [
+      "EmailTool"
+    ],
+    "missing": "TrainingTool",
+    "A_raw": "TrainingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -16.26812171936035,
+    "C_best_tool": "TrainingTool",
+    "C_best_tool_logprob": -0.0024958669673651457,
+    "C_done_rank": 28
+  },
+  {
+    "scenario": 10,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "AccountTool",
+      "TicketTool"
+    ],
+    "called": [
+      "AccountTool"
+    ],
+    "missing": "TicketTool",
+    "A_raw": "LegalTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -15.436278343200684,
+    "C_best_tool": "LegalTool",
+    "C_best_tool_logprob": -0.6003404855728149,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 11,
+    "conditional": false,
+    "complete": false,
+    "gold": [
+      "EmailTool",
+      "TicketTool"
+    ],
+    "called": [
+      "EmailTool"
+    ],
+    "missing": "TicketTool",
+    "A_raw": "ShippingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -13.509159088134766,
+    "C_best_tool": "ShippingTool",
+    "C_best_tool_logprob": -0.18884673714637756,
+    "C_done_rank": 31
+  },
+  {
+    "scenario": 0,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "TripTool",
+      "WeatherTool"
+    ],
+    "called": [
+      "WeatherTool",
+      "TripTool"
+    ],
+    "missing": null,
+    "A_raw": "HotelTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -16.03995132446289,
+    "C_best_tool": "HotelTool",
+    "C_best_tool_logprob": -0.8485445976257324,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 1,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "FinanceTool",
+      "TaxTool"
+    ],
+    "called": [
+      "FinanceTool",
+      "TaxTool"
+    ],
+    "missing": null,
+    "A_raw": "BudgetTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -13.961332321166992,
+    "C_best_tool": "BudgetTool",
+    "C_best_tool_logprob": -0.27383244037628174,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 2,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "CarRentalTool",
+      "FlightTool"
+    ],
+    "called": [
+      "FlightTool",
+      "CarRentalTool"
+    ],
+    "missing": null,
+    "A_raw": "WeatherTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -15.06347370147705,
+    "C_best_tool": "WeatherTool",
+    "C_best_tool_logprob": -0.23534885048866272,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 3,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "DoctorTool",
+      "HealthTool"
+    ],
+    "called": [
+      "HealthTool",
+      "DoctorTool"
+    ],
+    "missing": null,
+    "A_raw": "PharmacyTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -19.163726806640625,
+    "C_best_tool": "PharmacyTool",
+    "C_best_tool_logprob": -0.18716396391391754,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 4,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "InventoryTool",
+      "OrderTool"
+    ],
+    "called": [
+      "InventoryTool",
+      "OrderTool"
+    ],
+    "missing": null,
+    "A_raw": "SupplierTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -10.98570728302002,
+    "C_best_tool": "SupplierTool",
+    "C_best_tool_logprob": -0.23570716381072998,
+    "C_done_rank": 27
+  },
+  {
+    "scenario": 5,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "CalendarTool",
+      "MessageTool"
+    ],
+    "called": [
+      "CalendarTool",
+      "MessageTool"
+    ],
+    "missing": null,
+    "A_raw": "MeetingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -13.68938159942627,
+    "C_best_tool": "MeetingTool",
+    "C_best_tool_logprob": -0.7362565994262695,
+    "C_done_rank": 34
+  },
+  {
+    "scenario": 6,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "DeployTool",
+      "RepoTool"
+    ],
+    "called": [
+      "RepoTool",
+      "DeployTool"
+    ],
+    "missing": null,
+    "A_raw": "ShippingTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -5.14695930480957,
+    "C_best_tool": "ShippingTool",
+    "C_best_tool_logprob": -0.6547717452049255,
+    "C_done_rank": 11
+  },
+  {
+    "scenario": 7,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "BillingTool",
+      "EscalateTool"
+    ],
+    "called": [
+      "BillingTool",
+      "EscalateTool"
+    ],
+    "missing": null,
+    "A_raw": "EscalateTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -15.092735290527344,
+    "C_best_tool": "InvoiceTool",
+    "C_best_tool_logprob": -2.041954278945923,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 8,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "ResetTool",
+      "SecurityTool"
+    ],
+    "called": [
+      "SecurityTool",
+      "ResetTool"
+    ],
+    "missing": null,
+    "A_raw": "AccountTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -11.855134963989258,
+    "C_best_tool": "AccountTool",
+    "C_best_tool_logprob": -0.16763468086719513,
+    "C_done_rank": 34
+  },
+  {
+    "scenario": 9,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "HRTool",
+      "PayrollTool"
+    ],
+    "called": [
+      "HRTool",
+      "PayrollTool"
+    ],
+    "missing": null,
+    "A_raw": "AccountTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -8.41623306274414,
+    "C_best_tool": "AccountTool",
+    "C_best_tool_logprob": -1.1506084203720093,
+    "C_done_rank": 27
+  },
+  {
+    "scenario": 10,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "InvoiceTool",
+      "LegalTool"
+    ],
+    "called": [
+      "LegalTool",
+      "InvoiceTool"
+    ],
+    "missing": null,
+    "A_raw": "AccountTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -14.682111740112305,
+    "C_best_tool": "AccountTool",
+    "C_best_tool_logprob": -1.0844558477401733,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 11,
+    "conditional": true,
+    "complete": true,
+    "gold": [
+      "RefundTool",
+      "ShippingTool"
+    ],
+    "called": [
+      "ShippingTool",
+      "RefundTool"
+    ],
+    "missing": null,
+    "A_raw": "WeatherTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": false,
+    "C_done_logprob": -13.928251266479492,
+    "C_best_tool": "WeatherTool",
+    "C_best_tool_logprob": -0.7720015645027161,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 0,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "TripTool",
+      "WeatherTool"
+    ],
+    "called": [
+      "WeatherTool"
+    ],
+    "missing": "TripTool",
+    "A_raw": "TripTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -16.498332977294922,
+    "C_best_tool": "TripTool",
+    "C_best_tool_logprob": -0.9631757736206055,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 1,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "FinanceTool",
+      "TaxTool"
+    ],
+    "called": [
+      "FinanceTool"
+    ],
+    "missing": "TaxTool",
+    "A_raw": "BudgetTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -14.616486549377441,
+    "C_best_tool": "BudgetTool",
+    "C_best_tool_logprob": -0.4680493175983429,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 2,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "CarRentalTool",
+      "FlightTool"
+    ],
+    "called": [
+      "FlightTool"
+    ],
+    "missing": "CarRentalTool",
+    "A_raw": "HotelTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -14.926340103149414,
+    "C_best_tool": "HotelTool",
+    "C_best_tool_logprob": -1.0239965915679932,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 3,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "DoctorTool",
+      "HealthTool"
+    ],
+    "called": [
+      "HealthTool"
+    ],
+    "missing": "DoctorTool",
+    "A_raw": "PharmacyTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -18.925317764282227,
+    "C_best_tool": "PharmacyTool",
+    "C_best_tool_logprob": -0.05813062936067581,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 4,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "InventoryTool",
+      "OrderTool"
+    ],
+    "called": [
+      "InventoryTool"
+    ],
+    "missing": "OrderTool",
+    "A_raw": "SupplierTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -12.235077857971191,
+    "C_best_tool": "SupplierTool",
+    "C_best_tool_logprob": -0.2897650897502899,
+    "C_done_rank": 27
+  },
+  {
+    "scenario": 5,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "CalendarTool",
+      "MessageTool"
+    ],
+    "called": [
+      "CalendarTool"
+    ],
+    "missing": "MessageTool",
+    "A_raw": "EmailTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -13.465664863586426,
+    "C_best_tool": "EmailTool",
+    "C_best_tool_logprob": -0.4266023635864258,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 6,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "DeployTool",
+      "RepoTool"
+    ],
+    "called": [
+      "RepoTool"
+    ],
+    "missing": "DeployTool",
+    "A_raw": "DeployTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -7.0894598960876465,
+    "C_best_tool": "DeployTool",
+    "C_best_tool_logprob": -0.714460015296936,
+    "C_done_rank": 16
+  },
+  {
+    "scenario": 7,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "BillingTool",
+      "EscalateTool"
+    ],
+    "called": [
+      "BillingTool"
+    ],
+    "missing": "EscalateTool",
+    "A_raw": "InvoiceTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -13.651078224182129,
+    "C_best_tool": "InvoiceTool",
+    "C_best_tool_logprob": -0.6354532241821289,
+    "C_done_rank": 35
+  },
+  {
+    "scenario": 8,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "ResetTool",
+      "SecurityTool"
+    ],
+    "called": [
+      "SecurityTool"
+    ],
+    "missing": "ResetTool",
+    "A_raw": "AccountTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -11.811591148376465,
+    "C_best_tool": "AccountTool",
+    "C_best_tool_logprob": -0.22565342485904694,
+    "C_done_rank": 34
+  },
+  {
+    "scenario": 9,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "HRTool",
+      "PayrollTool"
+    ],
+    "called": [
+      "HRTool"
+    ],
+    "missing": "PayrollTool",
+    "A_raw": "AccountTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -11.534201622009277,
+    "C_best_tool": "AccountTool",
+    "C_best_tool_logprob": -0.8623262047767639,
+    "C_done_rank": 34
+  },
+  {
+    "scenario": 10,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "InvoiceTool",
+      "LegalTool"
+    ],
+    "called": [
+      "LegalTool"
+    ],
+    "missing": "InvoiceTool",
+    "A_raw": "InvoiceTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -15.423572540283203,
+    "C_best_tool": "InvoiceTool",
+    "C_best_tool_logprob": -0.5329470634460449,
+    "C_done_rank": 36
+  },
+  {
+    "scenario": 11,
+    "conditional": true,
+    "complete": false,
+    "gold": [
+      "RefundTool",
+      "ShippingTool"
+    ],
+    "called": [
+      "ShippingTool"
+    ],
+    "missing": "RefundTool",
+    "A_raw": "WeatherTool",
+    "A_said_done": false,
+    "B_raw": "NO",
+    "B_said_yes": false,
+    "B_correct": true,
+    "C_done_logprob": -14.522664070129395,
+    "C_best_tool": "WeatherTool",
+    "C_best_tool_logprob": -1.1867268085479736,
+    "C_done_rank": 36
+  }
+]

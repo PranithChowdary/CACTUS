@@ -1,71 +1,89 @@
 """
-metatool_env.py
+metatool_env.py - Gymnasium Edition
 
-MetaTool Environment: A DeepMind-style environment for training RL agents
-on tool selection tasks. Supports single-shot and multi-step interaction,
-with an action space spanning the full tool vocabulary.
+A standardized Gymnasium environment for tool-selection RL research.
 
-Author: CACTUS Authors
-Date: 2025-08-28
+Key properties (see docs/DESIGN.md and paper/main.tex Sec 3):
+- The action space is the tool vocabulary plus a DONE token.
+- Once a tool (right or wrong) has been chosen, it is permanently masked out via
+  `action_masks()` so it can never be chosen again. This is the mechanism that
+  bounds trajectory length to <= |A| and is what CACTUS's paper calls
+  "autoregressive action masking" -- it must be enforced by the *policy*
+  (see models/ppo_agent.py using sb3_contrib.MaskablePPO), not just exposed here.
+- `reset(options={"index": i})` selects a specific example deterministically,
+  which evaluation code uses to walk the test set exactly once instead of
+  sampling with replacement.
 """
 
-import random
-import dm_env
+import gymnasium as gym
+from gymnasium import spaces
+import numpy as np
 import pandas as pd
-from typing import List, Dict, Optional
-from dm_env import specs
+from typing import List, Dict, Optional, Tuple, Any
 
 
-class MetaToolEnv(dm_env.Environment):
+class MetaToolEnv(gym.Env):
     """
-    MetaTool tool-selection environment.
+    MetaTool environment for reinforcement learning.
 
-    Agents must select a subset of tools (typically K=5) from a global
-    vocabulary (~212 tools). Rewards are given for selecting correct tools.
+    The agent observes the current tool selection and the query, and must
+    select the correct subset of tools for the given query, then call DONE.
     """
+    metadata = {"render_modes": ["ansi"]}
 
     def __init__(
         self,
         dataframe: pd.DataFrame,
         tool_vocab: List[str],
+        max_steps: Optional[int] = None,
         mode: str = "multi-step",
-        max_steps: int = 20,
-        seed: Optional[int] = None
+        seed: Optional[int] = None,
+        step_penalty: float = 0.05,
+        correct_reward: float = 1.0,
+        incorrect_reward: float = -0.5,
+        exact_match_bonus: float = 2.0,
     ):
-        """
-        Initialize the MetaTool environment.
+        super().__init__()
 
-        Args:
-            dataframe (pd.DataFrame): Must contain ["Query", "Tool"] and optionally ["New Tools"].
-            tool_vocab (list[str]): Global vocabulary of all tools.
-            mode (str): "single-shot" or "multi-step".
-            max_steps (int): Maximum number of steps per episode (for multi-step).
-            seed (int, optional): Random seed for reproducibility.
-        """
-        assert "Query" in dataframe.columns, "DataFrame must contain 'Query' column"
-        assert "Tool" in dataframe.columns, "DataFrame must contain 'Tool' column"
-        assert mode in ["single-shot", "multi-step"], "Invalid mode"
-
+        # Data and Vocab
         self.df = dataframe.reset_index(drop=True)
         self.tool_vocab = list(tool_vocab)
-        self.mode = mode
-        self.max_steps = max_steps
-        self.rng = random.Random(seed)
-
-        # Add a "DONE" token to the action space
         if "DONE" not in self.tool_vocab:
-            self.tool_vocab = self.tool_vocab + ["DONE"]
+            self.tool_vocab.append("DONE")
 
-        self.current_index = None
-        self.correct_tools = None
-        self.selected_tools = []
-        self.prompt = None
-        self.done = False
+        self.tool_to_idx = {tool: i for i, tool in enumerate(self.tool_vocab)}
+        self.done_idx = self.tool_to_idx["DONE"]
+        self.n_actions = len(self.tool_vocab)
+
+        # With masking, a trajectory can select at most (n_actions - 1) real
+        # tools before DONE becomes the only unmasked action. max_steps is a
+        # safety truncation only -- it should never bind in practice, and
+        # MUST be identical between training and evaluation.
+        self.max_steps = max_steps if max_steps is not None else self.n_actions
+        self.mode = mode
+
+        self.step_penalty = step_penalty
+        self.correct_reward = correct_reward
+        self.incorrect_reward = incorrect_reward
+        self.exact_match_bonus = exact_match_bonus
+
+        # Spaces
+        self.action_space = spaces.Discrete(self.n_actions)
+        self.observation_space = spaces.Dict({
+            "selection": spaces.MultiBinary(self.n_actions),
+            "prompt_id": spaces.Discrete(len(self.df))
+        })
+
+        # State
+        self.current_idx = None
+        self.correct_tool_indices = set()
+        self.selected_tool_indices = set()
         self.step_count = 0
 
-    @staticmethod
-    def _normalize_tools(val) -> List[str]:
-        """Convert CSV string/list into a clean list of tool names."""
+        if seed is not None:
+            self.reset(seed=seed)
+
+    def _normalize_tools(self, val) -> List[str]:
         if pd.isna(val):
             return []
         if isinstance(val, str):
@@ -74,113 +92,102 @@ class MetaToolEnv(dm_env.Environment):
             return [str(v).strip() for v in val if str(v).strip()]
         return [str(val).strip()]
 
-    def reset(self) -> dm_env.TimeStep:
-        """Reset environment to start a new episode."""
-        self.done = False
-        self.selected_tools = []
+    def _get_obs(self) -> Dict[str, Any]:
+        selection = np.zeros(self.n_actions, dtype=np.int8)
+        for idx in self.selected_tool_indices:
+            selection[idx] = 1
+        return {
+            "selection": selection,
+            "prompt_id": self.current_idx
+        }
+
+    def _get_info(self) -> Dict[str, Any]:
+        row = self.df.iloc[self.current_idx]
+        return {
+            "prompt": row["Query"],
+            "correct_tools": [self.tool_vocab[i] for i in self.correct_tool_indices],
+            "selected_tools": [self.tool_vocab[i] for i in self.selected_tool_indices],
+            "step_count": self.step_count,
+            "index": self.current_idx,
+        }
+
+    def action_masks(self) -> np.ndarray:
+        """
+        Required by sb3_contrib.MaskablePPO (via ActionMasker / get_action_masks).
+        True = the action is legal right now. A tool that has already been
+        chosen (correct or not) is masked out; DONE is always legal.
+        """
+        mask = np.ones(self.n_actions, dtype=bool)
+        for idx in self.selected_tool_indices:
+            mask[idx] = False
+        mask[self.done_idx] = True
+        return mask
+
+    def reset(self, seed: Optional[int] = None, options: Optional[Dict] = None) -> Tuple[Dict, Dict]:
+        super().reset(seed=seed)
+
+        if options is not None and "index" in options:
+            # Deterministic selection, used by evaluation to walk the full
+            # test set exactly once instead of sampling with replacement.
+            self.current_idx = int(options["index"])
+            if not (0 <= self.current_idx < len(self.df)):
+                raise IndexError(f"index {self.current_idx} out of range for dataframe of length {len(self.df)}")
+        else:
+            self.current_idx = int(self.np_random.integers(0, len(self.df)))
+
+        row = self.df.iloc[self.current_idx]
+
+        raw_tools = row["New Tools"] if "New Tools" in row and not pd.isna(row["New Tools"]) else row["Tool"]
+        correct_tool_names = self._normalize_tools(raw_tools)
+        self.correct_tool_indices = {self.tool_to_idx[t] for t in correct_tool_names if t in self.tool_to_idx}
+
+        self.selected_tool_indices = set()
         self.step_count = 0
 
-        self.current_index = self.rng.randint(0, len(self.df) - 1)
-        row = self.df.iloc[self.current_index]
+        return self._get_obs(), self._get_info()
 
-        self.prompt = row["Query"]
-
-        # Prefer "New Tools" if available, else fallback to "Tool"
-        if "New Tools" in row and not pd.isna(row["New Tools"]):
-            self.correct_tools = self._normalize_tools(row["New Tools"])
-        else:
-            self.correct_tools = self._normalize_tools(row["Tool"])
-
-        return dm_env.restart(self._get_observation())
-
-    def step(self, action: int) -> dm_env.TimeStep:
-        """Take one step in the environment."""
-        if self.done:
-            raise RuntimeError("Episode is done. Call reset().")
+    def step(self, action: int) -> Tuple[Dict, float, bool, bool, Dict]:
+        if not self.action_masks()[action]:
+            raise ValueError(
+                f"Action {action} ('{self.tool_vocab[action]}') is masked out "
+                f"(already selected: {[self.tool_vocab[i] for i in self.selected_tool_indices]}). "
+                f"A masked policy should never emit this action -- check the mask wiring."
+            )
 
         self.step_count += 1
-        chosen_tool = self.tool_vocab[action]
-        reward = 0.0
+        terminated = False
+        truncated = False
 
-        # Reward logic
-        if chosen_tool == "DONE":
-            self.done = True
-        elif chosen_tool in self.correct_tools and chosen_tool not in self.selected_tools:
-            reward = 1.0  # reward for correct unique tool
-            self.selected_tools.append(chosen_tool)
+        if action == self.done_idx:
+            terminated = True
+            if self.selected_tool_indices == self.correct_tool_indices and len(self.correct_tool_indices) > 0:
+                reward = self.exact_match_bonus
+            else:
+                tp = len(self.selected_tool_indices & self.correct_tool_indices)
+                precision = tp / max(1, len(self.selected_tool_indices))
+                recall = tp / max(1, len(self.correct_tool_indices))
+                f1 = 2 * precision * recall / (precision + recall) if (precision + recall) > 0 else 0.0
+                reward = f1
         else:
-            reward = 0.0  # can extend to penalize wrong tools
+            # Masking guarantees this tool has never been picked before, so
+            # every non-DONE step strictly grows the history -- this is the
+            # h_{t+1} = h_t OR e_{a_t} update the paper's Eq. 1 describes.
+            self.selected_tool_indices.add(action)
+            reward = self.correct_reward if action in self.correct_tool_indices else self.incorrect_reward
 
-        # End conditions
+        reward -= self.step_penalty
+
         if self.mode == "single-shot":
-            self.done = True
-        else:
-            if set(self.selected_tools) == set(self.correct_tools):
-                self.done = True
-            if self.step_count >= self.max_steps:
-                self.done = True
+            terminated = True
 
-        if self.done:
-            # Extra terminal reward: F1 score
-            precision = len(set(self.selected_tools) & set(self.correct_tools)) / max(
-                1, len(self.selected_tools)
-            )
-            recall = len(set(self.selected_tools) & set(self.correct_tools)) / len(
-                self.correct_tools
-            )
-            f1 = (
-                2 * precision * recall / (precision + recall)
-                if precision + recall > 0
-                else 0.0
-            )
-            final_reward = reward + f1
-            return dm_env.termination(final_reward, self._get_observation())
-        else:
-            return dm_env.transition(reward, self._get_observation())
+        if self.step_count >= self.max_steps:
+            truncated = True
 
-    def _get_observation(self) -> Dict[str, object]:
-        """Construct observation dictionary."""
-        return {
-            "prompt": self.prompt,
-            "available_tools": self.tool_vocab,
-            "selected_tools": self.selected_tools,
-        }
+        return self._get_obs(), float(reward), terminated, truncated, self._get_info()
 
-    def observation_spec(self):
-        """Define observation spec."""
-        return {
-            "prompt": specs.Array(shape=(), dtype=object, name="prompt"),
-            "available_tools": specs.Array(
-                shape=(len(self.tool_vocab),), dtype=object, name="available_tools"
-            ),
-            "selected_tools": specs.Array(
-                shape=(None,), dtype=object, name="selected_tools"
-            ),
-        }
-
-    def action_spec(self):
-        """Define action spec (discrete tool choices)."""
-        return specs.DiscreteArray(
-            num_values=len(self.tool_vocab),
-            dtype=int,
-            name="action"
-        )
-
-
-if __name__ == "__main__":
-    # Example standalone test
-    df = pd.DataFrame({
-        "Query": ["Find academic papers on reinforcement learning."],
-        "Tool": ["SEOTool"],
-        "New Tools": ["Google Scholar, Arxiv"]
-    })
-    vocab = ["Google Scholar", "Arxiv", "PubMed", "Mendeley", "ResearchGate"]
-    env = MetaToolEnv(df, tool_vocab=vocab, mode="multi-step", max_steps=10, seed=42)
-    ts = env.reset()
-    print("Observation:", ts.observation)
-    for _ in range(5):
-        action = env.rng.randint(0, len(env.tool_vocab) - 1)
-        ts = env.step(action)
-        print(f"Action: {env.tool_vocab[action]} Reward: {ts.reward} Done: {ts.last()}")
-        if ts.last():
-            break
+    def render(self):
+        info = self._get_info()
+        print(f"Step: {self.step_count}")
+        print(f"Query: {info['prompt']}")
+        print(f"Selected: {info['selected_tools']}")
+        print(f"Correct: {info['correct_tools']}")

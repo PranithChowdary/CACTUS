@@ -1,0 +1,123 @@
+=========================================
+0. Scenario bank gates
+   (bank must be able to carry the
+    comparison at all)
+=========================================
+bank: 61 scenarios, 36 tools + DONE
+embedding with MiniLM-L6-v2 (mean pool + L2 norm)...
+
+==============================================================================
+SCENARIO BANK CHECK
+==============================================================================
+  check                                           fit       cv     gate      
+  1. conditionality predictable (need HIGH)     1.000    0.804     0.95  PASS
+  3. scenario identity separable (need HIGH)    1.000    0.680     0.95  PASS
+  4. static gold representable by policy class    1.000      nan     0.90  PASS
+  2. latent bit leaks? (need ~0.50, LOW)        0.500    0.107     0.60  PASS
+  -- memoryless linear baseline (not a gate)    0.705    0.000       --      
+  5. conditionality, markers STRIPPED           1.000    0.876       --      
+
+------------------------------------------------------------------------------
+  length parity (mean words): conditional 11.2 | static 11.6 | ablated 11.3
+  lexical-shortcut drop (cv): 0.804 -> 0.876  (delta +0.072)
+  The signal survives marker replacement at matched length: it is
+  carried by meaning, not by one keyword. The operative cue is that
+  static queries NAME their actions and conditional ones do not --
+  which is what underspecification is, and is the intended design.
+
+  held-out split available: 41 train / 20 test
+  (cv columns above are the relevant ones if that split is used)
+
+==============================================================================
+VERDICT: PASS -- bank can carry the comparison
+==============================================================================
+
+wrote results/scenario_bank_check.json
+
+=========================================
+1. Build the embedding cache up front
+   (so a missing model or an offline-mode
+    problem fails here, not 20 agents in)
+=========================================
+[nl_gym_env] embedding 245 texts with MiniLM-L6-v2 ...
+[nl_gym_env] wrote /users/staff/pranith/CACTUS/data/nl_embeddings.npz
+
+=========================================
+2. Alpha-shift on the NL environment
+=========================================
+[nl_gym_env] embeddings from cache (245 texts)
+env=nl  query types/scenarios=61  actions=37
+  train_a=0.00 seed=0  static_probe=0.000  SEM@a0.00=0.880  SEM@a1.00=0.010  (297s)
+  train_a=0.00 seed=1  static_probe=0.007  SEM@a0.00=0.807  SEM@a1.00=0.007  (292s)
+  train_a=0.00 seed=2  static_probe=0.000  SEM@a0.00=0.963  SEM@a1.00=0.033  (293s)
+  train_a=0.00 seed=3  static_probe=0.037  SEM@a0.00=0.725  SEM@a1.00=0.030  (295s)
+  train_a=0.00 seed=4  static_probe=0.000  SEM@a0.00=0.902  SEM@a1.00=0.013  (294s)
+train_alpha=0.00  STATIC PROBE RATE = 0.009 +/- 0.016
+
+  train_a=0.50 seed=0  static_probe=0.028  SEM@a0.00=0.797  SEM@a1.00=0.512  (294s)
+  train_a=0.50 seed=1  static_probe=0.000  SEM@a0.00=0.865  SEM@a1.00=0.535  (291s)
+  train_a=0.50 seed=2  static_probe=0.000  SEM@a0.00=0.882  SEM@a1.00=0.465  (295s)
+  train_a=0.50 seed=3  static_probe=0.000  SEM@a0.00=0.748  SEM@a1.00=0.500  (295s)
+  train_a=0.50 seed=4  static_probe=0.013  SEM@a0.00=0.760  SEM@a1.00=0.600  (294s)
+train_alpha=0.50  STATIC PROBE RATE = 0.008 +/- 0.012
+
+  train_a=0.90 seed=0  static_probe=0.025  SEM@a0.00=0.583  SEM@a1.00=0.650  (293s)
+  train_a=0.90 seed=1  static_probe=0.072  SEM@a0.00=0.640  SEM@a1.00=0.730  (294s)
+  train_a=0.90 seed=2  static_probe=0.000  SEM@a0.00=0.782  SEM@a1.00=0.745  (293s)
+  train_a=0.90 seed=3  static_probe=0.000  SEM@a0.00=0.613  SEM@a1.00=0.603  (293s)
+  train_a=0.90 seed=4  static_probe=0.035  SEM@a0.00=0.695  SEM@a1.00=0.752  (294s)
+train_alpha=0.90  STATIC PROBE RATE = 0.027 +/- 0.030
+
+  train_a=1.00 seed=0  static_probe=0.770  SEM@a0.00=0.028  SEM@a1.00=0.735  (295s)
+  train_a=1.00 seed=1  static_probe=0.765  SEM@a0.00=0.010  SEM@a1.00=0.708  (294s)
+  train_a=1.00 seed=2  static_probe=0.902  SEM@a0.00=0.000  SEM@a1.00=0.713  (293s)
+  train_a=1.00 seed=3  static_probe=0.790  SEM@a0.00=0.000  SEM@a1.00=0.715  (293s)
+  train_a=1.00 seed=4  static_probe=0.805  SEM@a0.00=0.000  SEM@a1.00=0.767  (292s)
+train_alpha=1.00  STATIC PROBE RATE = 0.806 +/- 0.056
+
+
+==============================================================================
+CAPACITY GATE (must pass before anything below is interpretable)
+==============================================================================
+  alpha=0-trained agent, SEM at alpha=0: 0.855 (gate 0.80)  -> PASS
+
+==============================================================================
+HEADLINE: static probe rate by training alpha
+  (probe is NOT in static gold -> this is pure waste)
+==============================================================================
+   train_alpha     static_probe   static_SEM   wasted/ep
+          0.00    0.009+/-0.016        0.868        0.10
+          0.50    0.008+/-0.012        0.810        0.05
+          0.90    0.027+/-0.030        0.682        0.05
+          1.00    0.806+/-0.056        0.011        1.87
+
+==============================================================================
+TRANSFER: SEM by (train_alpha, eval_alpha); MATCHED is the diagonal
+==============================================================================
+  train \ eval     0.00     0.25     0.50     0.75     0.90     1.00
+          0.00    0.855    0.626    0.433    0.218    0.097    0.018
+          0.50    0.810    0.726    0.668    0.596    0.549    0.523
+          0.90    0.662    0.672    0.691    0.688    0.692    0.696
+          1.00    0.007    0.206    0.368    0.552    0.659    0.727
+      ceiling*    1.000    0.875    0.750    0.625    0.550    0.500
+  * analytic bound for any memoryless (query-only) model, not for the agent
+
+==============================================================================
+OWN-DISTRIBUTION COMPETENCE (gate for reading the rows above)
+  each agent evaluated at the alpha it was TRAINED on
+==============================================================================
+  train_alpha=0.00  SEM at own alpha = 0.855 (gate 0.50)  -> PASS
+  train_alpha=0.50  SEM at own alpha = 0.668 (gate 0.50)  -> PASS
+  train_alpha=0.90  SEM at own alpha = 0.692 (gate 0.50)  -> PASS
+  train_alpha=1.00  SEM at own alpha = 0.727 (gate 0.50)  -> PASS
+
+==============================================================================
+OVER-GATHERING (confound-controlled, train_alpha=0.90):
+  static probe rate 0.009 (matched, a_train=0) -> 0.027 (a_train=0.9)
+  Delta = +0.018. KILL CRITERION MET: no elevated probe rate.
+  There is no over-gathering phenomenon to report.
+==============================================================================
+
+wrote results/nl_alpha_shift.json   total 5874s
+
+Done. Pull back with:  bash scripts/fetch_results.sh

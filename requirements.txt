@@ -1,5 +1,11 @@
-# Requirements
-dm_env
 torch
 pandas
 numpy
+gymnasium
+stable-baselines3
+sb3-contrib
+tensorboard
+sentence-transformers
+scikit-learn
+matplotlib
+scipy

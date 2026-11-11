@@ -1,0 +1,21 @@
+{
+  "n_scenarios": 61,
+  "cond_fit": 1.0,
+  "cond_cv": 0.804,
+  "bit_fit": 0.5,
+  "bit_cv": 0.10699999999999998,
+  "scen_fit": 1.0,
+  "scen_cv": 0.680327868852459,
+  "gold_linear_baseline_fit": 0.7049180327868853,
+  "gold_linear_baseline_cv": 0.0,
+  "gold_policyclass_fit": 1.0,
+  "gold_policyclass_cv": NaN,
+  "cond_fit_stripped": 1.0,
+  "cond_cv_stripped": 0.8763333333333334,
+  "ablation_length_parity_ok": true,
+  "mean_words": {
+    "cond": 11.19672131147541,
+    "static": 11.60655737704918,
+    "ablated": 11.311475409836065
+  }
+}

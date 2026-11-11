@@ -1,0 +1,361 @@
+[
+  [
+    {
+      "index": 0,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 1,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 2,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 3,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 4,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 5,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 6,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 7,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 8,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 9,
+      "f1": 0.0,
+      "success": 0.0,
+      "steps": 2.0,
+      "reward": 0.0
+    },
+    {
+      "index": 10,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 11,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 12,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 13,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2.0,
+      "reward": 0.0
+    },
+    {
+      "index": 14,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 15,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 16,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 17,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 18,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 19,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 20,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 21,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 22,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 23,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 24,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2.0,
+      "reward": 0.0
+    },
+    {
+      "index": 25,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 26,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 27,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 28,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 29,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 30,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 31,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 32,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 33,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2.0,
+      "reward": 0.0
+    },
+    {
+      "index": 34,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 35,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 36,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 37,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 38,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 39,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 40,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 41,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 42,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 43,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 44,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 45,
+      "f1": 0.8,
+      "success": 0.0,
+      "steps": 4.0,
+      "reward": 0.0
+    },
+    {
+      "index": 46,
+      "f1": 0.5,
+      "success": 0.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 47,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 48,
+      "f1": 0.6666666666666666,
+      "success": 0.0,
+      "steps": 2.0,
+      "reward": 0.0
+    },
+    {
+      "index": 49,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    },
+    {
+      "index": 50,
+      "f1": 1.0,
+      "success": 1.0,
+      "steps": 3.0,
+      "reward": 0.0
+    }
+  ]
+]

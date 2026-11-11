@@ -1,0 +1,62 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# OS
+.DS_Store
+
+# Environments
+cactus_env/
+venv/
+.venv/
+
+# Vendored encoder (~90MB, regenerate with scripts/setup_login_node.sh)
+models/embedding/
+
+# HuggingFace cache, if pointed at a project-local dir
+hf_cache/
+
+# Training artifacts (large / regenerable). results/*.json stays tracked:
+# it is the evidence behind the paper's numbers.
+logs/checkpoints/*.zip
+logs/ppo_tensorboard/
+logs/*.out
+logs/*.err
+
+# ...but the SLURM logs of the runs that produced the reported numbers ARE
+# tracked, so every number in the paper is traceable to a job that ran.
+# These are named in FROZEN_RESULTS.md; without the negations below the
+# `logs/*.out` rule above would silently exclude the paper's own provenance.
+!logs/final_run/
+!logs/multimodel_58724.out
+!logs/multimodel_58724.err
+!logs/scale70b_58915.out
+!logs/scale70b_58915.err
+!logs/alphashift_59061.out
+!logs/alphashift_59061.err
+!logs/nlshift_59325.out
+!logs/nlshift_59325.err
+!logs/bank61_65126.out
+!logs/bank61_65126.err
+!logs/bank61_70b_65133.out
+!logs/bank61_70b_65133.err
+!logs/bank61_70b_topup_65215.out
+!logs/bank61_70b_topup_65215.err
+
+# SLURM writes to the directory you submit FROM, so submitting inside scripts/
+# produces a second copy of every log. Same filenames as logs/, no extra
+# information; `logs/*.out` is anchored at the repo root and does not catch them.
+scripts/logs/
+
+# Merge leftovers retired by scripts/merge_topup.py (content already folded in)
+*.merged
+
+# LaTeX build products
+paper/*.aux
+paper/*.log
+paper/*.bbl
+paper/*.blg
+paper/*.out
+paper/*.pdf
+!paper/figures/*.pdf

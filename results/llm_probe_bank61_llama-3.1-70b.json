@@ -1,0 +1,5214 @@
+[
+  {
+    "alpha": 0.0,
+    "n": 61,
+    "scoring": "pmi",
+    "static_ceiling": 1.0,
+    "exact_match": 0.0,
+    "done_rate": 0.0,
+    "probe_first": NaN,
+    "conditions_on_result": NaN,
+    "over_probe_rate": 0.639344262295082,
+    "wasted_tools_per_static_episode": 3.1311475409836067,
+    "static_exact_match": 0.0,
+    "done_prob_at_complete": 2.570736309096402e-12,
+    "n_complete_states_seen": 22,
+    "sem_at_k": 0.36065573770491804,
+    "probe_in_topk_static": 0.16393442622950818,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "EscalateTool",
+          "TripTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "FlightTool",
+          "TripTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "HotelTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "CalendarTool",
+          "EscalateTool",
+          "CarRentalTool",
+          "WeatherTool"
+        ],
+        "topk": [
+          "TripTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "EmailTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "HotelTool",
+          "FlightTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "HotelTool",
+          "FlightTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": false,
+        "gold": [
+          "NewsTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "NewsTool",
+          "CalendarTool",
+          "EscalateTool",
+          "WeatherTool"
+        ],
+        "topk": [
+          "TripTool",
+          "NewsTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "HotelTool",
+          "CalendarTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "HotelTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "CalendarTool",
+          "HotelTool",
+          "FlightTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "TripTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "HotelTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "EscalateTool",
+          "WeatherTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "BudgetTool",
+          "CalendarTool",
+          "EscalateTool",
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "BudgetTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "InvoiceTool",
+          "EscalateTool",
+          "BillingTool",
+          "AccountTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "InvoiceTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "BudgetTool",
+          "EscalateTool",
+          "AccountTool",
+          "SupplierTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "BudgetTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "AccountTool",
+          "CalendarTool",
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "EscalateTool",
+          "AccountTool",
+          "HRTool",
+          "TicketTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "EscalateTool",
+          "FinanceTool",
+          "AccountTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": false,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "InsuranceTool",
+          "EscalateTool",
+          "AccountTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "InsuranceTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "CalendarTool",
+          "InventoryTool",
+          "InsuranceTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "DoctorTool",
+          "CalendarTool",
+          "EscalateTool",
+          "PharmacyTool",
+          "InsuranceTool"
+        ],
+        "topk": [
+          "DoctorTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": false,
+        "gold": [
+          "DoctorTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "DoctorTool",
+          "CalendarTool",
+          "InsuranceTool",
+          "EscalateTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "DoctorTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "InsuranceTool",
+          "PharmacyTool",
+          "EscalateTool",
+          "BillingTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "AccountTool",
+          "DoctorTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "InventoryTool",
+          "ShippingTool",
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "InventoryTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "InventoryTool",
+          "ShippingTool",
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "InventoryTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": false,
+        "gold": [
+          "InventoryTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "EscalateTool",
+          "SupplierTool",
+          "ShippingTool",
+          "TicketTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "ShippingTool",
+          "EscalateTool",
+          "CarRentalTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "CalendarTool",
+          "EmailTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "EscalateTool",
+          "InventoryTool",
+          "BillingTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "EmailTool",
+          "EscalateTool",
+          "ShippingTool",
+          "OrderTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "EmailTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "EmailTool",
+          "EscalateTool",
+          "TicketTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "MeetingTool",
+          "EmailTool",
+          "EscalateTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": false,
+        "gold": [
+          "MeetingTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "MeetingTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TicketTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "MeetingTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "MessageTool",
+          "TicketTool",
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "LegalTool",
+          "EmailTool",
+          "EscalateTool",
+          "CalendarTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "LegalTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "EscalateTool",
+          "MessageTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "DeployTool",
+          "TicketTool",
+          "EscalateTool",
+          "RepoTool",
+          "RollbackTool"
+        ],
+        "topk": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "RepoTool",
+          "DeployTool",
+          "MessageTool",
+          "RollbackTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "RepoTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": false,
+        "gold": [
+          "RollbackTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RollbackTool",
+          "EscalateTool",
+          "RepoTool",
+          "TicketTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "RollbackTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "EscalateTool",
+          "RepoTool",
+          "MessageTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": false,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "EscalateTool",
+          "TicketTool",
+          "CalendarTool",
+          "RollbackTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "RefundTool",
+          "EscalateTool",
+          "BillingTool",
+          "InvoiceTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "RefundTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": false,
+        "gold": [
+          "RefundTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RefundTool",
+          "EscalateTool",
+          "BillingTool",
+          "TicketTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "RefundTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EmailTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "BillingTool",
+          "LegalTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "EmailTool",
+          "AccountTool",
+          "TicketTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "EscalateTool",
+          "AccountTool",
+          "InsuranceTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "ResetTool",
+          "EmailTool",
+          "EscalateTool",
+          "AccountTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "ResetTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "MessageTool",
+          "EscalateTool",
+          "CalendarTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "HRTool",
+          "EscalateTool",
+          "ResetTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "ResetTool",
+          "EscalateTool",
+          "AccountTool",
+          "MessageTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "ResetTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TrainingTool",
+          "LegalTool",
+          "CalendarTool",
+          "HRTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "TrainingTool",
+          "LegalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "TicketTool",
+          "EscalateTool",
+          "BillingTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "PayrollTool",
+          "HRTool",
+          "EscalateTool",
+          "AccountTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "PayrollTool",
+          "HRTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "HRTool",
+          "TrainingTool",
+          "EscalateTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "LegalTool",
+          "EscalateTool",
+          "EmailTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "LegalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": false,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "AccountTool",
+          "LegalTool",
+          "EscalateTool",
+          "PayrollTool"
+        ],
+        "topk": [
+          "HRTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "HRTool"
+        ],
+        "actions": [
+          "HRTool",
+          "EscalateTool",
+          "AccountTool",
+          "PayrollTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "HRTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HRTool"
+        ],
+        "actions": [
+          "HRTool",
+          "AccountTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TrainingTool"
+        ],
+        "topk": [
+          "HRTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InventoryTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "EscalateTool",
+          "SupplierTool",
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "EscalateTool",
+          "EmailTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 23.58360655737705,
+    "wall_seconds": 4283.825222730637,
+    "model": "meta-llama/Llama-3.1-70B-Instruct"
+  },
+  {
+    "alpha": 1.0,
+    "n": 61,
+    "scoring": "pmi",
+    "static_ceiling": 0.5,
+    "exact_match": 0.0,
+    "done_rate": 0.0,
+    "probe_first": 0.5409836065573771,
+    "conditions_on_result": 0.6842105263157895,
+    "over_probe_rate": NaN,
+    "wasted_tools_per_static_episode": NaN,
+    "static_exact_match": NaN,
+    "done_prob_at_complete": 4.2328390414816456e-14,
+    "n_complete_states_seen": 10,
+    "sem_at_k": 0.16393442622950818,
+    "probe_in_topk_static": NaN,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": true,
+        "gold": [
+          "NewsTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "CarRentalTool",
+          "HotelTool",
+          "TripTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "CarRentalTool",
+          "HotelTool",
+          "EscalateTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": true,
+        "gold": [
+          "HotelTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "TripTool",
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "EscalateTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "WeatherTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "TripTool",
+          "FlightTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "TripTool",
+          "HotelTool",
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "HotelTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "FlightTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "EscalateTool",
+          "TripTool",
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "HotelTool",
+          "EscalateTool",
+          "CalendarTool",
+          "CarRentalTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "HotelTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "TripTool",
+          "HotelTool",
+          "FlightTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": true,
+        "gold": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "WeatherTool",
+          "NewsTool",
+          "EscalateTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "FinanceTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "BudgetTool",
+          "EscalateTool",
+          "CalendarTool",
+          "TaxTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "BudgetTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": true,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "EscalateTool",
+          "AccountTool",
+          "BillingTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "InvoiceTool",
+          "LegalTool",
+          "SupplierTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": true,
+        "gold": [
+          "LegalTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "TaxTool",
+          "EscalateTool",
+          "AccountTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "TaxTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "FinanceTool",
+          "BillingTool",
+          "HRTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "BillingTool",
+          "RefundTool",
+          "LegalTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "HealthTool",
+          "PharmacyTool",
+          "EscalateTool",
+          "DoctorTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "HealthTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": true,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "InsuranceTool",
+          "PharmacyTool",
+          "DoctorTool",
+          "EscalateTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "HealthTool",
+          "EscalateTool",
+          "PharmacyTool",
+          "DoctorTool",
+          "InsuranceTool"
+        ],
+        "topk": [
+          "HealthTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "InsuranceTool",
+          "CalendarTool",
+          "DoctorTool",
+          "PharmacyTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "InsuranceTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "InventoryTool",
+          "InsuranceTool",
+          "EscalateTool",
+          "SupplierTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "InventoryTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EscalateTool",
+          "DoctorTool",
+          "AccountTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "EscalateTool",
+          "SupplierTool",
+          "RefundTool",
+          "ShippingTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "EscalateTool",
+          "OrderTool",
+          "ShippingTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "SupplierTool",
+          "EscalateTool",
+          "ShippingTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "EscalateTool",
+          "ShippingTool",
+          "BillingTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": true,
+        "gold": [
+          "RefundTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "ShippingTool",
+          "RefundTool",
+          "AccountTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "BillingTool",
+          "AccountTool",
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "ShippingTool",
+          "NewsTool",
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "EscalateTool",
+          "CarRentalTool",
+          "RefundTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "MeetingTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EscalateTool",
+          "EmailTool",
+          "MessageTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "CalendarTool",
+          "MessageTool",
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": true,
+        "gold": [
+          "MeetingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "CalendarTool",
+          "AccountTool",
+          "CarRentalTool",
+          "TripTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "EscalateTool",
+          "CalendarTool",
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "EscalateTool",
+          "RollbackTool",
+          "TicketTool",
+          "DeployTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "EscalateTool",
+          "RollbackTool",
+          "TicketTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "EscalateTool",
+          "RollbackTool",
+          "TicketTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "RollbackTool",
+          "DeployTool",
+          "RepoTool",
+          "TicketTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "RollbackTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "BillingTool",
+          "RefundTool",
+          "AccountTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "BillingTool",
+          "RefundTool",
+          "AccountTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "BillingTool",
+          "RefundTool",
+          "AccountTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "BillingTool",
+          "RefundTool",
+          "AccountTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": true,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "TicketTool",
+          "CalendarTool",
+          "MessageTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "LegalTool",
+          "BillingTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "SecurityTool",
+          "ResetTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "AccountTool",
+          "SecurityTool",
+          "ResetTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "HRTool",
+          "ResetTool",
+          "SecurityTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "AccountTool",
+          "SecurityTool",
+          "ResetTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "EscalateTool",
+          "CalendarTool",
+          "AccountTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "HRTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "LegalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "AccountTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "LegalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "EscalateTool",
+          "PayrollTool",
+          "AccountTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "HRTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "HRTool",
+          "EscalateTool",
+          "AccountTool",
+          "TrainingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "HRTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "LegalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "InsuranceTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "LegalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "LegalTool",
+          "AccountTool",
+          "BillingTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "PayrollTool",
+          "EscalateTool",
+          "AccountTool",
+          "InsuranceTool"
+        ],
+        "topk": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "HRTool",
+          "AccountTool",
+          "EscalateTool",
+          "TrainingTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "HRTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "NewsTool",
+          "EscalateTool",
+          "ShippingTool",
+          "SupplierTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "NewsTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool",
+          "MessageTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "sem_at_k": 1.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 22.84262295081967,
+    "wall_seconds": 9095.0202460289,
+    "model": "meta-llama/Llama-3.1-70B-Instruct"
+  },
+  {
+    "alpha": 0.0,
+    "n": 61,
+    "scoring": "sum",
+    "static_ceiling": 1.0,
+    "exact_match": 0.0,
+    "done_rate": 0.08196721311475409,
+    "probe_first": NaN,
+    "conditions_on_result": NaN,
+    "over_probe_rate": 0.8688524590163934,
+    "wasted_tools_per_static_episode": 2.918032786885246,
+    "static_exact_match": 0.0,
+    "done_prob_at_complete": 0.010700428318969772,
+    "n_complete_states_seen": 33,
+    "sem_at_k": 0.5409836065573771,
+    "probe_in_topk_static": 0.2459016393442623,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "HotelTool",
+          "CarRentalTool",
+          "TripTool",
+          "FlightTool",
+          "WeatherTool"
+        ],
+        "topk": [
+          "HotelTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "CarRentalTool",
+          "HotelTool",
+          "TripTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "HotelTool",
+          "TripTool",
+          "CalendarTool",
+          "WeatherTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "CalendarTool",
+          "WeatherTool",
+          "NewsTool",
+          "FlightTool"
+        ],
+        "topk": [
+          "TripTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "TripTool",
+          "AccountTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "HotelTool",
+          "TripTool",
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": false,
+        "gold": [
+          "NewsTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "NewsTool",
+          "CalendarTool",
+          "WeatherTool",
+          "FlightTool"
+        ],
+        "topk": [
+          "TripTool",
+          "NewsTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "HotelTool",
+          "CalendarTool",
+          "TripTool",
+          "EmailTool",
+          "DONE"
+        ],
+        "topk": [
+          "HotelTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "CalendarTool",
+          "FlightTool",
+          "HotelTool",
+          "WeatherTool"
+        ],
+        "topk": [
+          "TripTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "HotelTool",
+          "TripTool",
+          "CalendarTool",
+          "DONE"
+        ],
+        "topk": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "WeatherTool",
+          "MeetingTool",
+          "DONE"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "BudgetTool",
+          "InvoiceTool",
+          "FinanceTool",
+          "TaxTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "BudgetTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "InvoiceTool",
+          "FinanceTool",
+          "TaxTool",
+          "BillingTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "InvoiceTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "BudgetTool",
+          "FinanceTool",
+          "AccountTool",
+          "SupplierTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "BudgetTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "AccountTool",
+          "InvoiceTool",
+          "BillingTool",
+          "TaxTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "HRTool",
+          "AccountTool",
+          "BudgetTool",
+          "TicketTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "HRTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "FinanceTool",
+          "InvoiceTool",
+          "AccountTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": false,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "OrderTool",
+          "InsuranceTool",
+          "AccountTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "OrderTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "InventoryTool",
+          "CalendarTool",
+          "InsuranceTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "InventoryTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "DoctorTool",
+          "CalendarTool",
+          "HealthTool",
+          "InsuranceTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "DoctorTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": false,
+        "gold": [
+          "DoctorTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "DoctorTool",
+          "CalendarTool",
+          "HealthTool",
+          "EmailTool",
+          "InsuranceTool"
+        ],
+        "topk": [
+          "DoctorTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "InsuranceTool",
+          "PharmacyTool",
+          "BillingTool",
+          "EmailTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "DoctorTool",
+          "HealthTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "InventoryTool",
+          "ShippingTool",
+          "InvoiceTool",
+          "SupplierTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "InventoryTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "InvoiceTool",
+          "InventoryTool",
+          "ShippingTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": false,
+        "gold": [
+          "InventoryTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "FinanceTool",
+          "SupplierTool",
+          "TicketTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "ShippingTool",
+          "InvoiceTool",
+          "InventoryTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EmailTool",
+          "SecurityTool",
+          "BillingTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "OrderTool",
+          "EmailTool",
+          "BillingTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "OrderTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "EmailTool",
+          "OrderTool",
+          "ShippingTool",
+          "InvoiceTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "EmailTool",
+          "OrderTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "EmailTool",
+          "ShippingTool",
+          "TicketTool",
+          "BillingTool",
+          "DONE"
+        ],
+        "topk": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "MeetingTool",
+          "CalendarTool",
+          "EmailTool",
+          "MessageTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "MeetingTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": false,
+        "gold": [
+          "MeetingTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "MeetingTool",
+          "CalendarTool",
+          "TicketTool",
+          "EmailTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "MeetingTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "MessageTool",
+          "EmailTool",
+          "TicketTool",
+          "CalendarTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "MessageTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "EmailTool",
+          "LegalTool",
+          "CalendarTool",
+          "InvoiceTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "MeetingTool",
+          "MessageTool",
+          "DONE"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "DeployTool",
+          "TicketTool",
+          "RepoTool",
+          "ShippingTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "DeployTool",
+          "MessageTool",
+          "RepoTool",
+          "RollbackTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "DeployTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": false,
+        "gold": [
+          "RollbackTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RollbackTool",
+          "TicketTool",
+          "RepoTool",
+          "DeployTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "RollbackTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "RepoTool",
+          "MessageTool",
+          "EmailTool",
+          "DeployTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "RepoTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": false,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "DeployTool",
+          "TicketTool",
+          "RollbackTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "DeployTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "RefundTool",
+          "InvoiceTool",
+          "BillingTool",
+          "FinanceTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "RefundTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": false,
+        "gold": [
+          "RefundTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RefundTool",
+          "TicketTool",
+          "BillingTool",
+          "InvoiceTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "RefundTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "EmailTool",
+          "AccountTool",
+          "MeetingTool",
+          "CalendarTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "EmailTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "BillingTool",
+          "FinanceTool",
+          "EmailTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "BillingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "EmailTool",
+          "AccountTool",
+          "TicketTool",
+          "SecurityTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "EmailTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "FinanceTool",
+          "InvoiceTool",
+          "AccountTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "ResetTool",
+          "EmailTool",
+          "AccountTool",
+          "SecurityTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "ResetTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "MessageTool",
+          "SecurityTool",
+          "FinanceTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "HRTool",
+          "SecurityTool",
+          "ResetTool",
+          "PayrollTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "ResetTool",
+          "MessageTool",
+          "AccountTool",
+          "SecurityTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "ResetTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TrainingTool",
+          "HRTool",
+          "LegalTool",
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "TrainingTool",
+          "HRTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "TicketTool",
+          "BillingTool",
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "PayrollTool",
+          "HRTool",
+          "FinanceTool",
+          "TaxTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "PayrollTool",
+          "HRTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TrainingTool",
+          "AccountTool",
+          "HRTool",
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "TrainingTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "EmailTool",
+          "LegalTool",
+          "MessageTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": false,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "LegalTool",
+          "AccountTool",
+          "PayrollTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "HRTool",
+          "LegalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "HRTool"
+        ],
+        "actions": [
+          "HRTool",
+          "PayrollTool",
+          "EmailTool",
+          "CalendarTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HRTool"
+        ],
+        "actions": [
+          "HRTool",
+          "AccountTool",
+          "CalendarTool",
+          "TrainingTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "HRTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InventoryTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "EmailTool",
+          "SupplierTool",
+          "FinanceTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "EmailTool",
+          "NewsTool",
+          "MessageTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 1.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 21.865573770491803,
+    "wall_seconds": 4371.324037313461,
+    "model": "meta-llama/Llama-3.1-70B-Instruct"
+  },
+  {
+    "alpha": 1.0,
+    "n": 61,
+    "scoring": "sum",
+    "static_ceiling": 0.5,
+    "exact_match": 0.0,
+    "done_rate": 0.04918032786885246,
+    "probe_first": 0.8360655737704918,
+    "conditions_on_result": 0.7213114754098361,
+    "over_probe_rate": NaN,
+    "wasted_tools_per_static_episode": NaN,
+    "static_exact_match": NaN,
+    "done_prob_at_complete": 0.0015540436674017968,
+    "n_complete_states_seen": 19,
+    "sem_at_k": 0.3114754098360656,
+    "probe_in_topk_static": NaN,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": true,
+        "gold": [
+          "NewsTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "TripTool",
+          "FlightTool",
+          "HotelTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "HotelTool",
+          "CalendarTool",
+          "TripTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": true,
+        "gold": [
+          "HotelTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "TripTool",
+          "HotelTool",
+          "CalendarTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "DONE"
+        ],
+        "topk": [
+          "FlightTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "TripTool",
+          "FlightTool",
+          "CarRentalTool",
+          "ShippingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "TripTool",
+          "HotelTool",
+          "FlightTool",
+          "MeetingTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "HotelTool",
+          "TripTool",
+          "NewsTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "FlightTool"
+        ],
+        "actions": [
+          "FlightTool",
+          "TripTool",
+          "CalendarTool",
+          "InvoiceTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "FlightTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "HotelTool",
+          "CalendarTool",
+          "TripTool",
+          "InvoiceTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "HotelTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "TripTool",
+          "FlightTool",
+          "HotelTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": true,
+        "gold": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "WeatherTool",
+          "NewsTool",
+          "CalendarTool",
+          "TripTool",
+          "HealthTool"
+        ],
+        "topk": [
+          "WeatherTool",
+          "NewsTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "FinanceTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "BudgetTool",
+          "TaxTool",
+          "InvoiceTool",
+          "PayrollTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "BudgetTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": true,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "FinanceTool",
+          "InvoiceTool",
+          "BillingTool",
+          "AccountTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "InvoiceTool",
+          "FinanceTool",
+          "LegalTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": true,
+        "gold": [
+          "LegalTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "TaxTool",
+          "FinanceTool",
+          "InvoiceTool",
+          "AccountTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TaxTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "InvoiceTool",
+          "FinanceTool",
+          "BudgetTool",
+          "TaxTool",
+          "HRTool"
+        ],
+        "topk": [
+          "InvoiceTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "InvoiceTool",
+          "EmailTool",
+          "MessageTool",
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "InvoiceTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "HealthTool",
+          "PharmacyTool",
+          "DoctorTool",
+          "CalendarTool",
+          "InsuranceTool"
+        ],
+        "topk": [
+          "HealthTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": true,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "InsuranceTool",
+          "PharmacyTool",
+          "OrderTool",
+          "SupplierTool",
+          "ShippingTool"
+        ],
+        "topk": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "HealthTool",
+          "DoctorTool",
+          "PharmacyTool",
+          "InsuranceTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "HealthTool",
+          "DoctorTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "InsuranceTool",
+          "DoctorTool",
+          "CalendarTool",
+          "HealthTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "InsuranceTool",
+          "DoctorTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "InventoryTool",
+          "SupplierTool",
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "InventoryTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "MeetingTool",
+          "DoctorTool",
+          "AccountTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "SupplierTool",
+          "OrderTool",
+          "ShippingTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "OrderTool",
+          "InvoiceTool",
+          "ShippingTool",
+          "SupplierTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "OrderTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "SupplierTool",
+          "ShippingTool",
+          "InvoiceTool",
+          "InventoryTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "SupplierTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "InventoryTool",
+          "ShippingTool",
+          "InvoiceTool",
+          "BillingTool",
+          "OrderTool"
+        ],
+        "topk": [
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": true,
+        "gold": [
+          "RefundTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "EscalateTool",
+          "RefundTool",
+          "OrderTool",
+          "BillingTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "OrderTool",
+          "RefundTool",
+          "InvoiceTool",
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "OrderTool",
+          "RefundTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "NewsTool",
+          "FlightTool",
+          "WeatherTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "NewsTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "ShippingTool",
+          "EscalateTool",
+          "NewsTool",
+          "WeatherTool",
+          "TicketTool"
+        ],
+        "topk": [
+          "ShippingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "MessageTool",
+          "MeetingTool",
+          "EmailTool",
+          "DONE"
+        ],
+        "topk": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "EmailTool",
+          "MeetingTool",
+          "MessageTool",
+          "DONE"
+        ],
+        "topk": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "MessageTool",
+          "EmailTool",
+          "CalendarTool",
+          "MeetingTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "MessageTool",
+          "EmailTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "MeetingTool",
+          "EmailTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": true,
+        "gold": [
+          "MeetingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "MeetingTool",
+          "AccountTool",
+          "EmailTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "DeployTool",
+          "InventoryTool",
+          "ShippingTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "DeployTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "DeployTool",
+          "RollbackTool",
+          "TicketTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "DeployTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "TicketTool",
+          "DeployTool",
+          "RollbackTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "RepoTool",
+          "DeployTool",
+          "RollbackTool",
+          "TicketTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "RepoTool",
+          "DeployTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "DeployTool",
+          "RepoTool",
+          "RollbackTool",
+          "TicketTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "DeployTool",
+          "RepoTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "EscalateTool",
+          "RefundTool",
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "RefundTool",
+          "InvoiceTool",
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "InvoiceTool",
+          "RefundTool",
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "BillingTool",
+          "RefundTool",
+          "InvoiceTool",
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": true,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TicketTool",
+          "EscalateTool",
+          "EmailTool",
+          "MessageTool",
+          "CalendarTool"
+        ],
+        "topk": [
+          "TicketTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "EscalateTool",
+          "LegalTool",
+          "BillingTool",
+          "InvoiceTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "AccountTool",
+          "SecurityTool",
+          "ResetTool",
+          "EscalateTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "SecurityTool",
+          "AccountTool",
+          "ResetTool",
+          "EscalateTool",
+          "EmailTool"
+        ],
+        "topk": [
+          "SecurityTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "HRTool",
+          "SecurityTool",
+          "ResetTool",
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "topk": [
+          "HRTool",
+          "SecurityTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "SecurityTool",
+          "AccountTool",
+          "ResetTool",
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "topk": [
+          "SecurityTool",
+          "AccountTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "CalendarTool",
+          "PayrollTool",
+          "EmailTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "HRTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "LegalTool",
+          "CalendarTool",
+          "FinanceTool",
+          "EmailTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "LegalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "PayrollTool",
+          "InvoiceTool",
+          "AccountTool",
+          "TaxTool"
+        ],
+        "topk": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "HRTool",
+          "CalendarTool",
+          "TrainingTool",
+          "EmailTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "HRTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "LegalTool",
+          "InvoiceTool",
+          "EmailTool",
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "LegalTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "LegalTool",
+          "InvoiceTool",
+          "BillingTool",
+          "AccountTool",
+          "HRTool"
+        ],
+        "topk": [
+          "LegalTool",
+          "InvoiceTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "HRTool",
+          "PayrollTool",
+          "TaxTool",
+          "InvoiceTool",
+          "AccountTool"
+        ],
+        "topk": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "HRTool",
+          "TrainingTool",
+          "SecurityTool",
+          "AccountTool",
+          "PayrollTool"
+        ],
+        "topk": [
+          "HRTool",
+          "TrainingTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "NewsTool",
+          "SupplierTool",
+          "ShippingTool",
+          "InventoryTool",
+          "FinanceTool"
+        ],
+        "topk": [
+          "NewsTool",
+          "SupplierTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "NewsTool",
+          "FinanceTool",
+          "MessageTool",
+          "TicketTool",
+          "InventoryTool"
+        ],
+        "topk": [
+          "NewsTool",
+          "FinanceTool"
+        ],
+        "sem_at_k": 0.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.00993377483444,
+    "mean_done_rank_sum": 23.539735099337747,
+    "wall_seconds": 4300.148580312729,
+    "model": "meta-llama/Llama-3.1-70B-Instruct"
+  }
+]

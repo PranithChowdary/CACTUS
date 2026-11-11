@@ -1,0 +1,5218 @@
+[
+  {
+    "alpha": 0.0,
+    "n": 61,
+    "scoring": "sum",
+    "static_ceiling": 1.0,
+    "exact_match": 0.0,
+    "done_rate": 0.0,
+    "probe_first": NaN,
+    "conditions_on_result": NaN,
+    "over_probe_rate": 0.13114754098360656,
+    "wasted_tools_per_static_episode": 4.754098360655738,
+    "static_exact_match": 0.0,
+    "done_prob_at_complete": NaN,
+    "n_complete_states_seen": 0,
+    "sem_at_k": 0.0,
+    "probe_in_topk_static": 0.03278688524590164,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "BudgetTool",
+          "WeatherTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": false,
+        "gold": [
+          "NewsTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "BudgetTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "TripTool",
+          "BudgetTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": false,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "DoctorTool",
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "DoctorTool",
+          "TripTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": false,
+        "gold": [
+          "DoctorTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": false,
+        "gold": [
+          "InventoryTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "BudgetTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "TripTool",
+          "BudgetTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": false,
+        "gold": [
+          "MeetingTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "BudgetTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "TripTool",
+          "BudgetTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "MessageTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "TripTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": false,
+        "gold": [
+          "RollbackTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": false,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": false,
+        "gold": [
+          "RefundTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": false,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "HRTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HRTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InventoryTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 26.43606557377049,
+    "wall_seconds": 101.50529718399048,
+    "model": "meta-llama/Llama-3.2-1B-Instruct"
+  },
+  {
+    "alpha": 1.0,
+    "n": 61,
+    "scoring": "sum",
+    "static_ceiling": 0.5,
+    "exact_match": 0.0,
+    "done_rate": 0.0,
+    "probe_first": 0.0,
+    "conditions_on_result": 0.3333333333333333,
+    "over_probe_rate": NaN,
+    "wasted_tools_per_static_episode": NaN,
+    "static_exact_match": NaN,
+    "done_prob_at_complete": 0.0002761166251730174,
+    "n_complete_states_seen": 1,
+    "sem_at_k": 0.01639344262295082,
+    "probe_in_topk_static": NaN,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": true,
+        "gold": [
+          "NewsTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": true,
+        "gold": [
+          "HotelTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "CarRentalTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "FlightTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": true,
+        "gold": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "FinanceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": true,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": true,
+        "gold": [
+          "LegalTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": true,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": true,
+        "gold": [
+          "RefundTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": true,
+        "gold": [
+          "MeetingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "RepoTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "TripTool",
+          "RepoTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": true,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "TripTool",
+          "HotelTool",
+          "WeatherTool",
+          "NewsTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "TripTool",
+          "WeatherTool",
+          "NewsTool",
+          "HotelTool",
+          "BudgetTool"
+        ],
+        "topk": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "sem_at_k": 0.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 25.852459016393443,
+    "wall_seconds": 95.25822067260742,
+    "model": "meta-llama/Llama-3.2-1B-Instruct"
+  },
+  {
+    "alpha": 0.0,
+    "n": 61,
+    "scoring": "pmi",
+    "static_ceiling": 1.0,
+    "exact_match": 0.0,
+    "done_rate": 0.0,
+    "probe_first": NaN,
+    "conditions_on_result": NaN,
+    "over_probe_rate": 0.16393442622950818,
+    "wasted_tools_per_static_episode": 4.459016393442623,
+    "static_exact_match": 0.0,
+    "done_prob_at_complete": 2.0105440851406458e-14,
+    "n_complete_states_seen": 2,
+    "sem_at_k": 0.03278688524590164,
+    "probe_in_topk_static": 0.06557377049180328,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": false,
+        "gold": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 1.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "TripTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": false,
+        "gold": [
+          "NewsTool",
+          "TripTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "NewsTool",
+          "EscalateTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "HotelTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "TripTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": false,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "MessageTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "RefundTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": false,
+        "gold": [
+          "BudgetTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "NewsTool",
+          "EscalateTool",
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "NewsTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "RefundTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": false,
+        "gold": [
+          "FinanceTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "MessageTool",
+          "CalendarTool",
+          "EscalateTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": false,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "PharmacyTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "PharmacyTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "NewsTool",
+          "PharmacyTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": false,
+        "gold": [
+          "DoctorTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "PharmacyTool",
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "MessageTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": false,
+        "gold": [
+          "InvoiceTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": false,
+        "gold": [
+          "InventoryTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "HotelTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": false,
+        "gold": [
+          "OrderTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "TripTool",
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "OrderTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": false,
+        "gold": [
+          "MeetingTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "RefundTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "MessageTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "MessageTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "TripTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": false,
+        "gold": [
+          "DeployTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "MessageTool",
+          "CalendarTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": false,
+        "gold": [
+          "RollbackTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": false,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "RefundTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "RefundTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": false,
+        "gold": [
+          "RefundTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "RefundTool",
+          "EscalateTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "RefundTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": false,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "MessageTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "MessageTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "HRTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "PayrollTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": false,
+        "gold": [
+          "MessageTool",
+          "ResetTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "MessageTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "PayrollTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": false,
+        "gold": [
+          "AccountTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "TrainingTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "MessageTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": false,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "PayrollTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "PayrollTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "HRTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "PayrollTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": false,
+        "gold": [
+          "CalendarTool",
+          "HRTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "InventoryTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": false,
+        "gold": [
+          "EmailTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 26.98032786885246,
+    "wall_seconds": 97.5729329586029,
+    "model": "meta-llama/Llama-3.2-1B-Instruct"
+  },
+  {
+    "alpha": 1.0,
+    "n": 61,
+    "scoring": "pmi",
+    "static_ceiling": 0.5,
+    "exact_match": 0.0,
+    "done_rate": 0.0,
+    "probe_first": 0.04918032786885246,
+    "conditions_on_result": 0.6,
+    "over_probe_rate": NaN,
+    "wasted_tools_per_static_episode": NaN,
+    "static_exact_match": NaN,
+    "done_prob_at_complete": NaN,
+    "n_complete_states_seen": 0,
+    "sem_at_k": 0.0,
+    "probe_in_topk_static": NaN,
+    "episodes": [
+      {
+        "episode": 0,
+        "scenario": 0,
+        "is_conditional": true,
+        "gold": [
+          "NewsTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TripTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 1,
+        "scenario": 1,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TripTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 2,
+        "scenario": 2,
+        "is_conditional": true,
+        "gold": [
+          "HotelTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 3,
+        "scenario": 3,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "TripTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 4,
+        "scenario": 4,
+        "is_conditional": true,
+        "gold": [
+          "FlightTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 5,
+        "scenario": 5,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "TripTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 6,
+        "scenario": 6,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "HotelTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "HotelTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 7,
+        "scenario": 7,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "FlightTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TripTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 8,
+        "scenario": 8,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "HotelTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 9,
+        "scenario": 9,
+        "is_conditional": true,
+        "gold": [
+          "CarRentalTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "NewsTool",
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 10,
+        "scenario": 10,
+        "is_conditional": true,
+        "gold": [
+          "TripTool",
+          "WeatherTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 11,
+        "scenario": 11,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "FinanceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 12,
+        "scenario": 12,
+        "is_conditional": true,
+        "gold": [
+          "FinanceTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 13,
+        "scenario": 13,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 14,
+        "scenario": 14,
+        "is_conditional": true,
+        "gold": [
+          "LegalTool",
+          "TaxTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 15,
+        "scenario": 15,
+        "is_conditional": true,
+        "gold": [
+          "BudgetTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "TripTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 16,
+        "scenario": 16,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "InvoiceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 17,
+        "scenario": 17,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "PharmacyTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 18,
+        "scenario": 18,
+        "is_conditional": true,
+        "gold": [
+          "InsuranceTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "TripTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 19,
+        "scenario": 19,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "HealthTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 20,
+        "scenario": 20,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "InsuranceTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 21,
+        "scenario": 21,
+        "is_conditional": true,
+        "gold": [
+          "DoctorTool",
+          "PharmacyTool"
+        ],
+        "actions": [
+          "PharmacyTool",
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "PharmacyTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 22,
+        "scenario": 22,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "DoctorTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 23,
+        "scenario": 23,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 24,
+        "scenario": 24,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 25,
+        "scenario": 25,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "SupplierTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 26,
+        "scenario": 26,
+        "is_conditional": true,
+        "gold": [
+          "InventoryTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 27,
+        "scenario": 27,
+        "is_conditional": true,
+        "gold": [
+          "RefundTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 28,
+        "scenario": 28,
+        "is_conditional": true,
+        "gold": [
+          "OrderTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 29,
+        "scenario": 29,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "NewsTool",
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 30,
+        "scenario": 30,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "ShippingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 31,
+        "scenario": 31,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 32,
+        "scenario": 32,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "NewsTool",
+          "EscalateTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 33,
+        "scenario": 33,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 34,
+        "scenario": 34,
+        "is_conditional": true,
+        "gold": [
+          "CalendarTool",
+          "MeetingTool"
+        ],
+        "actions": [
+          "CalendarTool",
+          "CarRentalTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CalendarTool",
+          "CarRentalTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 35,
+        "scenario": 35,
+        "is_conditional": true,
+        "gold": [
+          "MeetingTool",
+          "MessageTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 36,
+        "scenario": 36,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 37,
+        "scenario": 37,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 38,
+        "scenario": 38,
+        "is_conditional": true,
+        "gold": [
+          "RepoTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 39,
+        "scenario": 39,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "RepoTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 40,
+        "scenario": 40,
+        "is_conditional": true,
+        "gold": [
+          "DeployTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 41,
+        "scenario": 41,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "RefundTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 42,
+        "scenario": 42,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "EmailTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 43,
+        "scenario": 43,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 44,
+        "scenario": 44,
+        "is_conditional": true,
+        "gold": [
+          "BillingTool",
+          "RefundTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "RefundTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 45,
+        "scenario": 45,
+        "is_conditional": true,
+        "gold": [
+          "MessageTool",
+          "TicketTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 46,
+        "scenario": 46,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "EscalateTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 47,
+        "scenario": 47,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 48,
+        "scenario": 48,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 49,
+        "scenario": 49,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "MessageTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 50,
+        "scenario": 50,
+        "is_conditional": true,
+        "gold": [
+          "AccountTool",
+          "SecurityTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "EscalateTool",
+          "CalendarTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "EscalateTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 51,
+        "scenario": 51,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 52,
+        "scenario": 52,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "RefundTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 53,
+        "scenario": 53,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 54,
+        "scenario": 54,
+        "is_conditional": true,
+        "gold": [
+          "HRTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 55,
+        "scenario": 55,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 56,
+        "scenario": 56,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "LegalTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 57,
+        "scenario": 57,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "PayrollTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "PayrollTool",
+          "NewsTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 58,
+        "scenario": 58,
+        "is_conditional": true,
+        "gold": [
+          "EmailTool",
+          "TrainingTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 59,
+        "scenario": 59,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      },
+      {
+        "episode": 60,
+        "scenario": 60,
+        "is_conditional": true,
+        "gold": [
+          "EscalateTool",
+          "NewsTool"
+        ],
+        "actions": [
+          "CarRentalTool",
+          "CalendarTool",
+          "EscalateTool",
+          "NewsTool",
+          "MessageTool"
+        ],
+        "topk": [
+          "CarRentalTool",
+          "CalendarTool"
+        ],
+        "sem_at_k": 0.0
+      }
+    ],
+    "mean_done_rank_pmi": 35.0,
+    "mean_done_rank_sum": 26.64918032786885,
+    "wall_seconds": 96.69058179855347,
+    "model": "meta-llama/Llama-3.2-1B-Instruct"
+  }
+]

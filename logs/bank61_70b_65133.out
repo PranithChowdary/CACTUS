@@ -1,0 +1,64 @@
+bank size check:
+  61 scenarios
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -17.3361 vs policy -17.3361
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.528 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.095 vs r_sum = -0.528
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +7.89 vs DeployTool +3.10
+      (argmax under PMI on this toy prompt: ' CarRentalTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   CarRentalTool      4    -19.35    -4.84    -27.47      8.13
+   HotelTool          2    -17.34    -8.67    -25.23      7.89
+   DeployTool         2    -22.18   -11.09    -25.28      3.10
+   DONE               1    -12.01   -12.01    -11.74     -0.27
+   PharmacyTool       2    -25.82   -12.91    -25.28     -0.54
+   WeatherTool        2    -23.64   -11.82    -22.82     -0.82
+
+critical: 6/6 passed   diagnostic: 3/3 passed
+model on cuda:0
+
+
+[sum] alpha=0.0 ...
+    step 1: 61 active, 894s
+    step 2: 61 active, 1779s
+    step 3: 61 active, 2667s
+    step 4: 61 active, 3537s
+    step 5: 0 active, 4371s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.082  SEM@k=0.541  probe_in_topk=0.246  P(DONE|complete)=0.011  (4371s)
+
+[sum] alpha=1.0 ...
+    step 1: 61 active, 894s
+    step 2: 60 active, 1774s
+    step 3: 60 active, 2641s
+    step 4: 60 active, 3487s
+    step 5: 0 active, 4300s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.049  SEM@k=0.311  probe_in_topk=nan  P(DONE|complete)=0.002  (4300s)
+
+[pmi] alpha=0.0 ...
+    step 1: 61 active, 895s
+    step 2: 61 active, 1750s
+    step 3: 61 active, 2600s
+    step 4: 61 active, 3448s
+    step 5: 0 active, 4284s
+[pmi] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.361  probe_in_topk=0.164  P(DONE|complete)=0.000  (4284s)
+
+[pmi] alpha=1.0 ...
