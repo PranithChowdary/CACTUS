@@ -37,28 +37,27 @@ in Tool-Using Language Models}
 \begin{abstract}
 Agents built on instruction-tuned language models select external tools well but
 are widely observed to call more tools than a task requires. We show that this is
-not a failure of tool relevance but a separable failure of \emph{termination}, and
-that the two capabilities dissociate sharply. Using a controllable
-natural-language tool-selection benchmark in which a tunable fraction $\alpha$ of
-tasks require executing a tool before the correct next action is determined, we
-evaluate four instruction-tuned models under constrained decoding, which scores
-every legal action and so makes the model a policy over the same discrete action
-set as a reinforcement-learning agent. LLaMA-3.1-8B and 70B attain \emph{perfect}
-tool recall --- the gold tool set appears within their first five selections in all
-61 scenarios --- while placing only 0.2--1.1\% of their probability mass on the
-stop action at the moment the gold set is complete, and stopping in at most 5 of 61
-scenarios. Termination improves nowhere along a $70\times$ sweep from 1B to 70B. Qwen2.5-7B, at one tenth
-the parameters of LLaMA-3.1-70B, stops in 60 of 61 scenarios with 57.5\% mass on
-stopping, so termination tracks post-training rather than capacity. On the
-identical task a small masked-PPO policy (two 256-unit layers) terminates in
-$92.5\%$ of episodes or more --- every one of 20 agents across 4 training regimes
-and 5 seeds --- and gathers conditionally, probing on 2.7\% of tasks where probing
-is wasteful versus 98.9\% where it is required. We further
-report a pre-registered hypothesis that we tested and \emph{refuted}: agents
-trained where gathering is almost always necessary do not learn to always gather
-($\Delta = +0.018$ in wasteful probing under an out-of-distribution control).
-Finally, we bound when sequential policies are worth their cost: they exceed the
-analytic ceiling for any memoryless policy only when $\alpha \gtrsim 0.7$.
+not a failure of tool relevance but a separable failure of \emph{termination}.
+Using a controllable natural-language benchmark of 61 tool-selection scenarios, in
+which a tunable fraction $\alpha$ of tasks require executing a tool before the
+correct next action is determined, we evaluate four instruction-tuned models under
+constrained decoding --- scoring every legal action, which makes the model a policy
+over the same discrete action set as a reinforcement-learning agent.
+LLaMA-3.1-8B and 70B attain \emph{perfect} tool recall, the gold set appearing
+within their first five selections in all 61 scenarios, yet place only 0.2\% and
+1.1\% of their probability mass on the stop action at the moment the task is
+complete, and stop in at most 5 of 61 scenarios; termination improves nowhere
+along a $70\times$ parameter sweep. Qwen2.5-7B, at one tenth the parameters of the
+70B model, stops in 60 of 61 scenarios with 57.5\% of its mass on stopping, so
+termination tracks post-training rather than scale. On the identical task a small
+masked-PPO policy terminates in at least 92.5\% of episodes across 20 agents and 5
+seeds, and gathers conditionally, probing on 2.7\% of tasks where probing is
+wasteful against 98.9\% where it is required. We additionally report a
+pre-registered hypothesis that we tested and \emph{refuted} --- agents trained
+where gathering is almost always necessary do not learn to always gather
+($\Delta = +0.018$ under an out-of-distribution control) --- and bound the regime
+in which sequential policies beat the analytic memoryless ceiling to
+$\alpha \gtrsim 0.7$.
 \end{abstract}
 
 \noindent\textbf{Keywords:} tool-augmented language models; termination; LLM
@@ -77,9 +76,11 @@ and in agentic deployments the risk of a side effect that should not have
 occurred.
 
 The natural reading of this behaviour is that the model is uncertain about
-\emph{which} tools the task needs. We show that reading is wrong, at least for the
-models we study. The models we evaluate know exactly which tools the task needs.
-What they lack is the ability to \emph{stop}.
+\emph{which} tools the task needs. We show that reading is wrong for every model
+in our study that is competent at the task at all. Those models identify the
+required tools perfectly. What they lack is the ability to \emph{stop}.
+
+Figure~\ref{fig:one} shows the dissociation and its resolution in one view.
 
 This distinction matters because it changes what should be fixed. If over-calling
 were a relevance failure, the remedy would be better tool descriptions, retrieval
@@ -170,43 +171,62 @@ query --- and is the subject of Section~\ref{sec:overgather}.}
 \section{Related Work}
 % =====================================================================
 
-\paragraph{Tool selection and tool-augmented agents.}
-A large body of work equips language models with external tools and studies which
-tool a model should call, including benchmark efforts that catalogue tools and
-measure selection accuracy. This line of work overwhelmingly measures
-\emph{relevance}: given a request, is the chosen tool the right one. Our results
-suggest that relevance is close to saturated for 8B-class instruction-tuned models
-on tasks of this difficulty, and that the remaining error is concentrated in a
-decision these benchmarks do not score --- when to stop.
+\paragraph{Tool-augmented language models.}
+Connecting language models to external capability has been approached by routing
+between neural and symbolic modules \citep{karpas2022mrkl}, by teaching the model
+to emit API calls during generation \citep{schick2023toolformer}, by interleaving
+reasoning traces with actions \citep{yao2022react}, by fine-tuning for API syntax
+at scale \citep{patil2023gorilla,qin2023toolllm}, and by using one model as a
+controller that dispatches to others \citep{shen2023hugginggpt};
+\citet{mialon2023augmented} survey the area. Across these designs the end of a
+trajectory is something the model produces in free text, and is consequently not
+scored as a decision. Our evaluation makes stopping an explicit action weighed
+against every alternative at every step, which is what allows it to be measured
+rather than inferred from whether generation happened to halt.
 
-\paragraph{Surface-form competition and answer scoring.}
-Choosing among candidate continuations by raw sequence probability conflates how
-well a candidate fits the task with how probable its surface string is a priori;
+\paragraph{Benchmarks for tool selection.}
+MetaTool \citep{huang2023metatool} frames the problem as deciding whether to use a
+tool and which one to use, and ToolSandbox \citep{lu2024toolsandbox} evaluates
+stateful, multi-turn tool use with implicit state dependencies between tools and a
+user simulator in the loop. Our benchmark is narrower than either and is a
+diagnostic probe rather than a competitor: 61 authored scenarios, parameterless
+tools, and gold sets of size two, built so that a latent variable is provably
+unavailable to any query-only policy. What we add is not scale but a controlled
+handle on \emph{when} gathering is necessary, and a metric for the stop decision
+itself.
+
+\paragraph{Scoring candidate continuations.}
+Choosing among candidates by raw sequence probability conflates how well a
+candidate fits the task with how probable its surface string is a priori;
 \citet{holtzman2021surface} characterise this as surface-form competition and
-propose domain-conditional pointwise mutual information as a correction. This
-directly affects termination measurement, because the stop action is a short,
-frequent string competing against multi-token tool names. We therefore report
-multiple scoring rules rather than fixing one, and we show
-(Section~\ref{sec:protocol}) that the choice can invert the conclusion.
+propose domain-conditional pointwise mutual information as a correction. This bears
+directly on termination measurement, because the stop action is a short, frequent
+string competing against multi-token tool names. We report multiple scoring rules
+rather than fixing one, and Section~\ref{sec:scorer} shows the choice can invert
+the central comparison.
 
-\paragraph{Reinforcement learning for sequential decision making with masking.}
-Action masking in policy-gradient methods is standard practice for combinatorial
-action spaces, and we use a masked PPO variant so that the agent and the language
-model face an identical legal-action set at every step. We make no methodological
-claim here; the agent is an instrument for establishing what the task permits.
+\paragraph{Action masking and policy-gradient methods.}
+We use a masked variant of PPO \citep{schulman2017ppo}; invalid-action masking in
+policy-gradient methods is well characterised by \citet{huang2022masking}. We make
+no methodological claim here. The agent is an instrument for establishing what the
+task permits, not a proposed method.
 
-\paragraph{RL versus supervised fine-tuning for generalisation.}
-Recent work argues that reinforcement learning generalises where supervised
-fine-tuning memorises. Our contribution is orthogonal and narrower: we do not
-compare training regimes for language models, but use an RL policy to establish
-an existence result --- that termination on this task is learnable, and cheaply so
---- which converts the language models' failure from a property of the task into a
-property of those models.
+\paragraph{Post-training and generalisation.}
+\citet{chu2025sftrl} argue that reinforcement learning generalises where supervised
+fine-tuning memorises. Our question is adjacent but narrower: we do not compare
+training regimes for language models, and our agent is not a language model. We use
+it only to establish that termination on this task is learnable, which converts the
+language models' failure from a property of the task into a property of those
+models.
 
-\emph{[Draft note: citations to be completed against the verified bibliography;
-only \citet{holtzman2021surface} is currently verified. Earlier drafts of this
-project contained two fabricated author attributions, so every entry is to be
-checked against a primary source before submission.]}
+\paragraph{What we could not verify, and therefore do not claim.}
+A reader may expect positioning against function-calling leaderboards and
+tool-agent-user benchmarks that evaluate irrelevance detection or unnecessary
+calls. We deliberately do not assert that existing suites ignore termination: we
+were unable to verify the scope of several of them against primary sources in
+preparing this draft, and the abstracts we did check do not state whether
+termination is scored. The claim we make is about the four models we measured
+under our protocol, not about a gap in the literature.
 
 % =====================================================================
 \section{Problem Formulation}
@@ -287,8 +307,8 @@ an unseen scenario.
 
 \begin{table}[t]
 \centering
-\caption{Benchmark validation (61 scenarios; MiniLM-L6-v2 sentence embeddings,
-mean-pooled and $\ell_2$-normalised). Thresholds were fixed before measurement.
+\caption{Benchmark validation (61 scenarios; MiniLM-L6-v2 sentence embeddings
+\citep{reimers2019sbert}, mean-pooled and $\ell_2$-normalised). Thresholds were fixed before measurement.
 The latent bit remains at chance, so Proposition~\ref{prop:ceiling} is a genuine
 bound rather than an artifact of representation.}
 \label{tab:bank}
@@ -332,6 +352,13 @@ scenario-level generalisation; see Section~\ref{sec:limitations}.
 \label{sec:protocol}
 % =====================================================================
 
+\paragraph{Models.}
+We evaluate four open-weight instruction-tuned models: LLaMA-3.2-1B-Instruct,
+LLaMA-3.1-8B-Instruct and LLaMA-3.1-70B-Instruct \citep{grattafiori2024llama3},
+and Qwen2.5-7B-Instruct \citep{qwen2024qwen25}. The first three give a
+$70\times$ scale sweep within one family and one post-training recipe; the fourth
+holds scale roughly fixed against LLaMA-3.1-8B and changes the recipe.
+
 \paragraph{Constrained decoding.}
 At each step we score every legal action $a$ by the summed log-probability of its
 token sequence given the prompt, and take the arg\-max. Candidates share a prefix,
@@ -345,14 +372,17 @@ passed all checks.
 \paragraph{Scoring rule.}
 Because the stop action is a short, frequent string, the scoring rule is a
 substantive choice rather than an implementation detail. We compute summed
-log-probability, length-normalised log-probability, and domain-conditional PMI, and
-report all three. We selected the summed rule as primary \emph{on evidence}: it
-ranks tools far better: SEM@$k$ of 0.951 versus 0.049 for PMI on LLaMA-3.1-8B, and
-0.656 versus 0.492 on Qwen2.5-7B. We record that we initially argued for PMI on a
-priori grounds and were wrong, and that PMI reports a stop rate of 0.000 for
-\emph{every} model, including Qwen2.5-7B where the summed rule reports 0.984 ---
-the scoring rule can invert the paper's central observation, which is why all
-three are logged per step.
+log-probability and domain-conditional PMI on the 61-scenario bank and report
+both. We also measured length-normalised log-probability on an earlier
+12-scenario version of this evaluation, where it was \emph{numerically identical}
+to the summed rule on every metric and every configuration; we therefore did not
+re-run it at $n=61$, and we do not report it as a third independent result.
+Readers should treat the comparison in this paper as summed versus PMI.
+
+We selected the summed rule as primary on evidence, not a priori: it ranks tools
+far better, with SEM@$k$ of 0.951 against 0.049 for PMI on LLaMA-3.1-8B and 0.656
+against 0.492 on Qwen2.5-7B. We record that we initially argued for PMI on
+principled grounds and were wrong.
 
 \paragraph{Metrics.}
 \sem{} is exact set match. SEM@$k$ asks whether the first $k=|g|$ non-stop
@@ -393,7 +423,7 @@ identify the required tools in every scenario and stop in at most five.}
 \label{tab:llm}
 \begin{tabular}{lcccccc}
 \toprule
-Model & Recall@5 & SEM@$k$ & Probe ($\alpha{=}1$) & Stops & $\done$ rank / 35 & $P(\done\mid c)$ \\
+Model & Recall@5 & SEM@$k$ & Probe ($\alpha{=}1$) & Stops & $\done$ rank (of ${\sim}35$) & $P(\done\mid c)$ \\
 \midrule
 LLaMA-3.2-1B   & 0.033 & 0.000 & 0.000 & 0/61 & 26.4 & --- \\
 LLaMA-3.1-8B   & \textbf{1.000} & 0.951 & 0.787 & \textbf{0/61} & 30.1 & \textbf{0.0020} \\
@@ -410,6 +440,16 @@ the moment the task is complete, and the stop action ranks 30.1 and 21.9 of
 roughly 35 candidates. They know which tools are needed and continue regardless.
 Over-calling here is not a relevance failure.
 
+The conditional instances let us check that this is not a general failure to use
+tool output. Among episodes that did probe, the fraction recovering the full gold
+set --- that is, reading the probe's returned sentence and selecting the branch it
+implies --- is $0.508$ for LLaMA-3.1-8B, $0.721$ for LLaMA-3.1-70B and $0.281$ for
+Qwen2.5-7B. The LLaMA models therefore gather when gathering is required
+(probe-first rates of $0.787$ and $0.836$) and act on what they learn roughly half
+to three-quarters of the time, while still not stopping. Interestingly the 70B
+model, which ranks tools least sharply of the two competent LLaMA models, exploits
+the probe result best.
+
 The 1B model is a floor rather than a datapoint: with recall@5 of 0.033 it selects
 the same four tools (\texttt{TripTool}, \texttt{WeatherTool}, \texttt{NewsTool},
 \texttt{HotelTool}) for essentially every query regardless of domain, so its
@@ -420,16 +460,39 @@ termination behaviour is uninformative.
 No. Within the LLaMA family, $P(\done \mid \text{gold complete})$ is $0.0020$ at
 8B and $0.0107$ at 70B. The 70B value is five times the 8B one and still about one
 percent; the model stops in 5 of 61 scenarios. On the scale that matters it is flat
-at approximately zero across a $70\times$ increase in parameters. Scale does move the
-stop action up the ranking, from 26.4 (1B) to 30.1 (8B) to 21.9 (70B) of roughly 35,
-so the capability is approached non-monotonically; it does not arrive. Qwen2.5-7B, with one tenth the parameters of
-the 70B model, places 57.5\% of its mass on stopping and ranks it 2.1. The
-determining factor is the post-training recipe, not capacity.
+at approximately zero across a $70\times$ increase in parameters. The mean rank of the stop
+action gives no evidence of a trend either: 26.4 at 1B, 30.1 at 8B, 21.9 at 70B.
+That sequence is non-monotonic, and the 1B figure is uninterpretable in any case
+because the model is not competent at the task. What is robust is the gap between
+families: across all three LLaMA models the stop action sits roughly 22 to 30
+places down a list of about 35 candidates, whereas Qwen2.5-7B places it at 2.1 and
+holds 57.5\% of its mass there. The determining factor is the post-training
+recipe, not capacity.
+
+We flag that the earlier 12-scenario version of this evaluation produced ranks of
+28.6, 28.5 and 21.9, which read as a clean monotone improvement with scale. That
+apparent trend did not survive the move to 61 scenarios. It is a small
+illustration of why we report the unit of evidence explicitly
+(Section~\ref{sec:protocol}).
 
 Qwen's termination is nevertheless \emph{miscalibrated}, which we regard as the
 more useful finding than a clean success: of 61 scenarios it stops at exactly the
 right point in 24, too late in 34, and never in 1, against a gold cardinality of 2.
 Even a model that can stop over-gathers in 56\% of scenarios.
+
+A sharper caution applies to how Qwen's stopping should be interpreted. Its mean
+rank for the stop action is $2.1$ \emph{averaged over all steps}, not only over
+steps where the gold set is complete. A model that recognised completion would
+rank the stop action highly at the completing step and poorly elsewhere; a model
+with a high unconditional prior on a short, frequent string would rank it second
+everywhere, and stop once the better-scoring tools had been masked out. Our
+measurements cannot currently separate these, because we logged the probability
+mass on stopping only at the completing step and not at the others. The
+$0.5753$ figure is therefore an upper bound on how much of Qwen's behaviour is
+genuine completion-awareness, and the late stopping in 34 of 61 scenarios is
+consistent with the prior explanation. Resolving this requires logging
+$P(\done)$ at every step, which we flag as the most informative cheap extension
+of this work (Section~\ref{sec:limitations}).
 
 A second observation guards against a misreading of Table~\ref{tab:llm}: the 70B
 model's SEM@$k$ of 0.541 is \emph{lower} than the 8B model's 0.951, which looks
@@ -441,10 +504,37 @@ coverage by cutoff is 0.541 at $m{=}2$, 0.803 at $m{=}3$, and 1.000 at $m{=}5$: 
 less peaked policy, not a less knowledgeable one. SEM@$k$ alone understates it,
 which is why we report recall@5 alongside.
 
+\subsection{The scorer is load-bearing for one of our two claims}
+\label{sec:scorer}
+
+Before the contrast with a learned policy, we report a result that constrains how
+far the preceding section can be read. Under domain-conditional PMI the stop rate
+is $0.000$ for \emph{every} model at both values of $\alpha$ --- no model
+terminates anywhere. PMI therefore does not merely change the reading of one
+model; it removes the cross-family contrast entirely.
+
+The two claims of Section~\ref{sec:dissociation} are not equally exposed to this.
+The \emph{scale} claim --- that termination does not emerge from 1B to 70B within
+the LLaMA family --- survives every rule we tried, because those models fail to
+stop under all of them. The \emph{post-training} claim --- that Qwen2.5-7B stops
+where LLaMA does not --- holds under summed and length-normalised scoring and
+disappears under PMI. We chose the primary rule on ranking evidence
+(Section~\ref{sec:protocol}), which we regard as the right basis, but a reader who
+prefers PMI on principled grounds would see no model terminate and should treat
+the post-training claim as scorer-dependent.
+
 \subsection{RQ3: Is termination learnable on this task at all?}
 \label{sec:rl}
 
-Yes, and cheaply. We train masked PPO on the identical benchmark --- same 36 tools
+Yes, and cheaply. We state the status of this experiment plainly before reporting
+it: it is a \emph{sanity check}, not a proposed method and not a fair competitor
+to the language models. The agent is trained directly on the 61 evaluation
+scenarios with a reward that pays an exact-match bonus for stopping on the
+complete set, so that it learns to stop is close to a tautology. Its purpose is
+narrow and, we think, necessary: it rules out the possibility that the benchmark
+is simply unstoppable --- that no policy could terminate correctly here --- which
+would otherwise be a live explanation for Section~\ref{sec:dissociation}. Read it
+as an existence proof about the task, not as evidence about language models. We train masked PPO on the identical benchmark --- same 36 tools
 plus stop, same gold sets, same masking, same five-step budget --- with
 observations comprising the sentence embedding of the query, the embedding of the
 probe's result sentence, and the selection bitmask. The agent reads the same
@@ -468,7 +558,8 @@ Section~\ref{sec:overgather}.
 \begin{table}[t]
 \centering
 \caption{\textbf{Masked PPO on the identical task terminates and gathers
-conditionally.} Mean $\pm$ s.d.\ over 5 seeds, 300k steps, two 256-unit layers. Probing a static task is pure waste; probing a conditional task is
+conditionally.} Mean $\pm$ s.d.\ over 5 seeds, 300k steps, two 256-unit layers.
+Probing a static task is pure waste; probing a conditional task is
 required. The $\alpha_{\text{train}}=1.00$ row is confounded by distribution
 shift and is discussed in Section~\ref{sec:overgather}.}
 \label{tab:rl}
@@ -517,6 +608,7 @@ query}, because conditional and static instances use different query phrasings.
 Elevated probing there is confounded with out-of-distribution input rather than
 being evidence of a learned always-gather policy. We therefore also train at
 $\alpha_{\text{train}}=0.90$, where static queries are in distribution but rare.
+Table~\ref{tab:overgather} reports both arms on both environments.
 
 \begin{table}[t]
 \centering
@@ -548,12 +640,28 @@ environments where the input distribution shifts with the quantity being varied.
 \subsection{RQ5: When are sequential policies worth their cost?}
 \label{sec:crossover}
 
-Only when most tasks genuinely require gathering (Table~\ref{tab:crossover}). On
-the natural-language benchmark the best agent exceeds the memoryless ceiling of
-Proposition~\ref{prop:ceiling} from $\alpha \approx 0.75$ upward; below
-$\alpha \approx 0.5$ the ceiling is higher than anything the agent achieves, so a
-memoryless classifier is the better choice. The synthetic environment places the
-crossover later, near $\alpha \approx 0.9$.
+We must state this result more carefully than we first did.
+Table~\ref{tab:crossover} shows that on the natural-language benchmark our best
+agent exceeds the memoryless ceiling of Proposition~\ref{prop:ceiling} from
+$\alpha \approx 0.75$ upward, and the synthetic environment crosses near
+$\alpha \approx 0.9$.
+
+This crossover is \emph{not} a boundary condition on sequential policies, and it
+would be wrong to present it as one. An optimal sequential policy attains exact
+match $1.000$ at every $\alpha$, since probing reveals the latent bit and the gold
+set is then determined; it therefore beats $(1-\alpha) + \alpha/2$ for every
+$\alpha > 0$. Our agent does not: it reaches $0.855$ at $\alpha=0$ against a
+ceiling of $1.000$. The crossover we observe is simply the point at which that
+optimisation deficit becomes smaller than the decline of the memoryless ceiling.
+It is a property of \emph{this} PPO setup on \emph{this} 61-scenario environment
+at this training budget, and a better-optimised agent would cross earlier.
+
+What the table does support is narrower and still useful: on tasks where the
+required tools follow from the request, our sequential agent was beaten by a
+logistic regression on the same frozen embeddings, and the practitioner's question
+is therefore whether their own sequential policy clears the analytic bound at
+their own $\alpha$ --- a check Proposition~\ref{prop:ceiling} makes cheap, since
+the bound needs no baseline to be trained at all.
 
 \begin{table}[t]
 \centering
@@ -577,10 +685,11 @@ $\alpha_{\text{eval}}$ & best PPO & ceiling & best PPO & ceiling & RL wins? \\
 \end{tabular}
 \end{table}
 
-This is a negative result for the ``add RL to tool use'' framing and we state it
-plainly: on tasks where the right tools follow from the request, a frozen-embedding
-classifier is both simpler and better. The sequential machinery earns its cost
-only when execution genuinely reveals information the request does not contain.
+We also flag a selection effect in the table: the ``best PPO'' column takes, at
+each evaluation $\alpha$, the maximum over the four training regimes, which is a
+mild form of selecting on the evaluation condition and slightly favours the agent.
+Correcting for it would move the crossover later, not earlier, so it does not
+rescue the sequential policy.
 
 % =====================================================================
 \section{Discussion and Practical Implications}
@@ -640,11 +749,43 @@ termination is learnable here; it does not show that an \emph{LLM} could be
 post-trained to acquire it, which would require the fine-tuning experiment we did
 not run.
 
-\emph{Scoring rule dependence.} The central observation is robust across the
-summed and length-normalised rules but not under PMI, which reports a stop rate of
-0.000 for Qwen2.5-7B. We selected the primary rule on ranking evidence and report
-all three, but a reader who prefers PMI on principled grounds would draw a
-different conclusion about Qwen specifically.
+\emph{The stop action may be an interface artifact, and we have not ruled this
+out.} We score a literal \textsc{done} string against the tool names. The
+instruction-tuned models we evaluate were not post-trained to end a tool-use
+episode that way: they end turns by emitting natural-language text and an
+end-of-turn token. A low probability on \textsc{done} is therefore consistent
+with two very different readings --- the model cannot recognise completion, or it
+recognises completion and expresses it through a channel our action set does not
+contain. Our free-generation pilot does not settle this, because it prompted for
+the same \textsc{done} string. The decisive measurement is cheap and we have not
+yet run it: score each model's \emph{native} end-of-turn token as an additional
+stop candidate at the completing step. If that token carries substantial mass
+while \textsc{done} does not, our central claim is an artifact of the action set;
+if neither does, the claim is considerably strengthened. Until that is run, the
+result should be read as being about termination \emph{under a uniform
+constrained action set}, which is the condition under which the models are
+comparable to each other and to the agent, but is not the condition under which
+they were trained.
+
+\emph{The post-training claim rests on one confounded pair.} LLaMA-3.1 versus
+Qwen2.5-7B differ in pretraining corpus, tokenizer, architecture, chat template
+and post-training recipe simultaneously. Attributing the difference to
+post-training is therefore an inference from a single contrast, not a controlled
+result. The controlled version --- base versus instruct checkpoints within each
+family, across more families --- is inexpensive at this model scale and is the
+first thing we would add.
+
+\emph{Scoring rule dependence, and it is load-bearing.} Under domain-conditional
+PMI the stop rate is 0.000 for \emph{every} model at both values of $\alpha$: no
+model terminates at all. PMI therefore does not merely change the conclusion about
+Qwen2.5-7B, it erases the cross-family contrast on which our post-training claim
+rests. The LLaMA result is unaffected, since those models fail to stop under every
+rule we tried, but the Qwen comparison is not. We chose the summed rule on ranking
+evidence rather than a priori (SEM@$k$ of 0.951 versus 0.049 on LLaMA-3.1-8B) and
+log all three per step, and we note that we initially favoured PMI on principled
+grounds and were wrong. A reader who still prefers PMI would see no model
+terminate anywhere, and should read our scale claim as holding and our
+post-training claim as scorer-dependent.
 
 % =====================================================================
 \section{Conclusion}
@@ -652,10 +793,10 @@ different conclusion about Qwen specifically.
 
 Selecting the right tools and knowing when to stop calling them are separable
 capabilities. LLaMA-3.1-8B and 70B attain perfect tool recall while placing
-0.2--0.3\% of their probability mass on stopping when the task is already served,
-and termination improves nowhere along a $70\times$ sweep from 1B to 70B;
+0.2\% and 1.1\% of their probability mass on stopping when the task is already
+served, and termination improves nowhere along a $70\times$ sweep from 1B to 70B;
 Qwen2.5-7B stops reliably at one tenth the parameters, though it still
-over-gathers in 58\% of episodes. On the identical task a two-layer, 256-unit
+over-gathers in 56\% of scenarios. On the identical task a two-layer, 256-unit
 masked-PPO policy terminates in at least $92.5\%$ of episodes and gathers
 conditionally, so the deficit is a property of these models rather
 than of the task. We additionally report a pre-registered hypothesis about learned
@@ -677,11 +818,6 @@ analysis scripts that produce every table are released with the code; each repor
 number is machine-read from the stored result files rather than transcribed.
 
 \bibliographystyle{plainnat}
-\begin{thebibliography}{9}
-\bibitem[Holtzman et al.(2021)]{holtzman2021surface}
-A.~Holtzman, P.~West, V.~Shwartz, Y.~Choi, and L.~Zettlemoyer.
-Surface form competition: Why the highest probability answer isn't always right.
-\emph{EMNLP}, 2021.
-\end{thebibliography}
+\bibliography{references}
 
 \end{document}

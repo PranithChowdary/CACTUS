@@ -60,3 +60,6 @@ paper/*.blg
 paper/*.out
 paper/*.pdf
 !paper/figures/*.pdf
+
+# Overleaf upload package (build artifact; regenerate any time)
+termination_paper_overleaf.zip
