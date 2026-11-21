@@ -1,0 +1,2760 @@
+[
+  {
+    "model": "meta-llama/Meta-Llama-3.1-8B-Instruct",
+    "alpha": 0.0,
+    "n_steps": 305,
+    "n_complete_states": 58,
+    "p_done_at_complete": 0.002000016696258393,
+    "p_native_at_complete": 2.351731820750792e-09,
+    "p_done_before_complete": 0.001883197879474974,
+    "p_native_before_complete": 2.170347270972236e-09,
+    "steps": [
+      {
+        "episode": 0,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 7.097825882595998e-09,
+        "p_native_stop": 2.3539794998306252e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 0,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.179025055364491e-08,
+        "p_native_stop": 1.08237167176619e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 0,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.0343304640846327e-06,
+        "p_native_stop": 1.0652919052323734e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 0,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 4.817439247517541e-08,
+        "p_native_stop": 1.172074491287503e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 0,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 6.536407681778655e-08,
+        "p_native_stop": 2.137817760845947e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 1,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 6.125586260452565e-09,
+        "p_native_stop": 9.234743548945013e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 1,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.461198451124801e-08,
+        "p_native_stop": 8.519249310556912e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 1,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.6651481971052817e-08,
+        "p_native_stop": 4.225359804353633e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 1,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.1701064056856012e-08,
+        "p_native_stop": 1.2794675627171738e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 1,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.596983961211663e-07,
+        "p_native_stop": 3.599674035893959e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 2,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 6.337560254365826e-09,
+        "p_native_stop": 3.937243890571795e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 2,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.8872380991297177e-08,
+        "p_native_stop": 2.7520491970906315e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 2,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.300946100319834e-08,
+        "p_native_stop": 2.85965272770859e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 2,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.2198069043733994e-07,
+        "p_native_stop": 1.1520834246297771e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 2,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 7.601041716043255e-07,
+        "p_native_stop": 4.65085964871986e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 3,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.956242279277376e-09,
+        "p_native_stop": 6.4839640791893456e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 3,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.2902231222587943e-08,
+        "p_native_stop": 2.5961383234865663e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 3,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.3487952915957067e-08,
+        "p_native_stop": 1.7439722872822194e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 3,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.4106426249327342e-08,
+        "p_native_stop": 7.54183483400046e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 3,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.2749637789966073e-08,
+        "p_native_stop": 3.140904399840456e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 4,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.168453943658278e-08,
+        "p_native_stop": 1.2090249590996104e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 4,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 6.396630283234117e-07,
+        "p_native_stop": 1.7900579199341666e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 4,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.2567055566469207e-05,
+        "p_native_stop": 1.5938707523616482e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 4,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.8737573554972187e-06,
+        "p_native_stop": 7.654286679869701e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 4,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.207547928876011e-06,
+        "p_native_stop": 2.376395964567431e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 5,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.275078596156391e-09,
+        "p_native_stop": 3.821145161430588e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 5,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 6.51179377086919e-08,
+        "p_native_stop": 4.491394253275113e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 5,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 4.0376104948336433e-07,
+        "p_native_stop": 9.779315672793007e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 5,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.0531122402189794e-07,
+        "p_native_stop": 2.056405063762778e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 5,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 6.822330306022195e-06,
+        "p_native_stop": 8.486280321490465e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 6,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.364312995910666e-09,
+        "p_native_stop": 4.554830948492548e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 6,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.903512180158941e-09,
+        "p_native_stop": 5.031701626993131e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 6,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 8.359136494107133e-09,
+        "p_native_stop": 1.1515350230412067e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 6,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.1704791802458203e-08,
+        "p_native_stop": 1.2544069886376395e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 6,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.5870696513693474e-08,
+        "p_native_stop": 1.0173501698617483e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 7,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.031135064115233e-09,
+        "p_native_stop": 2.938038061903488e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 7,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.0894303237307668e-08,
+        "p_native_stop": 6.0622510030778786e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 7,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.4538127857122163e-07,
+        "p_native_stop": 1.8338943651201333e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 7,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.308512563331533e-07,
+        "p_native_stop": 9.275189143281417e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 7,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.6380061513009423e-07,
+        "p_native_stop": 1.8693783620513228e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 8,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.4443120860695444e-09,
+        "p_native_stop": 6.6862372347346686e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 8,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.535276794584206e-08,
+        "p_native_stop": 2.3022333085588886e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 8,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.00246708711893e-08,
+        "p_native_stop": 2.095379724441919e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 8,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.187291243098798e-08,
+        "p_native_stop": 2.3531961504337512e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 8,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.139662041462543e-08,
+        "p_native_stop": 5.363083983836512e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 9,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 4.016337928902658e-09,
+        "p_native_stop": 2.242339961392637e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 9,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.532690939778149e-08,
+        "p_native_stop": 2.25496557318527e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 9,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.8857825782324653e-06,
+        "p_native_stop": 1.78373379640926e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 9,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.314676567038987e-05,
+        "p_native_stop": 7.601004089893621e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 9,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.829902420373401e-06,
+        "p_native_stop": 1.0982204106627439e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 10,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.889156019454276e-08,
+        "p_native_stop": 1.0165674227908073e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 10,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 9.903440059133573e-07,
+        "p_native_stop": 9.444235459728463e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 10,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.0015706130070611835,
+        "p_native_stop": 2.5510805396142528e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 10,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.00023351401614490896,
+        "p_native_stop": 2.210570507951487e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 10,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00021063264284748584,
+        "p_native_stop": 4.004403924143733e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 11,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.8909682353296375e-07,
+        "p_native_stop": 1.2281785658177872e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 11,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.031232426702445e-08,
+        "p_native_stop": 1.5221437128669307e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 11,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00010097747872350737,
+        "p_native_stop": 9.548763026715284e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 11,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.9030316252610646e-05,
+        "p_native_stop": 6.750525292095218e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 11,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.547202817979269e-06,
+        "p_native_stop": 1.3371416097151857e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 12,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 9.655463983904156e-09,
+        "p_native_stop": 2.0471592222938e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 12,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.597691033974115e-08,
+        "p_native_stop": 1.1379991980168764e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 12,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.2506467101047747e-05,
+        "p_native_stop": 7.875463916762553e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 12,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 5.360058821679559e-06,
+        "p_native_stop": 5.835756701570289e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 12,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 6.863714952487499e-05,
+        "p_native_stop": 6.712223617619917e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 13,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.3137229082360591e-08,
+        "p_native_stop": 3.9909193421186145e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 13,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.8096470100203987e-08,
+        "p_native_stop": 1.151955363086829e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 13,
+        "step": 2,
+        "gold_complete": false,
+        "p_done": 3.434971063143166e-08,
+        "p_native_stop": 1.9471277728626605e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 13,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 4.1607492562434345e-08,
+        "p_native_stop": 3.7961785017711386e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 13,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 4.0175891058424895e-08,
+        "p_native_stop": 4.839674815165069e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 14,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.6470957930891927e-08,
+        "p_native_stop": 6.899577705565477e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 14,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 4.404058628892926e-08,
+        "p_native_stop": 5.959132535928169e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 14,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 3.7504086947137694e-08,
+        "p_native_stop": 4.735720242780536e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 14,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.0595400112833886e-07,
+        "p_native_stop": 1.4686775614745464e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 14,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.3972105080028996e-05,
+        "p_native_stop": 5.329596456089131e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 15,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 9.875961382022069e-08,
+        "p_native_stop": 1.1336386112742117e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 15,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.9891379088885515e-08,
+        "p_native_stop": 1.8576341759446424e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 15,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 5.4743157562597844e-08,
+        "p_native_stop": 4.730685665363985e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 15,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 6.853350953406334e-08,
+        "p_native_stop": 4.40793822932918e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 15,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.015977654285962e-07,
+        "p_native_stop": 7.411106353810058e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 16,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.1138453121238854e-07,
+        "p_native_stop": 1.6431066314294053e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 16,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.7034003480252977e-08,
+        "p_native_stop": 2.3282948404251523e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 16,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.0865879630728159e-05,
+        "p_native_stop": 6.112564110943081e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 16,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 3.990357799921185e-05,
+        "p_native_stop": 1.0229495675872612e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 16,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.3584483642480336e-05,
+        "p_native_stop": 5.887911623640502e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 17,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.306605934559002e-08,
+        "p_native_stop": 1.157880722977349e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 17,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.9235871562273132e-08,
+        "p_native_stop": 3.3295867471614244e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 17,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.9241409720270894e-06,
+        "p_native_stop": 2.839280509121792e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 17,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 3.312908916086599e-07,
+        "p_native_stop": 6.909861408163811e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 17,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.760216316095466e-07,
+        "p_native_stop": 3.153038655256232e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 18,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.207771105349309e-10,
+        "p_native_stop": 9.132200716899197e-13,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 18,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 7.012421576746419e-08,
+        "p_native_stop": 4.693703828894186e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 18,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00027118780417367816,
+        "p_native_stop": 1.110627825411811e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 18,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.00010962538362946361,
+        "p_native_stop": 1.9422869382392004e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 18,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.708849544636905e-05,
+        "p_native_stop": 2.149618126869582e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 19,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.5317274438284585e-08,
+        "p_native_stop": 7.664648730014059e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 19,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.23719585079607e-08,
+        "p_native_stop": 3.087898518737018e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 19,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 7.15706391929416e-07,
+        "p_native_stop": 7.159851266688761e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 19,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.475280552971526e-06,
+        "p_native_stop": 2.133488787195886e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 19,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 8.96136316441698e-06,
+        "p_native_stop": 8.060881924375311e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 20,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.2244820147298014e-08,
+        "p_native_stop": 1.0428051603267371e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 20,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.2283936712265131e-06,
+        "p_native_stop": 1.2229143874062758e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 20,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00011682389595080167,
+        "p_native_stop": 1.0071576474037943e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 20,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.773736298422591e-07,
+        "p_native_stop": 1.2381640445955344e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 20,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.7682664191816e-06,
+        "p_native_stop": 8.323593594661287e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 21,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.6339406029337624e-08,
+        "p_native_stop": 6.262289170543557e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 21,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.1651184195216047e-07,
+        "p_native_stop": 3.579038208284123e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 21,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00022055320732761174,
+        "p_native_stop": 1.0929962753168913e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 21,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.939119622169528e-05,
+        "p_native_stop": 3.9852378926151803e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 21,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 8.081684427452274e-06,
+        "p_native_stop": 1.136272816470115e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 22,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 8.716565247368635e-09,
+        "p_native_stop": 3.1791628393946366e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 22,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 4.5476497234631097e-07,
+        "p_native_stop": 1.140402241531805e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 22,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00016821565805003047,
+        "p_native_stop": 4.500753443394722e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 22,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.3622771803056821e-05,
+        "p_native_stop": 7.587641451501696e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 22,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.026924999430775642,
+        "p_native_stop": 2.449363585237692e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 23,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.455281276070309e-07,
+        "p_native_stop": 3.402293488521516e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 23,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.0524940939358203e-06,
+        "p_native_stop": 1.3761709668515276e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 23,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.3554257748182863e-05,
+        "p_native_stop": 7.140468913168115e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 23,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.5547844668617472e-05,
+        "p_native_stop": 7.027516078675464e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 23,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00017245490744244307,
+        "p_native_stop": 5.548473593380551e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 24,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 6.552372866508449e-08,
+        "p_native_stop": 4.227757098943368e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 24,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.4833275372438948e-06,
+        "p_native_stop": 4.282774630357057e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 24,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.013856104575097561,
+        "p_native_stop": 7.3693634458236575e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 24,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 7.616566563228844e-06,
+        "p_native_stop": 1.6627759862225644e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 24,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.000727417937014252,
+        "p_native_stop": 4.372510532754413e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 25,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.0235695846461113e-08,
+        "p_native_stop": 1.4900831791918055e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 25,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.552556648855898e-08,
+        "p_native_stop": 2.9209273331296106e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 25,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 5.772288602656772e-08,
+        "p_native_stop": 9.588794534318978e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 25,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.143035387940472e-05,
+        "p_native_stop": 2.6069351314520053e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 25,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.594897174887592e-06,
+        "p_native_stop": 3.06377535115264e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 26,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 6.080829706434088e-08,
+        "p_native_stop": 1.7187057960150912e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 26,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.0666165195516442e-07,
+        "p_native_stop": 1.1294461981977556e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 26,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.0035786317530437e-06,
+        "p_native_stop": 1.5643736445869278e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 26,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 4.529699708655244e-07,
+        "p_native_stop": 1.6608727926099704e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 26,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.2062519090250134e-06,
+        "p_native_stop": 3.227706152354081e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 27,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.3405812044074992e-07,
+        "p_native_stop": 1.1215440093563734e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 27,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 3.700970410136506e-05,
+        "p_native_stop": 5.273106818834159e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 27,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.05567384138703346,
+        "p_native_stop": 1.7683229746987762e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 27,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.0028766095638275146,
+        "p_native_stop": 1.011108472620575e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 27,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.0008622145396657288,
+        "p_native_stop": 9.054643475528907e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 28,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 7.035012004052987e-07,
+        "p_native_stop": 1.1335574599932216e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 28,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.636778392821725e-06,
+        "p_native_stop": 1.7143930871775777e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 28,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.001638107467442751,
+        "p_native_stop": 3.990762482447814e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 28,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.00012609516852535307,
+        "p_native_stop": 8.364343237576656e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 28,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.01033003069460392,
+        "p_native_stop": 1.9195929950989522e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 29,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.1358189055954426e-07,
+        "p_native_stop": 9.952243011134451e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 29,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.2621354699149379e-06,
+        "p_native_stop": 4.81049626734301e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 29,
+        "step": 2,
+        "gold_complete": false,
+        "p_done": 1.233170314662857e-05,
+        "p_native_stop": 8.340653916915111e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 29,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 9.3867896566735e-08,
+        "p_native_stop": 8.995931097527365e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 29,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.1346139078559645e-07,
+        "p_native_stop": 2.947233703308102e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 30,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.478833494024002e-06,
+        "p_native_stop": 1.1956533425573766e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 30,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.2980163976171752e-06,
+        "p_native_stop": 4.978709410199838e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 30,
+        "step": 2,
+        "gold_complete": false,
+        "p_done": 3.1875540571491e-06,
+        "p_native_stop": 1.2677473736832565e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 30,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 4.294388054404408e-05,
+        "p_native_stop": 2.93518450752373e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 30,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.553337071731221e-05,
+        "p_native_stop": 4.942739698855078e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 31,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 4.423598554126329e-08,
+        "p_native_stop": 2.3761493644177216e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 31,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 8.503419479666263e-08,
+        "p_native_stop": 8.734527343493073e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 31,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 8.231219794652134e-07,
+        "p_native_stop": 4.791888439939801e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 31,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 6.770397362743097e-07,
+        "p_native_stop": 2.9659729457810554e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 31,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.825209665184957e-06,
+        "p_native_stop": 1.7562094756572253e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 32,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.8933322110115114e-07,
+        "p_native_stop": 2.2967643107078138e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 32,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 6.517103088299336e-07,
+        "p_native_stop": 3.5560978897897666e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 32,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00023101414262782782,
+        "p_native_stop": 1.5185906101399735e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 32,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.0005319888587109745,
+        "p_native_stop": 4.887501912454497e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 32,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00018433446530252695,
+        "p_native_stop": 4.826746729974966e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 33,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.686484172429118e-08,
+        "p_native_stop": 4.033584169429589e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 33,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 5.308265258463507e-07,
+        "p_native_stop": 4.972129333604148e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 33,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.0001289054489461705,
+        "p_native_stop": 1.9212992434988085e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 33,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 3.0695351597387344e-05,
+        "p_native_stop": 1.1369837673755904e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 33,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00537857273593545,
+        "p_native_stop": 4.392730058869441e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 34,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.556199660830316e-07,
+        "p_native_stop": 6.340821810852786e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 34,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 4.7472519781877054e-07,
+        "p_native_stop": 3.826555597749474e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 34,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.450124091206817e-05,
+        "p_native_stop": 2.967323454425457e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 34,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 9.918993782775942e-06,
+        "p_native_stop": 2.8295297696456613e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 34,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.908293365384452e-06,
+        "p_native_stop": 4.061752848900399e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 35,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.196767105530853e-08,
+        "p_native_stop": 1.0786369491805715e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 35,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 7.649837812095939e-07,
+        "p_native_stop": 1.4969597696815663e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 35,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.000260234548477456,
+        "p_native_stop": 2.910618969734892e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 35,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 3.210917202522978e-05,
+        "p_native_stop": 2.4435808278908418e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 35,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.821577411144972e-05,
+        "p_native_stop": 3.5133166810008184e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 36,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.0787088317320013e-07,
+        "p_native_stop": 1.3342614912696255e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 36,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.7696545455692103e-06,
+        "p_native_stop": 4.873316069186727e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 36,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00031477483571507037,
+        "p_native_stop": 2.7045978317484555e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 36,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.001263718120753765,
+        "p_native_stop": 3.5573261569739057e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 36,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.0056272102519869804,
+        "p_native_stop": 6.908639337200164e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 37,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.501058418147295e-07,
+        "p_native_stop": 1.1497432382562312e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 37,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 8.408243843405216e-07,
+        "p_native_stop": 5.2196212824995494e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 37,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.003683445742353797,
+        "p_native_stop": 8.192593760729245e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 37,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.0004751727683469653,
+        "p_native_stop": 3.824174543034443e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 37,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.023682426661252975,
+        "p_native_stop": 9.349894346470387e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 38,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 7.66251332606771e-07,
+        "p_native_stop": 9.626284711601487e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 38,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 5.435507773654535e-06,
+        "p_native_stop": 2.0958540576391372e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 38,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.0003276016504969448,
+        "p_native_stop": 2.5969642075848717e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 38,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.0034421123564243317,
+        "p_native_stop": 7.454670509362138e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 38,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.008432858623564243,
+        "p_native_stop": 6.05501659731276e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 39,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 8.4408505074407e-08,
+        "p_native_stop": 4.3983298169026717e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 39,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 8.052810329672866e-08,
+        "p_native_stop": 6.87834199789306e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 39,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.0004007160314358771,
+        "p_native_stop": 5.780418819920266e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 39,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.00560749601572752,
+        "p_native_stop": 1.3461906507994792e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 39,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.009340418502688408,
+        "p_native_stop": 9.76755011600015e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 40,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.966057260385014e-09,
+        "p_native_stop": 1.5618205303803614e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 40,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.24254938782542e-07,
+        "p_native_stop": 2.51460915135972e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 40,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 1.2497756642915192e-06,
+        "p_native_stop": 1.113769941936151e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 40,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 3.916979949281085e-06,
+        "p_native_stop": 6.591412180292266e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 40,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 8.397722126574081e-07,
+        "p_native_stop": 1.0719898661896237e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 41,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.1864621995982816e-07,
+        "p_native_stop": 4.626246757445488e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 41,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 9.130422995440313e-07,
+        "p_native_stop": 2.1148602629043005e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 41,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.006815619766712189,
+        "p_native_stop": 5.626070050374998e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 41,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.003257055999711156,
+        "p_native_stop": 4.43508237758231e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 41,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.23086073994636536,
+        "p_native_stop": 2.3302676453655447e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 42,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.406309900810811e-08,
+        "p_native_stop": 4.4500058741686483e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 42,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.2241024194281636e-07,
+        "p_native_stop": 5.1154860954499335e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 42,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 9.248503829439869e-07,
+        "p_native_stop": 3.171906351875805e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 42,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.1413281501736492e-05,
+        "p_native_stop": 8.62099367323299e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 42,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00033805565908551216,
+        "p_native_stop": 2.633149679161078e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 43,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.3875334537469826e-08,
+        "p_native_stop": 4.0993294159027645e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 43,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 6.215823304955848e-07,
+        "p_native_stop": 1.951711293567193e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 43,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 5.590963496615586e-07,
+        "p_native_stop": 2.4442833875629316e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 43,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.4233894944482017e-05,
+        "p_native_stop": 1.886429041370476e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 43,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.4797183212067466e-05,
+        "p_native_stop": 3.580620574355551e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 44,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 9.644866594271662e-08,
+        "p_native_stop": 1.1995542993396408e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 44,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.2358210597085417e-06,
+        "p_native_stop": 3.403488153404829e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 44,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.0006708219298161566,
+        "p_native_stop": 4.080317925887516e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 44,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.3308304914971814e-05,
+        "p_native_stop": 2.2882586307037864e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 44,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.9820917916367762e-05,
+        "p_native_stop": 1.8994523943739174e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 45,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 9.8063047460073e-08,
+        "p_native_stop": 5.808596358453277e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 45,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.1424115814738798e-08,
+        "p_native_stop": 3.487191205863195e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 45,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.6458546926733106e-05,
+        "p_native_stop": 1.39350376961892e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 45,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 5.823007086291909e-06,
+        "p_native_stop": 4.606420431079887e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 45,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.2697092643065844e-05,
+        "p_native_stop": 6.075980726329572e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 46,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.115576608867741e-07,
+        "p_native_stop": 1.0513364431415081e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 46,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.477284570228221e-07,
+        "p_native_stop": 1.2107577824568106e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 46,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00010584569827187806,
+        "p_native_stop": 1.2425318539577995e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 46,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.0024989640805870295,
+        "p_native_stop": 4.778824378318658e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 46,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00029368235846050084,
+        "p_native_stop": 5.54887013459228e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 47,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.5323202019508244e-08,
+        "p_native_stop": 4.010258613665571e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 47,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.3247813512862194e-05,
+        "p_native_stop": 3.7477244527377256e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 47,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.024159381166100502,
+        "p_native_stop": 1.550658312545202e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 47,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.08243492245674133,
+        "p_native_stop": 4.721417372422746e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 47,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.028395384550094604,
+        "p_native_stop": 3.897474952408061e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 48,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.6401668407061152e-08,
+        "p_native_stop": 9.018064196024406e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 48,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 7.555772896239432e-08,
+        "p_native_stop": 2.3630747508185364e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 48,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 8.454361704934854e-06,
+        "p_native_stop": 3.649224553546772e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 48,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 3.4219419831060804e-06,
+        "p_native_stop": 1.408455680866364e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 48,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.2210377917654114e-06,
+        "p_native_stop": 1.724197504688002e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 49,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.613972422376264e-08,
+        "p_native_stop": 2.3518500610069965e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 49,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.8271958879267913e-07,
+        "p_native_stop": 5.513157575142764e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 49,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.451461796226795e-06,
+        "p_native_stop": 2.52938140976985e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 49,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.0700613529479597e-05,
+        "p_native_stop": 2.091879965836009e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 49,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.2379448889987543e-05,
+        "p_native_stop": 3.072974498063005e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 50,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.8610966989740518e-08,
+        "p_native_stop": 2.0053703195351355e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 50,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.983004492307373e-07,
+        "p_native_stop": 1.0113625245364117e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 50,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.003888485487550497,
+        "p_native_stop": 2.576932791922496e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 50,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.0034365232568234205,
+        "p_native_stop": 7.732964782994585e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 50,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.005030044354498386,
+        "p_native_stop": 1.4321871979159163e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 51,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 8.0032599214519e-08,
+        "p_native_stop": 1.2939886773108449e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 51,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 1.8028849524398538e-07,
+        "p_native_stop": 1.0970317553959611e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 51,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 2.4848382054187823e-06,
+        "p_native_stop": 5.295769541095272e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 51,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.1695586863424978e-06,
+        "p_native_stop": 1.2607369953556267e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 51,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.24491360920365e-06,
+        "p_native_stop": 1.997515340018284e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 52,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.6442834649410543e-08,
+        "p_native_stop": 3.8354005341320984e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 52,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 4.734138414619338e-08,
+        "p_native_stop": 1.5523164323797098e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 52,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 5.698661425412865e-06,
+        "p_native_stop": 2.5886272559692975e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 52,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.00044998538214713335,
+        "p_native_stop": 3.3902642804858064e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 52,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.1699856006307527e-05,
+        "p_native_stop": 3.55788554443216e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 53,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 3.3450338055018847e-09,
+        "p_native_stop": 3.885490868247551e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 53,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 8.411483918280283e-07,
+        "p_native_stop": 4.3182762417819375e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 53,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00019081101345364004,
+        "p_native_stop": 4.327719090935939e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 53,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 0.00020919508824590594,
+        "p_native_stop": 6.005025178507443e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 53,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.3218752176035196e-05,
+        "p_native_stop": 8.120896785656371e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 54,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 5.883339149193034e-09,
+        "p_native_stop": 3.3148432696452983e-12,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 54,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 8.679010221612771e-08,
+        "p_native_stop": 6.45709185925073e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 54,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.0008932541240938008,
+        "p_native_stop": 7.319740283702384e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 54,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.1377454939065501e-05,
+        "p_native_stop": 1.4409960569031066e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 54,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 3.0062459700275213e-05,
+        "p_native_stop": 1.5867621591723687e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 55,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.0548144163967663e-07,
+        "p_native_stop": 1.2086318831970876e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 55,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.1537391603487777e-07,
+        "p_native_stop": 3.755060192796572e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 55,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 9.387572958985402e-07,
+        "p_native_stop": 7.34637678702337e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 55,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 4.395861594730377e-07,
+        "p_native_stop": 4.816536262692068e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 55,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 2.1952621409582207e-06,
+        "p_native_stop": 1.135101777172248e-08,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 56,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 6.053519285842413e-08,
+        "p_native_stop": 1.1480097342051158e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 56,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 5.63670283781903e-08,
+        "p_native_stop": 8.586976500021973e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 56,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 4.097159398952499e-05,
+        "p_native_stop": 3.884619728799693e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 56,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 5.791795774712227e-05,
+        "p_native_stop": 4.054531158740853e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 56,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 0.00021152339468244463,
+        "p_native_stop": 8.592050128369141e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 57,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.8131304102553258e-07,
+        "p_native_stop": 7.350066629476184e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 57,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 6.446937561577215e-08,
+        "p_native_stop": 4.2844476670006993e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 57,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 4.904786621295898e-08,
+        "p_native_stop": 4.5749528163686845e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 57,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 1.4886794815538451e-05,
+        "p_native_stop": 1.6804710688290788e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 57,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 5.506250090547837e-06,
+        "p_native_stop": 5.247339738437666e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 58,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 7.638716681412916e-08,
+        "p_native_stop": 5.210716569087236e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 58,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 2.2114818420959637e-08,
+        "p_native_stop": 3.29120646567633e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 58,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 5.749784648401146e-08,
+        "p_native_stop": 7.968274578531215e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 58,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 2.942254866411531e-07,
+        "p_native_stop": 7.871527923513912e-10,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 58,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.3765559288003715e-06,
+        "p_native_stop": 4.213400003078412e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 59,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 1.2356329648355313e-07,
+        "p_native_stop": 8.441745398888989e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 59,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 7.387461664620787e-08,
+        "p_native_stop": 2.0092759473561364e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 59,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 0.00013760979345533997,
+        "p_native_stop": 2.2004238183117027e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 59,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 9.406205208506435e-05,
+        "p_native_stop": 1.968461675804715e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 59,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 1.8015600289800204e-05,
+        "p_native_stop": 2.849183058079759e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 60,
+        "step": 0,
+        "gold_complete": false,
+        "p_done": 2.1490940582680196e-07,
+        "p_native_stop": 8.816318122523412e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 60,
+        "step": 1,
+        "gold_complete": false,
+        "p_done": 7.936768753324941e-08,
+        "p_native_stop": 9.497705308684612e-11,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 60,
+        "step": 2,
+        "gold_complete": true,
+        "p_done": 5.618260274786735e-07,
+        "p_native_stop": 1.6638404619849711e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 60,
+        "step": 3,
+        "gold_complete": false,
+        "p_done": 5.9080707615066785e-06,
+        "p_native_stop": 2.2590656777189315e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      },
+      {
+        "episode": 60,
+        "step": 4,
+        "gold_complete": false,
+        "p_done": 9.615281305741519e-05,
+        "p_native_stop": 4.758693665412268e-09,
+        "best_native": "<|eot_id|>",
+        "argmax_is_done": false
+      }
+    ],
+    "wall_seconds": 569.2693436145782
+  }
+]

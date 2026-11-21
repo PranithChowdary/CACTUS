@@ -1,13 +1,13 @@
 #!/bin/bash
 #SBATCH --job-name=basevsinst
 #SBATCH --account=cminds_anandi
-#SBATCH --partition=cn4_mangala
-#SBATCH --qos=mangala
+#SBATCH --partition=cn3_anandi
+#SBATCH --qos=anandi
 #SBATCH --gres=gpu:1
 #SBATCH --nodes=1
 #SBATCH --ntasks=1
 #SBATCH --cpus-per-task=8
-#SBATCH --mem=62G
+#SBATCH --mem=48G
 #SBATCH --time=08:00:00
 #SBATCH --output=logs/%x_%j.out
 #SBATCH --error=logs/%x_%j.err
