@@ -1,0 +1,103 @@
+
+-------------------------------------------------------------
+# llama-3.1-8b-base   (meta-llama/Meta-Llama-3.1-8B)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+!! CRITICAL verification failure for llama-3.1-8b-base -- SKIPPING.
+!! Base models have no chat template; scores would be invalid.
+
+-------------------------------------------------------------
+# llama-3.1-8b-inst   (meta-llama/Meta-Llama-3.1-8B-Instruct)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [** FAIL **] batched == unbatched -- max abs diff 1.35e-01
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [** FAIL **] summed logprob matches manual -- manual -16.3159 vs policy -16.4513
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.538 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.152 vs r_sum = -0.538
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +11.53 vs DeployTool +5.60
+      (argmax under PMI on this toy prompt: ' HotelTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   HotelTool          2    -16.45    -8.23    -27.98     11.53
+   CarRentalTool      4    -18.83    -4.71    -29.06     10.23
+   WeatherTool        2    -20.07   -10.03    -26.66      6.59
+   DeployTool         2    -20.65   -10.32    -26.25      5.60
+   PharmacyTool       2    -25.39   -12.69    -29.04      3.65
+   DONE               1    -11.70   -11.70    -11.87      0.17
+
+critical: 4/6 passed   diagnostic: 3/3 passed
+CRITICAL FAILURE: the scoring maths is wrong; downstream numbers would be invalid.
+!! CRITICAL verification failure for llama-3.1-8b-inst -- SKIPPING.
+!! Base models have no chat template; scores would be invalid.
+
+-------------------------------------------------------------
+# qwen2.5-7b-base   (Qwen/Qwen2.5-7B)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+!! CRITICAL verification failure for qwen2.5-7b-base -- SKIPPING.
+!! Base models have no chat template; scores would be invalid.
+
+-------------------------------------------------------------
+# qwen2.5-7b-inst   (Qwen/Qwen2.5-7B-Instruct)
+-------------------------------------------------------------
+--- verifying scoring maths on this model's tokenizer ---
+
+1. BATCH INVARIANCE
+  [** FAIL **] batched == unbatched -- max abs diff 4.10e-01
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [** FAIL **] summed logprob matches manual -- manual -21.1251 vs policy -21.2056
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.429 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.185 vs r_sum = -0.429
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +12.03 vs DeployTool +5.35
+      (argmax under PMI on this toy prompt: ' HotelTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   HotelTool          2    -21.21   -10.60    -33.24     12.03
+   CarRentalTool      4    -31.96    -7.99    -40.22      8.26
+   DeployTool         2    -27.80   -13.90    -33.15      5.35
+   PharmacyTool       2    -30.69   -15.35    -35.80      5.11
+   WeatherTool        2    -32.01   -16.00    -26.36     -5.65
+   DONE               1    -18.08   -18.08     -7.95    -10.13
+
+critical: 4/6 passed   diagnostic: 3/3 passed
+CRITICAL FAILURE: the scoring maths is wrong; downstream numbers would be invalid.
+!! CRITICAL verification failure for qwen2.5-7b-inst -- SKIPPING.
+!! Base models have no chat template; scores would be invalid.
+
+-------------------------------------------------------------
+# comparison
+-------------------------------------------------------------
+no files matching 'results/llm_probe_basevsinst_*.json'
+
+Done. Pull back with:  bash scripts/fetch_results.sh

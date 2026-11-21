@@ -1,0 +1,11 @@
+
+EnvironmentNameNotFound: Could not find conda environment: cactus_env
+You can list all discoverable environments with `conda info --envs`.
+
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/evaluate_llm_baseline.py", line 5, in <module>
+    from transformers import AutoModelForCausalLM, AutoTokenizer
+ModuleNotFoundError: No module named 'transformers'
+srun: error: mangala: task 0: Exited with exit code 1
+srun: Terminating StepId=38278.0

@@ -1,0 +1,93 @@
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -16.4643 vs policy -16.4643
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL  (n=32 tools, all irrelevant to the query, lengths 2-4 tokens)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.535 (longer strings score worse despite equal irrelevance)
+
+5. PMI REDUCES LENGTH BIAS
+  [PASS] |r| smaller for PMI than for raw sum -- r_pmi = -0.149 vs r_sum = -0.535
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +11.52 vs DeployTool +5.47
+      (argmax under PMI on this toy prompt: ' HotelTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   HotelTool          2    -16.46    -8.23    -27.98     11.52
+   CarRentalTool      4    -18.85    -4.71    -29.01     10.16
+   WeatherTool        2    -20.16   -10.08    -26.61      6.45
+   DeployTool         2    -20.74   -10.37    -26.20      5.47
+   PharmacyTool       2    -25.41   -12.71    -29.04      3.63
+   DONE               1    -11.68   -11.68    -11.88      0.20
+
+critical: 6/6 passed   diagnostic: 3/3 passed
+model on cuda:0
+
+
+[pmi] alpha=0.0 ...
+    step 1: 48 active, 89s
+    step 2: 48 active, 175s
+    step 3: 48 active, 260s
+    step 4: 48 active, 341s
+    step 5: 0 active, 420s
+[pmi] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.167  probe_in_topk=0.250  P(DONE|complete)=0.000  (420s)
+
+[pmi] alpha=1.0 ...
+    step 1: 48 active, 90s
+    step 2: 48 active, 177s
+    step 3: 48 active, 262s
+    step 4: 48 active, 344s
+    step 5: 0 active, 424s
+[pmi] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.104  probe_in_topk=nan  P(DONE|complete)=0.000  (424s)
+
+[sum] alpha=0.0 ...
+    step 1: 48 active, 90s
+    step 2: 48 active, 177s
+    step 3: 48 active, 262s
+    step 4: 48 active, 344s
+    step 5: 0 active, 424s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.833  probe_in_topk=0.167  P(DONE|complete)=0.003  (424s)
+
+[sum] alpha=1.0 ...
+    step 1: 48 active, 90s
+    step 2: 48 active, 178s
+    step 3: 48 active, 265s
+    step 4: 48 active, 348s
+    step 5: 0 active, 431s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.271  probe_in_topk=nan  P(DONE|complete)=0.000  (431s)
+
+[mean] alpha=0.0 ...
+    step 1: 48 active, 90s
+    step 2: 48 active, 176s
+    step 3: 48 active, 259s
+    step 4: 48 active, 339s
+    step 5: 0 active, 417s
+[mean] alpha=0.0  ceiling=1.000  SEM=0.000  DONE_rate=0.000  SEM@k=0.833  probe_in_topk=0.167  P(DONE|complete)=0.001  (417s)
+
+[mean] alpha=1.0 ...
+    step 1: 48 active, 90s
+    step 2: 48 active, 177s
+    step 3: 48 active, 262s
+    step 4: 48 active, 343s
+    step 5: 0 active, 422s
+[mean] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.000  SEM@k=0.271  probe_in_topk=nan  P(DONE|complete)=0.000  (422s)
+
+======================================================================
+HEADLINE (PMI, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.167 (ceiling 1.000)
+  probe in top-k (over-gather): 0.250
+  over-probe rate (all 5 steps): 0.500
+  wasted tools per episode   : 3.58
+  exact match                : 0.000 (ceiling 1.000)
+  terminated via DONE        : 0.000
+======================================================================

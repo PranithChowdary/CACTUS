@@ -21,8 +21,6 @@ hf_cache/
 # it is the evidence behind the paper's numbers.
 logs/checkpoints/*.zip
 logs/ppo_tensorboard/
-logs/*.out
-logs/*.err
 
 # ...but the SLURM logs of the runs that produced the reported numbers ARE
 # tracked, so every number in the paper is traceable to a job that ran.

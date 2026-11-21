@@ -1,0 +1,13 @@
+model on cuda:0
+
+static      COMPLETE | A free-gen said DONE:  0/12   B binary correct:  1/12   C mean rank of DONE: 30.8 of 35
+static      INCOMPLETE | A free-gen said DONE:  0/12   B binary correct: 12/12   C mean rank of DONE: 33.9 of 36
+conditional COMPLETE | A free-gen said DONE:  0/12   B binary correct:  0/12   C mean rank of DONE: 31.5 of 35
+conditional INCOMPLETE | A free-gen said DONE:  0/12   B binary correct: 12/12   C mean rank of DONE: 33.1 of 36
+
+====================================================================
+On COMPLETE states: free-gen stops 0% of the time, binary question correct 4% of the time.
+VERDICT: the model cannot reliably recognise completion even when
+         asked directly. That is a genuine capability gap and is the
+         finding -- over-gathering has a mechanism.
+====================================================================

@@ -1,0 +1,98 @@
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/terms.json
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/terms.json
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/terms.json
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/terms.json
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/terms.json
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/terms.json
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/notices.json
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/notices.json
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/notices.json
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/notices.json
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/notices.json
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/notices.json
+
+ERROR conda.notices.fetch:get_channel_notice_response(72): Request error <HTTPSConnectionPool(host='repo.anaconda.com', port=443): Max retries exceeded with url: /pkgs/r/notices.json (Caused by NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))> for channel: defaults url: https://repo.anaconda.com/pkgs/r/notices.json
+ERROR conda.notices.fetch:get_channel_notice_response(72): Request error <HTTPSConnectionPool(host='repo.anaconda.com', port=443): Max retries exceeded with url: /pkgs/main/notices.json (Caused by NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable"))> for channel: defaults url: https://repo.anaconda.com/pkgs/main/notices.json
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/linux-64/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/noarch/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/noarch/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/linux-64/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/noarch/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/noarch/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/linux-64/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/noarch/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/r/noarch/repodata_shards.msgpack.zst
+
+Retrying (Retry(total=0, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/repodata_shards.msgpack.zst
+
+
+
+==> WARNING: A newer version of conda exists. <==
+    current version: 26.5.3
+    latest version: 26.7.0
+
+Please update conda by running
+
+    $ conda self update
+
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/libgcc-15.2.0-h69a1729_8.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/setuptools-83.0.0-py312h06a4308_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/python-3.12.13-hc5f7cf0_3.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/noarch/pip-26.1.2-pyhc872135_0.conda
+
+Retrying (Retry(total=2, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/libstdcxx-15.2.0-h39759b7_8.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/noarch/pip-26.1.2-pyhc872135_0.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/libgcc-15.2.0-h69a1729_8.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/python-3.12.13-hc5f7cf0_3.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/libstdcxx-15.2.0-h39759b7_8.conda
+
+Retrying (Retry(total=1, connect=None, read=None, redirect=None, status=None)) after connection broken by 'NewConnectionError("HTTPSConnection(host='repo.anaconda.com', port=443): Failed to establish a new connection: [Errno 101] Network is unreachable")': /pkgs/main/linux-64/setuptools-83.0.0-py312h06a4308_0.conda
+
+WARNING conda.conda_pypi.main:notify_externally_managed_future(156): 
+  Did you know? You can install many PyPI packages with conda
+  using the conda-pypi beta. Get started:
+    https://docs.conda.io/projects/conda/en/stable/new-features.html
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/train_ppo.py", line 4, in <module>
+    from env.metatool_env import MetaToolEnv
+ModuleNotFoundError: No module named 'env'
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=32445.0
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/evaluate_all.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=32445.1

@@ -1,0 +1,16 @@
+[transformers] `torch_dtype` is deprecated! Use `dtype` instead!
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/evaluate_llm_baseline.py", line 76, in <module>
+    evaluate()
+  File "/users/staff/pranith/CACTUS/experiments/evaluate_llm_baseline.py", line 17, in evaluate
+    model = AutoModelForCausalLM.from_pretrained(
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/auto_factory.py", line 402, in from_pretrained
+    return model_class.from_pretrained(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/modeling_utils.py", line 4226, in from_pretrained
+    device_map = check_and_set_device_map(device_map)  # warn, error and fix the device map
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/integrations/accelerate.py", line 137, in check_and_set_device_map
+    raise ValueError(
+ValueError: Using a `device_map`, `tp_plan`, `torch.device` context manager or setting `torch.set_default_device(device)` requires `accelerate`. You can install it with `pip install accelerate`

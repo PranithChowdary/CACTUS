@@ -1,0 +1,16 @@
+=========================================
+Evaluating all agents (PPO seeds + baselines)
+=========================================
+[config] Using vendored embedding model: /users/staff/pranith/CACTUS/models/embedding/all-MiniLM-L6-v2
+TextEmbeddingWrapper initialized with /users/staff/pranith/CACTUS/models/embedding/all-MiniLM-L6-v2 (dim=384)
+DenseRetrievalAgent initialized with 15 tools, stop_threshold=0.2.
+DenseRetrievalAgent: calibrated stop_threshold=0.175 (val F1=0.665)
+Warning: no PPO checkpoints found. Skipping PPO evaluation.
+Random: {'reward_mean': -2.420199536462512, 'reward_std': 0.2844072606597886, 'f1_mean': 0.18254556157670346, 'f1_std': 0.02097876710505019, 'success_mean': 0.0, 'success_std': 0.0, 'steps_mean': 8.250980392156864, 'steps_std': 0.6367871586556075}
+Heuristic: {'reward_mean': 0.20359477124182998, 'reward_std': 0.0, 'f1_mean': 0.1045751633986928, 'f1_std': 0.0, 'success_mean': 0.0, 'success_std': 0.0, 'steps_mean': 1.1568627450980393, 'steps_std': 0.0}
+DenseRetrieval: {'reward_mean': 1.395845004668534, 'reward_std': 0.0, 'f1_mean': 0.565452847805789, 'f1_std': 0.0, 'success_mean': 0.13725490196078433, 'success_std': 0.0, 'steps_mean': 2.803921568627451, 'steps_std': 0.0}
+
+Evaluation complete. Results saved to results/final_comparison.json, results/raw/, results/significance.json
+=========================================
+Evaluation complete. See results/final_comparison.json, results/significance.json
+=========================================

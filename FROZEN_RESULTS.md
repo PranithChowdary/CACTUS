@@ -56,6 +56,28 @@ far better (SEM@k 0.951 vs 0.049 on 8B). The scorer choice can invert the centra
 observation, which is why all three are logged per step and the primary was
 selected on ranking evidence rather than a priori.
 
+## 1b. The stop signal is uninformative in LLaMA, not merely weak
+
+`results/native_stop_*.json` · job 67879 · 61 scenarios, summed scoring, alpha=0
+
+| model | P(DONE\|cmpl) | P(DONE\|before) | elevation | P(native\|cmpl) |
+|---|---|---|---|---|
+| llama-3.1-8b | 0.00200 | 0.00188 | **1.06x** | 2.4e-09 |
+| qwen2.5-7b | 0.57531 | 0.19660 | **2.93x** | 9.8e-11 |
+
+- **The interface objection is narrowed.** Each model's own end-of-turn token,
+  scored at the same decision points, carries 1e-9 to 1e-11 of the mass. The
+  stop probability is not being routed through a channel the action set omits.
+  It does NOT settle the weaker form: the native mechanism is "emit text, then
+  end turn", and this measures only whether the model would end the turn
+  immediately. That needs free generation under a native interface.
+- **LLaMA's stop signal is independent of completion** (1.06x). Sharper than a
+  low absolute probability: a uniformly small signal would at least be
+  miscalibrated; this one carries almost no information about the state.
+- **Qwen's stopping is NOT pure surface-form prior** (2.93x elevation). It has
+  a high baseline prior AND real completion-sensitivity. This corrects a
+  speculation written into an earlier draft.
+
 ## 2. RL terminates and gathers conditionally — on the same task
 
 `results/nl_alpha_shift.json` · log `nlshift_59325` · 20 agents (4 α × 5 seeds),
@@ -130,7 +152,25 @@ signal survives marker replacement at matched length (11.3 vs 11.6 mean words),
 so it is carried by meaning — static queries name their actions, conditional
 ones do not — rather than by one keyword.
 
-## Outstanding: nothing
+## Outstanding: one job, in flight
+
+`scripts/run_base_vs_instruct.sh` (job 67880) was submitted and its results have
+not been pulled. It compares base vs instruct checkpoints within LLaMA and Qwen
+-- the controlled version of the "post-training not scale" claim, which
+currently rests on one confounded cross-family pair. The paper names this as
+its weakest claim and says the comparison is running.
+
+Check it skipped nothing before trusting it: base models have no chat template,
+and the script deliberately skips a model whose scoring verification fails
+rather than producing invalid scores.
+
+```
+grep -E "SKIPPING|critical:" logs/basevsin_*.out    # want 4 passes, no SKIPPING
+bash scripts/fetch_results.sh
+python scripts/compare_models.py --pattern 'results/llm_probe_basevsinst_*.json'
+```
+
+## Previously outstanding: nothing else
 
 All experiments are complete. Both sides of the comparison use the same
 61-scenario bank; all four models have all four scoring×α configs; both RL

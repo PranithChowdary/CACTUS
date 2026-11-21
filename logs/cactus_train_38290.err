@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/train_ppo.py", line 60, in <module>
+    main()
+  File "/users/staff/pranith/CACTUS/experiments/train_ppo.py", line 56, in main
+    train_one_seed(seed, args.timesteps)
+  File "/users/staff/pranith/CACTUS/experiments/train_ppo.py", line 26, in train_one_seed
+    env = TextEmbeddingWrapper(base_env, model_name=config.EMBEDDING_MODEL, local_files_only=True)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: TextEmbeddingWrapper.__init__() got an unexpected keyword argument 'local_files_only'
+srun: error: mangala: task 0: Exited with exit code 1
+srun: Terminating StepId=38290.0

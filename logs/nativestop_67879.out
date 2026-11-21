@@ -1,0 +1,158 @@
+
+-------------------------------------------------------------
+# llama-3.1-8b   (meta-llama/Meta-Llama-3.1-8B-Instruct)
+-------------------------------------------------------------
+model on cuda:0
+native stop tokens found: {'<|eot_id|>': 128009}
+
+  episode 1/61 (17s)
+  episode 2/61 (26s)
+  episode 3/61 (35s)
+  episode 4/61 (45s)
+  episode 5/61 (54s)
+  episode 6/61 (63s)
+  episode 7/61 (73s)
+  episode 8/61 (82s)
+  episode 9/61 (91s)
+  episode 10/61 (99s)
+  episode 11/61 (108s)
+  episode 12/61 (117s)
+  episode 13/61 (127s)
+  episode 14/61 (136s)
+  episode 15/61 (145s)
+  episode 16/61 (154s)
+  episode 17/61 (164s)
+  episode 18/61 (173s)
+  episode 19/61 (183s)
+  episode 20/61 (192s)
+  episode 21/61 (201s)
+  episode 22/61 (210s)
+  episode 23/61 (219s)
+  episode 24/61 (229s)
+  episode 25/61 (238s)
+  episode 26/61 (247s)
+  episode 27/61 (256s)
+  episode 28/61 (266s)
+  episode 29/61 (275s)
+  episode 30/61 (284s)
+  episode 31/61 (293s)
+  episode 32/61 (302s)
+  episode 33/61 (311s)
+  episode 34/61 (321s)
+  episode 35/61 (330s)
+  episode 36/61 (339s)
+  episode 37/61 (348s)
+  episode 38/61 (358s)
+  episode 39/61 (367s)
+  episode 40/61 (376s)
+  episode 41/61 (385s)
+  episode 42/61 (395s)
+  episode 43/61 (404s)
+  episode 44/61 (413s)
+  episode 45/61 (422s)
+  episode 46/61 (431s)
+  episode 47/61 (440s)
+  episode 48/61 (449s)
+  episode 49/61 (459s)
+  episode 50/61 (468s)
+  episode 51/61 (477s)
+  episode 52/61 (486s)
+  episode 53/61 (496s)
+  episode 54/61 (505s)
+  episode 55/61 (514s)
+  episode 56/61 (524s)
+  episode 57/61 (533s)
+  episode 58/61 (542s)
+  episode 59/61 (551s)
+  episode 60/61 (560s)
+  episode 61/61 (569s)
+
+[alpha=0.0] P(DONE|complete)=0.0020 vs before=0.0019
+[alpha=0.0] P(native|complete)=0.0000 vs before=0.0000
+
+======================================================================
+INTERPRETATION
+  Neither channel carries mass at completion. The termination
+  claim is STRENGTHENED: the native mechanism is absent too.
+  elevation at completion: DONE x1.1, native x1.1
+======================================================================
+
+-------------------------------------------------------------
+# qwen2.5-7b   (Qwen/Qwen2.5-7B-Instruct)
+-------------------------------------------------------------
+model on cuda:0
+native stop tokens found: {'<|im_end|>': 151645, '<|endoftext|>': 151643, '</s>': 128247}
+
+  episode 1/61 (8s)
+  episode 2/61 (16s)
+  episode 3/61 (23s)
+  episode 4/61 (28s)
+  episode 5/61 (32s)
+  episode 6/61 (35s)
+  episode 7/61 (42s)
+  episode 8/61 (47s)
+  episode 9/61 (54s)
+  episode 10/61 (59s)
+  episode 11/61 (64s)
+  episode 12/61 (69s)
+  episode 13/61 (74s)
+  episode 14/61 (79s)
+  episode 15/61 (85s)
+  episode 16/61 (91s)
+  episode 17/61 (100s)
+  episode 18/61 (105s)
+  episode 19/61 (111s)
+  episode 20/61 (117s)
+  episode 21/61 (125s)
+  episode 22/61 (131s)
+  episode 23/61 (136s)
+  episode 24/61 (143s)
+  episode 25/61 (148s)
+  episode 26/61 (157s)
+  episode 27/61 (162s)
+  episode 28/61 (167s)
+  episode 29/61 (172s)
+  episode 30/61 (179s)
+  episode 31/61 (185s)
+  episode 32/61 (192s)
+  episode 33/61 (199s)
+  episode 34/61 (206s)
+  episode 35/61 (211s)
+  episode 36/61 (216s)
+  episode 37/61 (221s)
+  episode 38/61 (228s)
+  episode 39/61 (234s)
+  episode 40/61 (240s)
+  episode 41/61 (248s)
+  episode 42/61 (253s)
+  episode 43/61 (260s)
+  episode 44/61 (265s)
+  episode 45/61 (272s)
+  episode 46/61 (280s)
+  episode 47/61 (285s)
+  episode 48/61 (292s)
+  episode 49/61 (300s)
+  episode 50/61 (305s)
+  episode 51/61 (313s)
+  episode 52/61 (322s)
+  episode 53/61 (328s)
+  episode 54/61 (335s)
+  episode 55/61 (343s)
+  episode 56/61 (350s)
+  episode 57/61 (357s)
+  episode 58/61 (363s)
+  episode 59/61 (370s)
+  episode 60/61 (377s)
+  episode 61/61 (382s)
+
+[alpha=0.0] P(DONE|complete)=0.5753 vs before=0.1966
+[alpha=0.0] P(native|complete)=0.0000 vs before=0.0000
+
+======================================================================
+INTERPRETATION
+  Neither channel carries mass at completion. The termination
+  claim is STRENGTHENED: the native mechanism is absent too.
+  elevation at completion: DONE x2.9, native x0.1
+======================================================================
+
+Done. Pull back with:  bash scripts/fetch_results.sh

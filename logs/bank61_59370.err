@@ -1,0 +1,5 @@
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 16351.63it/s]
+Loading weights:   0%|          | 0/146 [00:00<?, ?it/s]Loading weights:  30%|███       | 44/146 [00:00<00:00, 425.36it/s]Loading weights:  60%|█████▉    | 87/146 [00:00<00:00, 423.90it/s]Loading weights:  89%|████████▉ | 130/146 [00:00<00:00, 411.88it/s]Loading weights: 100%|██████████| 146/146 [00:00<00:00, 453.98it/s]
+srun: Job step aborted: Waiting up to 62 seconds for job step to finish.
+slurmstepd-mangala: error: *** JOB 59370 ON mangala CANCELLED AT 2026-10-07T23:42:30 DUE TO TIME LIMIT ***
+slurmstepd-mangala: error: *** STEP 59370.2 ON mangala CANCELLED AT 2026-10-07T23:42:30 DUE TO TIME LIMIT ***

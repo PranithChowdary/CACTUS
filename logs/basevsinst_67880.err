@@ -1,0 +1,206 @@
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 438, in cached_files
+    hf_hub_download(
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1028, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1906, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 773, in from_pretrained
+    config = AutoConfig.from_pretrained(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 388, in from_pretrained
+    config_dict, unused_kwargs = PreTrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 747, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 802, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 521, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 438, in cached_files
+    hf_hub_download(
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1028, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1906, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/verify_llm_policy.py", line 150, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/users/staff/pranith/CACTUS/experiments/verify_llm_policy.py", line 58, in main
+    tok = AutoTokenizer.from_pretrained(args.model)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 777, in from_pretrained
+    config = PreTrainedConfig.from_pretrained(pretrained_model_name_or_path, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 706, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 747, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 802, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 521, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=67880.0
+
+Loading weights:   0%|          | 0/291 [00:00<?, ?it/s]
+Loading weights:  15%|█▍        | 43/291 [00:00<00:00, 429.59it/s]
+Loading weights:  30%|██▉       | 86/291 [00:00<00:00, 401.21it/s]
+Loading weights:  44%|████▎     | 127/291 [00:00<00:00, 396.72it/s]
+Loading weights:  57%|█████▋    | 167/291 [00:00<00:00, 391.50it/s]
+Loading weights:  71%|███████   | 207/291 [00:00<00:00, 393.38it/s]
+Loading weights:  85%|████████▍ | 247/291 [00:00<00:00, 369.76it/s]
+Loading weights: 100%|██████████| 291/291 [00:00<00:00, 401.32it/s]
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=67880.1
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 438, in cached_files
+    hf_hub_download(
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1028, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1906, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 773, in from_pretrained
+    config = AutoConfig.from_pretrained(
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/configuration_auto.py", line 388, in from_pretrained
+    config_dict, unused_kwargs = PreTrainedConfig.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 747, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 802, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 521, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 438, in cached_files
+    hf_hub_download(
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/utils/_validators.py", line 88, in _inner_fn
+    return fn(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1028, in hf_hub_download
+    return _hf_hub_download_to_cache_dir(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1175, in _hf_hub_download_to_cache_dir
+    _raise_on_head_call_error(head_call_error, force_download, local_files_only)
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/huggingface_hub/file_download.py", line 1906, in _raise_on_head_call_error
+    raise LocalEntryNotFoundError(
+huggingface_hub.errors.LocalEntryNotFoundError: Cannot find the requested files in the disk cache and outgoing traffic has been disabled. To enable hf.co look-ups and downloads online, set 'local_files_only' to False.
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/users/staff/pranith/CACTUS/experiments/verify_llm_policy.py", line 150, in <module>
+    sys.exit(main())
+             ^^^^^^
+  File "/users/staff/pranith/CACTUS/experiments/verify_llm_policy.py", line 58, in main
+    tok = AutoTokenizer.from_pretrained(args.model)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/models/auto/tokenization_auto.py", line 777, in from_pretrained
+    config = PreTrainedConfig.from_pretrained(pretrained_model_name_or_path, **kwargs)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 706, in from_pretrained
+    config_dict, kwargs = cls.get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 747, in get_config_dict
+    config_dict, kwargs = cls._get_config_dict(pretrained_model_name_or_path, **kwargs)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/configuration_utils.py", line 802, in _get_config_dict
+    resolved_config_file = cached_file(
+                           ^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 294, in cached_file
+    file = cached_files(path_or_repo_id=path_or_repo_id, filenames=[filename], **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/users/staff/pranith/CACTUS/cactus_env/lib/python3.12/site-packages/transformers/utils/hub.py", line 521, in cached_files
+    raise OSError(
+OSError: We couldn't connect to 'https://huggingface.co' to load the files, and couldn't find them in the cached files.
+Check your internet connection or see how to run the library in offline mode at 'https://huggingface.co/docs/transformers/installation#offline-mode'.
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=67880.2
+
+Loading weights:   0%|          | 0/339 [00:00<?, ?it/s]
+Loading weights:   5%|▌         | 17/339 [00:00<00:01, 169.63it/s]
+Loading weights:  10%|█         | 34/339 [00:00<00:02, 124.18it/s]
+Loading weights:  14%|█▍        | 48/339 [00:00<00:03, 94.32it/s]
+Loading weights:  17%|█▋        | 59/339 [00:00<00:03, 91.90it/s]
+Loading weights:  24%|██▍       | 83/339 [00:00<00:02, 121.60it/s]
+Loading weights:  31%|███▏      | 106/339 [00:00<00:01, 146.85it/s]
+Loading weights:  36%|███▌      | 122/339 [00:01<00:01, 126.13it/s]
+Loading weights:  42%|████▏     | 142/339 [00:01<00:01, 136.19it/s]
+Loading weights:  46%|████▋     | 157/339 [00:01<00:01, 132.04it/s]
+Loading weights:  53%|█████▎    | 179/339 [00:01<00:01, 148.30it/s]
+Loading weights:  58%|█████▊    | 195/339 [00:01<00:00, 148.66it/s]
+Loading weights:  63%|██████▎   | 214/339 [00:01<00:00, 146.24it/s]
+Loading weights:  69%|██████▉   | 235/339 [00:01<00:00, 157.06it/s]
+Loading weights:  76%|███████▌  | 257/339 [00:01<00:00, 172.11it/s]
+Loading weights:  81%|████████  | 275/339 [00:01<00:00, 157.74it/s]
+Loading weights:  86%|████████▌ | 292/339 [00:02<00:00, 159.07it/s]
+Loading weights:  91%|█████████ | 309/339 [00:02<00:00, 158.03it/s]
+Loading weights:  96%|█████████▌| 326/339 [00:02<00:00, 137.90it/s]
+Loading weights: 100%|██████████| 339/339 [00:02<00:00, 143.47it/s]
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=67880.3
+srun: error: anandi: task 0: Exited with exit code 1
+srun: Terminating StepId=67880.4

@@ -1,0 +1,11 @@
+Activating existing local conda environment 'cactus_env'...
+=========================================
+Starting CACTUS Experiments Execution
+=========================================
+1. Training PPO Agent...
+-----------------------------------------
+2. Evaluating All Agents (Random, Heuristic, DenseRetrieval, PPO)...
+=========================================
+All experiments completed successfully.
+Results are saved in the results/ directory.
+=========================================

@@ -1,0 +1,549 @@
+------------ alpha = 0.0  (static; classifier ceiling is 1.000) ----------------
+model on cuda:0
+
+========================================================================
+EPISODE 0  scenario=0  conditional=False  bit=1
+  query : I'm going to Denver this weekend. Book me a hotel and a rental car.
+  gold  : ['CarRentalTool', 'HotelTool']   (probe=WeatherTool, probe_is_gold=False, branches=('TripTool', 'NewsTool'), static_gold=('HotelTool', 'CarRentalTool'))
+  turn 1: raw='HotelTool'                              -> 'HotelTool'      reward=+0.95  selected=['HotelTool']
+  turn 2: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=+0.95  selected=['HotelTool', 'CarRentalTool']
+  turn 3: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['HotelTool', 'CarRentalTool', 'WeatherTool']
+  turn 4: raw='FlightTool'                             -> 'FlightTool'     reward=-0.55  selected=['HotelTool', 'CarRentalTool', 'WeatherTool', 'FlightTool']
+  turn 5: raw='TripTool'                               -> 'TripTool'       reward=-0.55  selected=['HotelTool', 'CarRentalTool', 'WeatherTool', 'FlightTool', 'TripTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 1  scenario=1  conditional=False  bit=1
+  query : Set up my quarterly budget and issue the outstanding invoice.
+  gold  : ['BudgetTool', 'InvoiceTool']   (probe=FinanceTool, probe_is_gold=False, branches=('BudgetTool', 'TaxTool'), static_gold=('BudgetTool', 'InvoiceTool'))
+  turn 1: raw='BudgetTool'                             -> 'BudgetTool'     reward=+0.95  selected=['BudgetTool']
+  turn 2: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=+0.95  selected=['BudgetTool', 'InvoiceTool']
+  turn 3: raw='FinanceTool'                            -> 'FinanceTool'    reward=-0.55  selected=['BudgetTool', 'InvoiceTool', 'FinanceTool']
+  turn 4: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['BudgetTool', 'InvoiceTool', 'FinanceTool', 'CalendarTool']
+  turn 5: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['BudgetTool', 'InvoiceTool', 'FinanceTool', 'CalendarTool', 'AccountTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 2  scenario=2  conditional=False  bit=0
+  query : For my flight UA 421 tonight, reserve a car and book a hotel at the destination.
+  gold  : ['CarRentalTool', 'HotelTool']   (probe=FlightTool, probe_is_gold=False, branches=('CarRentalTool', 'HotelTool'), static_gold=('CarRentalTool', 'HotelTool'))
+  turn 1: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=+0.95  selected=['CarRentalTool']
+  turn 2: raw='HotelTool'                              -> 'HotelTool'      reward=+0.95  selected=['CarRentalTool', 'HotelTool']
+  turn 3: raw='FlightTool'                             -> 'FlightTool'     reward=-0.55  selected=['CarRentalTool', 'HotelTool', 'FlightTool']
+  turn 4: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['CarRentalTool', 'HotelTool', 'FlightTool', 'WeatherTool']
+  turn 5: raw='HotelTool'                              -> 'HotelTool'      reward=-0.50  selected=['CarRentalTool', 'HotelTool', 'FlightTool', 'WeatherTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 3  scenario=3  conditional=False  bit=0
+  query : Refill my usual prescription and confirm my insurance still covers it.
+  gold  : ['InsuranceTool', 'PharmacyTool']   (probe=HealthTool, probe_is_gold=False, branches=('PharmacyTool', 'DoctorTool'), static_gold=('PharmacyTool', 'InsuranceTool'))
+  turn 1: raw='InsuranceTool'                          -> 'InsuranceTool'  reward=+0.95  selected=['InsuranceTool']
+  turn 2: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=+0.95  selected=['InsuranceTool', 'PharmacyTool']
+  turn 3: raw='HealthTool'                             -> 'HealthTool'     reward=-0.55  selected=['InsuranceTool', 'PharmacyTool', 'HealthTool']
+  turn 4: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=-0.50  selected=['InsuranceTool', 'PharmacyTool', 'HealthTool']   <-- REPEAT
+  turn 5: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=-0.50  selected=['InsuranceTool', 'PharmacyTool', 'HealthTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 4  scenario=4  conditional=False  bit=1
+  query : Place an order for 40 units of SKU 7731 and arrange shipping.
+  gold  : ['OrderTool', 'ShippingTool']   (probe=InventoryTool, probe_is_gold=False, branches=('OrderTool', 'SupplierTool'), static_gold=('OrderTool', 'ShippingTool'))
+  turn 1: raw='OrderTool'                              -> 'OrderTool'      reward=+0.95  selected=['OrderTool']
+  turn 2: raw='ShippingTool'                           -> 'ShippingTool'   reward=+0.95  selected=['OrderTool', 'ShippingTool']
+  turn 3: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.55  selected=['OrderTool', 'ShippingTool', 'InventoryTool']
+  turn 4: raw='SupplierTool'                           -> 'SupplierTool'   reward=-0.55  selected=['OrderTool', 'ShippingTool', 'InventoryTool', 'SupplierTool']
+  turn 5: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['OrderTool', 'ShippingTool', 'InventoryTool', 'SupplierTool', 'InvoiceTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 5  scenario=5  conditional=False  bit=1
+  query : Create a meeting with Priya about the launch and email her the agenda.
+  gold  : ['EmailTool', 'MeetingTool']   (probe=CalendarTool, probe_is_gold=False, branches=('EmailTool', 'MessageTool'), static_gold=('MeetingTool', 'EmailTool'))
+  turn 1: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['EmailTool']
+  turn 2: raw='MeetingTool'                            -> 'MeetingTool'    reward=+0.95  selected=['EmailTool', 'MeetingTool']
+  turn 3: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['EmailTool', 'MeetingTool', 'CalendarTool']
+  turn 4: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.50  selected=['EmailTool', 'MeetingTool', 'CalendarTool']   <-- REPEAT
+  turn 5: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.50  selected=['EmailTool', 'MeetingTool', 'CalendarTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 6  scenario=6  conditional=False  bit=1
+  query : Deploy the current build and file a release ticket.
+  gold  : ['DeployTool', 'TicketTool']   (probe=RepoTool, probe_is_gold=False, branches=('DeployTool', 'RollbackTool'), static_gold=('DeployTool', 'TicketTool'))
+  turn 1: raw='DeployTool'                             -> 'DeployTool'     reward=+0.95  selected=['DeployTool']
+  turn 2: raw='TicketTool'                             -> 'TicketTool'     reward=+0.95  selected=['DeployTool', 'TicketTool']
+  turn 3: raw='ReleaseTicketTool'                      -> 'ReleaseTicketTool' reward=-0.50  selected=['DeployTool', 'TicketTool']   <-- UNPARSED
+  turn 4: raw='RepoTool'                               -> 'RepoTool'       reward=-0.55  selected=['DeployTool', 'TicketTool', 'RepoTool']
+  turn 5: raw='TicketTool'                             -> 'TicketTool'     reward=-0.50  selected=['DeployTool', 'TicketTool', 'RepoTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 7  scenario=7  conditional=False  bit=1
+  query : Issue the approved refund for last month's charge and email the customer.
+  gold  : ['EmailTool', 'RefundTool']   (probe=BillingTool, probe_is_gold=False, branches=('RefundTool', 'EscalateTool'), static_gold=('RefundTool', 'EmailTool'))
+  turn 1: raw='RefundTool'                             -> 'RefundTool'     reward=+0.95  selected=['RefundTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['RefundTool', 'EmailTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['RefundTool', 'EmailTool', 'InvoiceTool']
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['RefundTool', 'EmailTool', 'InvoiceTool', 'AccountTool']
+  turn 5: raw='BillingTool'                            -> 'BillingTool'    reward=-0.55  selected=['RefundTool', 'EmailTool', 'InvoiceTool', 'AccountTool', 'BillingTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 8  scenario=8  conditional=False  bit=0
+  query : Reset this user's password and email them the confirmation.
+  gold  : ['EmailTool', 'ResetTool']   (probe=SecurityTool, probe_is_gold=False, branches=('ResetTool', 'EscalateTool'), static_gold=('ResetTool', 'EmailTool'))
+  turn 1: raw='ResetTool'                              -> 'ResetTool'      reward=+0.95  selected=['ResetTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['ResetTool', 'EmailTool']
+  turn 3: raw='PasswordResetTool'                      -> 'PasswordResetTool' reward=-0.50  selected=['ResetTool', 'EmailTool']   <-- UNPARSED
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['ResetTool', 'EmailTool', 'AccountTool']
+  turn 5: raw='AccountTool'                            -> 'AccountTool'    reward=-0.50  selected=['ResetTool', 'EmailTool', 'AccountTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 9  scenario=9  conditional=False  bit=1
+  query : Enrol this employee in the compliance training and email them the schedule.
+  gold  : ['EmailTool', 'TrainingTool']   (probe=HRTool, probe_is_gold=False, branches=('CalendarTool', 'PayrollTool'), static_gold=('TrainingTool', 'EmailTool'))
+  turn 1: raw='TrainingTool'                           -> 'TrainingTool'   reward=+0.95  selected=['TrainingTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['TrainingTool', 'EmailTool']
+  turn 3: raw='HRTool'                                 -> 'HRTool'         reward=-0.55  selected=['TrainingTool', 'EmailTool', 'HRTool']
+  turn 4: raw='TrainingTool'                           -> 'TrainingTool'   reward=-0.50  selected=['TrainingTool', 'EmailTool', 'HRTool']   <-- REPEAT
+  turn 5: raw='TrainingTool'                           -> 'TrainingTool'   reward=-0.50  selected=['TrainingTool', 'EmailTool', 'HRTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 10  scenario=10  conditional=False  bit=1
+  query : Retrieve the vendor contract and file a ticket for the renewal review.
+  gold  : ['AccountTool', 'TicketTool']   (probe=LegalTool, probe_is_gold=False, branches=('InvoiceTool', 'EscalateTool'), static_gold=('AccountTool', 'TicketTool'))
+  turn 1: raw='LegalTool'                              -> 'LegalTool'      reward=-0.55  selected=['LegalTool']
+  turn 2: raw='TicketTool'                             -> 'TicketTool'     reward=+0.95  selected=['LegalTool', 'TicketTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['LegalTool', 'TicketTool', 'InvoiceTool']
+  turn 4: raw='VendorContractTool'                     -> 'VendorContractTool' reward=-0.50  selected=['LegalTool', 'TicketTool', 'InvoiceTool']   <-- UNPARSED
+  turn 5: raw='VendorContractTool'                     -> 'VendorContractTool' reward=-0.50  selected=['LegalTool', 'TicketTool', 'InvoiceTool']   <-- UNPARSED
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 11  scenario=11  conditional=False  bit=0
+  query : Email the customer their tracking number and file a delivery ticket.
+  gold  : ['EmailTool', 'TicketTool']   (probe=ShippingTool, probe_is_gold=False, branches=('EmailTool', 'RefundTool'), static_gold=('EmailTool', 'TicketTool'))
+  turn 1: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['EmailTool']
+  turn 2: raw='ShippingTool'                           -> 'ShippingTool'   reward=-0.55  selected=['EmailTool', 'ShippingTool']
+  turn 3: raw='TicketTool'                             -> 'TicketTool'     reward=+0.95  selected=['EmailTool', 'ShippingTool', 'TicketTool']
+  turn 4: raw='EmailTool'                              -> 'EmailTool'      reward=-0.50  selected=['EmailTool', 'ShippingTool', 'TicketTool']   <-- REPEAT
+  turn 5: raw='EmailTool'                              -> 'EmailTool'      reward=-0.50  selected=['EmailTool', 'ShippingTool', 'TicketTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+
+========================================================================
+episodes repeating a called tool: 7/12
+episodes emitting DONE          : 0/12
+OVER-PROBED (static episodes)   : 11/12
+episodes hitting max_steps      : 12/12
+episodes with an UNPARSED turn  : 3/12
+episodes using substring fallback: 0/12
+
+DIAGNOSIS (a): the model rarely emits DONE. Exact match is near-impossible
+  by construction -- fix the stopping affordance (prompt and/or max_steps)
+  before drawing any conclusion about information gathering.
+
+wrote results/trajectories_alpha0.json
+
+---------------- alpha = 0.0, FEW-SHOT ----------------
+model on cuda:0
+
+========================================================================
+EPISODE 0  scenario=0  conditional=False  bit=1
+  query : I'm going to Denver this weekend. Book me a hotel and a rental car.
+  gold  : ['CarRentalTool', 'HotelTool']   (probe=WeatherTool, probe_is_gold=False, branches=('TripTool', 'NewsTool'), static_gold=('HotelTool', 'CarRentalTool'))
+  turn 1: raw='HotelTool'                              -> 'HotelTool'      reward=+0.95  selected=['HotelTool']
+  turn 2: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=+0.95  selected=['HotelTool', 'CarRentalTool']
+  turn 3: raw='TripTool'                               -> 'TripTool'       reward=-0.55  selected=['HotelTool', 'CarRentalTool', 'TripTool']
+  turn 4: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['HotelTool', 'CarRentalTool', 'TripTool', 'CalendarTool']
+  turn 5: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=-0.50  selected=['HotelTool', 'CarRentalTool', 'TripTool', 'CalendarTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 1  scenario=1  conditional=False  bit=1
+  query : Set up my quarterly budget and issue the outstanding invoice.
+  gold  : ['BudgetTool', 'InvoiceTool']   (probe=FinanceTool, probe_is_gold=False, branches=('BudgetTool', 'TaxTool'), static_gold=('BudgetTool', 'InvoiceTool'))
+  turn 1: raw='BudgetTool'                             -> 'BudgetTool'     reward=+0.95  selected=['BudgetTool']
+  turn 2: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=+0.95  selected=['BudgetTool', 'InvoiceTool']
+  turn 3: raw='FinanceTool'                            -> 'FinanceTool'    reward=-0.55  selected=['BudgetTool', 'InvoiceTool', 'FinanceTool']
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['BudgetTool', 'InvoiceTool', 'FinanceTool', 'AccountTool']
+  turn 5: raw='TaxTool'                                -> 'TaxTool'        reward=-0.55  selected=['BudgetTool', 'InvoiceTool', 'FinanceTool', 'AccountTool', 'TaxTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 2  scenario=2  conditional=False  bit=0
+  query : For my flight UA 421 tonight, reserve a car and book a hotel at the destination.
+  gold  : ['CarRentalTool', 'HotelTool']   (probe=FlightTool, probe_is_gold=False, branches=('CarRentalTool', 'HotelTool'), static_gold=('CarRentalTool', 'HotelTool'))
+  turn 1: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=+0.95  selected=['CarRentalTool']
+  turn 2: raw='FlightTool'                             -> 'FlightTool'     reward=-0.55  selected=['CarRentalTool', 'FlightTool']
+  turn 3: raw='HotelTool'                              -> 'HotelTool'      reward=+0.95  selected=['CarRentalTool', 'FlightTool', 'HotelTool']
+  turn 4: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['CarRentalTool', 'FlightTool', 'HotelTool', 'CalendarTool']
+  turn 5: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=-0.50  selected=['CarRentalTool', 'FlightTool', 'HotelTool', 'CalendarTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 3  scenario=3  conditional=False  bit=0
+  query : Refill my usual prescription and confirm my insurance still covers it.
+  gold  : ['InsuranceTool', 'PharmacyTool']   (probe=HealthTool, probe_is_gold=False, branches=('PharmacyTool', 'DoctorTool'), static_gold=('PharmacyTool', 'InsuranceTool'))
+  turn 1: raw='InsuranceTool'                          -> 'InsuranceTool'  reward=+0.95  selected=['InsuranceTool']
+  turn 2: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=+0.95  selected=['InsuranceTool', 'PharmacyTool']
+  turn 3: raw='HealthTool'                             -> 'HealthTool'     reward=-0.55  selected=['InsuranceTool', 'PharmacyTool', 'HealthTool']
+  turn 4: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=-0.50  selected=['InsuranceTool', 'PharmacyTool', 'HealthTool']   <-- REPEAT
+  turn 5: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=-0.50  selected=['InsuranceTool', 'PharmacyTool', 'HealthTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 4  scenario=4  conditional=False  bit=1
+  query : Place an order for 40 units of SKU 7731 and arrange shipping.
+  gold  : ['OrderTool', 'ShippingTool']   (probe=InventoryTool, probe_is_gold=False, branches=('OrderTool', 'SupplierTool'), static_gold=('OrderTool', 'ShippingTool'))
+  turn 1: raw='OrderTool'                              -> 'OrderTool'      reward=+0.95  selected=['OrderTool']
+  turn 2: raw='ShippingTool'                           -> 'ShippingTool'   reward=+0.95  selected=['OrderTool', 'ShippingTool']
+  turn 3: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.55  selected=['OrderTool', 'ShippingTool', 'InventoryTool']
+  turn 4: raw='SupplierTool'                           -> 'SupplierTool'   reward=-0.55  selected=['OrderTool', 'ShippingTool', 'InventoryTool', 'SupplierTool']
+  turn 5: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.50  selected=['OrderTool', 'ShippingTool', 'InventoryTool', 'SupplierTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 5  scenario=5  conditional=False  bit=1
+  query : Create a meeting with Priya about the launch and email her the agenda.
+  gold  : ['EmailTool', 'MeetingTool']   (probe=CalendarTool, probe_is_gold=False, branches=('EmailTool', 'MessageTool'), static_gold=('MeetingTool', 'EmailTool'))
+  turn 1: raw='MeetingTool'                            -> 'MeetingTool'    reward=+0.95  selected=['MeetingTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['MeetingTool', 'EmailTool']
+  turn 3: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['MeetingTool', 'EmailTool', 'CalendarTool']
+  turn 4: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.50  selected=['MeetingTool', 'EmailTool', 'CalendarTool']   <-- REPEAT
+  turn 5: raw='EmailTool'                              -> 'EmailTool'      reward=-0.50  selected=['MeetingTool', 'EmailTool', 'CalendarTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 6  scenario=6  conditional=False  bit=1
+  query : Deploy the current build and file a release ticket.
+  gold  : ['DeployTool', 'TicketTool']   (probe=RepoTool, probe_is_gold=False, branches=('DeployTool', 'RollbackTool'), static_gold=('DeployTool', 'TicketTool'))
+  turn 1: raw='DeployTool'                             -> 'DeployTool'     reward=+0.95  selected=['DeployTool']
+  turn 2: raw='TicketTool'                             -> 'TicketTool'     reward=+0.95  selected=['DeployTool', 'TicketTool']
+  turn 3: raw='RepoTool'                               -> 'RepoTool'       reward=-0.55  selected=['DeployTool', 'TicketTool', 'RepoTool']
+  turn 4: raw='DeployTool'                             -> 'DeployTool'     reward=-0.50  selected=['DeployTool', 'TicketTool', 'RepoTool']   <-- REPEAT
+  turn 5: raw='DeployTool'                             -> 'DeployTool'     reward=-0.50  selected=['DeployTool', 'TicketTool', 'RepoTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 7  scenario=7  conditional=False  bit=1
+  query : Issue the approved refund for last month's charge and email the customer.
+  gold  : ['EmailTool', 'RefundTool']   (probe=BillingTool, probe_is_gold=False, branches=('RefundTool', 'EscalateTool'), static_gold=('RefundTool', 'EmailTool'))
+  turn 1: raw='RefundTool'                             -> 'RefundTool'     reward=+0.95  selected=['RefundTool']
+  turn 2: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['RefundTool', 'InvoiceTool']
+  turn 3: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['RefundTool', 'InvoiceTool', 'EmailTool']
+  turn 4: raw='BillingTool'                            -> 'BillingTool'    reward=-0.55  selected=['RefundTool', 'InvoiceTool', 'EmailTool', 'BillingTool']
+  turn 5: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.50  selected=['RefundTool', 'InvoiceTool', 'EmailTool', 'BillingTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 8  scenario=8  conditional=False  bit=0
+  query : Reset this user's password and email them the confirmation.
+  gold  : ['EmailTool', 'ResetTool']   (probe=SecurityTool, probe_is_gold=False, branches=('ResetTool', 'EscalateTool'), static_gold=('ResetTool', 'EmailTool'))
+  turn 1: raw='ResetTool'                              -> 'ResetTool'      reward=+0.95  selected=['ResetTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['ResetTool', 'EmailTool']
+  turn 3: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['ResetTool', 'EmailTool', 'AccountTool']
+  turn 4: raw='PasswordResetTool'                      -> 'PasswordResetTool' reward=-0.50  selected=['ResetTool', 'EmailTool', 'AccountTool']   <-- UNPARSED
+  turn 5: raw='EmailTool'                              -> 'EmailTool'      reward=-0.50  selected=['ResetTool', 'EmailTool', 'AccountTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 9  scenario=9  conditional=False  bit=1
+  query : Enrol this employee in the compliance training and email them the schedule.
+  gold  : ['EmailTool', 'TrainingTool']   (probe=HRTool, probe_is_gold=False, branches=('CalendarTool', 'PayrollTool'), static_gold=('TrainingTool', 'EmailTool'))
+  turn 1: raw='TrainingTool'                           -> 'TrainingTool'   reward=+0.95  selected=['TrainingTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['TrainingTool', 'EmailTool']
+  turn 3: raw='TrainingTool'                           -> 'TrainingTool'   reward=-0.50  selected=['TrainingTool', 'EmailTool']   <-- REPEAT
+  turn 4: raw='HRTool'                                 -> 'HRTool'         reward=-0.55  selected=['TrainingTool', 'EmailTool', 'HRTool']
+  turn 5: raw='TrainingTool'                           -> 'TrainingTool'   reward=-0.50  selected=['TrainingTool', 'EmailTool', 'HRTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 10  scenario=10  conditional=False  bit=1
+  query : Retrieve the vendor contract and file a ticket for the renewal review.
+  gold  : ['AccountTool', 'TicketTool']   (probe=LegalTool, probe_is_gold=False, branches=('InvoiceTool', 'EscalateTool'), static_gold=('AccountTool', 'TicketTool'))
+  turn 1: raw='LegalTool'                              -> 'LegalTool'      reward=-0.55  selected=['LegalTool']
+  turn 2: raw='TicketTool'                             -> 'TicketTool'     reward=+0.95  selected=['LegalTool', 'TicketTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['LegalTool', 'TicketTool', 'InvoiceTool']
+  turn 4: raw='ContractTool'                           -> 'ContractTool'   reward=-0.50  selected=['LegalTool', 'TicketTool', 'InvoiceTool']   <-- UNPARSED
+  turn 5: raw='ContractTool'                           -> 'ContractTool'   reward=-0.50  selected=['LegalTool', 'TicketTool', 'InvoiceTool']   <-- UNPARSED
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+========================================================================
+EPISODE 11  scenario=11  conditional=False  bit=0
+  query : Email the customer their tracking number and file a delivery ticket.
+  gold  : ['EmailTool', 'TicketTool']   (probe=ShippingTool, probe_is_gold=False, branches=('EmailTool', 'RefundTool'), static_gold=('EmailTool', 'TicketTool'))
+  turn 1: raw='ShippingTool'                           -> 'ShippingTool'   reward=-0.55  selected=['ShippingTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=+0.95  selected=['ShippingTool', 'EmailTool']
+  turn 3: raw='EmailTool'                              -> 'EmailTool'      reward=-0.50  selected=['ShippingTool', 'EmailTool']   <-- REPEAT
+  turn 4: raw='TicketTool'                             -> 'TicketTool'     reward=+0.95  selected=['ShippingTool', 'EmailTool', 'TicketTool']
+  turn 5: raw='EmailTool'                              -> 'EmailTool'      reward=-0.50  selected=['ShippingTool', 'EmailTool', 'TicketTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5  <-- OVER-PROBED (probe not needed here)
+
+========================================================================
+episodes repeating a called tool: 10/12
+episodes emitting DONE          : 0/12
+OVER-PROBED (static episodes)   : 10/12
+episodes hitting max_steps      : 12/12
+episodes with an UNPARSED turn  : 2/12
+episodes using substring fallback: 0/12
+
+DIAGNOSIS (a): the model rarely emits DONE. Exact match is near-impossible
+  by construction -- fix the stopping affordance (prompt and/or max_steps)
+  before drawing any conclusion about information gathering.
+
+wrote results/trajectories_alpha0_fewshot.json
+
+------------ alpha = 1.0  (every episode needs the probe) ------------------
+model on cuda:0
+
+========================================================================
+EPISODE 0  scenario=0  conditional=True  bit=1
+  query : I'm heading to Denver this weekend. Sort out whatever the conditions call for.
+  gold  : ['NewsTool', 'WeatherTool']   (probe=WeatherTool, probe_is_gold=True, branches=('TripTool', 'NewsTool'), static_gold=('HotelTool', 'CarRentalTool'))
+  turn 1: raw='WeatherTool'                            -> 'WeatherTool'    reward=+0.95  selected=['WeatherTool']
+  turn 2: raw='FlightTool'                             -> 'FlightTool'     reward=-0.55  selected=['WeatherTool', 'FlightTool']
+  turn 3: raw='TripTool'                               -> 'TripTool'       reward=-0.55  selected=['WeatherTool', 'FlightTool', 'TripTool']
+  turn 4: raw='HotelTool'                              -> 'HotelTool'      reward=-0.55  selected=['WeatherTool', 'FlightTool', 'TripTool', 'HotelTool']
+  turn 5: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.50  selected=['WeatherTool', 'FlightTool', 'TripTool', 'HotelTool']   <-- REPEAT
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 1  scenario=1  conditional=True  bit=1
+  query : Handle my finances for this quarter, depending on how the accounts look.
+  gold  : ['FinanceTool', 'TaxTool']   (probe=FinanceTool, probe_is_gold=True, branches=('BudgetTool', 'TaxTool'), static_gold=('BudgetTool', 'InvoiceTool'))
+  turn 1: raw='FinanceTool'                            -> 'FinanceTool'    reward=+0.95  selected=['FinanceTool']
+  turn 2: raw='BudgetTool'                             -> 'BudgetTool'     reward=-0.55  selected=['FinanceTool', 'BudgetTool']
+  turn 3: raw='TaxTool'                                -> 'TaxTool'        reward=+0.95  selected=['FinanceTool', 'BudgetTool', 'TaxTool']
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['FinanceTool', 'BudgetTool', 'TaxTool', 'AccountTool']
+  turn 5: raw='PayrollTool'                            -> 'PayrollTool'    reward=-0.55  selected=['FinanceTool', 'BudgetTool', 'TaxTool', 'AccountTool', 'PayrollTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 2  scenario=2  conditional=True  bit=0
+  query : I have flight UA 421 tonight. Make the arrangements that fit the situation.
+  gold  : ['CarRentalTool', 'FlightTool']   (probe=FlightTool, probe_is_gold=True, branches=('CarRentalTool', 'HotelTool'), static_gold=('CarRentalTool', 'HotelTool'))
+  turn 1: raw='FlightTool'                             -> 'FlightTool'     reward=+0.95  selected=['FlightTool']
+  turn 2: raw='HotelTool'                              -> 'HotelTool'      reward=-0.55  selected=['FlightTool', 'HotelTool']
+  turn 3: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['FlightTool', 'HotelTool', 'WeatherTool']
+  turn 4: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['FlightTool', 'HotelTool', 'WeatherTool', 'CalendarTool']
+  turn 5: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.55  selected=['FlightTool', 'HotelTool', 'WeatherTool', 'CalendarTool', 'MeetingTool']
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 3  scenario=3  conditional=True  bit=0
+  query : I've had a headache and a cough for two days. Do what the symptoms warrant.
+  gold  : ['HealthTool', 'PharmacyTool']   (probe=HealthTool, probe_is_gold=True, branches=('PharmacyTool', 'DoctorTool'), static_gold=('PharmacyTool', 'InsuranceTool'))
+  turn 1: raw='HealthTool'                             -> 'HealthTool'     reward=+0.95  selected=['HealthTool']
+  turn 2: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=+0.95  selected=['HealthTool', 'PharmacyTool']
+  turn 3: raw='DoctorTool'                             -> 'DoctorTool'     reward=-0.55  selected=['HealthTool', 'PharmacyTool', 'DoctorTool']
+  turn 4: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['HealthTool', 'PharmacyTool', 'DoctorTool', 'WeatherTool']
+  turn 5: raw='HealthTool'                             -> 'HealthTool'     reward=-0.50  selected=['HealthTool', 'PharmacyTool', 'DoctorTool', 'WeatherTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 4  scenario=4  conditional=True  bit=1
+  query : Customer wants 40 units of SKU 7731. Handle it according to what we have.
+  gold  : ['InventoryTool', 'SupplierTool']   (probe=InventoryTool, probe_is_gold=True, branches=('OrderTool', 'SupplierTool'), static_gold=('OrderTool', 'ShippingTool'))
+  turn 1: raw='InventoryTool'                          -> 'InventoryTool'  reward=+0.95  selected=['InventoryTool']
+  turn 2: raw='SupplierTool'                           -> 'SupplierTool'   reward=+0.95  selected=['InventoryTool', 'SupplierTool']
+  turn 3: raw='OrderTool'                              -> 'OrderTool'      reward=-0.55  selected=['InventoryTool', 'SupplierTool', 'OrderTool']
+  turn 4: raw='SupplierTool'                           -> 'SupplierTool'   reward=-0.50  selected=['InventoryTool', 'SupplierTool', 'OrderTool']   <-- REPEAT
+  turn 5: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.50  selected=['InventoryTool', 'SupplierTool', 'OrderTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 5  scenario=5  conditional=True  bit=1
+  query : Set up a sync with Priya about the launch, however her schedule allows.
+  gold  : ['CalendarTool', 'MessageTool']   (probe=CalendarTool, probe_is_gold=True, branches=('EmailTool', 'MessageTool'), static_gold=('MeetingTool', 'EmailTool'))
+  turn 1: raw='CalendarTool'                           -> 'CalendarTool'   reward=+0.95  selected=['CalendarTool']
+  turn 2: raw='EmailTool'                              -> 'EmailTool'      reward=-0.55  selected=['CalendarTool', 'EmailTool']
+  turn 3: raw='MessageTool'                            -> 'MessageTool'    reward=+0.95  selected=['CalendarTool', 'EmailTool', 'MessageTool']
+  turn 4: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.55  selected=['CalendarTool', 'EmailTool', 'MessageTool', 'MeetingTool']
+  turn 5: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['CalendarTool', 'EmailTool', 'MessageTool', 'MeetingTool', 'AccountTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 6  scenario=6  conditional=True  bit=1
+  query : Ship the current build, or don't, depending on where it stands.
+  gold  : ['RepoTool', 'RollbackTool']   (probe=RepoTool, probe_is_gold=True, branches=('DeployTool', 'RollbackTool'), static_gold=('DeployTool', 'TicketTool'))
+  turn 1: raw='RepoTool'                               -> 'RepoTool'       reward=+0.95  selected=['RepoTool']
+  turn 2: raw='DeployTool'                             -> 'DeployTool'     reward=-0.55  selected=['RepoTool', 'DeployTool']
+  turn 3: raw='ShippingTool'                           -> 'ShippingTool'   reward=-0.55  selected=['RepoTool', 'DeployTool', 'ShippingTool']
+  turn 4: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['RepoTool', 'DeployTool', 'ShippingTool', 'InvoiceTool']
+  turn 5: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.55  selected=['RepoTool', 'DeployTool', 'ShippingTool', 'InvoiceTool', 'InventoryTool']
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 7  scenario=7  conditional=True  bit=1
+  query : A customer is disputing last month's charge. Act on what the record shows.
+  gold  : ['BillingTool', 'EscalateTool']   (probe=BillingTool, probe_is_gold=True, branches=('RefundTool', 'EscalateTool'), static_gold=('RefundTool', 'EmailTool'))
+  turn 1: raw='BillingTool'                            -> 'BillingTool'    reward=+0.95  selected=['BillingTool']
+  turn 2: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['BillingTool', 'InvoiceTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.50  selected=['BillingTool', 'InvoiceTool']   <-- REPEAT
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['BillingTool', 'InvoiceTool', 'AccountTool']
+  turn 5: raw='AccountTool'                            -> 'AccountTool'    reward=-0.50  selected=['BillingTool', 'InvoiceTool', 'AccountTool']   <-- REPEAT
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 8  scenario=8  conditional=True  bit=0
+  query : A user can't sign in. Take the appropriate action for their account state.
+  gold  : ['ResetTool', 'SecurityTool']   (probe=SecurityTool, probe_is_gold=True, branches=('ResetTool', 'EscalateTool'), static_gold=('ResetTool', 'EmailTool'))
+  turn 1: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['AccountTool']
+  turn 2: raw='SecurityTool'                           -> 'SecurityTool'   reward=+0.95  selected=['AccountTool', 'SecurityTool']
+  turn 3: raw='ResetTool'                              -> 'ResetTool'      reward=+0.95  selected=['AccountTool', 'SecurityTool', 'ResetTool']
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.50  selected=['AccountTool', 'SecurityTool', 'ResetTool']   <-- REPEAT
+  turn 5: raw='AccountTool'                            -> 'AccountTool'    reward=-0.50  selected=['AccountTool', 'SecurityTool', 'ResetTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 9  scenario=9  conditional=True  bit=1
+  query : An employee asked about taking leave next month. Respond based on their balance.
+  gold  : ['HRTool', 'PayrollTool']   (probe=HRTool, probe_is_gold=True, branches=('CalendarTool', 'PayrollTool'), static_gold=('TrainingTool', 'EmailTool'))
+  turn 1: raw='HRTool'                                 -> 'HRTool'         reward=+0.95  selected=['HRTool']
+  turn 2: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['HRTool', 'AccountTool']
+  turn 3: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['HRTool', 'AccountTool', 'CalendarTool']
+  turn 4: raw='TrainingTool'                           -> 'TrainingTool'   reward=-0.55  selected=['HRTool', 'AccountTool', 'CalendarTool', 'TrainingTool']
+  turn 5: raw='PayrollTool'                            -> 'PayrollTool'    reward=+0.95  selected=['HRTool', 'AccountTool', 'CalendarTool', 'TrainingTool', 'PayrollTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 10  scenario=10  conditional=True  bit=1
+  query : Review the vendor contract renewal and proceed as the terms require.
+  gold  : ['EscalateTool', 'LegalTool']   (probe=LegalTool, probe_is_gold=True, branches=('InvoiceTool', 'EscalateTool'), static_gold=('AccountTool', 'TicketTool'))
+  turn 1: raw='LegalTool'                              -> 'LegalTool'      reward=+0.95  selected=['LegalTool']
+  turn 2: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['LegalTool', 'AccountTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['LegalTool', 'AccountTool', 'InvoiceTool']
+  turn 4: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['LegalTool', 'AccountTool', 'InvoiceTool', 'CalendarTool']
+  turn 5: raw='ContractTool'                           -> 'ContractTool'   reward=-0.50  selected=['LegalTool', 'AccountTool', 'InvoiceTool', 'CalendarTool']   <-- UNPARSED
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 11  scenario=11  conditional=True  bit=0
+  query : A parcel hasn't arrived. Do whatever the tracking situation calls for.
+  gold  : ['EmailTool', 'ShippingTool']   (probe=ShippingTool, probe_is_gold=True, branches=('EmailTool', 'RefundTool'), static_gold=('EmailTool', 'TicketTool'))
+  turn 1: raw='ShippingTool'                           -> 'ShippingTool'   reward=+0.95  selected=['ShippingTool']
+  turn 2: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['ShippingTool', 'WeatherTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['ShippingTool', 'WeatherTool', 'InvoiceTool']
+  turn 4: raw='TrackingTool'                           -> 'TrackingTool'   reward=-0.50  selected=['ShippingTool', 'WeatherTool', 'InvoiceTool']   <-- UNPARSED
+  turn 5: raw='TrackingTool'                           -> 'TrackingTool'   reward=-0.50  selected=['ShippingTool', 'WeatherTool', 'InvoiceTool']   <-- UNPARSED
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+
+========================================================================
+episodes repeating a called tool: 5/12
+episodes emitting DONE          : 0/12
+episodes hitting max_steps      : 12/12
+episodes with an UNPARSED turn  : 2/12
+episodes using substring fallback: 0/12
+
+DIAGNOSIS (a): the model rarely emits DONE. Exact match is near-impossible
+  by construction -- fix the stopping affordance (prompt and/or max_steps)
+  before drawing any conclusion about information gathering.
+
+wrote results/trajectories_alpha1.json
+
+---------------- alpha = 1.0, FEW-SHOT ----------------
+model on cuda:0
+
+========================================================================
+EPISODE 0  scenario=0  conditional=True  bit=1
+  query : I'm heading to Denver this weekend. Sort out whatever the conditions call for.
+  gold  : ['NewsTool', 'WeatherTool']   (probe=WeatherTool, probe_is_gold=True, branches=('TripTool', 'NewsTool'), static_gold=('HotelTool', 'CarRentalTool'))
+  turn 1: raw='WeatherTool'                            -> 'WeatherTool'    reward=+0.95  selected=['WeatherTool']
+  turn 2: raw='TripTool'                               -> 'TripTool'       reward=-0.55  selected=['WeatherTool', 'TripTool']
+  turn 3: raw='HotelTool'                              -> 'HotelTool'      reward=-0.55  selected=['WeatherTool', 'TripTool', 'HotelTool']
+  turn 4: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.50  selected=['WeatherTool', 'TripTool', 'HotelTool']   <-- REPEAT
+  turn 5: raw='FlightTool'                             -> 'FlightTool'     reward=-0.55  selected=['WeatherTool', 'TripTool', 'HotelTool', 'FlightTool']
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 1  scenario=1  conditional=True  bit=1
+  query : Handle my finances for this quarter, depending on how the accounts look.
+  gold  : ['FinanceTool', 'TaxTool']   (probe=FinanceTool, probe_is_gold=True, branches=('BudgetTool', 'TaxTool'), static_gold=('BudgetTool', 'InvoiceTool'))
+  turn 1: raw='FinanceTool'                            -> 'FinanceTool'    reward=+0.95  selected=['FinanceTool']
+  turn 2: raw='BudgetTool'                             -> 'BudgetTool'     reward=-0.55  selected=['FinanceTool', 'BudgetTool']
+  turn 3: raw='TaxTool'                                -> 'TaxTool'        reward=+0.95  selected=['FinanceTool', 'BudgetTool', 'TaxTool']
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['FinanceTool', 'BudgetTool', 'TaxTool', 'AccountTool']
+  turn 5: raw='PayrollTool'                            -> 'PayrollTool'    reward=-0.55  selected=['FinanceTool', 'BudgetTool', 'TaxTool', 'AccountTool', 'PayrollTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 2  scenario=2  conditional=True  bit=0
+  query : I have flight UA 421 tonight. Make the arrangements that fit the situation.
+  gold  : ['CarRentalTool', 'FlightTool']   (probe=FlightTool, probe_is_gold=True, branches=('CarRentalTool', 'HotelTool'), static_gold=('CarRentalTool', 'HotelTool'))
+  turn 1: raw='FlightTool'                             -> 'FlightTool'     reward=+0.95  selected=['FlightTool']
+  turn 2: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['FlightTool', 'WeatherTool']
+  turn 3: raw='HotelTool'                              -> 'HotelTool'      reward=-0.55  selected=['FlightTool', 'WeatherTool', 'HotelTool']
+  turn 4: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['FlightTool', 'WeatherTool', 'HotelTool', 'CalendarTool']
+  turn 5: raw='CarRentalTool'                          -> 'CarRentalTool'  reward=+0.95  selected=['FlightTool', 'WeatherTool', 'HotelTool', 'CalendarTool', 'CarRentalTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 3  scenario=3  conditional=True  bit=0
+  query : I've had a headache and a cough for two days. Do what the symptoms warrant.
+  gold  : ['HealthTool', 'PharmacyTool']   (probe=HealthTool, probe_is_gold=True, branches=('PharmacyTool', 'DoctorTool'), static_gold=('PharmacyTool', 'InsuranceTool'))
+  turn 1: raw='HealthTool'                             -> 'HealthTool'     reward=+0.95  selected=['HealthTool']
+  turn 2: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=+0.95  selected=['HealthTool', 'PharmacyTool']
+  turn 3: raw='DoctorTool'                             -> 'DoctorTool'     reward=-0.55  selected=['HealthTool', 'PharmacyTool', 'DoctorTool']
+  turn 4: raw='WeatherTool'                            -> 'WeatherTool'    reward=-0.55  selected=['HealthTool', 'PharmacyTool', 'DoctorTool', 'WeatherTool']
+  turn 5: raw='PharmacyTool'                           -> 'PharmacyTool'   reward=-0.50  selected=['HealthTool', 'PharmacyTool', 'DoctorTool', 'WeatherTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 4  scenario=4  conditional=True  bit=1
+  query : Customer wants 40 units of SKU 7731. Handle it according to what we have.
+  gold  : ['InventoryTool', 'SupplierTool']   (probe=InventoryTool, probe_is_gold=True, branches=('OrderTool', 'SupplierTool'), static_gold=('OrderTool', 'ShippingTool'))
+  turn 1: raw='InventoryTool'                          -> 'InventoryTool'  reward=+0.95  selected=['InventoryTool']
+  turn 2: raw='SupplierTool'                           -> 'SupplierTool'   reward=+0.95  selected=['InventoryTool', 'SupplierTool']
+  turn 3: raw='OrderTool'                              -> 'OrderTool'      reward=-0.55  selected=['InventoryTool', 'SupplierTool', 'OrderTool']
+  turn 4: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.50  selected=['InventoryTool', 'SupplierTool', 'OrderTool']   <-- REPEAT
+  turn 5: raw='InventoryTool'                          -> 'InventoryTool'  reward=-0.50  selected=['InventoryTool', 'SupplierTool', 'OrderTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 5  scenario=5  conditional=True  bit=1
+  query : Set up a sync with Priya about the launch, however her schedule allows.
+  gold  : ['CalendarTool', 'MessageTool']   (probe=CalendarTool, probe_is_gold=True, branches=('EmailTool', 'MessageTool'), static_gold=('MeetingTool', 'EmailTool'))
+  turn 1: raw='CalendarTool'                           -> 'CalendarTool'   reward=+0.95  selected=['CalendarTool']
+  turn 2: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.55  selected=['CalendarTool', 'MeetingTool']
+  turn 3: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.50  selected=['CalendarTool', 'MeetingTool']   <-- REPEAT
+  turn 4: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.50  selected=['CalendarTool', 'MeetingTool']   <-- REPEAT
+  turn 5: raw='MeetingTool'                            -> 'MeetingTool'    reward=-0.50  selected=['CalendarTool', 'MeetingTool']   <-- REPEAT
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 6  scenario=6  conditional=True  bit=1
+  query : Ship the current build, or don't, depending on where it stands.
+  gold  : ['RepoTool', 'RollbackTool']   (probe=RepoTool, probe_is_gold=True, branches=('DeployTool', 'RollbackTool'), static_gold=('DeployTool', 'TicketTool'))
+  turn 1: raw='RepoTool'                               -> 'RepoTool'       reward=+0.95  selected=['RepoTool']
+  turn 2: raw='DeployTool'                             -> 'DeployTool'     reward=-0.55  selected=['RepoTool', 'DeployTool']
+  turn 3: raw='ShippingTool'                           -> 'ShippingTool'   reward=-0.55  selected=['RepoTool', 'DeployTool', 'ShippingTool']
+  turn 4: raw='RepoTool'                               -> 'RepoTool'       reward=-0.50  selected=['RepoTool', 'DeployTool', 'ShippingTool']   <-- REPEAT
+  turn 5: raw='RepoTool'                               -> 'RepoTool'       reward=-0.50  selected=['RepoTool', 'DeployTool', 'ShippingTool']   <-- REPEAT
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 7  scenario=7  conditional=True  bit=1
+  query : A customer is disputing last month's charge. Act on what the record shows.
+  gold  : ['BillingTool', 'EscalateTool']   (probe=BillingTool, probe_is_gold=True, branches=('RefundTool', 'EscalateTool'), static_gold=('RefundTool', 'EmailTool'))
+  turn 1: raw='BillingTool'                            -> 'BillingTool'    reward=+0.95  selected=['BillingTool']
+  turn 2: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['BillingTool', 'InvoiceTool']
+  turn 3: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.50  selected=['BillingTool', 'InvoiceTool']   <-- REPEAT
+  turn 4: raw='EscalateTool'                           -> 'EscalateTool'   reward=+0.95  selected=['BillingTool', 'InvoiceTool', 'EscalateTool']
+  turn 5: raw='TicketTool'                             -> 'TicketTool'     reward=-0.55  selected=['BillingTool', 'InvoiceTool', 'EscalateTool', 'TicketTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 8  scenario=8  conditional=True  bit=0
+  query : A user can't sign in. Take the appropriate action for their account state.
+  gold  : ['ResetTool', 'SecurityTool']   (probe=SecurityTool, probe_is_gold=True, branches=('ResetTool', 'EscalateTool'), static_gold=('ResetTool', 'EmailTool'))
+  turn 1: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['AccountTool']
+  turn 2: raw='AccountTool'                            -> 'AccountTool'    reward=-0.50  selected=['AccountTool']   <-- REPEAT
+  turn 3: raw='SecurityTool'                           -> 'SecurityTool'   reward=+0.95  selected=['AccountTool', 'SecurityTool']
+  turn 4: raw='ResetTool'                              -> 'ResetTool'      reward=+0.95  selected=['AccountTool', 'SecurityTool', 'ResetTool']
+  turn 5: raw='ResetTool'                              -> 'ResetTool'      reward=-0.50  selected=['AccountTool', 'SecurityTool', 'ResetTool']   <-- REPEAT
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 9  scenario=9  conditional=True  bit=1
+  query : An employee asked about taking leave next month. Respond based on their balance.
+  gold  : ['HRTool', 'PayrollTool']   (probe=HRTool, probe_is_gold=True, branches=('CalendarTool', 'PayrollTool'), static_gold=('TrainingTool', 'EmailTool'))
+  turn 1: raw='HRTool'                                 -> 'HRTool'         reward=+0.95  selected=['HRTool']
+  turn 2: raw='FinanceTool'                            -> 'FinanceTool'    reward=-0.55  selected=['HRTool', 'FinanceTool']
+  turn 3: raw='CalendarTool'                           -> 'CalendarTool'   reward=-0.55  selected=['HRTool', 'FinanceTool', 'CalendarTool']
+  turn 4: raw='AccountTool'                            -> 'AccountTool'    reward=-0.55  selected=['HRTool', 'FinanceTool', 'CalendarTool', 'AccountTool']
+  turn 5: raw='PayrollTool'                            -> 'PayrollTool'    reward=+0.95  selected=['HRTool', 'FinanceTool', 'CalendarTool', 'AccountTool', 'PayrollTool']
+  RESULT: SUPERSET (over-predicted)   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 10  scenario=10  conditional=True  bit=1
+  query : Review the vendor contract renewal and proceed as the terms require.
+  gold  : ['EscalateTool', 'LegalTool']   (probe=LegalTool, probe_is_gold=True, branches=('InvoiceTool', 'EscalateTool'), static_gold=('AccountTool', 'TicketTool'))
+  turn 1: raw='LegalTool'                              -> 'LegalTool'      reward=+0.95  selected=['LegalTool']
+  turn 2: raw='InvoiceTool'                            -> 'InvoiceTool'    reward=-0.55  selected=['LegalTool', 'InvoiceTool']
+  turn 3: raw='ContractTool'                           -> 'ContractTool'   reward=-0.50  selected=['LegalTool', 'InvoiceTool']   <-- UNPARSED
+  turn 4: raw='LegalTool'                              -> 'LegalTool'      reward=-0.50  selected=['LegalTool', 'InvoiceTool']   <-- REPEAT
+  turn 5: raw='LegalTool'                              -> 'LegalTool'      reward=-0.50  selected=['LegalTool', 'InvoiceTool']   <-- REPEAT
+  RESULT: WRONG SET   emitted DONE: False   turns used: 5/5
+========================================================================
+EPISODE 11  scenario=11  conditional=True  bit=0
+  query : A parcel hasn't arrived. Do whatever the tracking situation calls for.
+  gold  : ['EmailTool', 'ShippingTool']   (probe=ShippingTool, probe_is_gold=True, branches=('EmailTool', 'RefundTool'), static_gold=('EmailTool', 'TicketTool'))
+  turn 1: raw='ShippingTool'                           -> 'ShippingTool'   reward=+0.95  selected=['ShippingTool']
+  turn 2: raw='TrackingTool'                           -> 'TrackingTool'   reward=-0.50  selected=['ShippingTool']   <-- UNPARSED
+  turn 3: raw='TrackingTool'                           -> 'TrackingTool'   reward=-0.50  selected=['ShippingTool']   <-- UNPARSED
+  turn 4: raw='ShippingTool'                           -> 'ShippingTool'   reward=-0.50  selected=['ShippingTool']   <-- REPEAT
+  turn 5: raw='TrackingTool'                           -> 'TrackingTool'   reward=-0.50  selected=['ShippingTool']   <-- UNPARSED
+  RESULT: SUBSET (under-predicted)   emitted DONE: False   turns used: 5/5
+
+========================================================================
+episodes repeating a called tool: 9/12
+episodes emitting DONE          : 0/12
+episodes hitting max_steps      : 12/12
+episodes with an UNPARSED turn  : 2/12
+episodes using substring fallback: 0/12
+
+DIAGNOSIS (a): the model rarely emits DONE. Exact match is near-impossible
+  by construction -- fix the stopping affordance (prompt and/or max_steps)
+  before drawing any conclusion about information gathering.
+
+wrote results/trajectories_alpha1_fewshot.json

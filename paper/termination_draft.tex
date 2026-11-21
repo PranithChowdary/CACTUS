@@ -47,7 +47,13 @@ LLaMA-3.1-8B and 70B attain \emph{perfect} tool recall, the gold set appearing
 within their first five selections in all 61 scenarios, yet place only 0.2\% and
 1.1\% of their probability mass on the stop action at the moment the task is
 complete, and stop in at most 5 of 61 scenarios; termination improves nowhere
-along a $70\times$ parameter sweep. Qwen2.5-7B, at one tenth the parameters of the
+along a $70\times$ parameter sweep. Scoring each model's own end-of-turn token
+at the same decision points rules out the obvious explanation that stopping is
+simply expressed through a channel our action set omits: that token carries
+$10^{-9}$ of the mass or less. Sharper still, LLaMA-3.1-8B's stop probability is
+$1.06\times$ its value before the task is complete --- the signal is not merely
+weak but almost uninformative about completion --- against $2.93\times$ for
+Qwen2.5-7B. Qwen2.5-7B, at one tenth the parameters of the
 70B model, stops in 60 of 61 scenarios with 57.5\% of its mass on stopping, so
 termination tracks post-training rather than scale. On the identical task a small
 masked-PPO policy terminates in at least 92.5\% of episodes across 20 agents and 5
@@ -135,6 +141,12 @@ comparison between them is a comparison of policies rather than of interfaces.
   report it because it rules out the most natural alternative explanation and
   because the uncontrolled version of the same experiment produces a large
   spurious effect.
+
+  \item A measurement separating a weak stop signal from an uninformative one,
+  and excluding the native end-of-turn token as a confound
+  (Section~\ref{sec:elevation}). The elevation of stop probability at completion
+  --- $1.06\times$ for LLaMA-3.1-8B against $2.93\times$ for Qwen2.5-7B --- is a
+  more precise statement of the deficit than absolute probability mass.
 
   \item A boundary condition: sequential policies beat the memoryless ceiling only
   above $\alpha \approx 0.7$ (Section~\ref{sec:crossover}), which tells a
@@ -480,19 +492,12 @@ more useful finding than a clean success: of 61 scenarios it stops at exactly th
 right point in 24, too late in 34, and never in 1, against a gold cardinality of 2.
 Even a model that can stop over-gathers in 56\% of scenarios.
 
-A sharper caution applies to how Qwen's stopping should be interpreted. Its mean
-rank for the stop action is $2.1$ \emph{averaged over all steps}, not only over
-steps where the gold set is complete. A model that recognised completion would
-rank the stop action highly at the completing step and poorly elsewhere; a model
-with a high unconditional prior on a short, frequent string would rank it second
-everywhere, and stop once the better-scoring tools had been masked out. Our
-measurements cannot currently separate these, because we logged the probability
-mass on stopping only at the completing step and not at the others. The
-$0.5753$ figure is therefore an upper bound on how much of Qwen's behaviour is
-genuine completion-awareness, and the late stopping in 34 of 61 scenarios is
-consistent with the prior explanation. Resolving this requires logging
-$P(\done)$ at every step, which we flag as the most informative cheap extension
-of this work (Section~\ref{sec:limitations}).
+One reading of Qwen's behaviour has to be excluded before it can be called
+completion-awareness. Its mean rank for the stop action is $2.1$ \emph{averaged
+over all steps}, not only over completing ones, which is equally consistent with a
+high unconditional prior on a short, frequent string that wins once the
+better-scoring tools have been masked out. Section~\ref{sec:elevation} measures
+this directly and rules it out.
 
 A second observation guards against a misreading of Table~\ref{tab:llm}: the 70B
 model's SEM@$k$ of 0.541 is \emph{lower} than the 8B model's 0.951, which looks
@@ -503,6 +508,64 @@ plausible same-domain tool between the two gold tools --- for a request needing
 coverage by cutoff is 0.541 at $m{=}2$, 0.803 at $m{=}3$, and 1.000 at $m{=}5$: a
 less peaked policy, not a less knowledgeable one. SEM@$k$ alone understates it,
 which is why we report recall@5 alongside.
+
+\subsection{Is the stop signal sensitive to completion, and is it an artifact of
+the action set?}
+\label{sec:elevation}
+
+Two objections bear directly on Section~\ref{sec:dissociation}, and both are
+answerable with one measurement. The first is that scoring a literal
+\textsc{done} string may test an interface rather than a capability: these models
+end turns with a native end-of-turn token, not by naming a pseudo-tool, so a low
+probability on \textsc{done} could reflect a stop signal expressed through a
+channel our action set does not contain. The second is that a stop probability
+measured only at the completing step cannot distinguish recognition of completion
+from a high constant prior.
+
+We therefore re-ran LLaMA-3.1-8B and Qwen2.5-7B with each model's own native
+end-of-turn token added as a further scored candidate --- read off the tokenizer
+rather than hardcoded --- and logged the mass on both stop channels at
+\emph{every} step, not only completing ones (Table~\ref{tab:elevation}).
+
+\begin{table}[t]
+\centering
+\caption{\textbf{The stop signal is uninformative in LLaMA and genuinely
+completion-sensitive in Qwen, and the native end-of-turn token is not a competing
+channel.} Probability mass on each stop channel at the step where the gold set is
+complete, against all earlier steps. 61 scenarios, summed scoring, $\alpha=0$.}
+\label{tab:elevation}
+\begin{tabular}{lcccc}
+\toprule
+Model & $P(\done\mid$cmpl$)$ & $P(\done\mid$before$)$ & elevation & $P($native$\mid$cmpl$)$ \\
+\midrule
+LLaMA-3.1-8B & 0.00200 & 0.00188 & $\mathbf{1.06\times}$ & $2.4 \times 10^{-9}$ \\
+Qwen2.5-7B   & 0.57531 & 0.19660 & $\mathbf{2.93\times}$ & $9.8 \times 10^{-11}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Three things follow. First, the native end-of-turn token carries between
+$10^{-9}$ and $10^{-11}$ of the mass --- nine to eleven orders of magnitude below
+\textsc{done} --- for both models. There is no competing native stop channel
+absorbing the probability at the decision point, so \textsc{done}'s low mass in
+LLaMA is not an artifact of the action set excluding the model's preferred way of
+stopping. Section~\ref{sec:limitations} states what this does and does not settle.
+
+Second, and more informative than anything in Table~\ref{tab:llm}: LLaMA-3.1-8B's
+stop mass is $0.00200$ at completion against $0.00188$ before it, an elevation of
+$1.06\times$. The signal is not merely small; it is \emph{independent of whether
+the task is done}. This is a stronger statement of the paper's central claim than
+a low absolute probability, because a uniformly small stop probability would at
+least be a miscalibrated signal, whereas this one carries almost no information
+about the state it is supposed to describe.
+
+Third, Qwen2.5-7B's mass is $0.57531$ at completion against $0.19660$ before,
+an elevation of $2.93\times$. Its stopping is therefore \emph{not} explained by
+surface-form prior alone: there is a substantial baseline prior, and real
+completion-sensitivity on top of it. Both are true, which also explains the
+pattern in Section~\ref{sec:dissociation} --- a model that stops in 60 of 61
+scenarios but too late in 34 of them is one whose stop signal points in the right
+direction without being sharp enough to fire at the right step.
 
 \subsection{The scorer is load-bearing for one of our two claims}
 \label{sec:scorer}
@@ -749,31 +812,34 @@ termination is learnable here; it does not show that an \emph{LLM} could be
 post-trained to acquire it, which would require the fine-tuning experiment we did
 not run.
 
-\emph{The stop action may be an interface artifact, and we have not ruled this
-out.} We score a literal \textsc{done} string against the tool names. The
-instruction-tuned models we evaluate were not post-trained to end a tool-use
-episode that way: they end turns by emitting natural-language text and an
-end-of-turn token. A low probability on \textsc{done} is therefore consistent
-with two very different readings --- the model cannot recognise completion, or it
-recognises completion and expresses it through a channel our action set does not
-contain. Our free-generation pilot does not settle this, because it prompted for
-the same \textsc{done} string. The decisive measurement is cheap and we have not
-yet run it: score each model's \emph{native} end-of-turn token as an additional
-stop candidate at the completing step. If that token carries substantial mass
-while \textsc{done} does not, our central claim is an artifact of the action set;
-if neither does, the claim is considerably strengthened. Until that is run, the
-result should be read as being about termination \emph{under a uniform
-constrained action set}, which is the condition under which the models are
-comparable to each other and to the agent, but is not the condition under which
-they were trained.
+\emph{The interface objection is narrowed but not closed.} We score a literal
+\textsc{done} string, and these models were not post-trained to end a tool-use
+episode that way. Section~\ref{sec:elevation} removes the strongest form of the
+objection: each model's own end-of-turn token, scored as a candidate at the same
+decision points, carries $10^{-9}$ to $10^{-11}$ of the mass, so the stop
+probability is not simply being routed through a channel our action set omits.
+
+What that measurement does \emph{not} establish is the weaker form of the
+objection, and we want to be exact about it. It asks whether the model would end
+the turn \emph{immediately}, at a position where the prompt has just requested
+one tool name. A model's native way of concluding is to emit a sentence and only
+then an end-of-turn token, so a near-zero probability on that token at this
+position is expected even for a model that has recognised completion, and our
+measurement cannot distinguish the two. Settling it requires free generation
+under a native function-calling or ReAct interface, with the output judged for
+whether it concludes rather than calls another tool. We have not run that, and
+until it is run the result should be read as: under a uniform constrained action
+set, neither the imposed stop action nor the native one carries a
+completion-sensitive signal in LLaMA.
 
 \emph{The post-training claim rests on one confounded pair.} LLaMA-3.1 versus
 Qwen2.5-7B differ in pretraining corpus, tokenizer, architecture, chat template
 and post-training recipe simultaneously. Attributing the difference to
 post-training is therefore an inference from a single contrast, not a controlled
-result. The controlled version --- base versus instruct checkpoints within each
-family, across more families --- is inexpensive at this model scale and is the
-first thing we would add.
+result, and it is the weakest claim in this paper. The controlled comparison ---
+base versus instruct checkpoints within each family --- is inexpensive at this
+scale; it is implemented and was running at the time of writing, and we will
+report it rather than leave the inference standing on one pair.
 
 \emph{Scoring rule dependence, and it is load-bearing.} Under domain-conditional
 PMI the stop rate is 0.000 for \emph{every} model at both values of $\alpha$: no
@@ -798,8 +864,11 @@ served, and termination improves nowhere along a $70\times$ sweep from 1B to 70B
 Qwen2.5-7B stops reliably at one tenth the parameters, though it still
 over-gathers in 56\% of scenarios. On the identical task a two-layer, 256-unit
 masked-PPO policy terminates in at least $92.5\%$ of episodes and gathers
-conditionally, so the deficit is a property of these models rather
-than of the task. We additionally report a pre-registered hypothesis about learned
+conditionally, so the deficit is a property of these models rather than of the
+task. Measuring the stop signal before as well as at completion sharpens what
+that deficit is: LLaMA's stop probability barely moves when the task becomes
+complete ($1.06\times$), while Qwen's nearly triples ($2.93\times$), and neither
+model routes the decision through its native end-of-turn token. We additionally report a pre-registered hypothesis about learned
 over-gathering that we tested and refuted, and bound the regime in which
 sequential policies are worth their cost to $\alpha \gtrsim 0.7$.
 

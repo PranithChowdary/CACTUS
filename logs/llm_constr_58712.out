@@ -1,0 +1,34 @@
+
+1. BATCH INVARIANCE
+  [PASS] batched == unbatched -- max abs diff 0.00e+00
+
+2. MANUAL AGREEMENT (independent token-by-token recomputation)
+  [PASS] summed logprob matches manual -- manual -16.4643 vs policy -16.4643
+
+3. VALID LOG-PROBABILITIES
+  [PASS] all sum logprobs <= 0
+  [PASS] softmax over candidates sums to 1 (sum)
+  [PASS] softmax over candidates sums to 1 (mean)
+  [PASS] softmax over candidates sums to 1 (pmi)
+
+4. LENGTH BIAS IS REAL (the problem PMI exists to fix)
+  [PASS] sum-logprob correlates negatively with length -- r = -0.316 (longer strings score worse regardless of fit)
+
+5. PMI REDUCES LENGTH BIAS
+  [** FAIL **] |r| smaller for PMI than for raw sum -- r_pmi = +0.676 vs r_sum = -0.316
+
+6. SANITY RANKING
+  [PASS] a plausible tool outranks an irrelevant one under PMI -- HotelTool +11.52 vs DeployTool +5.47
+      (argmax under PMI on this toy prompt: ' HotelTool')
+
+--- per-candidate table ---
+  candidate        toks       sum     mean     prior       PMI
+   HotelTool          2    -16.46    -8.23    -27.98     11.52
+   CarRentalTool      4    -18.85    -4.71    -29.01     10.16
+   WeatherTool        2    -20.16   -10.08    -26.61      6.45
+   DeployTool         2    -20.74   -10.37    -26.20      5.47
+   PharmacyTool       2    -25.41   -12.71    -29.04      3.63
+   DONE               1    -11.68   -11.68    -11.88      0.20
+
+8/9 checks passed
+SCORING VERIFICATION FAILED -- aborting

@@ -1,0 +1,783 @@
+Creating new local conda environment 'cactus_env'...
+2 channel Terms of Service accepted
+Retrieving notices: - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Channels:
+ - defaults
+Platform: linux-64
+Collecting package metadata (repodata.json): \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Solving environment: \ done
+
+## Package Plan ##
+
+  environment location: /users/staff/pranith/CACTUS/cactus_env
+
+  added / updated specs:
+    - python=3.12
+
+
+The following packages will be downloaded:
+
+    package                    |            build
+    ---------------------------|-----------------
+    _libgcc_mutex-0.1          |             main           3 KB
+    _openmp_mutex-5.1          |           52_gnu           7 KB
+    ca-certificates-2026.7.16  |       h06a4308_0         106 KB
+    ld_impl_linux-64-2.44      |       h9e0c5a2_3         725 KB
+    libgcc-15.2.0              |       h69a1729_8         803 KB
+    libgcc-ng-15.2.0           |       h166f726_8          28 KB
+    libstdcxx-15.2.0           |       h39759b7_8         3.7 MB
+    packaging-26.1             |  py312h06a4308_0         275 KB
+    pip-26.1.2                 |     pyhc872135_0         1.1 MB
+    python-3.12.13             |       hc5f7cf0_3        30.2 MB
+    setuptools-83.0.0          |  py312h06a4308_0         1.6 MB
+    tzdata-2026c               |       he532380_0         117 KB
+    wheel-0.47.0               |  py312h06a4308_0          72 KB
+    ------------------------------------------------------------
+                                           Total:        38.8 MB
+
+The following NEW packages will be INSTALLED:
+
+  _libgcc_mutex      pkgs/main/linux-64::_libgcc_mutex-0.1-main 
+  _openmp_mutex      pkgs/main/linux-64::_openmp_mutex-5.1-52_gnu 
+  bzip2              pkgs/main/linux-64::bzip2-1.0.8-h5eee18b_6 
+  ca-certificates    pkgs/main/linux-64::ca-certificates-2026.7.16-h06a4308_0 
+  ld_impl_linux-64   pkgs/main/linux-64::ld_impl_linux-64-2.44-h9e0c5a2_3 
+  libexpat           pkgs/main/linux-64::libexpat-2.8.2-h7354ed3_1 
+  libffi             pkgs/main/linux-64::libffi-3.4.8-h06d3fd0_3 
+  libgcc             pkgs/main/linux-64::libgcc-15.2.0-h69a1729_8 
+  libgcc-ng          pkgs/main/linux-64::libgcc-ng-15.2.0-h166f726_8 
+  libstdcxx          pkgs/main/linux-64::libstdcxx-15.2.0-h39759b7_8 
+  libuuid            pkgs/main/linux-64::libuuid-1.41.5-h5eee18b_0 
+  libxcb             pkgs/main/linux-64::libxcb-1.17.0-h9b100fa_0 
+  libzlib            pkgs/main/linux-64::libzlib-1.3.2-h47b2149_0 
+  ncurses            pkgs/main/linux-64::ncurses-6.5-h7934f7d_0 
+  openssl            pkgs/main/linux-64::openssl-3.5.7-h1b28b03_0 
+  packaging          pkgs/main/linux-64::packaging-26.1-py312h06a4308_0 
+  pip                pkgs/main/noarch::pip-26.1.2-pyhc872135_0 
+  pthread-stubs      pkgs/main/linux-64::pthread-stubs-0.3-h47b2149_2 
+  python             pkgs/main/linux-64::python-3.12.13-hc5f7cf0_3 
+  readline           pkgs/main/linux-64::readline-8.3-hc2a1206_0 
+  setuptools         pkgs/main/linux-64::setuptools-83.0.0-py312h06a4308_0 
+  sqlite             pkgs/main/linux-64::sqlite-3.53.2-h795bf6d_0 
+  tk                 pkgs/main/linux-64::tk-8.6.15-h54e0aa7_0 
+  tzdata             pkgs/main/noarch::tzdata-2026c-he532380_0 
+  wheel              pkgs/main/linux-64::wheel-0.47.0-py312h06a4308_0 
+  xorg-libx11        pkgs/main/linux-64::xorg-libx11-1.8.12-h9b100fa_1 
+  xorg-libxau        pkgs/main/linux-64::xorg-libxau-1.0.12-h9b100fa_0 
+  xorg-libxdmcp      pkgs/main/linux-64::xorg-libxdmcp-1.1.5-h9b100fa_0 
+  xorg-xorgproto     pkgs/main/linux-64::xorg-xorgproto-2024.1-h47b2149_2 
+  xz                 pkgs/main/linux-64::xz-5.8.2-h448239c_0 
+  zlib               pkgs/main/linux-64::zlib-1.3.2-h47b2149_0 
+
+
+
+Downloading and Extracting Packages: ...working...python-3.12.13       | 30.2 MB   |            |   0% 
+libstdcxx-15.2.0     | 3.7 MB    |            |   0% [A
+
+setuptools-83.0.0    | 1.6 MB    |            |   0% [A[A
+
+
+pip-26.1.2           | 1.1 MB    |            |   0% [A[A[A
+
+
+
+libgcc-15.2.0        | 803 KB    |            |   0% [A[A[A[A
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    |            |   0% [A[A[A[A[A
+
+
+
+
+
+packaging-26.1       | 275 KB    |            |   0% [A[A[A[A[A[A
+
+
+
+
+
+
+tzdata-2026c         | 117 KB    |            |   0% [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ca-certificates-2026 | 106 KB    |            |   0% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+wheel-0.47.0         | 72 KB     |            |   0% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 28 KB     |            |   0% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+_openmp_mutex-5.1    | 7 KB      |            |   0% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+_libgcc_mutex-0.1    | 3 KB      |            |   0% [A[A[A[A[A[A[A[A[A[A[A[A
+libstdcxx-15.2.0     | 3.7 MB    |            |   0% [A
+
+
+pip-26.1.2           | 1.1 MB    | 1          |   1% [A[A[A
+
+
+pip-26.1.2           | 1.1 MB    | ########## | 100% [A[A[Apython-3.12.13       | 30.2 MB   |            |   0% 
+
+setuptools-83.0.0    | 1.6 MB    | 1          |   1% [A[A
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | 2          |   2% [A[A[A[A[A
+
+
+
+libgcc-15.2.0        | 803 KB    | 1          |   2% [A[A[A[A
+libstdcxx-15.2.0     | 3.7 MB    | #########5 |  96% [Apython-3.12.13       | 30.2 MB   | 7          |   7% 
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | ########## | 100% [A[A[A[A[A
+
+setuptools-83.0.0    | 1.6 MB    | ########## | 100% [A[A
+
+setuptools-83.0.0    | 1.6 MB    | ########## | 100% [A[A
+libstdcxx-15.2.0     | 3.7 MB    | ########## | 100% [A
+
+
+
+libgcc-15.2.0        | 803 KB    | ########## | 100% [A[A[A[A
+
+
+
+
+
+packaging-26.1       | 275 KB    | 5          |   6% [A[A[A[A[A[A
+
+
+
+
+
+
+
+ca-certificates-2026 | 106 KB    | #5         |  15% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ca-certificates-2026 | 106 KB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+packaging-26.1       | 275 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+
+
+
+wheel-0.47.0         | 72 KB     | ##2        |  22% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+wheel-0.47.0         | 72 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+tzdata-2026c         | 117 KB    | #3         |  14% [A[A[A[A[A[A[A
+
+
+
+
+
+
+tzdata-2026c         | 117 KB    | ########## | 100% [A[A[A[A[A[A[Apython-3.12.13       | 30.2 MB   | ##6        |  26% 
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 28 KB     | #####7     |  58% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+_openmp_mutex-5.1    | 7 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 28 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+_openmp_mutex-5.1    | 7 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+_libgcc_mutex-0.1    | 3 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+_libgcc_mutex-0.1    | 3 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[Apython-3.12.13       | 30.2 MB   | #####1     |  51% python-3.12.13       | 30.2 MB   | #######5   |  75% 
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | ########## | 100% [A[A[A[A[A
+
+
+
+
+ld_impl_linux-64-2.4 | 725 KB    | ########## | 100% [A[A[A[A[Apython-3.12.13       | 30.2 MB   | #########6 |  96% python-3.12.13       | 30.2 MB   | ########## | 100% 
+
+
+
+libgcc-15.2.0        | 803 KB    | ########## | 100% [A[A[A[A
+
+
+
+libgcc-15.2.0        | 803 KB    | ########## | 100% [A[A[A[A
+libstdcxx-15.2.0     | 3.7 MB    | ########## | 100% [A
+
+
+
+
+
+
+
+ca-certificates-2026 | 106 KB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+ca-certificates-2026 | 106 KB    | ########## | 100% [A[A[A[A[A[A[A[A
+
+
+
+
+
+packaging-26.1       | 275 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+packaging-26.1       | 275 KB    | ########## | 100% [A[A[A[A[A[A
+
+
+
+
+
+
+
+
+wheel-0.47.0         | 72 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+wheel-0.47.0         | 72 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A
+
+
+pip-26.1.2           | 1.1 MB    | ########## | 100% [A[A[A
+
+
+pip-26.1.2           | 1.1 MB    | ########## | 100% [A[A[A
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 28 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+libgcc-ng-15.2.0     | 28 KB     | ########## | 100% [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+_openmp_mutex-5.1    | 7 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+_libgcc_mutex-0.1    | 3 KB      | ########## | 100% [A[A[A[A[A[A[A[A[A[A[A[A
+
+setuptools-83.0.0    | 1.6 MB    | ########## | 100% [A[A
+
+
+
+
+
+
+tzdata-2026c         | 117 KB    | ########## | 100% [A[A[A[A[A[A[A
+
+
+
+
+
+
+tzdata-2026c         | 117 KB    | ########## | 100% [A[A[A[A[A[A[Apython-3.12.13       | 30.2 MB   | ########## | 100%                                                      
+                                                     [A
+
+                                                     [A[A
+
+
+                                                     [A[A[A
+
+
+
+                                                     [A[A[A[A
+
+
+
+
+                                                     [A[A[A[A[A
+
+
+
+
+
+                                                     [A[A[A[A[A[A
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A
+
+
+
+
+
+
+
+
+
+
+
+                                                     [A[A[A[A[A[A[A[A[A[A[A[A done
+Preparing transaction: / - \ | / - \ done
+Verifying transaction: / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / done
+Executing transaction: \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | / - \ | done
+#
+# To activate this environment, use
+#
+#     $ conda activate /users/staff/pranith/CACTUS/cactus_env
+#
+# To deactivate an active environment, use
+#
+#     $ conda deactivate
+
+Installing requirements...
+Collecting torch (from -r requirements.txt (line 1))
+  Downloading torch-2.13.0-cp312-cp312-manylinux_2_28_x86_64.whl.metadata (38 kB)
+Collecting pandas (from -r requirements.txt (line 2))
+  Downloading pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (79 kB)
+Collecting numpy (from -r requirements.txt (line 3))
+  Downloading numpy-2.5.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+Collecting gymnasium (from -r requirements.txt (line 4))
+  Downloading gymnasium-1.3.0-py3-none-any.whl.metadata (10 kB)
+Collecting stable-baselines3 (from -r requirements.txt (line 5))
+  Downloading stable_baselines3-2.9.0-py3-none-any.whl.metadata (5.0 kB)
+Collecting tensorboard (from -r requirements.txt (line 6))
+  Downloading tensorboard-2.21.0-py3-none-any.whl.metadata (1.8 kB)
+Collecting sentence-transformers (from -r requirements.txt (line 7))
+  Downloading sentence_transformers-6.0.0-py3-none-any.whl.metadata (20 kB)
+Collecting scikit-learn (from -r requirements.txt (line 8))
+  Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (11 kB)
+Collecting filelock (from torch->-r requirements.txt (line 1))
+  Downloading filelock-3.32.4-py3-none-any.whl.metadata (2.0 kB)
+Collecting typing-extensions>=4.10.0 (from torch->-r requirements.txt (line 1))
+  Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: setuptools>=77.0.3 in ./cactus_env/lib/python3.12/site-packages (from torch->-r requirements.txt (line 1)) (83.0.0)
+Collecting sympy>=1.13.3 (from torch->-r requirements.txt (line 1))
+  Using cached sympy-1.14.0-py3-none-any.whl.metadata (12 kB)
+Collecting networkx>=2.5.1 (from torch->-r requirements.txt (line 1))
+  Using cached networkx-3.6.1-py3-none-any.whl.metadata (6.8 kB)
+Collecting jinja2 (from torch->-r requirements.txt (line 1))
+  Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB)
+Collecting fsspec>=0.8.5 (from torch->-r requirements.txt (line 1))
+  Using cached fsspec-2026.7.0-py3-none-any.whl.metadata (10 kB)
+Collecting cuda-toolkit==13.0.3 (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached cuda_toolkit-13.0.3.0-py2.py3-none-any.whl.metadata (17 kB)
+Collecting cuda-bindings<14,>=13.0.3 (from torch->-r requirements.txt (line 1))
+  Downloading cuda_bindings-13.3.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl.metadata (2.5 kB)
+Collecting nvidia-cudnn-cu13==9.20.0.48 (from torch->-r requirements.txt (line 1))
+  Using cached nvidia_cudnn_cu13-9.20.0.48-py3-none-manylinux_2_27_x86_64.whl.metadata (1.9 kB)
+Collecting nvidia-cusparselt-cu13==0.8.1 (from torch->-r requirements.txt (line 1))
+  Using cached nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_x86_64.whl.metadata (12 kB)
+Collecting nvidia-nccl-cu13==2.29.7 (from torch->-r requirements.txt (line 1))
+  Using cached nvidia_nccl_cu13-2.29.7-py3-none-manylinux_2_18_x86_64.whl.metadata (2.1 kB)
+Collecting nvidia-nvshmem-cu13==3.4.5 (from torch->-r requirements.txt (line 1))
+  Using cached nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.1 kB)
+Collecting triton==3.7.1 (from torch->-r requirements.txt (line 1))
+  Downloading triton-3.7.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cublas==13.1.1.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cublas-13.1.1.3-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cuda-nvrtc==13.0.88.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-runtime==13.0.96.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cufft==12.0.0.61.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvjitlink<14,>=13.0.88 (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_nvjitlink-13.3.33-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cufile==1.15.1.6.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cuda-cupti==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-curand==10.4.0.35.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl.metadata (1.7 kB)
+Collecting nvidia-cusolver==12.0.4.66.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-cusparse==12.6.3.3.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (1.8 kB)
+Collecting nvidia-nvtx==13.0.85.* (from cuda-toolkit[cublas,cudart,cufft,cufile,cupti,curand,cusolver,cusparse,nvjitlink,nvrtc,nvtx]==13.0.3; platform_system == "Linux"->torch->-r requirements.txt (line 1))
+  Using cached nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl.metadata (1.8 kB)
+Collecting cuda-pathfinder>=1.4.2 (from cuda-bindings<14,>=13.0.3->torch->-r requirements.txt (line 1))
+  Downloading cuda_pathfinder-1.7.0-py3-none-any.whl.metadata (1.9 kB)
+Collecting python-dateutil>=2.8.2 (from pandas->-r requirements.txt (line 2))
+  Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+Collecting cloudpickle>=1.2.0 (from gymnasium->-r requirements.txt (line 4))
+  Downloading cloudpickle-3.1.2-py3-none-any.whl.metadata (7.1 kB)
+Collecting farama-notifications>=0.0.1 (from gymnasium->-r requirements.txt (line 4))
+  Downloading farama_notifications-0.0.6-py3-none-any.whl.metadata (729 bytes)
+Collecting absl-py>=0.4 (from tensorboard->-r requirements.txt (line 6))
+  Downloading absl_py-2.5.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting grpcio<2.0,>=1.74.0 (from tensorboard->-r requirements.txt (line 6))
+  Downloading grpcio-1.83.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (3.7 kB)
+Collecting markdown>=2.6.8 (from tensorboard->-r requirements.txt (line 6))
+  Downloading markdown-3.10.3-py3-none-any.whl.metadata (5.1 kB)
+Requirement already satisfied: packaging in ./cactus_env/lib/python3.12/site-packages (from tensorboard->-r requirements.txt (line 6)) (26.1)
+Collecting pillow (from tensorboard->-r requirements.txt (line 6))
+  Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (9.1 kB)
+Collecting protobuf<8.0.0,>=6.31.1 (from tensorboard->-r requirements.txt (line 6))
+  Downloading protobuf-7.36.0-cp310-abi3-manylinux2014_x86_64.whl.metadata (595 bytes)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->-r requirements.txt (line 6))
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl.metadata (1.1 kB)
+Collecting werkzeug>=1.0.1 (from tensorboard->-r requirements.txt (line 6))
+  Downloading werkzeug-3.1.8-py3-none-any.whl.metadata (4.0 kB)
+Collecting transformers<6.0.0,>=5.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading transformers-5.16.1-py3-none-any.whl.metadata (32 kB)
+Collecting tokenizers>=0.19 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (9.8 kB)
+Collecting huggingface-hub<2.0.0,>=1.3.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading huggingface_hub-1.29.0-py3-none-any.whl.metadata (16 kB)
+Collecting scipy>=1.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (62 kB)
+Collecting tqdm>=4.0.0 (from sentence-transformers->-r requirements.txt (line 7))
+  Downloading tqdm-4.70.0-py3-none-any.whl.metadata (57 kB)
+Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading click-8.5.0-py3-none-any.whl.metadata (2.6 kB)
+Collecting hf-xet<2.0.0,>=1.5.2 (from huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (4.9 kB)
+Collecting httpx<1,>=0.23.0 (from huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading httpx-0.28.1-py3-none-any.whl.metadata (7.1 kB)
+Collecting pyyaml>=5.1 (from huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.4 kB)
+Collecting anyio (from httpx<1,>=0.23.0->huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading anyio-4.14.2-py3-none-any.whl.metadata (4.6 kB)
+Collecting certifi (from httpx<1,>=0.23.0->huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+Collecting httpcore==1.* (from httpx<1,>=0.23.0->huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading httpcore-1.0.9-py3-none-any.whl.metadata (21 kB)
+Collecting idna (from httpx<1,>=0.23.0->huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading idna-3.19-py3-none-any.whl.metadata (9.2 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1,>=0.23.0->huggingface-hub<2.0.0,>=1.3.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading h11-0.16.0-py3-none-any.whl.metadata (8.3 kB)
+Collecting regex>=2025.10.22 (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading regex-2026.7.19-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (40 kB)
+Collecting typer (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading typer-0.27.1-py3-none-any.whl.metadata (16 kB)
+Collecting safetensors>=0.8.0 (from transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.2 kB)
+Collecting joblib>=1.4.0 (from scikit-learn->-r requirements.txt (line 8))
+  Using cached joblib-1.5.3-py3-none-any.whl.metadata (5.5 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn->-r requirements.txt (line 8))
+  Downloading narwhals-2.25.0-py3-none-any.whl.metadata (15 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn->-r requirements.txt (line 8))
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->-r requirements.txt (line 2))
+  Using cached six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch->-r requirements.txt (line 1))
+  Using cached mpmath-1.3.0-py3-none-any.whl.metadata (8.6 kB)
+Collecting markupsafe>=2.1.1 (from werkzeug>=1.0.1->tensorboard->-r requirements.txt (line 6))
+  Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB)
+Collecting shellingham>=1.3.0 (from typer->transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl.metadata (3.5 kB)
+Collecting rich>=13.8.0 (from typer->transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading rich-15.0.0-py3-none-any.whl.metadata (18 kB)
+Collecting annotated-doc>=0.0.2 (from typer->transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading annotated_doc-0.0.5-py3-none-any.whl.metadata (6.5 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl.metadata (7.4 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer->transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading pygments-2.21.0-py3-none-any.whl.metadata (2.5 kB)
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers<6.0.0,>=5.0.0->sentence-transformers->-r requirements.txt (line 7))
+  Downloading mdurl-0.1.2-py3-none-any.whl.metadata (1.6 kB)
+Downloading torch-2.13.0-cp312-cp312-manylinux_2_28_x86_64.whl (526.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 526.6/526.6 MB 33.4 MB/s  0:00:11
+Using cached cuda_toolkit-13.0.3.0-py2.py3-none-any.whl (2.5 kB)
+Using cached nvidia_cudnn_cu13-9.20.0.48-py3-none-manylinux_2_27_x86_64.whl (366.2 MB)
+Using cached nvidia_cusparselt_cu13-0.8.1-py3-none-manylinux2014_x86_64.whl (170.1 MB)
+Using cached nvidia_nccl_cu13-2.29.7-py3-none-manylinux_2_18_x86_64.whl (206.0 MB)
+Using cached nvidia_nvshmem_cu13-3.4.5-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (60.4 MB)
+Downloading triton-3.7.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (197.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 197.7/197.7 MB 49.0 MB/s  0:00:04
+Downloading cuda_bindings-13.3.1-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (6.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.7/6.7 MB 44.0 MB/s  0:00:00
+Using cached nvidia_cublas-13.1.1.3-py3-none-manylinux_2_27_x86_64.whl (423.1 MB)
+Using cached nvidia_cuda_cupti-13.0.85-py3-none-manylinux_2_25_x86_64.whl (10.7 MB)
+Using cached nvidia_cuda_nvrtc-13.0.88-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (90.2 MB)
+Using cached nvidia_cuda_runtime-13.0.96-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.2 MB)
+Using cached nvidia_cufft-12.0.0.61-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (214.1 MB)
+Using cached nvidia_cufile-1.15.1.6-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+Using cached nvidia_curand-10.4.0.35-py3-none-manylinux_2_27_x86_64.whl (59.5 MB)
+Using cached nvidia_cusolver-12.0.4.66-py3-none-manylinux_2_27_x86_64.whl (200.9 MB)
+Using cached nvidia_cusparse-12.6.3.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (145.9 MB)
+Using cached nvidia_nvjitlink-13.3.33-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (40.7 MB)
+Using cached nvidia_nvtx-13.0.85-py3-none-manylinux1_x86_64.manylinux_2_5_x86_64.whl (148 kB)
+Downloading pandas-3.0.5-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (11.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.0/11.0 MB 44.2 MB/s  0:00:00
+Downloading numpy-2.5.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 44.3 MB/s  0:00:00
+Downloading gymnasium-1.3.0-py3-none-any.whl (953 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 953.9/953.9 kB 21.6 MB/s  0:00:00
+Downloading stable_baselines3-2.9.0-py3-none-any.whl (187 kB)
+Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 43.0 MB/s  0:00:00
+Downloading grpcio-1.83.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 43.9 MB/s  0:00:00
+Downloading protobuf-7.36.0-cp310-abi3-manylinux2014_x86_64.whl (340 kB)
+Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 44.5 MB/s  0:00:00
+Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Downloading sentence_transformers-6.0.0-py3-none-any.whl (739 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 739.6/739.6 kB 22.8 MB/s  0:00:00
+Downloading huggingface_hub-1.29.0-py3-none-any.whl (795 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 795.8/795.8 kB 24.8 MB/s  0:00:00
+Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Downloading hf_xet-1.6.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 43.0 MB/s  0:00:00
+Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Downloading transformers-5.16.1-py3-none-any.whl (12.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.1/12.1 MB 43.4 MB/s  0:00:00
+Downloading tokenizers-0.23.1-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 39.7 MB/s  0:00:00
+Downloading scikit_learn-1.9.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.1/9.1 MB 37.5 MB/s  0:00:00
+Downloading absl_py-2.5.0-py3-none-any.whl (137 kB)
+Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Downloading cuda_pathfinder-1.7.0-py3-none-any.whl (63 kB)
+Downloading farama_notifications-0.0.6-py3-none-any.whl (2.9 kB)
+Downloading filelock-3.32.4-py3-none-any.whl (99 kB)
+Using cached fsspec-2026.7.0-py3-none-any.whl (206 kB)
+Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Using cached joblib-1.5.3-py3-none-any.whl (309 kB)
+Downloading markdown-3.10.3-py3-none-any.whl (110 kB)
+Downloading narwhals-2.25.0-py3-none-any.whl (467 kB)
+Using cached networkx-3.6.1-py3-none-any.whl (2.1 MB)
+Using cached python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 24.5 MB/s  0:00:00
+Downloading regex-2026.7.19-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (801 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 801.8/801.8 kB 24.5 MB/s  0:00:00
+Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 14.1 MB/s  0:00:02
+Using cached six-1.17.0-py2.py3-none-any.whl (11 kB)
+Using cached sympy-1.14.0-py3-none-any.whl (6.3 MB)
+Using cached mpmath-1.3.0-py3-none-any.whl (536 kB)
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Downloading tqdm-4.70.0-py3-none-any.whl (80 kB)
+Downloading werkzeug-3.1.8-py3-none-any.whl (226 kB)
+Downloading markupsafe-3.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Downloading anyio-4.14.2-py3-none-any.whl (125 kB)
+Downloading idna-3.19-py3-none-any.whl (68 kB)
+Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 45.7 MB/s  0:00:00
+Downloading typer-0.27.1-py3-none-any.whl (122 kB)
+Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 33.2 MB/s  0:00:00
+Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Installing collected packages: nvidia-cusparselt-cu13, mpmath, farama-notifications, cuda-toolkit, typing-extensions, triton, tqdm, threadpoolctl, tensorboard-data-server, sympy, six, shellingham, safetensors, regex, pyyaml, pygments, protobuf, pillow, nvidia-nvtx, nvidia-nvshmem-cu13, nvidia-nvjitlink, nvidia-nccl-cu13, nvidia-curand, nvidia-cufile, nvidia-cuda-runtime, nvidia-cuda-nvrtc, nvidia-cuda-cupti, numpy, networkx, narwhals, mdurl, markupsafe, markdown, joblib, idna, hf-xet, h11, fsspec, filelock, cuda-pathfinder, cloudpickle, click, certifi, annotated-doc, absl-py, werkzeug, scipy, python-dateutil, nvidia-cusparse, nvidia-cufft, nvidia-cublas, markdown-it-py, jinja2, httpcore, gymnasium, grpcio, cuda-bindings, anyio, tensorboard, scikit-learn, rich, pandas, nvidia-cusolver, nvidia-cudnn-cu13, httpx, typer, huggingface-hub, torch, tokenizers, transformers, stable-baselines3, sentence-transformers
+
+Successfully installed absl-py-2.5.0 annotated-doc-0.0.5 anyio-4.14.2 certifi-2026.7.22 click-8.5.0 cloudpickle-3.1.2 cuda-bindings-13.3.1 cuda-pathfinder-1.7.0 cuda-toolkit-13.0.3.0 farama-notifications-0.0.6 filelock-3.32.4 fsspec-2026.7.0 grpcio-1.83.0 gymnasium-1.3.0 h11-0.16.0 hf-xet-1.6.0 httpcore-1.0.9 httpx-0.28.1 huggingface-hub-1.29.0 idna-3.19 jinja2-3.1.6 joblib-1.5.3 markdown-3.10.3 markdown-it-py-4.2.0 markupsafe-3.0.3 mdurl-0.1.2 mpmath-1.3.0 narwhals-2.25.0 networkx-3.6.1 numpy-2.5.2 nvidia-cublas-13.1.1.3 nvidia-cuda-cupti-13.0.85 nvidia-cuda-nvrtc-13.0.88 nvidia-cuda-runtime-13.0.96 nvidia-cudnn-cu13-9.20.0.48 nvidia-cufft-12.0.0.61 nvidia-cufile-1.15.1.6 nvidia-curand-10.4.0.35 nvidia-cusolver-12.0.4.66 nvidia-cusparse-12.6.3.3 nvidia-cusparselt-cu13-0.8.1 nvidia-nccl-cu13-2.29.7 nvidia-nvjitlink-13.3.33 nvidia-nvshmem-cu13-3.4.5 nvidia-nvtx-13.0.85 pandas-3.0.5 pillow-12.3.0 protobuf-7.36.0 pygments-2.21.0 python-dateutil-2.9.0.post0 pyyaml-6.0.3 regex-2026.7.19 rich-15.0.0 safetensors-0.8.0 scikit-learn-1.9.0 scipy-1.18.1 sentence-transformers-6.0.0 shellingham-1.5.4 six-1.17.0 stable-baselines3-2.9.0 sympy-1.14.0 tensorboard-2.21.0 tensorboard-data-server-0.7.2 threadpoolctl-3.6.0 tokenizers-0.23.1 torch-2.13.0 tqdm-4.70.0 transformers-5.16.1 triton-3.7.1 typer-0.27.1 typing-extensions-4.16.0 werkzeug-3.1.8
+=========================================
+Starting CACTUS Experiments Execution
+=========================================
+1. Training PPO Agent...
+-----------------------------------------
+2. Evaluating All Agents (Random, Heuristic, DenseRetrieval, PPO)...
+=========================================
+All experiments completed successfully.
+Results are saved in the results/ directory.
+=========================================
