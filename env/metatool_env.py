@@ -3,7 +3,8 @@ metatool_env.py - Gymnasium Edition
 
 A standardized Gymnasium environment for tool-selection RL research.
 
-Key properties (see docs/DESIGN.md and paper/termination_draft.tex Sec 3):
+Key properties (see FROZEN_RESULTS.md; the design notes and manuscript are
+kept local and are not distributed with this repository):
 - The action space is the tool vocabulary plus a DONE token.
 - Once a tool (right or wrong) has been chosen, it is permanently masked out via
   `action_masks()` so it can never be chosen again. This is the mechanism that

@@ -166,6 +166,15 @@ def main():
     ap.add_argument("--scorings", nargs="+", default=["sum", "pmi"])
     ap.add_argument("--batch_size", type=int, default=48)
     ap.add_argument("--out", default="results/llm_probe_constrained.json")
+    # ConstrainedLLMPolicy applies the tokenizer's chat template by default,
+    # which is right for instruct checkpoints and wrong for base ones: a base
+    # model never saw that conversational wrapper in pretraining. Pass this to
+    # score the raw prompt instead. It is the ablation that separates "the base
+    # model cannot terminate" from "the base model was handed a format it does
+    # not recognise" -- see the limitations section of the paper.
+    ap.add_argument("--no_chat_template", action="store_true",
+                    help="Score the raw prompt instead of applying the "
+                         "tokenizer's chat template (use for base models).")
     args = ap.parse_args()
 
     torch.manual_seed(0)
@@ -173,8 +182,10 @@ def main():
     model = AutoModelForCausalLM.from_pretrained(
         args.model, dtype=torch.float16, device_map="auto", local_files_only=True)
     model.eval()
-    policy = ConstrainedLLMPolicy(model, tok, batch_size=args.batch_size)
-    print(f"model on {model.device}\n", flush=True)
+    policy = ConstrainedLLMPolicy(model, tok, batch_size=args.batch_size,
+                                  use_chat_template=not args.no_chat_template)
+    print(f"model on {model.device}  "
+          f"chat_template={'off' if args.no_chat_template else 'on'}\n", flush=True)
 
     os.makedirs(os.path.dirname(args.out), exist_ok=True)
     if args.model_tag:
@@ -186,6 +197,7 @@ def main():
             print(f"\n[{scoring}] alpha={alpha} ...", flush=True)
             r = run(policy, alpha, args.episodes, scoring)
             r["model"] = args.model
+            r["chat_template"] = not args.no_chat_template
             out.append(r)
             print(f"[{scoring}] alpha={alpha:.1f}  ceiling={r['static_ceiling']:.3f}  "
                   f"SEM={r['exact_match']:.3f}  DONE_rate={r['done_rate']:.3f}  "

@@ -129,7 +129,7 @@ in **one job**, one code path, mangala, summed scoring, 61 scenarios
   override it). The base model never saw that format in pretraining. Bounded by
   recall@5 0.967 and DONE rank 10.1 under the same formatting — it reads the
   query fine — but a stop-token-specific effect is not excluded. Settle it with
-  `--no_chat_template` (~0.3 GPU-h). Base passed 6/6 critical checks.
+  `sbatch scripts/run_template_ablation.sh` (~0.5 GPU-h; completes the 2x2). Base passed 6/6 critical checks.
 - **PMI erases this too**: rank_pmi 35.0 (base) vs 35.5 (instruct) — last of ~35
   and in the wrong order. The 75× is specific to summed scoring.
 >>>>>>> 6d553f0 (fin runs)
@@ -243,7 +243,7 @@ re-probe; the job script preflights the path and skips the model cleanly, so
 0.0020, *below* qwen2.5-7b-base at 0.0076. So two readings survive — LLaMA's
 post-training **failed to install** termination, or it **suppressed** it. Only the
 base checkpoint distinguishes them. The paper claims the weaker of the two
-(§`sec:basevsinst`).
+(see §1b above; the manuscript is kept local and is not in this repository).
 
 Everything else is complete: both sides use the same 61-scenario bank, all four
 scoring×α configs, both RL environments at 20 agents × 5 seeds, and the
@@ -270,7 +270,6 @@ and a venue decision.
 python experiments/check_scenario_bank.py                  # environment gates
 python scripts/compare_models.py --pattern 'results/llm_probe_bank61_*.json'
 python scripts/compare_models.py --pattern 'results/llm_probe_basevsinst_*.json'
-python paper/make_fig1.py                                  # Figure 1 (5 checkpoints)
 sbatch  scripts/run_alpha_shift.sh                         # RL, synthetic
 sbatch  scripts/run_nl_alpha_shift.sh                      # RL, natural language
 ```

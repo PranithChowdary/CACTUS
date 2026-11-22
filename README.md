@@ -35,7 +35,6 @@ env/          Gymnasium environment (MDP, action masking) + config
 models/       MaskablePPO agent and the baseline agents
 experiments/  train_ppo.py, evaluate_all.py, evaluate_llm_baseline.py
 scripts/      SLURM job scripts + login-node setup + offline re-analysis
-paper/        termination_draft.tex, references.bib, make_fig1.py
 results/      Aggregated metrics, per-example raw records, significance tests
 datasets/     train/val/test splits and tool vocabulary
 ```
@@ -61,7 +60,6 @@ To re-analyse finished runs without re-running any model (numpy + scipy only):
 
 ```bash
 python scripts/recompute_stats.py   # rebuilds final_comparison.json + significance.json
-python paper/make_figures.py        # rebuilds paper/figures/*.pdf from results/
 ```
 
 ## Evaluation protocol
@@ -77,11 +75,13 @@ extension of this work:
   rule calibrated on the *validation* split. A baseline that cannot terminate is
   forced to over-predict and is not a fair comparison.
 
-## Building the paper
+## The manuscript
 
-```bash
-cd paper && pdflatex termination_draft && bibtex termination_draft && pdflatex termination_draft && pdflatex termination_draft
-```
+The write-up is not distributed with this repository. What is here is the
+evidence behind it: `results/` holds the per-run records every reported number
+is machine-read from, `logs/` holds the SLURM logs of the jobs that produced
+them, and `FROZEN_RESULTS.md` states each finding with the result file and job
+id it came from.
 
 ## Known limitations
 

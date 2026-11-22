@@ -59,15 +59,19 @@ scripts/logs/
 # Merge leftovers retired by scripts/merge_topup.py (content already folded in)
 *.merged
 
-# LaTeX build products
-paper/*.aux
-paper/*.log
-paper/*.bbl
-paper/*.blg
-paper/*.out
-paper/*.pdf
-!paper/figures/*.pdf
+# The manuscript and design notes are kept LOCAL and deliberately not
+# published to GitHub. They were tracked until now, so ignoring them is not
+# enough on its own -- they were untracked with:
+#     git rm -r --cached paper docs
+# which leaves every file in place on disk. Note that git does not descend
+# into an excluded directory, so a negation such as !paper/figures/*.pdf
+# would NOT work below; do not add one expecting it to.
+#
+# This does not remove the manuscript from the repository's HISTORY, where it
+# remains readable in earlier commits. Removing it from history needs a
+# filter-repo rewrite and a force push, which was considered and declined.
+paper/
+docs/
 
 # Overleaf upload package (build artifact; regenerate any time)
 termination_paper_overleaf.zip
-paper/*.zip
