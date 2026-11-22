@@ -56,6 +56,7 @@ far better (SEM@k 0.951 vs 0.049 on 8B). The scorer choice can invert the centra
 observation, which is why all three are logged per step and the primary was
 selected on ranking evidence rather than a priori.
 
+<<<<<<< HEAD
 ## 1b. The stop signal is uninformative in LLaMA, not merely weak
 
 `results/native_stop_*.json` · job 67879 · 61 scenarios, summed scoring, alpha=0
@@ -77,6 +78,61 @@ selected on ranking evidence rather than a priori.
 - **Qwen's stopping is NOT pure surface-form prior** (2.93x elevation). It has
   a high baseline prior AND real completion-sensitivity. This corrects a
   speculation written into an earlier draft.
+=======
+## 1a. The stop action is not an interface artifact
+
+`results/native_stop_*.json` · log `nativestop_67879` · α=0, each model's native
+end-of-turn token scored as an extra stop candidate at **every** step
+
+| model | steps | compl. states | P(DONE\|c) | P(DONE\|¬c) | elevation | P(native\|c) |
+|---|---|---|---|---|---|---|
+| llama-3.1-8b | 305 | 58 | 0.00200 | 0.00188 | **1.06×** | 2.4e-09 |
+| qwen2.5-7b | 226 | 40 | 0.57531 | 0.19660 | **2.93×** | 9.8e-11 |
+
+- **Objection killed.** The native channel carries 6–10 orders of magnitude *less*
+  mass than DONE (8.5e5× less for LLaMA, 5.9e9× for Qwen). Neither model signals
+  completion through the channel it was trained on, so the missing stop is a
+  property of the models, not of our action set.
+- **Claim sharpened.** LLaMA's elevation of 1.06× means its stop probability is
+  statistically **independent of task completion** — a stronger statement than
+  "low probability". This is now the form the main result is stated in.
+- **Our own speculation corrected.** We had flagged that Qwen's rank-2.1 stop
+  might be pure surface-form prior, making 0.5753 an upper bound. A pure prior
+  predicts 1.0× elevation; Qwen is at 2.93×, so its stopping *is* conditioned on
+  task state. The prior is still real (0.1966 before completion) and is the
+  mechanism behind the 34/61 late stops.
+
+## 1b. Controlled: instruction tuning installs termination
+
+`results/llm_probe_basevsinst_*.json` · log `basevsinst_67978` · all checkpoints
+in **one job**, one code path, mangala, summed scoring, 61 scenarios
+
+| checkpoint | α | recall@5 | stops | DONE rank | P(DONE\|c) | SEM |
+|---|---|---|---|---|---|---|
+| llama-3.1-8b-inst | 0 | 1.000 | 0/61 | 30.1 | 0.0020 | 0.000 |
+| qwen2.5-7b-base | 0 | 0.967 | 0/61 | 10.1 | 0.0076 | 0.000 |
+| qwen2.5-7b-inst | 0 | 0.951 | **60/61** | **2.1** | **0.5753** | **0.377** |
+| llama-3.1-8b-inst | 1 | — | 0/61 | 33.6 | 0.0001 | 0.000 |
+| qwen2.5-7b-base | 1 | — | 0/61 | 13.4 | 0.0174 | 0.000 |
+| qwen2.5-7b-inst | 1 | — | **54/61** | **2.3** | **0.5782** | **0.098** |
+
+- **75× on P(DONE|complete)** (0.0076 → 0.5753) with corpus, tokenizer and
+  architecture held fixed; 33× at α=1. The post-training claim is now an
+  intervention, not a cross-family correlation.
+- **Relevance does not follow it** — recall@5 0.967 → 0.951, probe-first
+  0.754 → 0.721, both slightly *down*. The dissociation is causal, not just
+  observed across models.
+- **Termination gates the score.** Base scores SEM 0.000 despite recall@5 0.967:
+  it finds the right tools and never returns an answer, because it never stops.
+- **Residual confound:** the chat template IS applied to both, base included
+  (`ConstrainedLLMPolicy` defaults `use_chat_template=True`; the probe does not
+  override it). The base model never saw that format in pretraining. Bounded by
+  recall@5 0.967 and DONE rank 10.1 under the same formatting — it reads the
+  query fine — but a stop-token-specific effect is not excluded. Settle it with
+  `--no_chat_template` (~0.3 GPU-h). Base passed 6/6 critical checks.
+- **PMI erases this too**: rank_pmi 35.0 (base) vs 35.5 (instruct) — last of ~35
+  and in the wrong order. The 75× is specific to summed scoring.
+>>>>>>> 6d553f0 (fin runs)
 
 ## 2. RL terminates and gathers conditionally — on the same task
 
@@ -152,6 +208,7 @@ signal survives marker replacement at matched length (11.3 vs 11.6 mean words),
 so it is carried by meaning — static queries name their actions, conditional
 ones do not — rather than by one keyword.
 
+<<<<<<< HEAD
 ## Outstanding: one job, in flight
 
 `scripts/run_base_vs_instruct.sh` (job 67880) was submitted and its results have
@@ -171,12 +228,27 @@ python scripts/compare_models.py --pattern 'results/llm_probe_basevsinst_*.json'
 ```
 
 ## Previously outstanding: nothing else
+=======
+## Outstanding: one cell, blocked externally
+>>>>>>> 6d553f0 (fin runs)
 
-All experiments are complete. Both sides of the comparison use the same
-61-scenario bank; all four models have all four scoring×α configs; both RL
-environments have 20 agents each at 5 seeds. The remaining work is writing, not
-computing — see `paper/termination_draft.tex`, whose open items are the
-bibliography (only one entry is verified) and a venue decision.
+`llama-3.1-8b-base` — **gated on HuggingFace per account**; access request
+submitted 2026-11-21 and not granted. The shared cache at
+`/janaki/common/huggingface` holds `-Instruct` variants only, and an admin's
+access does not transfer. Run `python scripts/fetch_base_models.py --check` to
+re-probe; the job script preflights the path and skips the model cleanly, so
+`sbatch scripts/run_base_vs_instruct.sh` can simply be resubmitted once granted.
+
+**Why it matters more than a missing replicate:** llama-3.1-8b-inst sits at
+0.0020, *below* qwen2.5-7b-base at 0.0076. So two readings survive — LLaMA's
+post-training **failed to install** termination, or it **suppressed** it. Only the
+base checkpoint distinguishes them. The paper claims the weaker of the two
+(§`sec:basevsinst`).
+
+Everything else is complete: both sides use the same 61-scenario bank, all four
+scoring×α configs, both RL environments at 20 agents × 5 seeds, and the
+bibliography is fully verified against the arXiv API. Remaining work is writing
+and a venue decision.
 
 ## Deliberately not done (v2)
 
@@ -196,7 +268,9 @@ bibliography (only one entry is verified) and a venue decision.
 
 ```
 python experiments/check_scenario_bank.py                  # environment gates
-python scripts/compare_models.py                           # LLM table (12-scenario)
+python scripts/compare_models.py --pattern 'results/llm_probe_bank61_*.json'
+python scripts/compare_models.py --pattern 'results/llm_probe_basevsinst_*.json'
+python paper/make_fig1.py                                  # Figure 1 (5 checkpoints)
 sbatch  scripts/run_alpha_shift.sh                         # RL, synthetic
 sbatch  scripts/run_nl_alpha_shift.sh                      # RL, natural language
 ```

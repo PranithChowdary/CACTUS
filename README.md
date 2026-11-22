@@ -35,7 +35,7 @@ env/          Gymnasium environment (MDP, action masking) + config
 models/       MaskablePPO agent and the baseline agents
 experiments/  train_ppo.py, evaluate_all.py, evaluate_llm_baseline.py
 scripts/      SLURM job scripts + login-node setup + offline re-analysis
-paper/        main.tex, references.bib, figure-generation script
+paper/        termination_draft.tex, references.bib, make_fig1.py
 results/      Aggregated metrics, per-example raw records, significance tests
 datasets/     train/val/test splits and tool vocabulary
 ```
@@ -80,7 +80,7 @@ extension of this work:
 ## Building the paper
 
 ```bash
-cd paper && pdflatex main.tex && bibtex main && pdflatex main.tex && pdflatex main.tex
+cd paper && pdflatex termination_draft && bibtex termination_draft && pdflatex termination_draft && pdflatex termination_draft
 ```
 
 ## Known limitations

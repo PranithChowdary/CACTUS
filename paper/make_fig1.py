@@ -35,11 +35,17 @@ plt.rcParams.update({
 })
 
 # ---------------------------------------------------------------- panel A data
-LLMS = [("LLaMA-3.2-1B", "llama-3.2-1b"), ("LLaMA-3.1-8B", "llama-3.1-8b"),
-        ("LLaMA-3.1-70B", "llama-3.1-70b"), ("Qwen2.5-7B", "qwen2.5-7b")]
+# The Qwen base checkpoint comes from the controlled base-vs-instruct job and so
+# lives under a different filename prefix; placing it immediately left of the
+# instruct bar makes the within-family intervention readable off the figure.
+LLMS = [("LLaMA-3.2-1B",       "llm_probe_bank61_llama-3.2-1b.json"),
+        ("LLaMA-3.1-8B",       "llm_probe_bank61_llama-3.1-8b.json"),
+        ("LLaMA-3.1-70B",      "llm_probe_bank61_llama-3.1-70b.json"),
+        ("Qwen2.5-7B base",    "llm_probe_basevsinst_qwen2.5-7b-base.json"),
+        ("Qwen2.5-7B instruct","llm_probe_bank61_qwen2.5-7b.json")]
 recall, stop, pdc = [], [], []
-for _, tag in LLMS:
-    d = json.load(open(f"{R}/llm_probe_bank61_{tag}.json"))
+for _, fname in LLMS:
+    d = json.load(open(f"{R}/{fname}"))
     a0 = next(r for r in d if r["scoring"] == "sum" and r["alpha"] == 0.0)
     eps = a0["episodes"]
     recall.append(sum(1 for e in eps
@@ -63,8 +69,8 @@ p_stop = [agg(k, "done_rate") for k in keys]
 # sit ABOVE the bars in a single row (both panels have bars reaching 1.0, so an
 # in-plot legend overlapped data), and the P(stop|complete) row gets its own
 # margin below the tick labels.
-fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.2, 3.7),
-                               gridspec_kw={"width_ratios": [1.05, 1]})
+fig, (axA, axB) = plt.subplots(1, 2, figsize=(7.6, 3.7),
+                               gridspec_kw={"width_ratios": [1.3, 1]})
 
 def style(ax):
     ax.set_ylim(0, 1.30); ax.set_yticks([0, .25, .5, .75, 1.0])
@@ -82,7 +88,7 @@ for i, v in enumerate(stop):                       # label the decisive series o
              va="bottom", fontsize=7.2, color=INK)
 axA.set_xticks(x)
 axA.set_xticklabels(["LLaMA-3.2\n1B", "LLaMA-3.1\n8B", "LLaMA-3.1\n70B",
-                     "Qwen2.5\n7B"], fontsize=7.2)
+                     "Qwen2.5-7B\nbase", "Qwen2.5-7B\ninstruct"], fontsize=7.2)
 axA.set_ylabel("fraction of scenarios"); style(axA)
 axA.set_title("a  Language models: relevance without termination",
               loc="left", color=INK, pad=16)
@@ -94,6 +100,29 @@ for i, p_ in enumerate(pdc):                       # decisive metric, own row
                  ha="center", fontsize=6.9, color=INK2, annotation_clip=False)
 # Row label omitted deliberately: at 6.9pt it needs ~75pt of left margin and was
 # clipped by the figure edge. The caption names the quantity instead.
+
+# Mark the controlled pair. Without this the figure shows five bars and a reader
+# cannot tell that the last two differ ONLY in post-training while the first
+# three are a scale sweep -- which is the entire point of including the base
+# checkpoint. Bracket sits below the P(DONE|complete) row.
+_lo, _hi = x[-2], x[-1]
+axA.annotate("", xy=(_lo, -0.265), xytext=(_hi, -0.265),
+             xycoords=("data", "axes fraction"),
+             textcoords=("data", "axes fraction"), annotation_clip=False,
+             arrowprops=dict(arrowstyle="-", color=INK2, lw=0.7,
+                             shrinkA=0, shrinkB=0))
+for _e in (_lo, _hi):
+    axA.annotate("", xy=(_e, -0.265), xytext=(_e, -0.245),
+                 xycoords=("data", "axes fraction"),
+                 textcoords=("data", "axes fraction"), annotation_clip=False,
+                 arrowprops=dict(arrowstyle="-", color=INK2, lw=0.7,
+                                 shrinkA=0, shrinkB=0))
+# One label only: the tick labels already identify the LLaMA sweep, and a
+# second annotation beside this one collided with it at 6.6pt.
+axA.annotate("controlled: differs only in post-training",
+             xy=((_lo + _hi) / 2, -0.30), xycoords=("data", "axes fraction"),
+             ha="center", va="top", fontsize=6.6, color=INK2,
+             annotation_clip=False)
 
 # --- B: masked PPO ----------------------------------------------------------
 xb = np.arange(len(keys)); wb = 0.26

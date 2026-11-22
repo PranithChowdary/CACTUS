@@ -41,6 +41,15 @@ logs/ppo_tensorboard/
 !logs/bank61_70b_65133.err
 !logs/bank61_70b_topup_65215.out
 !logs/bank61_70b_topup_65215.err
+!logs/nativestop_67879.out
+!logs/nativestop_67879.err
+!logs/basevsinst_67978.out
+!logs/basevsinst_67978.err
+# 67880 is a FAILED run and is tracked deliberately: the paper's protocol
+# section cites its batch-invariance residual of 1.35e-01 on cn3_anandi as the
+# reason the experiment is pinned to mangala. The claim needs its evidence.
+!logs/basevsinst_67880.out
+!logs/basevsinst_67880.err
 
 # SLURM writes to the directory you submit FROM, so submitting inside scripts/
 # produces a second copy of every log. Same filenames as logs/, no extra
@@ -61,3 +70,4 @@ paper/*.pdf
 
 # Overleaf upload package (build artifact; regenerate any time)
 termination_paper_overleaf.zip
+paper/*.zip

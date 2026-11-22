@@ -40,13 +40,14 @@ are widely observed to call more tools than a task requires. We show that this i
 not a failure of tool relevance but a separable failure of \emph{termination}.
 Using a controllable natural-language benchmark of 61 tool-selection scenarios, in
 which a tunable fraction $\alpha$ of tasks require executing a tool before the
-correct next action is determined, we evaluate four instruction-tuned models under
+correct next action is determined, we evaluate five checkpoints under
 constrained decoding --- scoring every legal action, which makes the model a policy
 over the same discrete action set as a reinforcement-learning agent.
 LLaMA-3.1-8B and 70B attain \emph{perfect} tool recall, the gold set appearing
 within their first five selections in all 61 scenarios, yet place only 0.2\% and
 1.1\% of their probability mass on the stop action at the moment the task is
 complete, and stop in at most 5 of 61 scenarios; termination improves nowhere
+<<<<<<< HEAD
 along a $70\times$ parameter sweep. Scoring each model's own end-of-turn token
 at the same decision points rules out the obvious explanation that stopping is
 simply expressed through a channel our action set omits: that token carries
@@ -56,6 +57,19 @@ weak but almost uninformative about completion --- against $2.93\times$ for
 Qwen2.5-7B. Qwen2.5-7B, at one tenth the parameters of the
 70B model, stops in 60 of 61 scenarios with 57.5\% of its mass on stopping, so
 termination tracks post-training rather than scale. On the identical task a small
+=======
+along a $70\times$ parameter sweep. Scoring the \emph{native} end-of-turn token of
+LLaMA-3.1-8B and Qwen2.5-7B alongside the stop action rules out the interface
+explanation --- for both, that channel carries six to ten orders of magnitude
+less mass than the stop action itself --- and shows LLaMA's stop probability to be
+statistically \emph{independent} of task completion, elevated only $1.06\times$ at
+the completing step against $2.93\times$ for Qwen. A controlled
+within-family intervention then isolates the cause: Qwen2.5-7B base stops in 0 of
+61 scenarios and its instruction-tuned checkpoint in 60 of 61, a $75\times$ change
+in stop mass with pretraining corpus, tokenizer and architecture held fixed, while
+tool recall moves only from 0.967 to 0.951. Termination tracks post-training
+rather than scale. On the identical task a small
+>>>>>>> 6d553f0 (fin runs)
 masked-PPO policy terminates in at least 92.5\% of episodes across 20 agents and 5
 seeds, and gathers conditionally, probing on 2.7\% of tasks where probing is
 wasteful against 98.9\% where it is required. We additionally report a
@@ -63,7 +77,10 @@ pre-registered hypothesis that we tested and \emph{refuted} --- agents trained
 where gathering is almost always necessary do not learn to always gather
 ($\Delta = +0.018$ under an out-of-distribution control) --- and bound the regime
 in which sequential policies beat the analytic memoryless ceiling to
-$\alpha \gtrsim 0.7$.
+$\alpha \gtrsim 0.7$. We report that every termination finding here is specific to
+summed log-probability scoring: under domain-conditional PMI no model terminates
+at all and the $75\times$ separation vanishes, which we treat as a methodological
+result rather than a caveat.
 \end{abstract}
 
 \noindent\textbf{Keywords:} tool-augmented language models; termination; LLM
@@ -103,7 +120,7 @@ consistent with the stop action never being a plausible continuation of the prom
 at all. Scoring the candidate continuations separates these --- the stop action
 ranked 31st of roughly 35 candidates with a 13.5-nat gap to the best tool, meaning
 it held on the order of $10^{-6}$ of the best tool's mass. It was not losing a
-close decision; it was absent from the distribution. We therefore evaluate under
+close decision; it was effectively absent from the distribution. We therefore evaluate under
 \emph{constrained decoding}: at each step the model scores every legal action and
 the arg\-max is taken. This makes the language model a policy over exactly the
 same masked, discrete action set as a reinforcement-learning agent, so a
@@ -128,8 +145,18 @@ comparison between them is a comparison of policies rather than of interfaces.
 
   \item The dissociation result: perfect tool recall with essentially zero
   termination at 8B and 70B, and a same-family sweep from 1B to 70B showing that
-  scale installs termination nowhere along it, while a different post-training
-  recipe does (Section~\ref{sec:dissociation}).
+  scale installs termination nowhere along it (Section~\ref{sec:dissociation}).
+  We rule out the interface explanation on the two competent instruct
+  checkpoints by scoring their native end-of-turn token as a competing stop
+  candidate, and in doing so sharpen the claim: LLaMA's stop probability is not
+  merely low but independent of whether the task is complete
+  (Section~\ref{sec:elevation}).
+
+  \item A controlled test of the post-training attribution: base versus instruct
+  within one family, which holds corpus, tokenizer and architecture fixed and
+  changes $P(\done \mid \text{gold complete})$ by $75\times$ while leaving tool
+  recall unmoved (Section~\ref{sec:basevsinst}). This converts our second claim
+  from a cross-family correlation into an intervention.
 
   \item The contrast on the \emph{identical} task: a small masked-PPO policy
   acquires both capabilities, establishing that termination is cheap to install
@@ -157,7 +184,7 @@ comparison between them is a comparison of policies rather than of interfaces.
 \centering
 \includegraphics[width=0.78\textwidth]{figures/fig1_dissociation.pdf}
 \caption{\textbf{Tool relevance and termination dissociate, and a small RL policy
-has both.} \textbf{(a)} Four instruction-tuned models on the benchmark. Blue:
+has both.} \textbf{(a)} Five checkpoints on the benchmark. Blue:
 tool recall@5, the fraction of scenarios in which the whole gold tool set appears
 within the model's first five selections. Orange: stop rate, the fraction of
 episodes ended by choosing the stop action. LLaMA-3.1-8B and 70B identify the
@@ -165,8 +192,12 @@ required tools in every scenario (recall@5 $=1.000$) and stop in at most five of
 sixty-one. The row of values beneath each pair of bars is
 $P(\done \mid \text{gold complete})$, the probability mass on stopping at the
 step where the task is already served: $0.0020$ at 8B and $0.0107$ at 70B,
-against $0.5753$ for Qwen2.5-7B at one tenth the parameters --- so termination
-tracks post-training, not capacity. Decoding is arg\-max over the legal action
+flat across a $70\times$ parameter increase. The two rightmost bars are the
+controlled comparison --- Qwen2.5-7B base against its instruction-tuned
+checkpoint, which share corpus, tokenizer and architecture --- and they move
+recall@5 from $0.967$ to $0.951$ while moving the stop rate from $0/61$ to
+$60/61$ and $P(\done \mid \text{gold complete})$ from $0.0076$ to $0.5753$.
+Termination tracks post-training, not capacity. Decoding is arg\-max over the legal action
 set and the scenarios are deterministic, with one episode per scenario, so these
 are exact counts over all 61 scenarios rather than estimates and no error bars
 apply. \textbf{(b)} Masked PPO
@@ -237,8 +268,8 @@ tool-agent-user benchmarks that evaluate irrelevance detection or unnecessary
 calls. We deliberately do not assert that existing suites ignore termination: we
 were unable to verify the scope of several of them against primary sources in
 preparing this draft, and the abstracts we did check do not state whether
-termination is scored. The claim we make is about the four models we measured
-under our protocol, not about a gap in the literature.
+termination is scored. The claim we make is about the five checkpoints we
+measured under our protocol, not about a gap in the literature.
 
 % =====================================================================
 \section{Problem Formulation}
@@ -260,8 +291,8 @@ bit $c \sim \mathrm{Bernoulli}(1/2)$ is drawn independently of everything the ag
 observes, the gold set is $\{p_s, b_s^c\}$, and executing $p_s$ returns a sentence
 revealing $c$. On a static instance the gold set is $g_s$, which excludes the probe
 --- so calling the probe there is a wrong tool \emph{and} a wasted step. The
-performance measure is sequence exact match (\sem): the selected set equals the
-gold set.
+performance measure is set exact match (\sem): the selected set equals the
+gold set, order disregarded.
 
 Two design requirements make the formulation informative, and each one corrects a
 flaw we found in an earlier version of our own benchmark. First, the probe must
@@ -365,11 +396,27 @@ scenario-level generalisation; see Section~\ref{sec:limitations}.
 % =====================================================================
 
 \paragraph{Models.}
-We evaluate four open-weight instruction-tuned models: LLaMA-3.2-1B-Instruct,
+We evaluate five open-weight checkpoints: LLaMA-3.2-1B-Instruct,
 LLaMA-3.1-8B-Instruct and LLaMA-3.1-70B-Instruct \citep{grattafiori2024llama3},
-and Qwen2.5-7B-Instruct \citep{qwen2024qwen25}. The first three give a
-$70\times$ scale sweep within one family and one post-training recipe; the fourth
-holds scale roughly fixed against LLaMA-3.1-8B and changes the recipe.
+and Qwen2.5-7B together with Qwen2.5-7B-Instruct \citep{qwen2024qwen25}. The
+three LLaMA models give a $70\times$ scale sweep within one family and one
+post-training recipe. Qwen2.5-7B-Instruct holds scale roughly fixed against
+LLaMA-3.1-8B and changes the recipe, and the Qwen base checkpoint turns that
+cross-family comparison into a within-family intervention, since base and instruct
+share corpus, tokenizer and architecture and differ only in post-training
+(Section~\ref{sec:basevsinst}). Base and instruct checkpoints are treated
+identically by our protocol, which applies each tokenizer's own chat template to
+the prompt. For the instruct checkpoints this is the format they were trained on.
+For the base checkpoint it is not, and we flag this as a residual confound rather
+than claiming the comparison is clean of prompt formatting
+(Section~\ref{sec:limitations}).
+
+A base model has no instruction-following prior to lean on, so we ran the
+per-model scoring verification below on it before trusting any of its numbers; it
+passed all six critical checks. We note this because the same verification
+\emph{failed} for these models on a second node type in our cluster, at a
+batch-invariance residual of $1.4\times10^{-1}$ against exactly $0$ on the node we
+report, and we discarded that run rather than loosening the tolerance.
 
 \paragraph{Constrained decoding.}
 At each step we score every legal action $a$ by the summed log-probability of its
@@ -378,8 +425,8 @@ so a step is one batched forward pass. We verify the scoring mathematics
 \emph{per model} before trusting it --- batch invariance, agreement with an
 independent token-by-token recomputation, validity of the log-probabilities, and a
 sanity ranking --- because chat templates and tokenisation differ by family and a
-silent mismatch would corrupt every score while appearing to work. All four models
-passed all checks.
+silent mismatch would corrupt every score while appearing to work. All five
+checkpoints passed all six critical checks, the base model included.
 
 \paragraph{Scoring rule.}
 Because the stop action is a short, frequent string, the scoring rule is a
@@ -397,7 +444,7 @@ against 0.492 on Qwen2.5-7B. We record that we initially argued for PMI on
 principled grounds and were wrong.
 
 \paragraph{Metrics.}
-\sem{} is exact set match. SEM@$k$ asks whether the first $k=|g|$ non-stop
+\sem{} is set exact match. SEM@$k$ asks whether the first $k=|g|$ non-stop
 selections equal the gold set, which measures ranking independently of whether the
 model ever stops. Recall@5 asks whether the gold set appears anywhere in the first
 five selections, separating ``does not know the tools'' from ``does not rank them
@@ -420,7 +467,11 @@ multiple of $1/61$.
 \section{Results}
 % =====================================================================
 
-We organise results around five questions.
+We organise results around five questions, with two further subsections that
+defend the first answer against the objections most likely to dissolve it ---
+whether the missing stop action is an artifact of our action set
+(Section~\ref{sec:elevation}), and whether the post-training attribution survives
+a controlled design (Section~\ref{sec:basevsinst}).
 
 \subsection{RQ1: Is over-calling a relevance failure or a termination failure?}
 \label{sec:dissociation}
@@ -467,6 +518,74 @@ the same four tools (\texttt{TripTool}, \texttt{WeatherTool}, \texttt{NewsTool},
 \texttt{HotelTool}) for essentially every query regardless of domain, so its
 termination behaviour is uninformative.
 
+\subsection{Is the missing stop action an interface artifact?}
+\label{sec:elevation}
+
+\begin{table}[t]
+\centering
+\caption{\textbf{The dissociation is not an interface artifact, and LLaMA's stop
+signal is independent of completion.} Each model's native end-of-turn token scored
+as an additional stop candidate at every step, $\alpha=0$. Elevation is
+$P(\done\mid c)\,/\,P(\done\mid \neg c)$; an unconditional prior on the stop
+string predicts $1.0\times$. The native channel carries six to ten orders of
+magnitude \emph{less} mass than \textsc{done} for both models, so neither
+expresses completion through the channel it was trained on.}
+\label{tab:elevation}
+\begin{tabular}{lcccccc}
+\toprule
+Model & Steps & Compl.\ states & $P(\done\mid c)$ & $P(\done\mid \neg c)$ & Elevation & $P(\text{native}\mid c)$ \\
+\midrule
+LLaMA-3.1-8B & 305 & 58 & 0.00200 & 0.00188 & $1.06\times$ & $2.4\times10^{-9}$ \\
+Qwen2.5-7B   & 226 & 40 & 0.5753  & 0.1966  & $\mathbf{2.93\times}$ & $9.8\times10^{-11}$ \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The result above is open to an objection that would dissolve it. We score a
+literal \textsc{done} string against tool names, but no instruction-tuned model
+was post-trained to end a tool-use episode that way: these models end turns by
+emitting natural-language text followed by a native end-of-turn token. Low mass on
+\textsc{done} is therefore consistent with two incompatible readings --- the model
+cannot recognise completion, or it recognises completion and expresses it through
+a channel our action set omits. Our free-generation pilot does not settle this,
+because it prompted for the same \textsc{done} string.
+
+We settle it for the two competent instruct checkpoints --- LLaMA-3.1-8B and
+Qwen2.5-7B, the pair on which the cross-family contrast rests --- by scoring each
+one's native end-of-turn token as an additional stop candidate at every step.
+Table~\ref{tab:elevation} reports the outcome, and it is not close: the native channel carries $2.4\times10^{-9}$ (LLaMA-3.1-8B) and
+$9.8\times10^{-11}$ (Qwen2.5-7B) of the mass at completion, roughly six and ten orders
+of magnitude \emph{below} the \textsc{done} string in the same forward pass.
+Neither model signals completion natively either. The dissociation is a property
+of the models under a uniform action set, not an artifact of the action set.
+
+The same measurement sharpens the central claim in a way we did not anticipate.
+Logging $P(\done)$ at every step rather than only at the completing step yields an
+\emph{elevation ratio}: the mass on stopping when the gold set is complete divided
+by the mass on stopping before it is. A model that recognises completion raises
+its stop probability at the completing step; a model with a high unconditional
+prior on a short, frequent string scores it alike everywhere, and an elevation of
+$1.0\times$ is what that prior predicts.
+
+LLaMA-3.1-8B gives $0.00200$ at completion against $0.00188$ before it: an
+elevation of $1.06\times$. Its stop signal is not so much weak as
+\emph{statistically independent of task state}. The model's propensity to stop
+carries essentially no information about whether the task is finished, which is a
+stronger and more specific statement than a low probability alone supports, and it
+is the form in which we now state our main result.
+
+Qwen2.5-7B gives $0.5753$ against $0.1966$, an elevation of $2.93\times$. This
+corrects a caution we had raised against our own finding. Qwen's mean stop rank of
+$2.1$ is averaged over all steps, which is equally consistent with a model that
+ranks a short frequent string second everywhere and stops once the better-scoring
+tools have been masked out --- surface-form competition rather than
+completion-awareness \citep{holtzman2021surface}. The elevation measurement
+separates the two hypotheses, and Qwen's $2.93\times$ is incompatible with a pure
+prior: its stopping is genuinely conditioned on task state. The prior is
+nevertheless a real component of its behaviour, since $0.1966$ of its mass sits on
+stopping \emph{before} the task is complete, and that is the mechanism behind the
+late stopping we report next.
+
 \subsection{RQ2: Does termination emerge with scale?}
 
 No. Within the LLaMA family, $P(\done \mid \text{gold complete})$ is $0.0020$ at
@@ -478,8 +597,10 @@ That sequence is non-monotonic, and the 1B figure is uninterpretable in any case
 because the model is not competent at the task. What is robust is the gap between
 families: across all three LLaMA models the stop action sits roughly 22 to 30
 places down a list of about 35 candidates, whereas Qwen2.5-7B places it at 2.1 and
-holds 57.5\% of its mass there. The determining factor is the post-training
-recipe, not capacity.
+holds 57.5\% of its mass there. The natural reading is that the post-training
+recipe rather than capacity is the determining factor, but on this evidence alone
+it is an inference from a single confounded pair; Section~\ref{sec:basevsinst}
+tests it under a controlled design.
 
 We flag that the earlier 12-scenario version of this evaluation produced ranks of
 28.6, 28.5 and 21.9, which read as a clean monotone improvement with scale. That
@@ -492,12 +613,23 @@ more useful finding than a clean success: of 61 scenarios it stops at exactly th
 right point in 24, too late in 34, and never in 1, against a gold cardinality of 2.
 Even a model that can stop over-gathers in 56\% of scenarios.
 
+<<<<<<< HEAD
 One reading of Qwen's behaviour has to be excluded before it can be called
 completion-awareness. Its mean rank for the stop action is $2.1$ \emph{averaged
 over all steps}, not only over completing ones, which is equally consistent with a
 high unconditional prior on a short, frequent string that wins once the
 better-scoring tools have been masked out. Section~\ref{sec:elevation} measures
 this directly and rules it out.
+=======
+The late stopping has a mechanism, and Section~\ref{sec:elevation} identifies it.
+Qwen places $0.1966$ of its mass on stopping \emph{before} the gold set is
+complete --- a substantial unconditional component that the elevation measurement
+isolates from the $2.93\times$ rise at completion. Its stopping is genuinely
+conditioned on task state, but it sits on top of a large state-independent prior,
+and that prior is what produces a stop later than the completing step. Our logs
+record whether a stop was early, exact or late, not by how many steps, so we do
+not quantify the lag.
+>>>>>>> 6d553f0 (fin runs)
 
 A second observation guards against a misreading of Table~\ref{tab:llm}: the 70B
 model's SEM@$k$ of 0.541 is \emph{lower} than the 8B model's 0.951, which looks
@@ -509,6 +641,7 @@ coverage by cutoff is 0.541 at $m{=}2$, 0.803 at $m{=}3$, and 1.000 at $m{=}5$: 
 less peaked policy, not a less knowledgeable one. SEM@$k$ alone understates it,
 which is why we report recall@5 alongside.
 
+<<<<<<< HEAD
 \subsection{Is the stop signal sensitive to completion, and is it an artifact of
 the action set?}
 \label{sec:elevation}
@@ -540,10 +673,38 @@ Model & $P(\done\mid$cmpl$)$ & $P(\done\mid$before$)$ & elevation & $P($native$\
 \midrule
 LLaMA-3.1-8B & 0.00200 & 0.00188 & $\mathbf{1.06\times}$ & $2.4 \times 10^{-9}$ \\
 Qwen2.5-7B   & 0.57531 & 0.19660 & $\mathbf{2.93\times}$ & $9.8 \times 10^{-11}$ \\
+=======
+\subsection{A controlled test of the post-training attribution}
+\label{sec:basevsinst}
+
+\begin{table}[t]
+\centering
+\caption{\textbf{Instruction tuning installs termination while leaving relevance
+unchanged.} All three checkpoints measured in a single job on identical hardware
+with one code path, summed scoring, 61 scenarios, one episode each. Base versus
+instruct within the Qwen family holds pretraining corpus, tokenizer and
+architecture fixed and changes only the post-training recipe. \sem{} is set exact
+match: the base model scores $0.000$ despite near-saturated recall because it
+never terminates and so never returns an answer. Recall@5 and \sem{} are measured
+at $\alpha=0$; the probe-first rate is defined only at $\alpha=1$.}
+\label{tab:basevsinst}
+\begin{tabular}{lcccccc}
+\toprule
+Checkpoint & $\alpha$ & Recall@5 & Stops & $\done$ rank (of ${\sim}35$) & $P(\done\mid c)$ & \sem{} \\
+\midrule
+LLaMA-3.1-8B-Instruct & 0 & 1.000 & 0/61 & 30.1 & 0.0020 & 0.000 \\
+Qwen2.5-7B (base)     & 0 & 0.967 & 0/61 & 10.1 & 0.0076 & 0.000 \\
+Qwen2.5-7B-Instruct   & 0 & 0.951 & \textbf{60/61} & \textbf{2.1} & \textbf{0.5753} & \textbf{0.377} \\
+\midrule
+LLaMA-3.1-8B-Instruct & 1 & --- & 0/61 & 33.6 & 0.0001 & 0.000 \\
+Qwen2.5-7B (base)     & 1 & --- & 0/61 & 13.4 & 0.0174 & 0.000 \\
+Qwen2.5-7B-Instruct   & 1 & --- & \textbf{54/61} & \textbf{2.3} & \textbf{0.5782} & \textbf{0.098} \\
+>>>>>>> 6d553f0 (fin runs)
 \bottomrule
 \end{tabular}
 \end{table}
 
+<<<<<<< HEAD
 Three things follow. First, the native end-of-turn token carries between
 $10^{-9}$ and $10^{-11}$ of the mass --- nine to eleven orders of magnitude below
 \textsc{done} --- for both models. There is no competing native stop channel
@@ -566,6 +727,45 @@ completion-sensitivity on top of it. Both are true, which also explains the
 pattern in Section~\ref{sec:dissociation} --- a model that stops in 60 of 61
 scenarios but too late in 34 of them is one whose stop signal points in the right
 direction without being sharp enough to fire at the right step.
+=======
+The attribution above rests on one cross-family pair, and that pair is confounded.
+LLaMA-3.1-8B and Qwen2.5-7B differ in pretraining corpus, tokenizer, architecture,
+chat template and post-training recipe simultaneously, so assigning the difference
+to post-training is an inference from a single contrast rather than a controlled
+result. Base versus instruct \emph{within} one family changes the recipe and holds
+the rest fixed, which is the controlled form of the same comparison.
+
+Table~\ref{tab:basevsinst} reports it. Qwen2.5-7B base stops in $0/61$ scenarios
+and places $0.0076$ of its mass on stopping at completion, against $60/61$ and
+$0.5753$ for the instruct checkpoint of the same model --- a $75\times$ difference
+in $P(\done \mid c)$ with pretraining data, tokenizer and architecture held fixed.
+At $\alpha=1$ the comparison gives $0.0174$ against $0.5782$, a factor of $33$.
+Instruction tuning installs termination on this task.
+
+Relevance, over the same intervention, barely moves and moves \emph{downward}:
+recall@5 goes from $0.967$ to $0.951$ and the probe-first rate from $0.754$ to
+$0.721$. The dissociation this paper is about is therefore visible as an
+intervention and not only as a correlation across checkpoints --- a single change
+to the training pipeline moves termination by nearly two orders of magnitude while
+leaving the ability to identify the right tools where it was.
+
+The base model also makes the dependency between the two capabilities concrete. It
+attains recall@5 of $0.967$, so it does identify the required tools, and scores
+$0.000$ set exact match, because it never stops and therefore never returns an
+answer at all. On this task termination is not an auxiliary competence that
+improves a score; it gates the score entirely.
+
+One cell of the design is missing, and it bounds what we can claim.
+LLaMA-3.1-8B base is gated on a per-account basis and our access request was not
+granted within the period of this study; the offline cache available to us holds
+instruct checkpoints only. This is more than a missing replicate. LLaMA-3.1-8B-%
+Instruct sits at $0.0020$, \emph{below} Qwen base at $0.0076$, so two readings
+survive: LLaMA's post-training failed to install termination, or it actively
+suppressed it. Only the base checkpoint distinguishes them. We therefore claim
+that instruction tuning installs termination in Qwen2.5-7B and that LLaMA-3.1's
+recipe does not produce it --- not that post-training is the operative mechanism
+in every family.
+>>>>>>> 6d553f0 (fin runs)
 
 \subsection{The scorer is load-bearing for one of our two claims}
 \label{sec:scorer}
@@ -585,6 +785,20 @@ disappears under PMI. We chose the primary rule on ranking evidence
 (Section~\ref{sec:protocol}), which we regard as the right basis, but a reader who
 prefers PMI on principled grounds would see no model terminate and should treat
 the post-training claim as scorer-dependent.
+
+The controlled comparison of Section~\ref{sec:basevsinst} does not rescue the
+claim from this dependence, and we report that plainly. Under PMI the mean rank of
+the stop action is $35.0$ for Qwen2.5-7B base and $35.5$ for Qwen2.5-7B-Instruct,
+both last of roughly 35 candidates and in the \emph{wrong} order by half a place.
+The $75\times$ separation that summed scoring exposes is not merely reduced under
+PMI; it is absent. A scoring rule adopted on principled grounds --- and PMI does
+measurably reduce length bias: on the Qwen base checkpoint our per-model
+verification records the length--score correlation falling from $r=-0.590$ under
+summed scoring to $r=-0.348$ under PMI over 32 equally irrelevant candidate tools
+--- can therefore delete the phenomenon under study. We take this as a methodological result in its own right rather than
+a caveat to be buried: termination findings are not scorer-invariant, and a paper
+reporting one rule only cannot distinguish a property of the model from a property
+of its own measurement.
 
 \subsection{RQ3: Is termination learnable on this task at all?}
 \label{sec:rl}
@@ -766,15 +980,25 @@ adding retrieval over the catalogue. In our models the relevance pathway is alre
 saturated, and interventions aimed at it cannot help.
 
 \emph{Do not wait for scale.} Termination did not improve across a $70\times$
-parameter increase within one model family, while a different post-training recipe
-at one tenth the size installed it. If an agent cannot stop, a larger model from
-the same family is unlikely to fix it.
+parameter increase within one model family, while changing the post-training
+recipe at one tenth the size installed it --- and the controlled form of that
+comparison, base against instruct within the Qwen family, moves the stop rate from
+$0/61$ to $60/61$ (Section~\ref{sec:basevsinst}). If an agent cannot stop, a
+larger model from the same family is unlikely to fix it; a differently
+post-trained one of the same size may.
 
-\emph{Impose the stop action rather than hoping for it.} Under free generation the
-stop token was absent from the distribution, not merely disfavoured. Constrained
-decoding over an explicit legal-action set --- the same mechanism that makes the
-comparison in this paper possible --- is also a practical remedy, since it forces
-the stop action to compete on a calibrated footing.
+\emph{Do not expect constrained decoding to fix it.} It is tempting to read our
+protocol as a remedy: put the stop action in an explicit legal-action set and let
+it compete on a calibrated footing. Our own results refute that reading.
+LLaMA-3.1-8B stops in $0/61$ scenarios \emph{under exactly this protocol}, and its
+native end-of-turn token fares no better (Section~\ref{sec:elevation}), so making
+the stop action available and cheap to select does not make a model select it.
+Constrained decoding is what makes termination measurable here; it is not what
+makes it happen. A deployed agent whose base model lacks the capability needs a
+stop criterion that does not depend on the model's own judgement --- a step
+budget, or a separate completion check over the gathered evidence --- or a model
+whose post-training installed termination, which Section~\ref{sec:basevsinst}
+shows is an achievable intervention rather than an emergent property of scale.
 
 % =====================================================================
 \section{Limitations}
@@ -788,11 +1012,11 @@ collected and the tool catalogue is fixed and small. Whether the dissociation
 holds on a deployed agent trace is untested and is the single most important
 extension. We expect the direction to hold and the magnitudes to change.
 
-\emph{Four models, one scale axis.} The scale sweep is within the LLaMA-3 family;
-the cross-family comparison rests on a single alternative (Qwen2.5-7B). The claim
-that termination tracks post-training rather than capacity is therefore supported
-by one contrast, not a systematic sweep over recipes. Mistral-7B was intended as a
-third family but its weights were unavailable in our offline environment.
+\emph{Five checkpoints, one scale axis.} The scale sweep is within the LLaMA-3
+family and spans $70\times$ in parameters; the post-training axis is a single
+base-versus-instruct pair within the Qwen family (Section~\ref{sec:basevsinst}).
+Neither axis is a systematic sweep, and the two are not crossed: we have no base
+checkpoint at 70B and no scale sweep within Qwen.
 
 \emph{Sample size.} At $\alpha=0$ the effective $n$ is the number of scenarios.
 Both the language-model and reinforcement-learning results use the same
@@ -808,10 +1032,15 @@ catalogue, not to transfer to unseen tools.
 
 \emph{The RL agent is not a language model.} It receives sentence embeddings, not
 tokens, and is trained directly on this task's reward. It establishes that
-termination is learnable here; it does not show that an \emph{LLM} could be
-post-trained to acquire it, which would require the fine-tuning experiment we did
-not run.
+termination is learnable here; it does not show that an \emph{LLM} acquires it
+from any particular training signal. Section~\ref{sec:basevsinst} supplies
+observational evidence that instruction tuning does install it in one family, but
+that is a comparison of released checkpoints whose recipes we did not control and
+cannot inspect. The controlled version --- fine-tuning one base model under
+objectives we specify --- is the experiment that would identify the mechanism, and
+we did not run it.
 
+<<<<<<< HEAD
 \emph{The interface objection is narrowed but not closed.} We score a literal
 \textsc{done} string, and these models were not post-trained to end a tool-use
 episode that way. Section~\ref{sec:elevation} removes the strongest form of the
@@ -840,6 +1069,58 @@ result, and it is the weakest claim in this paper. The controlled comparison ---
 base versus instruct checkpoints within each family --- is inexpensive at this
 scale; it is implemented and was running at the time of writing, and we will
 report it rather than leave the inference standing on one pair.
+=======
+\emph{The stop action is not an interface artifact, but the action set is still
+not the training condition.} We score a literal \textsc{done} string against the
+tool names, and the instruction-tuned models were not post-trained to end an
+episode that way. Section~\ref{sec:elevation} tests the resulting objection
+directly, for the two checkpoints the contrast rests on, by scoring their native
+end-of-turn token alongside \textsc{done} at every step, and the objection does
+not survive: the native
+channel carries $2.4\times10^{-9}$ and $9.8\times10^{-11}$ of the mass at
+completion, orders of magnitude below \textsc{done} itself. Neither model
+expresses completion through the channel it was trained on. What remains is a
+weaker but real caveat: our models choose among a masked set of legal actions
+rather than generating freely, which is the condition that makes them comparable
+to each other and to the learned agent but is not the condition under which they
+were deployed. A model whose completion-awareness is expressed only through
+natural-language text --- ``I have what I need'' with no distinguished token ---
+would still be invisible to us. We regard this as unlikely given that the
+end-of-turn token is the trained terminator and carries almost no mass, but it is
+not excluded. We also ran this probe on two of five checkpoints rather than all
+five; the 1B model is not competent enough for the measurement to mean anything
+and the 70B run was not worth its allocation once the 8B result was unambiguous,
+but we have not verified that the 70B model behaves like the 8B one here.
+
+\emph{The base checkpoint is evaluated under a chat template it was not trained
+with.} Our protocol applies each tokenizer's own chat template uniformly, which
+is the correct choice for the instruct models and a questionable one for
+Qwen2.5-7B base: it wraps the prompt in a conversational format the base model saw
+little of in pretraining. A sceptic can therefore argue that part of the
+$75\times$ gap in Section~\ref{sec:basevsinst} reflects prompt formatting rather
+than post-training. Two observations bound how much work that objection can do.
+The base model attains recall@5 of $0.967$ under the same formatting, within two
+scenarios of the instruct checkpoint, so the template plainly does not prevent it
+from reading the query and ranking tools competently; and its stop action ranks
+$10.1$ of roughly 35, far better than any LLaMA checkpoint, so the \textsc{done}
+string is not being pushed out of consideration wholesale. What we cannot exclude
+is a formatting effect specific to the stop token. Re-running the base checkpoint
+with the raw prompt and no template would settle it, costs about $0.3$ GPU-hours,
+and is the single cheapest strengthening of this result.
+
+\emph{The post-training claim is controlled in one family and open in the other.}
+Section~\ref{sec:basevsinst} replaces the original confounded cross-family
+contrast with a within-family intervention: Qwen2.5-7B base versus instruct moves
+$P(\done\mid c)$ by $75\times$ with corpus, tokenizer and architecture fixed. The
+matching LLaMA cell is missing, because LLaMA-3.1-8B base is gated per account and
+our request was not granted in time. That gap is consequential rather than
+cosmetic: LLaMA-3.1-8B-Instruct ($0.0020$) sits below Qwen base ($0.0076$), so we
+cannot distinguish a recipe that \emph{failed to install} termination from one that
+\emph{suppressed} it. We also have one family, not a sweep over recipes;
+Mistral-7B was intended as a third and its weights were unavailable offline. The
+claim we defend is that instruction tuning installs termination in Qwen2.5-7B and
+that LLaMA-3.1's recipe does not produce it.
+>>>>>>> 6d553f0 (fin runs)
 
 \emph{Scoring rule dependence, and it is load-bearing.} Under domain-conditional
 PMI the stop rate is 0.000 for \emph{every} model at both values of $\alpha$: no
@@ -876,15 +1157,30 @@ sequential policies are worth their cost to $\alpha \gtrsim 0.7$.
 \section*{Reproducibility and Compute}
 % =====================================================================
 
-All experiments ran on a single node with NVIDIA RTX PRO 6000 Blackwell GPUs
-(approximately 96\,GB each) under SLURM; the 70B evaluation used two GPUs with
-automatic sharding, all other runs a single GPU. Total cost is approximately 12
-GPU-hours: $8.9$ GPU-hours for language-model evaluation across four models and all
-scoring rules --- of which $7.7$ are the 70B model, which occupies two GPUs for
-$3.8$ hours of wall time --- and $2.8$ GPU-hours for the 40 reinforcement-learning
-agents. Hyperparameters, the scenario bank, per-model scoring verification, and the
-analysis scripts that produce every table are released with the code; each reported
-number is machine-read from the stored result files rather than transcribed.
+All experiments ran on NVIDIA RTX PRO 6000 Blackwell GPUs (approximately
+96\,GB each) under SLURM; the 70B evaluation used two GPUs with automatic
+sharding, all other runs a single GPU. Total cost is approximately $17.2$
+GPU-hours, accounted as follows. Language-model evaluation on the 61-scenario bank
+across all scoring rules is $14.4$ GPU-hours, of which $12.2$ is the 70B model
+alone --- $6.1$ hours of wall time on two GPUs --- against $0.6$, $0.1$ and $0.5$
+for LLaMA-3.1-8B, LLaMA-3.2-1B and Qwen2.5-7B-Instruct. The native end-of-turn
+probe of Section~\ref{sec:elevation} adds $0.3$ GPU-hours and the controlled
+base-versus-instruct comparison of Section~\ref{sec:basevsinst} a further $0.8$.
+The 40 reinforcement-learning agents cost $2.8$ GPU-hours. Figures are summed
+per-run wall time read from the stored result files and exclude checkpoint loading
+and the per-model verification pass, so the billed allocation is somewhat higher.
+
+We note a correction: an earlier version of this manuscript reported $8.9$
+GPU-hours for the language-model side. That figure was computed against a
+superseded 12-scenario run of the 70B model rather than the 61-scenario run the
+tables report, and understated the true cost by roughly a factor of two on the
+dominant term. Every number in this section is now machine-read from the result
+files that the tables are generated from.
+
+Hyperparameters, the scenario bank, per-model scoring verification, and the
+analysis scripts that produce every table are released with the code; each
+reported number is machine-read from the stored result files rather than
+transcribed.
 
 \bibliographystyle{plainnat}
 \bibliography{references}
