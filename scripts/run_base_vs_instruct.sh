@@ -14,12 +14,7 @@
 #
 # DO NOT repoint this at cn3_anandi. Run 67880 did, and verify_llm_policy.py
 # failed checks 1 and 2 there (batch invariance 1.35e-01, manual agreement
-<<<<<<< HEAD
-# 0.135 nats) for the very instruct models that pass at exactly 0.00e+00 on
-# mangala. The header and the skip message below both depend on this.
-=======
 # 0.135 nats) for the very models that pass at exactly 0.00e+00 on mangala.
->>>>>>> 6d553f0 (fin runs)
 #
 # JOB 2 OF 2 -- isolates post-training from everything it is currently
 # confounded with.
@@ -62,15 +57,6 @@
 # is run first for each and a critical failure SKIPS that model rather than
 # producing scores that look valid and are not.
 #
-<<<<<<< HEAD
-# The base checkpoints CANNOT live in /janaki/common/huggingface -- that cache
-# is read-only to this account (writing a ref there fails with EACCES), so a
-# repo id for a base model will never resolve under HF_HUB_OFFLINE. They are
-# loaded from BASE_DIR below as filesystem paths instead; both the verifier and
-# the probe pass --model straight to from_pretrained, so a path is equivalent
-# to an id. The instruct models DO resolve from the shared cache, which already
-# holds them, so HF_HOME still points there.
-=======
 # CONFOUND: ConstrainedLLMPolicy defaults use_chat_template=True and the probe
 # does not override it, so each tokenizer's chat template IS applied -- to the
 # base checkpoint too, which was not trained on it. Pass --no_chat_template to
@@ -84,22 +70,10 @@
 # probe pass --model straight to from_pretrained, so a path is equivalent to an
 # id. The instruct models DO resolve from the shared cache, which already holds
 # them, so HF_HOME still points there.
->>>>>>> 6d553f0 (fin runs)
 #
 # To populate BASE_DIR, on the LOGIN node (which has internet):
 #   python scripts/fetch_base_models.py            # download
 #   python scripts/fetch_base_models.py --check    # probe access only
-<<<<<<< HEAD
-# That script overrides the read-only HF_HOME, probes gating by resolving a
-# real file (model_info() does NOT work -- metadata on a gated repo is public,
-# so it returns success for a repo you cannot download), skips the ~16 GB of
-# duplicate original/*.pth weights, and verifies shard completeness afterwards.
-#
-# Note the LLaMA base id is Llama-3.1-8B, not Meta-Llama-3.1-8B. It is gated
-# and approval is per-account: the shared cache holds only -Instruct variants,
-# so an admin's access does not transfer. Accept the licence at
-# https://huggingface.co/meta-llama/Llama-3.1-8B first.
-=======
 # That script overrides the read-only HF_HOME before importing huggingface_hub,
 # probes gating by resolving a real FILE (model_info() does NOT work -- metadata
 # on a gated repo is public, so it succeeds for a repo you cannot download),
@@ -109,7 +83,6 @@
 # The LLaMA base id is Llama-3.1-8B, not Meta-Llama-3.1-8B. Gating is
 # per-account: the shared cache holds only -Instruct variants, so an admin's
 # access does not transfer.
->>>>>>> 6d553f0 (fin runs)
 #
 # ~1.5 GPU-hours for four models at 61 episodes, one scoring rule, alpha 0 and 1.
 #
@@ -150,18 +123,11 @@ for entry in "${MODELS[@]}"; do
     echo "-------------------------------------------------------------"
 
     # Preflight for local checkpoints, so a missing download reports itself as
-<<<<<<< HEAD
-    # a missing download and not as a verification failure.
-    if [ "$SOURCE" = "local" ] && [ ! -f "$MODEL/config.json" ]; then
-        echo "!! $TAG NOT PRESENT -- no config.json at $MODEL"
-        echo "!! This is a missing download, NOT a scoring problem. See the"
-=======
     # a missing download and not as a verification failure. Run 67880 conflated
     # the two and cost a debugging round.
     if [ "$SOURCE" = "local" ] && [ ! -f "$MODEL/config.json" ]; then
         echo "!! $TAG NOT PRESENT -- no config.json at $MODEL"
         echo "!! This is a missing download, NOT a scoring problem."
->>>>>>> 6d553f0 (fin runs)
         echo "!! login node:  python scripts/fetch_base_models.py --check"
         echo "!! Skipping $TAG; the remaining models still run."
         continue
@@ -174,18 +140,10 @@ for entry in "${MODELS[@]}"; do
         echo "!! Read the numbered checks above for the ACTUAL reason. Two"
         echo "!! distinct causes look alike here:"
         echo "!!   checks 1-2 failing  -> numerical: batched and unbatched"
-<<<<<<< HEAD
-        echo "!!      scoring disagree. This is hardware/BLAS dependent and has"
-        echo "!!      been seen on anandi while passing at 0.00e+00 on mangala."
-        echo "!!      Run on mangala; do NOT loosen the tolerance to pass."
-        echo "!!   model fails to LOAD -> the checkpoint is not in the offline"
-        echo "!!      cache. Download it on the login node (see header)."
-=======
         echo "!!      scoring disagree. Hardware/BLAS dependent; seen on anandi"
         echo "!!      while passing at 0.00e+00 on mangala. Do NOT loosen the"
         echo "!!      tolerance to pass."
         echo "!!   model fails to LOAD -> checkpoint not in the offline cache."
->>>>>>> 6d553f0 (fin runs)
         continue
     fi
 

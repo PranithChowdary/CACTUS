@@ -1,0 +1,8 @@
+
+-------------------------------------------------------------
+# qwen2.5-7b-base-notmpl   (/users/staff/pranith/models/Qwen2.5-7B)   chat template OFF
+-------------------------------------------------------------
+model on cuda:0  chat_template=off
+
+
+[sum] alpha=0.0 ...

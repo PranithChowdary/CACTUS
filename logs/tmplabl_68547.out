@@ -1,0 +1,95 @@
+
+-------------------------------------------------------------
+# qwen2.5-7b-base-notmpl   (/users/staff/pranith/models/Qwen2.5-7B)   chat template OFF
+-------------------------------------------------------------
+model on cuda:0  chat_template=off
+
+
+[sum] alpha=0.0 ...
+    step 1: 61 active, 97s
+    step 2: 59 active, 188s
+    step 3: 48 active, 275s
+    step 4: 41 active, 343s
+    step 5: 0 active, 398s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.131  DONE_rate=0.410  SEM@k=0.623  probe_in_topk=0.131  P(DONE|complete)=0.191  (398s)
+
+[sum] alpha=1.0 ...
+    step 1: 61 active, 94s
+    step 2: 60 active, 184s
+    step 3: 60 active, 271s
+    step 4: 59 active, 355s
+    step 5: 0 active, 434s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.000  DONE_rate=0.148  SEM@k=0.016  probe_in_topk=nan  P(DONE|complete)=0.025  (434s)
+
+======================================================================
+HEADLINE (sum scoring, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.623 (ceiling 1.000)
+  probe in top-k (over-gather): 0.131
+  over-probe rate (all 5 steps): 0.508
+  wasted tools per episode   : 2.16
+  exact match                : 0.131 (ceiling 1.000)
+  terminated via DONE        : 0.410
+======================================================================
+
+-------------------------------------------------------------
+# qwen2.5-7b-inst-notmpl   (Qwen/Qwen2.5-7B-Instruct)   chat template OFF
+-------------------------------------------------------------
+model on cuda:0  chat_template=off
+
+
+[sum] alpha=0.0 ...
+    step 1: 61 active, 95s
+    step 2: 61 active, 186s
+    step 3: 55 active, 276s
+    step 4: 34 active, 354s
+    step 5: 0 active, 401s
+[sum] alpha=0.0  ceiling=1.000  SEM=0.098  DONE_rate=0.738  SEM@k=0.721  probe_in_topk=0.197  P(DONE|complete)=0.126  (401s)
+
+[sum] alpha=1.0 ...
+    step 1: 61 active, 94s
+    step 2: 60 active, 185s
+    step 3: 54 active, 273s
+    step 4: 43 active, 351s
+    step 5: 0 active, 410s
+[sum] alpha=1.0  ceiling=0.500  SEM=0.016  DONE_rate=0.525  SEM@k=0.230  probe_in_topk=nan  P(DONE|complete)=0.091  (410s)
+
+======================================================================
+HEADLINE (sum scoring, alpha=0, probe is NOT needed):
+  SEM@k (ranking quality)    : 0.721 (ceiling 1.000)
+  probe in top-k (over-gather): 0.197
+  over-probe rate (all 5 steps): 0.557
+  wasted tools per episode   : 1.72
+  exact match                : 0.098 (ceiling 1.000)
+  terminated via DONE        : 0.738
+======================================================================
+
+-------------------------------------------------------------
+# the 2x2 -- compare against results/llm_probe_basevsinst_*.json
+-------------------------------------------------------------
+
+scoring = sum   (PMI reported as ablation in the raw JSON)
+alpha=0 unit of evidence = SCENARIOS, not episodes (deterministic argmax makes repeats identical)
+
+model             recall    rank   probe       exploit    stop  DONErank   P(DONE)   spur
+                      @5   SEM@k     a=1      branch@2    scen    of ~35     |cmpl    a=0
+-----------------------------------------------------------------------------------------
+llm_probe_notmpl_qwen2.5-7b-base-notmpl   0.869   0.623   0.492  0.030 (n=33)   25/61       3.8    0.1912  0.131
+llm_probe_notmpl_qwen2.5-7b-inst-notmpl   1.000   0.721   0.754  0.286 (n=49)   45/61       2.8    0.1265  0.197
+
+TERMINATION, two ways:
+  llm_probe_notmpl_qwen2.5-7b-base-notmpl stops in 25/61 scenarios   P(DONE | gold complete) = 0.1912
+  llm_probe_notmpl_qwen2.5-7b-inst-notmpl stops in 45/61 scenarios   P(DONE | gold complete) = 0.1265
+
+  crosses done_rate > 0.05        : llm_probe_notmpl_qwen2.5-7b-base-notmpl, llm_probe_notmpl_qwen2.5-7b-inst-notmpl
+  holds >10% mass on DONE at cmpl : llm_probe_notmpl_qwen2.5-7b-base-notmpl, llm_probe_notmpl_qwen2.5-7b-inst-notmpl
+
+  note: one episode per scenario, so n = 61 with no repeat inflation. Rates
+        are multiples of 1/61; CIs are over scenarios.
+
+wrote results/model_comparison.json
+
+Template ON numbers for reference (job 67978, summed scoring, alpha 0):
+  qwen2.5-7b-base   P(DONE|cmpl) 0.0076   stops 0/61
+  qwen2.5-7b-inst   P(DONE|cmpl) 0.5753   stops 60/61
+
+Done. Pull back with:  bash scripts/fetch_results.sh

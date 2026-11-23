@@ -6,12 +6,15 @@ log that produced it named for provenance.
 
 ## The claim
 
-> Instruct-tuned LLMs fail to terminate at every scale tested, while masked PPO
-> on the identical task learns both conditional information-gathering and
-> termination — but sequential policies beat a memoryless classifier only when
-> roughly 70% or more of tasks genuinely require gathering.
+> Knowing which tools a task needs and knowing when to stop calling them are
+> separable capabilities. LLaMA checkpoints identify the right tools at every
+> scale tested and never terminate; masked PPO on the identical task learns
+> both. Termination moves by 75x under manipulations that move tool recall by
+> 1.15x — and we could not pin which manipulation is responsible.
 
-Three supporting results, one refuted hypothesis, and the boundary condition.
+Three supporting results, **two refuted hypotheses** (over-gathering, §3; our own
+post-training attribution, §1b), and one crossover we explicitly decline to call
+a boundary condition (§4).
 
 ## 1. LLMs rank tools near-perfectly and cannot stop
 
@@ -56,29 +59,6 @@ far better (SEM@k 0.951 vs 0.049 on 8B). The scorer choice can invert the centra
 observation, which is why all three are logged per step and the primary was
 selected on ranking evidence rather than a priori.
 
-<<<<<<< HEAD
-## 1b. The stop signal is uninformative in LLaMA, not merely weak
-
-`results/native_stop_*.json` · job 67879 · 61 scenarios, summed scoring, alpha=0
-
-| model | P(DONE\|cmpl) | P(DONE\|before) | elevation | P(native\|cmpl) |
-|---|---|---|---|---|
-| llama-3.1-8b | 0.00200 | 0.00188 | **1.06x** | 2.4e-09 |
-| qwen2.5-7b | 0.57531 | 0.19660 | **2.93x** | 9.8e-11 |
-
-- **The interface objection is narrowed.** Each model's own end-of-turn token,
-  scored at the same decision points, carries 1e-9 to 1e-11 of the mass. The
-  stop probability is not being routed through a channel the action set omits.
-  It does NOT settle the weaker form: the native mechanism is "emit text, then
-  end turn", and this measures only whether the model would end the turn
-  immediately. That needs free generation under a native interface.
-- **LLaMA's stop signal is independent of completion** (1.06x). Sharper than a
-  low absolute probability: a uniformly small signal would at least be
-  miscalibrated; this one carries almost no information about the state.
-- **Qwen's stopping is NOT pure surface-form prior** (2.93x elevation). It has
-  a high baseline prior AND real completion-sensitivity. This corrects a
-  speculation written into an earlier draft.
-=======
 ## 1a. The stop action is not an interface artifact
 
 `results/native_stop_*.json` · log `nativestop_67879` · α=0, each model's native
@@ -102,37 +82,41 @@ end-of-turn token scored as an extra stop candidate at **every** step
   task state. The prior is still real (0.1966 before completion) and is the
   mechanism behind the 34/61 late stops.
 
-## 1b. Controlled: instruction tuning installs termination
+## 1b. Base vs instruct: the post-training attribution REFUTED
 
-`results/llm_probe_basevsinst_*.json` · log `basevsinst_67978` · all checkpoints
-in **one job**, one code path, mangala, summed scoring, 61 scenarios
+`results/llm_probe_basevsinst_*.json` (job `basevsinst_67978`, template on) and
+`results/llm_probe_notmpl_*.json` (job `tmplabl_68547`, template off).
+Summed scoring, 61 scenarios, one episode each, mangala.
 
-| checkpoint | α | recall@5 | stops | DONE rank | P(DONE\|c) | SEM |
-|---|---|---|---|---|---|---|
-| llama-3.1-8b-inst | 0 | 1.000 | 0/61 | 30.1 | 0.0020 | 0.000 |
-| qwen2.5-7b-base | 0 | 0.967 | 0/61 | 10.1 | 0.0076 | 0.000 |
-| qwen2.5-7b-inst | 0 | 0.951 | **60/61** | **2.1** | **0.5753** | **0.377** |
-| llama-3.1-8b-inst | 1 | — | 0/61 | 33.6 | 0.0001 | 0.000 |
-| qwen2.5-7b-base | 1 | — | 0/61 | 13.4 | 0.0174 | 0.000 |
-| qwen2.5-7b-inst | 1 | — | **54/61** | **2.3** | **0.5782** | **0.098** |
+**alpha = 0, the full 2x2:**
 
-- **75× on P(DONE|complete)** (0.0076 → 0.5753) with corpus, tokenizer and
-  architecture held fixed; 33× at α=1. The post-training claim is now an
-  intervention, not a cross-family correlation.
-- **Relevance does not follow it** — recall@5 0.967 → 0.951, probe-first
-  0.754 → 0.721, both slightly *down*. The dissociation is causal, not just
-  observed across models.
-- **Termination gates the score.** Base scores SEM 0.000 despite recall@5 0.967:
-  it finds the right tools and never returns an answer, because it never stops.
-- **Residual confound:** the chat template IS applied to both, base included
-  (`ConstrainedLLMPolicy` defaults `use_chat_template=True`; the probe does not
-  override it). The base model never saw that format in pretraining. Bounded by
-  recall@5 0.967 and DONE rank 10.1 under the same formatting — it reads the
-  query fine — but a stop-token-specific effect is not excluded. Settle it with
-  `sbatch scripts/run_template_ablation.sh` (~0.5 GPU-h; completes the 2x2). Base passed 6/6 critical checks.
-- **PMI erases this too**: rank_pmi 35.0 (base) vs 35.5 (instruct) — last of ~35
-  and in the wrong order. The 75× is specific to summed scoring.
->>>>>>> 6d553f0 (fin runs)
+| checkpoint | template | recall@5 | stops | P(DONE\|c) | SEM |
+|---|---|---|---|---|---|
+| qwen2.5-7b-base | on | 0.967 | 0/61 | 0.0076 | 0.000 |
+| qwen2.5-7b-base | off | 0.869 | **25/61** | **0.1912** | 0.131 |
+| qwen2.5-7b-inst | on | 0.951 | 60/61 | **0.5753** | 0.377 |
+| qwen2.5-7b-inst | off | 1.000 | 45/61 | **0.1265** | 0.098 |
+
+alpha = 1: base on 0/61 @ 0.0174 · base off 9/61 @ 0.0253 · inst on 54/61 @
+0.5782 · inst off 32/61 @ 0.0907.
+
+- **The 75x is a prompt-formatting artifact.** Removing the chat template moves
+  base UP 25x (0.0076 -> 0.1912) and instruct DOWN 4.5x (0.5753 -> 0.1265). The
+  instruct/base ratio goes 75.4x -> **0.66x**: it reverses, base ends up higher.
+- **Neither cell is a clean control.** With the template the comparison is unfair
+  to base; without it, unfair to instruct (recall@5 1.000 but SEM 0.098 — ranks
+  tools fine, performs badly in an unfamiliar format). The format a checkpoint
+  expects *is* a product of its post-training, so released checkpoints cannot
+  separate the two. **Claim withdrawn from the paper.**
+- **What still survives:** instruct's stop RATE exceeds base's under both formats
+  (60/61 vs 0/61; 45/61 vs 25/61). The direction holds on the argmax measure; it
+  is only the probability mass that reverses.
+- **What is strengthened:** across all four cells recall@5 spans 0.869–1.000
+  (1.15x) while P(DONE|c) spans 0.0076–0.5753 (75x) and stops span 0/61–60/61.
+  Two manipulations that barely touch relevance reorganise termination
+  completely — the dissociation is robust to post-training AND prompt format.
+- Settling this needs fine-tuning one base checkpoint under controlled recipes,
+  evaluated under one fixed format. Not run.
 
 ## 2. RL terminates and gathers conditionally — on the same task
 
@@ -174,7 +158,7 @@ The α_train=0.90 agent is near-invariant across evaluation α
 (0.662 / 0.672 / 0.691 / 0.688 / 0.692 / 0.696) — the signature of a policy
 conditioned on need rather than a fixed gathering habit.
 
-## 4. The boundary: sequential policies only pay off at high α
+## 4. Our agent clears the memoryless ceiling only above α ≈ 0.75
 
 Best agent vs. the analytic memoryless ceiling `(1-α) + α/2`:
 
@@ -188,6 +172,13 @@ Best agent vs. the analytic memoryless ceiling `(1-α) + α/2`:
 α\* ≈ **0.6–0.75** on natural language, ≈ **0.85–0.9** synthetically. Below it a
 logistic regression on the same frozen embeddings wins — consistent with the
 MetaTool finding that began this work.
+
+**This is NOT a boundary condition on sequential policies and the paper says so
+explicitly (§6.8).** An optimal sequential policy scores 1.000 at every α and so
+beats `(1-α)+α/2` for every α > 0. Ours reaches 0.855 at α=0. The crossover is
+where our agent's optimisation deficit becomes smaller than the ceiling's
+decline — a fact about this PPO setup at this budget, not about the policy
+class. A better-optimised agent crosses earlier. Do not restate it as a bound.
 
 ## Environment validity
 
@@ -208,47 +199,21 @@ signal survives marker replacement at matched length (11.3 vs 11.6 mean words),
 so it is carried by meaning — static queries name their actions, conditional
 ones do not — rather than by one keyword.
 
-<<<<<<< HEAD
-## Outstanding: one job, in flight
+## Outstanding
 
-`scripts/run_base_vs_instruct.sh` (job 67880) was submitted and its results have
-not been pulled. It compares base vs instruct checkpoints within LLaMA and Qwen
--- the controlled version of the "post-training not scale" claim, which
-currently rests on one confounded cross-family pair. The paper names this as
-its weakest claim and says the comparison is running.
+**`llama-3.1-8b-base` — gated on HuggingFace per account**, requested 2026-11-21,
+not granted. Would show whether the template reversal in §1b reproduces in a
+second family. `python scripts/fetch_base_models.py --check` re-probes; the job
+script preflights and skips cleanly, so just resubmit once granted.
 
-Check it skipped nothing before trusting it: base models have no chat template,
-and the script deliberately skips a model whose scoring verification fails
-rather than producing invalid scores.
-
-```
-grep -E "SKIPPING|critical:" logs/basevsin_*.out    # want 4 passes, no SKIPPING
-bash scripts/fetch_results.sh
-python scripts/compare_models.py --pattern 'results/llm_probe_basevsinst_*.json'
-```
-
-## Previously outstanding: nothing else
-=======
-## Outstanding: one cell, blocked externally
->>>>>>> 6d553f0 (fin runs)
-
-`llama-3.1-8b-base` — **gated on HuggingFace per account**; access request
-submitted 2026-11-21 and not granted. The shared cache at
-`/janaki/common/huggingface` holds `-Instruct` variants only, and an admin's
-access does not transfer. Run `python scripts/fetch_base_models.py --check` to
-re-probe; the job script preflights the path and skips the model cleanly, so
-`sbatch scripts/run_base_vs_instruct.sh` can simply be resubmitted once granted.
-
-**Why it matters more than a missing replicate:** llama-3.1-8b-inst sits at
-0.0020, *below* qwen2.5-7b-base at 0.0076. So two readings survive — LLaMA's
-post-training **failed to install** termination, or it **suppressed** it. Only the
-base checkpoint distinguishes them. The paper claims the weaker of the two
-(see §1b above; the manuscript is kept local and is not in this repository).
+**The experiment that would actually settle what installs termination:**
+fine-tune one base checkpoint under recipes we control and evaluate every variant
+under one fixed prompt format. Released checkpoints cannot do it — see §1b. Not
+run, and flagged as open in the paper.
 
 Everything else is complete: both sides use the same 61-scenario bank, all four
-scoring×α configs, both RL environments at 20 agents × 5 seeds, and the
-bibliography is fully verified against the arXiv API. Remaining work is writing
-and a venue decision.
+scoring×α configs, both RL environments at 20 agents × 5 seeds, the chat-template
+2×2, and a bibliography verified against primary sources.
 
 ## Deliberately not done (v2)
 
